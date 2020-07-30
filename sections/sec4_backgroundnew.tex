@@ -1,0 +1,261 @@
+\section{FCNC signal samples}
+\label{sec:fcncbkg}
+
+The targeted signal in this analysis is $tqH/tH$ with $\Htautau$ (samples 411170-411177 and 412098-412105) in App. \ref{app:mc_sample_list}).
+%In addition to the jet faking $\tauhad$ background, there is also background from fake leptons that do not come from prompt decays of $W$, $Z$ or tau lepton.
+However, if the FCNC processes exists, the other decays of the Higgs can be part of the signal.
+Therefore, samples xxxxxx-xxxxxx (App. \ref{app:mc_sample_list}) with inclusive $W$ and Higgs decays are also included. These sample have a one-lepton (electron or muon) filter at truth level (either coming from $W$ or Higgs decays). Events overlapping with 410818-410839 are removed based on truth information.
+
+It is checked that after the final selection, there are 110 overlapped signal events caused by different overlap removal and object definition in xTauFramework and ttHMultiAna (27140 in total for hadhad channel and 95253 in total for lepton channels) but there is no overlap in the signal enriched region (BDT > 0.5).
+
+The total FCNC signal with fake taus in this analysis is not used in the MVA training, but is regarded as part of the total signal in the fit. The normalization factor of the other components is common with the signal, so that their yields are fully correlated in the fit. In Sec. \ref{sec:control_plots}, this signal is summed with the nominal signal in the control plots. The signal fake tau shares the same normalisation and systematics as described in \ref{sf_method}.
+
+%\begin{figure}[htb]
+%\centering
+%\includegraphics[width=0.4\textwidth]{figures/lephad/sig_comp_lh3j.eps}
+%\put(-140, 92){\footnotesize{$lh$ 3-jet}}
+%\includegraphics[width=0.4\textwidth]{figures/lephad/sig_comp_lh4j.eps}
+%\put(-140, 92){\footnotesize{$lh$ 4-jet}}\\
+%\includegraphics[width=0.4\textwidth]{figures/hadhad/sig_comp_hh3j.eps}
+%\put(-140, 92){\footnotesize{$hh$ 3-jet}}
+%\includegraphics[width=0.4\textwidth]{figures/hadhad/sig_comp_hh4j.eps}
+%\put(-140, 92){\footnotesize{TTH $\thadhad$ }}
+%\caption{ The breakdown of the total signal into real and fake tau parts in different FRs. The shadows indicate the total statistical errors. The BDT distributions are introduced in Sec. \ref{sec:mva}. }
+%\label{fig:sig_comp}
+%\end{figure}
+
+
+\section{Background estimation}
+\label{sec:background}
+
+The background events with real tau leptons are represented by Monte Carlo (MC) samples. These include $t\bar{t}$, $t\bar{t}+H/V$ and 
+single top events with real taus, and $Z\to\tau\tau$+jets. The $Z\to ee,\mu\mu$ processes are included for lepton faking 
+tau background, and the contribution from jet faking tau.
+The fake background with one or more taus faked by jets consists of the top fake (with at least one fake tau from jets in the top events), 
+QCD multijet, $W$+jets and diboson events. Since a jet can be reconstructed as a fake tau with equal probability charge being positive or 
+negative at the first order, the fake taus in the opposite-sign di-tau events could be estimated using the same-sign events 
+after correction of the truth tau contributions. 
+However, the charge of two taus candidates might be correlated in the $t\bar t$ events
+when one of taus is a real tau from the $W\rightarrow \tau \nu$ decay while the other tau is a fake from a jet from other $W\rightarrow jj$ decay.
+They are likely to carry the opposite charges to each other.  
+Because of this charge asymmetry we have to calibrate the fake-tau modeling using a Data-Driven (DD) Scale Factor (SF) 
+method by comparing the normalization of fake-tau events in MC to data in the dilepton + jets control regions.
+This SF is then applied to correct the normalization of tau fakes in the MC yields.
+The excess of the SS events over these MC background in $\thadhad$ is dominated by the fake-tau background from multi-jets (QCD).
+However, for the leptonic events, the fake-tau contribution is dominated by the $t\bar t$ events and 
+we simply estimate the fake-tau background by correcting the normalization of tau fakes in the MC yields. 
+
+\subsection{Origin of fake $\tauhad$}
+\label{sec:fake_origin}
+
+Top fake is the largest fake background in the total fake in the leptonic channels. 
+Within the top fake events, fake taus can come from different origins, i.e., from jets (heavy/light flavor quark or gluon initiated) 
+or leptons (electron or muon). Different fake origins in SS and OS can induce additional systematics. To this end, the tau fake 
+origins are checked with the top MC. Three dedicated top pair production control regions are define for:
+\begin{itemize}
+\item{W-jet faking tau: exactly 1 lepton, exactly 1 tau candidate, exactly 3 jets with exactly 2 b-tagged. Tau candidate and lepton have the same charge.}
+\item{B-jet faking tau: 2 leptons with different flavors or away from Z pole ($M_{ll}>100\GeV$ or $M_{ll}<90\GeV$), exactly 1 tau candidate, exactly 1 b-tagged jet.}
+\item{Radiation faking tau: 2 leptons with different flavors or away from Z pole, exactly 1 tau candidate, exactly 2 b-tagged jets.}
+\end{itemize}
+Figure \ref{fig:lh_fake_comp} shows the fractions of fake taus from different 
+origins in top control regions and SS, OS signal regions. The matching between tau candidates and truth particles or partons are based on $\Delta R<0.4$. 
+Most of the fake taus come from quark initiated jets, but the flavor distributions in OS are similar to those in SS. 
+%However, these differences are well reproduced in the VR regions, which are also shown in Fig. \ref{fig:lh_fake_comp}. 
+%Therefore, the VR events are important to cover systematics coming from fake tau origins as well. Similar fake origin 
+%distributions in $\thadhad$ are shown in Fig. \ref{fig:hh_fake_comp}, although the top fake is only subdominant, and statistical errors are larger.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[page=4,width=0.45\textwidth]{figures/r21/thq1lntau/FakeOriginCalibration/prefit/taupt.pdf}
+\put(-100, 140){\textbf{(a)}}
+\put(-75, 140){\footnotesize{$W$-jet fake}}
+\includegraphics[page=4,width=0.45\textwidth]{figures/r21/thq1lntau/FakeOriginCalibration/prefit/taulmass.pdf}
+\put(-110, 140){\textbf{(b)}}
+\put(-75, 140){\footnotesize{$W$-jet fake}}\\
+\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq1lntau/FakeOriginCalibration/prefit/taupt.pdf}
+\put(-100, 140){\textbf{(c)}}
+\put(-75, 140){\footnotesize{b-jet fake}}
+\includegraphics[page=2,width=0.45\textwidth]{figures/r21/thq1lntau/FakeOriginCalibration/prefit/taupt.pdf}
+\put(-110, 140){\textbf{(d)}}
+\put(-75, 140){\footnotesize{Radiation fake}}\\
+\includegraphics[width=0.45\textwidth]{figures/r21/thq1l2tau/Plots_h1l2tau_Ltauosfakeorig_thuguth.pdf}
+\put(-100, 97){\textbf{(e)}}
+\put(-75, 97){\footnotesize{$l+hh$ OS}}
+\includegraphics[width=0.45\textwidth]{figures/r21/thq1l2tau/Plots_h1l2tau_Ltaussfakeorig_thuguth.pdf}
+\put(-100, 97){\textbf{(f)}}
+\put(-75, 97){\footnotesize{$l+hh$ SS}}\\
+\caption{ The origins of fake $\tau$'s in the top fake MC for W-jet fake control region (a,b), b-jet fake control region (c), radiation control region (d); 
+ in the leptonic OS (e) and SS (f) categories. The flavor distributions are quite similar between OS and SS.}
+\label{fig:lh_fake_comp}
+\end{figure}
+
+\subsection{MC fake $\tauhad$ estimation (obsolete)}
+\label{sec:sf_method_obsolete}
+
+To estimate the fake tau background from MC, we use the same Data-Driven (DD) Scale Factor (SF) method developed for the ATLAS 
+ttH multi-lepton analysis~\cite{ATL-COM-PHYS-2018-410} 
+in which the SF is derived in the opposite-sign dilepton + $\tauhad$ ($2lOS$+1$\tauhad$) control region by comparing the rate of observed fake-tau events to 
+the MC simulation. The scale factors are parametrized as a function of $\pt$ for 1- and 3-prong $\tauhad$ separately and the final 
+SF are summarized in Table~\ref{tab:faketauSF}. The systematics on the scale factors are derived by comparing the values in the nominal control region to
+those obtained in either enriched $t\bar t$ or $Z$ boson control regions respectively.
+
+%%% I am here 
+\begin{table}[htb]
+\caption{ The fake-tau SF measured from the control regions as a function of tau $\pt$ where uncertainty is divided into statistical and 
+systematic obtained from control regions enriched in $t\bar t$ and $Z$ + jets. The $\pt$ bins for 1-prong(3-prong) $\tauhad$ are listed separately.}
+\centering
+\begin{tabular}{|c|c|c|c|} \hline
+type of $\tauhad$  & 25-45(25-50) GeV & 45-70(50-75) GeV  & $>$ 70(75) GeV \\ \hline
+1-prong & 1.05$\pm$0.04$\pm$0.05 & 0.94$\pm$0.08$\pm$0.21 & 0.64$\pm$0.10$\pm$0.07 \\
+3-prong & 1.25$\pm$0.10$\pm$0.41 & 1.30$\pm$0.32$\pm$0.72 & 0.52$\pm$0.30$\pm$0.64 \\ \hline
+\end{tabular}
+\label{tab:faketauSF}
+\end{table}
+
+These SF are then applied to correct the normalization of MC yields in the for both leptonic and hadronic channels. 
+To validate the fake-tau estimate, we have compared the leading $\tauhad$ $\pt$ between data and MC prediction using the events in 
+the same-sign control region where the di-tau have the same-sign charge (SS).
+The distributions are shown in Figure~\ref{fig:lhsf_validation}. The data are in good agreement with MC predictions, 
+which indicated the fake tau is well modeled in MC. 
+
+\begin{figure}[htb]
+\centering
+\includegraphics[page=6,width=0.34\textwidth]{figures/r21/thq1lntau/MCDataComparisonBeforeAnyBkgModelling/ShowContributionFromRealBkgAndFake/reg1l2tau1bnj_ss_vetobtagwp70/taupt_0.pdf}
+\put(-75, 110){\textbf{(a)}}
+\put(-100, 100){\footnotesize{$l\thadhad$ SS}}
+\includegraphics[page=6,width=0.34\textwidth]{figures/r21/thq1lntau/MCDataComparisonBeforeAnyBkgModelling/ShowContributionFromRealBkgAndFake/reg1l1tau1b2j_ss_vetobtagwp70/taupt_0.pdf}
+\put(-75, 110){\textbf{(b)}}
+\put(-100, 100){\footnotesize{STH $\tlhad$ SS}}
+\includegraphics[page=6,width=0.34\textwidth]{figures/r21/thq1lntau/MCDataComparisonBeforeAnyBkgModelling/ShowContributionFromRealBkgAndFake/reg1l1tau1b3j_ss_vetobtagwp70/taupt_0.pdf}
+\put(-75, 110){\textbf{(c)}}
+\put(-100, 100){\footnotesize{TTH $\tlhad$ SS}}\\
+\includegraphics[page=6,width=0.34\textwidth]{figures/r21/thq1lntau/MCBasedBkgModellingWithttHMLNumbers/reg1l2tau1bnj_ss_vetobtagwp70/taupt_0.pdf}
+\put(-75, 110){\textbf{(d)}}
+\put(-100, 100){\footnotesize{$l\thadhad$ SS-cor.}}
+\includegraphics[page=6,width=0.34\textwidth]{figures/r21/thq1lntau/MCBasedBkgModellingWithttHMLNumbers/reg1l1tau1b2j_ss_vetobtagwp70/taupt_0.pdf}
+\put(-75, 110){\textbf{(e)}}
+\put(-100, 100){\footnotesize{STH $\tlhad$ SS-cor.}}
+\includegraphics[page=6,width=0.34\textwidth]{figures/r21/thq1lntau/MCBasedBkgModellingWithttHMLNumbers/reg1l1tau1b3j_ss_vetobtagwp70/taupt_0.pdf}
+\put(-75, 110){\textbf{(f)}}
+\put(-100, 100){\footnotesize{TTH $\tlhad$ SS-cor.}}\\
+\caption{ The distributions of tau $\pt$ are compared between data and MC predictions in the $l\thadhad$ (left), the STH $\tlhad$ (middle), and the TTH $\tlhad$ (right) same-sign control regions before (top row) and after (bottom row) the fake-tau SF corrections.}
+\label{fig:lhsf_validation}
+\end{figure}
+
+\subsection{MC fake $\tauhad$ estimation}
+\label{sec:sf_method}
+
+Although the method mentioned in the \ref{sec:sf_method_obsolete} was adopted by the tthML analysis, a new method is needed in this case. As shown in the Figure \ref{fig:pt_raw}, the data is generally over-estimated in the OS regions while it is opposite in the SS region. If the fake taus are corrected by the same scale factors, this mismodelling will never get solved. This asymmetry of the SS and OS fake taus can be interpreted by the mis-modelling of the fake tau charges. Since the fake taus mainly come from light-flavored jets as shown in Figure \ref{fig:lh_fake_comp}, the mis-modelling is related to the charge carried by the jets. In conclusion, the mis-modelling is originated from the charge correlation between the jet which is faking a tau and the lepton. So the parent of the jet is believed to be charge correlated with the lepton. Considering the main background is $\bar{t}t$ process. The only suspect is the hadronic $W$ boson. In order to find the contribution of w-jet faking taus ($\tau_{W}$).  the truth information is used to match between the w-jet and the fake tau with $\Delta R < 0.2$. As shown in the Figure \ref{fig:wjet_pt}, there is a considerable amount of $\tau_{W}$'s in both SS and OS regions. There are three kinds of fake taus that need to be calibrated: Type1) $\tau_{W}$'s with the opposite charge of the lepton; Type2) $\tau_{W}$'s with the same charge of the lepton; Type3) the fake taus that are not from $W$-decay jets. Many control regions are used to calibrate the three components:
+
+\begin{itemize}
+\item{$2l1tau1b$: 2 leptons with different flavors or away from Z pole, exactly 1 tau candidate,  exactly 1 b-tagged jets.}
+\item{$2l1tau2b$: 2 leptons with different flavors or away from Z pole, exactly 1 tau candidate,  exactly 2 b-tagged jets.}
+\item{$1l1tau2b2j SS$: Exactly 1 lepton, exactly 1 tau candidate, exactly 4 jets with exactly 2 b-tagged. Tau candidate and lepton have the same charge.}
+\item{$1l1tau2b2j OS$: Exactly 1 lepton, exactly 1 tau candidate, exactly 4 jets with exactly 2 b-tagged. Tau candidate and lepton have the opposite charge.}
+\item{$1l1tau2b3j SS$: Exactly 1 lepton, exactly 1 tau candidate, at least 5 jets with exactly 2 b-tagged. Tau candidate and lepton have the same charge.}
+\item{$1l1tau2b3j OS$: Exactly 1 lepton, exactly 1 tau candidate, at least 5 jets with exactly 2 b-tagged. Tau candidate and lepton have the opposite charge.}
+\end{itemize}
+
+Where di-lep regions ($2l1tau1b$ and $2l1tau2b$) are used to calibrate the Type3 fake taus. As explained in the \ref{sec:fake_origin}, these regions are dominated by the bjet and the radiated gluon-jet faking taus. 2bOS regions ($1l1tau2b2j OS$ and $1l1tau2b3j OS$) are used to calibrate Type1 fake taus. Compared to the signal region, this region has an additional b-jet. So the $\bar{t}t$ background is enhanced in this region and signal is depleted. Similarly for the Type2 we can use 2bSS regions ($1l1tau2b2j SS$ and $1l1tau2b3j SS$) to calibrate. The components of these regions are shown in Figure \ref{fig:wjet_pt_CR}. Then two fits are made to derive the scale factors for the fake taus. There are three parameters needed to be decided (the scale factors for the 3 types). But considering the $p_{T}$ depencence of the tau reconstruction, the scale factors are derived in 3 $\pt$ slices (25-35,35-45,45-inf)GeV. So there are 9 parameters to be decided. Since we only care about the signal region (OS), adding the SS region might worse the modelling, so only the the di-lep regions and 2bOS regions are used. A fit is done to the MC to match the data in these control regions by floating the scale factor of Type1 and Type3 fake taus. The fit result is shown in table \ref{tab:scale_factors_os}. In order to have a cross check, the fit for di-lep and 2bSS regions are also made to derive the scale factor of Type2 and Type3. The results is shown in table \ref{tab:scale_factors_ss}. All of the CP and theory uncerntainties are used to derive the uncertainty of the scale factors. It is observed that for both fit, the scale factors of the Type3 fake taus are consistent. The post-fit plots are shown in Figure \ref{fig:wjet_pt_postfit_CR}. Then the scale factors are applied to the corresponding single b-jet regions. In $l\thadhad$ channel, both taus can be fake, so the calibration is done to them separately, following the same procedure as $\tlhad$ channels using the lepton and fake tau charges, then the scale factors are multiplied together. The data-MC comparison is show in Figure \ref{fig:wjet_pt_postfit}.
+
+\input{figures/r21/tex/pt_raw}
+\input{tables/scale_factors_os}
+\input{tables/scale_factors_ss}
+\input{figures/r21/tex/wjet_pt}
+\input{figures/r21/tex/wjet_pt_CR}
+\input{figures/r21/tex/wjet_pt_postfit_CR}
+\input{figures/r21/tex/wjet_pt_postfit}
+
+\subsection{QCD fake $\tauhad$ estimate in $\thadhad$}
+\label{sec:ss_method}
+
+Figure \ref{fig:os_pre_hadhad} shows the $\tauhad$ $\pt$ spectra in the $\thadhad$ SS and OS. The fake tau background events from QCD multi-jets 
+is not added yet so the data have more than the background prediction. The top fake are dominated by fakes with one real tau.
+It is found, based on the MC prediction, that the QCD fake is the dominant fake process in the $\thadhad$ channel.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq2tau/MCDataComparisonBeforeAnyBkgModelling/reg2mtau1b2jss/tau_0_pt.pdf}
+\put(-100, 140){\textbf{(a)}}
+\put(-120, 130){\footnotesize{STH $\thadhad$ (SS)}}
+\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq2tau/MCDataComparisonBeforeAnyBkgModelling/reg2mtau1b2jos/tau_0_pt.pdf}
+\put(-100, 140){\textbf{(b)}}
+\put(-120, 130){\footnotesize{STH $\thadhad$ (OS)}}\\
+\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq2tau/MCDataComparisonBeforeAnyBkgModelling/reg2mtau1b3jss/tau_0_pt.pdf}
+\put(-100, 140){\textbf{(c)}}
+\put(-120, 130){\footnotesize{TTH $\thadhad$ (SS)}}
+\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq2tau/MCDataComparisonBeforeAnyBkgModelling/reg2mtau1b3jos/tau_0_pt.pdf}
+\put(-100, 140){\textbf{(d)}}
+\put(-120, 130){\footnotesize{TTH $\thadhad$ (OS)}}
+\caption{ The distributions of $\tau$ $\pt$ in the STH $\thadhad$ (SS)(a), STH $\thadhad$ (OS) (b), TTH $\thadhad$ (SS) (c) 
+and TTH $\thadhad$ (OS) (d), to illustrate the background composition. Data is more than the prediction because the fake tau backgrounds are missing. }
+\label{fig:os_pre_hadhad}
+\end{figure}
+
+The excess of the SS events over MC with truth taus are used to estimate the fake tau background in OS from QCD multi-jets in the $\thadhad$ + jets channel:   
+\begin{equation}
+N_{\text{QCD fake}}^{\text{OS}} =f_{\text{norm}}\cdot (N_{\text{data}}^{\text{SS}} - N_{\text{MC}}^{\text{SS}}),
+\label{eq:eq10}
+\end{equation}
+
+where $f_{\text{norm}}$ is a ratio of OS and SS from multi-jets QCD, 
+$N_{\text{data}}^{\text{SS}}$, and $N_{\text{MC}}^{\text{SS}}$ are observed data and estimated MC predictions in the SS regions. 
+
+The $f_{\text{norm}}$ is measured separately to be $1.32\pm 0.03$ in the signal-depleted
+one $b$-tag events with $BDT<0.5$ and $1.6\pm 0.1$ in the double $b$-tagged  $\thadhad$ +$\ge$ 3jets events,
+ which provides a good closure test of QCD fake tau estimation. We take the difference between these
+two values as a systematics for the method and assign $f_{\text{norm}}=1.3\pm 0.3$ for the analysis.
+
+\subsection{Fake lepton background}
+\label{sec:fcnc_fakeLep_bkg}
+
+The fake lepton background in $\tlhad$ and lepton+$\thadhad$, which is estimated from MC\footnote{This includes fake lepton + real tau events
+from all MC samples, namely, top, $W/Z$+jets, diboson}, is about $0.3$-$0.5\%$ of the total background. It constitutes
+such a negligible fraction because a very high lepton $\pt$ threshold is already required at the trigger level. This
+background is varied by $100\%$ as a conservative systematics.
+
+\subsection{Summary of signal and background events}
+\label{sec:background_hadhad}
+
+We estimate the expected signal and background events in different regions, which are summarized in Table~\ref{tab:yield}. 
+
+%\begin{table}[htb]
+%\caption{ The summary of total background estimations in the signal regions where the errors are statistics only.}
+%\centering
+%\begin{tabular}{|c|c|c|c|c|c|} \hline
+%Sources & \multicolumn{2}{|c|}{$\thadhad$+jets} & \multicolumn{2}{|c|}{$\tlhad$+jets} & lepton+$\thadhad$ \\ \hline 
+%        &  3jets & $\ge$4jets & 3jets & $\ge$4jets & \\ \hline
+%$t\rightarrow Hu$  &$ 65.308 \pm 0.980 $&$ 148.211 \pm 1.499 $&$  $&$  $&\\ 
+%$t\rightarrow Hc$  &$ 67.421 \pm 1.021 $&$ 140.682 \pm 1.512 $&$  $&$  $& \\
+%$gu\rightarrow Ht$ &$ 29.472 \pm 0.492 $&$ 32.039 \pm 0.523 $&$  $&$  $& \\
+%$gc\rightarrow Ht$ &$ 6.566 \pm 0.107 $&$ 6.239 \pm 0.101 $&$  $&$  $& \\
+%Sum of t-H-u &$ 94.780 \pm 1.097 $&$ 180.250 \pm 1.588 $&$  $&$  $& \\   
+%Sum of t-H-c &$ 73.660 \pm 1.027 $&$ 147.247 \pm 1.516 $&$  $&$  $& \\
+%fake(ss) &$ 3312.466 \pm 71.527 $&$ 3888.549 \pm 75.866 $&$  $&$  $& \\
+%SM Higgs &$ 36.533 \pm 1.397 $&$ 32.849 \pm 1.407 $&$  $&$  $& \\
+%ttV      &$   $&$  $&$  $&$  $& \\
+%rare     &$   $&$  $&$  $&$  $& \\
+%diboson  &$ 16.721 \pm 1.420 $&$ 24.878 \pm 1.320 $&$  $&$  $& \\
+%V+jets   &$ 1208.434 \pm 37.821 $&$ 1212.504 \pm 20.285 $&$  $&$  $& \\ \hline 
+%Sum of Background &$  $&$  $&$  $&$  $&  \\ \hline 
+%\end{tabular}
+%\label{tab:background_summary}
+%\end{table}
+
+Figure~\ref{fig:pt_frs} shows the leading $\tauhad$ $\pt$ distribution from the OS events in the $\thadhad$ signal regions where the points are data
+and the histograms as the expected various backgrounds.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq2tau/SSOSWithFakeMCCalibrated/reg2mtau1b2jos/tau_0_pt.pdf}
+\put(-100, 140){\textbf{(a)}}
+\put(-120, 130){\footnotesize{STH $\thadhad$ OS}}
+\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq2tau/SSOSWithFakeMCCalibrated/reg2mtau1b3jos/tau_0_pt.pdf}
+\put(-100, 140){\textbf{(b)}}
+\put(-120, 130){\footnotesize{TTH $\thadhad$ OS}}\\
+\caption{ The distributions of leading$\tau$ $\pt$ in the $\thadhad$ + 3 jets (a), and 4 jets OS (b)}
+\label{fig:pt_frs}
+\end{figure}
+ 
+\clearpage
+%include{background_controlplots.tex}

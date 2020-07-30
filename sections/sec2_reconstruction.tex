@@ -1,0 +1,158 @@
+%\section{Blinding strategy}
+%\label{sec:blind}
+
+%In order to keep the analysis unbiased from artificial cut tunings, data histogram bins with significances greater than the values in Tab. \ref{tab:blinding} are blinded\footnote{The values in Tab. \ref{tab:blinding} are chosen such that the last few bins of the MVA BDT distributions (Fig. \ref{fig:os_bdt} in Sec. \ref{sec:mva}) are blinded.}. The number counting significance is calculated as
+%%
+%\begin{equation}
+%Z = \sqrt{2(s+b)\ln\left(1+\frac{s}{b}\right)-2s},
+%\end{equation}
+%%
+%where $s$ and $b$ are the expected numbers of signal and background events per bin.
+
+%\begin{table}[htb]
+%\caption{The upper cuts on the significance per bin for different categories applied for blinding. }
+%\centering
+%\begin{tabular}{|c|c|c|c|} \hline
+% $\tlhad$ 4-jet & $\tlhad$ 3-jet & $\thadhad$ 4-jet & $\thadhad$ 3-jet \\ \hline
+% 0.90 & 0.25 & 2.10 & 0.50 \\ \hline
+%\end{tabular}
+%\label{tab:blinding}
+%\end{table}
+
+\section{Reconstruction of event topology}
+\label{sec:reconstruction}
+
+Depending on the production modes and the decay of the $W$ boson from top quark, the analysis is split into 4 categories as shown in table \ref{tab:signalevents}. All of the 8 decay modes are considered in the analyses. The selection requirement dedicated for each decay mode is also listed in talbe \ref{tab:signalevents}. Due to the low statistics when STL cuts are applied, the ST and TTL are included in a single region ($l\tauhad$ for $H\to\thadhad$ and $2lSS\tauhad$ for $H\to\tlhad$) where there is no light jet multiplicity requirement. In order to reduce the background, the $2lSS\tauhad$ region requires the the leptonic tau and the lepton from W decay to be of the same charge, where the ``2lSS'' comes from.
+
+For the future convenience, STH $\tlhad$ and TTH $\tlhad$ are indicated by $\tlhad$; STH $\thadhad$ and TTH $\thadhad$ are indicated by $\thadhad$; All the channels involving leptons (including $\taulep$) are indicated by leptonic channels.
+
+\begin{table}
+\footnotesize
+\centering
+\caption{Overview of the final states of signal events}
+\begin{tabular}[h]{c|c|c|c|c|c|c}
+\hline \hline
+
+\multicolumn{2}{c|}{\# of particles}	& alias & b-jet & jets & lepton & taus\\ \hline
+\multirow{2}{*}{ST}	& $W\to l\nu$		& STL   & 1	    & 1    & 1      & 2   \\ \cline{2-7}
+					& $W\to q\bar{q}$	& STH   & 1	    & 3    & 0      & 2   \\ \hline
+\multirow{2}{*}{TT}	& $W\to l\nu$		& TTL   & 1	    & 2    & 1      & 2   \\ \cline{2-7}
+					& $W\to q\bar{q}$	& TTH   & 1	    & 4    & 0      & 2   \\ \hline
+\end{tabular}
+\footnotesize
+\centering
+\caption{Overview of the signal regions}
+\begin{tabular}[h]{c|c|c|c|c}
+\hline \hline
+\# of particles& b-jet & jets   & lepton & hadronic taus\\ \hline
+$2lSS\tauhad$  & 1     & $\ge1$ & 2      & 1			\\ \hline
+$l\thadhad$	   & 1     & $\ge1$ & 1      & 2            \\ \hline
+STH $\thadhad$ & 1     & 3      & 0      & 2            \\ \hline
+TTH $\thadhad$ & 1     & $\ge4$ & 0      & 2            \\ \hline
+STH $\tlhad$   & 1     & 3      & 1      & 1            \\ \hline
+TTH $\tlhad$   & 1     & $\ge4$ & 1      & 1            \\ \hline
+\end{tabular}
+\label{tab:signalevents}
+\end{table}
+
+To comply with the signal topology, in each channel, exactly one jet should be tagged as a $b$-jet. 
+
+In TTH channel, all jets from the top hadronic decay and the jet from $t\to Hq$, denoted as the FCNC jet, pass the jet selection, there should be at least four jets 
+among which the one with smallest $\Delta R(p^{\mu}_{\text{jet}},p^{\mu}_{\tau1}+p^{\mu}_{\tau2})$ is considered as FCNC jet. If there are more than 2 jets beside FCNC jet and $b$-jet, the jets from $W$ boson decay are chosen based on $W$ boson resonance. There is the chance that one of the jets fails the $\pt$ requirement and not reconstructed. This kind of events will fall into STH channel. The FCNC top resonance is still reconstructed given the big chance that the jet which is missing is from $W$ decay.
+
+In STH events, there are 3 jets coming from top decay including the b-jet. So a Higgs resonance formed by the taus and a top resonance formed by the jets are expected.
+
+In STH and TTH channels , the method introduced in \cite{fcnc_PRD} is used to recontruct the ditau mass and momentum by taking the $\tau$ decay kinematics into account. To determine the 4-momenta of the invisible decay products of the tau decays, the following $\chi^2$ in Eq.~\ref{eq:eq2}, based on the probability functions above and the constraints from the tau mass, the Higgs mass and the measured $\met$, is defined,
+\begin{eqnarray}
+\begin{array}{ll}
+\chi^2 = & -2\ln \mathcal{P}_1 -2\ln \mathcal{P}_2 + \left( \frac{m_{\tau_1}^{\text{fit}} - 1.78}{\sigma_{\tau}} \right)^2 +  \left( \frac{m_{\tau_2}^{\text{fit}} - 1.78}{\sigma_{\tau}} \right)^2 +  \left( \frac{m_{H}^{\text{fit}} - 125}{\sigma_{\text{Higgs}}} \right)^2 + \\
+ & \left( \frac{E_{x,\text{miss}}^{\text{fit}} - E_{x,\text{miss}}}{\sigma_{\text{miss}}} \right)^2 + \left( \frac{E_{y,\text{miss}}^{\text{fit}} - E_{y,\text{miss}}}{\sigma_{\text{miss}}} \right)^2 ,
+\end{array}
+\label{eq:eq2}
+\end{eqnarray}
+where $\mathcal{P}_i(\Delta R)$ are the probability distributions of the angular distance of the visible and invisible decay products in the tau decay, parametrized as a function of the momentum of the tau lepton. In the $\taulep$ mode where two neutrinos are present, it is extended to be the joint probability distribution of $\Delta R$ and $m_{\text{mis}}$ with $m_{\text{mis}}$ being the invariant mass of the neutrinos, denoted by $\mathcal{P}(\Delta R, m_{\text{mis}})$. These probability density functions are obtained from the MC simulation. Figure \ref{fig:tau_prob} illustrates the distributions of $\mathcal{P}(\Delta R, m_{\text{mis}})$ for $\taulep$, and $\mathcal{P}(\Delta R)$ for $\tauhad$, with the original tau's momentum in the range 60 GeV$<p<80$ GeV. Figures \ref{fig:chi2terms_hh3j}-\ref{fig:chi2terms_lh4j} in App. \ref{app:reco} show the distributions for each term in Eq. \ref{eq:eq2}.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.4\textwidth]{figures/tau_prob_lep.eps}
+\put(-60, 130){\textbf{{\color{white} (a)}}}\hspace{0.02\textwidth}
+\includegraphics[width=0.4\textwidth]{figures/tau_prob_had.eps}
+\put(-60, 130){\textbf{(b)}}
+\caption{ The distributions of (a) $\mathcal{P}(\Delta R, m_{\text{mis}})$ for $\taulep$, and (b) $\mathcal{P}(\Delta R)$ for $\tauhad$, with the original tau's momentum in the range 60 GeV$<p<80$ GeV. }
+\label{fig:tau_prob}
+\end{figure}
+
+In Eq. \ref{eq:eq2}, the free parameters scanned are the 4-momentum components of the invisible decay products for each tau decay. In the $\tauhad$ mode, only three momentum components are scanned since a single neutrino is massless. $m_{\tau_{1,2}}^{\text{fit}}$,  $m_{H}^{\text{fit}}$ and $E_{xy,\text{miss}}^{\text{fit}}$ are the calculated tau mass, Higgs mass, and missing transverse energy with the scanned parameters. The corresponding mass resolutions, $\sigma_{\tau}$ and $\sigma_{\text{Higgs}}$, are set to 1.8~GeV and 20~GeV respectively. The $\met$ resolution is parametrized as
+\begin{equation}
+\sigma_{\text{miss}}=13.1 + 0.50\sqrt{\Sigma E_\text{T}},
+\label{eq:eq7}
+\end{equation}
+where $\Sigma E_\text{T}$ (in GeV) is the scalar sum of transverse energy depositions of all objects and clusters. The invisible 4-momenta are obtained by minimizing the combined $\chi^2$ for each event\footnote{
+The coarse global minimum of the $\chi^2$ in Eq. \ref{eq:eq2} is first obtained by scanning the ($\eta$, $\phi$) of the netrino(s) from one tau, and repeating for the other tau. Then a final minimum is obtained around it with the MINUIT packge \cite{MINUIT}.
+}. By adding the Higgs mass constraint term in the kinematic fit, not only is the Higgs mass resolution improved, but also the resolutions of the Higgs boson's four-momentum, and the mass of the top from which the Higgs comes. Figure \ref{fig:chi2} shows the distributions of $\chi^2$ in different regions. Good agreement between data and background predictions are achieved.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[page=6,width=0.4\textwidth]{figures/r21/thq2tau/SSOSWithFakeMCCalibrated/reg2mtau1b3jos/chi2.pdf}
+\put(-50, 80){\textbf{(a)}}
+\put(-57, 95){\footnotesize{$lh$ 3-jet}}
+\includegraphics[page=6,width=0.4\textwidth]{figures/r21/thq2tau/SSOSWithFakeMCCalibrated/reg2mtau1b2jos/chi2.pdf}
+\put(-50, 80){\textbf{(b)}}
+\put(-57, 95){\footnotesize{$lh$ 4-jet}}\\
+\includegraphics[page=6,width=0.4\textwidth]{figures/r21/thq1lntau/MCBasedBkgModellingWithttHMLNumbers/reg1l1tau1b3j_os_vetobtagwp70/chi2.pdf}
+\put(-50, 80){\textbf{(c)}}
+\put(-57, 95){\footnotesize{$hh$ 3-jet}}
+\includegraphics[page=6,width=0.4\textwidth]{figures/r21/thq1lntau/MCBasedBkgModellingWithttHMLNumbers/reg1l1tau1b2j_os_vetobtagwp70/chi2.pdf}
+\put(-50, 80){\textbf{(d)}}
+\put(-57, 95){\footnotesize{$hh$ 4-jet}}
+\caption{ The distributions of $\chi^2$ in Eq. \ref{eq:eq2} in the hadronic channels. }
+\label{fig:chi2}
+\end{figure}
+
+In $l\thadhad$ channels, a Higgs resonance formed by the taus is expected. Additionally for TTL $\thadhad$ events, a top resonance formed by the c/u jet and Higgs is expected. Thus the invariant mass of the hadronic tau candidates and the FCNC-jet is required to be less than 125GeV.
+Due to the large amount of neutrinos produced in leptonic channels with a huge degree of freedom. The kinematic fit to reconstruct the neutrinos is given up in $l\thadhad$ channels. The kinematics calculated directly from visible particles and $\met$ are used as BDT input.
+
+With the event topology reconstructed, a number of variables are defined for signal and background separation. Their distributions can be found in Sec. \ref{sec:background}, and some of their explanations are as follows. In the following explanations, tau candidates or di-tau point to the visible decay product of both $\tauhad$ and $\taulep$.
+
+\begin{enumerate}
+
+\item $E^{T}_{miss}$ is the missing transverse momentum.
+\item $p_{T,\tau}$ is the transverse momentum of the leading tau candidate.
+\item $p_{T,sub-\tau}$ is the transverse momentum of the sub-leading tau candidate.
+\item $p_{T,l}$ is the transverse momentum of the leading lepton.
+\item $p_{T,sub-l}$ is the transverse momentum of the sub-leading lepton.
+\item $\chi^2$ is derived from kinematic fitting for the neutrinos.
+\item $m_{t,SM}$ is the invariant mass of the $b$-jet and the two jets from the $W$ decay, and reflects the top mass in the decay $t\to Wb \to j_1j_2b$. This variable is only defined for the 4-jet STH and TTH events.
+\item $m^{T}_{W}$ is the transverse mass calculated from the lepton and $\met$ in the leptonic channels, defined as
+\begin{equation}
+m^{T}_{W} = \sqrt{2 p_{\text{T,lep}} E_{\text{T}}^{\text{miss}} \left(1-\cos\Delta\phi_{\text{lep,miss}} \right)}.  
+\end{equation}
+\item $m_{\tau,\tau}$ is the invariant mass of the tau candidates and reconstructed neutrinos in STH and TTH channels. 
+\item $m_{W}$ is the reconstructed invariant mass of the hadronic $W$ boson from SM top quark.
+\item $m_{t,FCNC}$ is the visible invariant mass of the FCNC-decaying top quark reconstructed from di-tau candidates, FCNC-jet and reconstructed neutrinos.
+\item $m_{\tau\tau,vis}$ is the visible invariant mass of the two tau candidates
+\item $p_{T,\tau\tau,vis}$ is the $\pt$ of the di-tau candidates.
+\item $m_{t,FCNC,vis}$ is the reconstructed invariant mass of the FCNC-decaying top quark.
+\item $m_{t,SM,vis}$ is the invariant mass of the lepton (the lepton far-away from tau candidate in the 2lSS channel) and the b-jet, which reflects the visible SM top mass.
+\item $M(\tau\tau light-jet,min)$ is the invariant mass of the two tau candidates (include leptonic tau) and the light-flavor jet, minimized by choosing different jet.
+\item $M(light-jet,light-jet,min)$ is the invariant mass of two light-flavor jet, minimized by choosing different jets.
+\item $E^{T}_{miss}$ centrality is a measure of how central the $\met$ lies between the two tau candidates in the transverse plane, and is defined as
+\begin{eqnarray}
+\begin{array}{l}
+\met~\text{centrality} = {(x+y)}/{\sqrt{x^2+y^2}}, \\
+\text{with}~x=\frac{\sin(\phi_{\text{miss}}-\phi_{\tau_1})}{\sin(\phi_{\tau_2}-\phi_{\tau_1})},  y=\frac{\sin(\phi_{\tau_2}-\phi_{\text{miss}})}{\sin(\phi_{\tau_2}-\phi_{\tau_1})} ,
+\end{array}
+\label{eq:eq3}
+\end{eqnarray}
+\item $E_{\nu,i}/E_{\tau,i},i=1,2$ is the momentum fraction carried by the visible decay products from the tau mother. It is based on the best-fit 4-momentum of the neutrino(s) according to the event reconstruction algorithm in this section. For the $\tauhad$ decay mode, the visible decay products carry most of the tau energy since there is only a single neutrino in the final state, which is evident in the excess around 1 in Fig. \ref{fig:x12_fit}. 
+\item $\Delta R(l+b-jet,\tau+\tau)$ is the angular distance between the lepton+b-jet and di-tau candidates.
+\item $\Delta R(l,b-jet)$ is the angular distance between the lepton and b-jet.
+\item $\Delta R(\tau,b-jet)$ is the angular distance between the tau and b-jet.
+\item $\eta_{\tau,max}$ is the larger polar angle among the tau candidates.
+\item $\Delta R(l,\tau)$ is the angular distance between the lepton and the closest tau candidate in the leptonic channels.
+\item $\Delta R(\tau,fcnc-j)$ is the angular distance between the tau and the reconstructed fcnc jet.
+\item $\Delta R(\tau,\tau)$ is the angular distance between two tau candidates.
+\item $\Delta R(\tau,light-jet,min)$ is the angular distance between the closest tau candidate and light-flavor jet.
+\item $\Delta\phi(\tau\tau,P^{T}_{miss})$ is the azimuthal angle between the $\met$ and di-tau $\pt$.
+
+\end{enumerate}

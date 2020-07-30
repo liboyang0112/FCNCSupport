@@ -1,0 +1,16 @@
+*.log
+*.out
+*.toc
+*.aux
+*DS_Store
+*dragged*
+converted-to
+FCNCsupport-blx.bib
+FCNCsupport.bbl
+FCNCsupport.blg
+FCNCsupport.run.xml
+mvplots.sh
+oldtex
+talk
+figures/*
+*converted-to*

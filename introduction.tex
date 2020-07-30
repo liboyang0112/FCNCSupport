@@ -1,0 +1,174 @@
+\section{Introduction}
+Since the discovery of the Higgs boson in 2012, great efforts are made to study its properties. As the mass of the Higgs boson is about 125 GeV \cite{HiggsMass}, it is kinematically allowed that a top quark decays to a Higgs boson and an up-type quark via the flavour-changing neutral current (FCNC). In the Standard Model (SM), the FCNC interaction is forbidden at tree level and suppressed at higher orders due to the Glashow-Iliopoulos-Maiani (GIM) mechanism \cite{GIM}. The $t\to u/c+H$ branching fraction in the SM is calculated to be around $10^{-15}$ \cite{brtch3}. It would be enhanced in many models beyond the SM (BSM). Examples are the quark-singlet model \cite{quarkSinglet1,quarkSinglet2}, the two-Higgs doublet model with or without the flavour violation \cite{2hdm1,2hdm2}, the minimal supersymmetric standard model (MSSM) \cite{2hdm3}, supersymmetry with R-parity violation \cite{Rparity},
+the Topcolour-assisted Technicolour model \cite{Techni} or models with warped extra dimensions \cite{extraD}, the little Higgs model with T-parity conservation \cite{littleH} and the composite Higgs models \cite{compositeH}.
+Especially, the ansatz of Cheng and Sher \cite{Sher} allows a branching fraction of about $10^{-3}$ \cite{FCNC_rate}. Therefore, an observation of this decay would be a clear evidence for new physics.
+
+On the other hand, if the $tHq$ interaction exists, the single-top, Higgs associated production through this interaction should also be enhanced. The $tH$ associated production in the SM prediction is expected to be small at LHC\cite{tHjb_production}. So the study on this process will also contribute to the FCNC interaction searches.
+
+Upper $95\%$ CL limits on BR($t\to Hq$) have been obtained by ATLAS based on the data from 2015 and 2016, in the $H\to\gamma\gamma$ \cite{fcncgmgm}, $H\to WW/\tll$ multilepton \cite{fcncml} and  $\Htautau$, $H\to b\bar{b}$ \cite{fcnctautau} channels. The combined expected (observed) limits are $0.083\%$ ($0.11\%$) and $0.083\%$ ($0.12\%$) for $t\to Hc$ and $t\to Hu$, respectively.
+
+The $t\to Hq$ decay and $gq\to tH$ production are also searched by CMS based on the data from 2015 and 2016\cite{CMS-TOP-17-003}. 
+
+The FCNC coupling is parametrised using dim-6 operators \cite{fcnc_production_theory}. The effective Lagrangian regarding $tqH$ interaction is:
+%
+\begin{equation}
+\mathcal{L}_{EFT} = \frac{C^{i3}_{u\phi}}{\Lambda^{2}}(\phi^{\dagger}\phi)(\bar{q_{i}}t)\tilde{\phi} + \frac{C^{3i}_{u\phi}}{\Lambda^{2}}(\phi^{\dagger}\phi)(\bar{t_{i}}q)\tilde{\phi}
+\label{eq:eq01}
+\end{equation}
+%
+Where the operator notation is consistent with \cite{fcnc_production_theory}. The coefficient $C_{u\phi}$'s can be extracted as
+\begin{equation}
+\begin{array}{l}
+(C^{i3}_{u\phi})^2 + (C^{3i}_{u\phi})^2 = 1946.6~\text{BR}(t\to qH)\\
+(C^{13}_{u\phi})^2 + (C^{31}_{u\phi})^2 = \sigma(ug\to tH)/365.2~\text{fb}\\
+(C^{23}_{u\phi})^2 + (C^{32}_{u\phi})^2 = \sigma(cg\to tH)/52.9~\text{fb}
+\end{array}
+\label{eq:eq02}
+\end{equation}
+
+To give a better impression on the numbers, we use $\text{BR}(t\to qH)=1(0.2)\%$ as benchmark, which is corresponding to ($C^{13}_{u\phi})^2 + (C^{31}_{u\phi})^2=19.47(3.89)$, $\sigma(ug\to tH)=7109.0(1421.8)$ pb, $\sigma(cg\to tH)=1029.8(206.0)$ pb.
+
+In this article, a search for the decay $t\to qH$ in the $t\bar{t}$ production (TT) and single-top, Higgs associated production (ST) with $H\to\tau\tau$  as shown in Fig \ref{fig:diagrams} using 140~fb$^{-1}$ of proton-proton collision data at 13~TeV, taken with the ATLAS detector at the Large Hadron Collider (LHC), is presented. The final state is characterized by one top and one Higgs. In TT, there is an additional u/c quark forming a top resonance with Higgs.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.4\textwidth]{figures/r21/diagrams/TT.pdf}
+\includegraphics[width=0.4\textwidth]{figures/r21/diagrams/ST.pdf}\\
+\caption{ Diagrams of FCNC TT(left) and ST(right) process. }
+\label{fig:diagrams}
+\end{figure}
+
+
+\section{Detector, data set and Monte Carlo simulation}
+
+\subsection{ATLAS detector}
+\label{sec:detector}
+
+The ATLAS detector \cite{PERF-2007-01} at the LHC covers nearly the entire solid angle around the collision point. It consists of an inner tracking detector surrounded by a thin superconducting solenoid, electromagnetic and hadronic calorimeters, and a muon spectrometer incorporating three large superconducting toroid magnets.
+
+The inner-detector system (ID) is immersed in a \SI{2}{T} axial magnetic field and provides charged particle tracking in the range $| \eta | < 2.5$. A high-granularity silicon pixel detector covers the vertex region and typically provides three measurements per track. It is followed by a silicon microstrip tracker, which usually provides four two-dimensional measurement points per track. These silicon detectors are complemented by a transition radiation tracker, which enables radially extended track reconstruction up to $| \eta | < 2.0$. The transition radiation tracker also provides electron identification information based on the fraction of hits above a higher energy-deposit threshold corresponding to transition radiation. Compared to Run-1, an Insertable B-Layer \cite{IBL} (IBL) is inserted as the innermost pixel layer during LS1 for Run-2, which significantly improves the tracking performance.
+
+The calorimeter system covers the pseudorapidity range $| \eta | < 4.9$. Within the region $| \eta | < 3.2$, electromagnetic calorimetry is provided by barrel and endcap high-granularity liquid-argon (LAr) electromagnetic calorimeters, with an additional thin LAr presampler covering $| \eta | < 1.8$, to correct for energy loss in material upstream of the calorimeters. Hadronic calorimetry is provided by a scintillator-tile calorimeter, segmented into three barrel structures within $| \eta | < 1.7$, and two LAr hadronic endcap calorimeters.
+
+A muon spectrometer (MS) comprises separate trigger and high-precision tracking chambers measuring the deflection of muons in a magnetic field generated by superconducting air-core toroids. The precision chamber system covers the region $| \eta |< 2.7$ with three layers of monitored drift tubes, complemented by cathode strip chambers in the forward region, where the background is highest. The muon trigger system covers the range $| \eta | < 2.4$ with resistive-plate chambers in the barrel, and thin-gap chambers in the endcap regions.
+
+\subsection{Data set}
+\label{sec:dataset}
+
+This analysis is based on the full proton-proton data at a center-of-mass energy $\sqrt{s}=13$~TeV with a bunch spacing of 25~ns collected by ATLAS in Run-2. The following good run list (GRL) was used for the 2015 dataset:
+
+
+{\tt\scriptsize data15\_13TeV.periodAllYear\_DetStatus-v89-pro21-02\_Unknown\_PHYS\_StandardGRL\_All\_Good\_25ns.xml}
+
+which corresponds to an integrated luminosity of 3.22 fb$^{-1}$.
+
+The GRL used for the 2016 dataset:
+
+{\tt\scriptsize data16\_13TeV.periodAllYear\_DetStatus-v89-pro21-01\_DQDefects-00-02-04\_PHYS\_StandardGRL\_All\_Good\_25ns.xml}
+
+corresponds to an integrated luminosity of 32.88 fb$^{-1}$.
+
+These GRLs exclude data where the IBL was not fully operational. The uncertainty in the combined 2015+2016 integrated luminosity, 36.1~fb$^{-1}$, is $2.1\%$. It is derived, following a methodology similar to that detailed in Ref.~\cite{DAPR-2013-01}, from a calibration of the luminosity scale using x-y beam-separation scans performed in August 2015 and May 2016.
+
+The GRL used for the 2017 dataset:
+
+{\tt\scriptsize data17\_13TeV.periodAllYear\_DetStatus-v99-pro22-01\_Unknown\_PHYS\_StandardGRL\_All\_Good\_25ns\_Triggerno17e33prim.xml}
+
+corresponds to an integrated luminosity of 44.307 fb$^{-1}$.
+
+The GRL used for the 2018 dataset:
+
+{\tt\scriptsize  data18\_13TeV.periodAllYear\_DetStatus-v102-pro22-04\_Unknown\_PHYS\_StandardGRL\_All\_Good\_25ns\_Triggerno17e33prim.xml}
+
+corresponds to an integrated luminosity of 59.937 fb$^{-1}$. The final luminosity used for the analysis is 140.45 fb$^{-1}$.
+%The integrated luminosity is 36.1~fb$^{-1}$ with a relative uncertainty of 3.2\% after the application of data-quality requirements.
+%The average number of interactions per bunch crossing, over short time periods of about 1 minute, denoted by $\langle\mu\rangle$, is 13 in 2015 and 25 in 2016. The pile-up background is formed by the inelastic collisions, producing mainly low transverse momentum particles, in addition to the hard interaction.
+
+\subsection{Signal and background simulation}
+\label{sec:generator}
+
+The overview of the major samples generated is summarized in table \ref{mob}.
+
+The TopFCNC UFO model \cite{FCNC_UFO1,FCNC_UFO2} with 5-flavour scheme is used for signal simulation.
+
+The FCNC ST signal is simulated using MadGraph5\_aMC@NLO v2.6.2 \cite{MG5} interfaced with Pythia 8.230 \cite{Pythia8} with the A14 tune \cite{A14} for the generation of parton showers, hadronisation and multiple interactions and the NNPDF30NLO \cite{NNPDF30NLO} parton distribution functions (PDF) is used to generate $qg$ events at next-to-leading order (NLO) in QCD. Depending on either up quark or charm quark involved in the FCNC decay and either the $W$ bosons decaying hadronically or leptonically, 4 samples are generated for each term of effective Lagrangian, so eight samples in total.
+
+The FCNC TT signal is simulated using Powheg-Box \cite{Powheg} V2 interfaced with Pythia8.2 12 \cite{Pythia8} with the A14 tune \cite{A14} for the generation of parton showers, hadronisation and multiple interactions and the NNPDF30NLO \cite{NNPDF30NLO} parton distribution functions (PDF) is used to generate $t\bar{t}$ events at next-to-leading order (NLO) in QCD. Depending on either the top or the anti-top quark decaying to $bW$, either up quark or charm quark involved in the FCNC decay and either the $W$ bosons decaying hadronically or leptonically, eight samples are produced with the Higgs going to a $\tau$-lepton pair.
+
+The dominant background is the $t\bar{t}$ production. The $t\bar{t}$ process and the single top process are generated with Powheg-Box \cite{Powheg} V2, and Pythia 8.230 is used for the parton shower. NNPDF30NLO \cite{NNPDF30NLO} and A14 tune \cite{A14} are used for $t\bar{t}$(single top). The $t\bar{t}$ sample is also generated with different generators and parton showers models, as well as different amount of radiations, for systematics as detailed in Sec. \ref{sec:systematics}.
+
+The $t\bar{t}X$, where X=$H$, $W$, $ee$, $\mu\mu$, $\tau\tau$ or $Z(qq,\nu\nu)$ ($\tau\tau$ has the Higgs resonance excluded), are generated with MadGraph5\_aMC@NLO and inferfaced with Pythia8 for the parton shower. The NNPDF30NLO \cite{NNPDF30NLO} is used for the matrix element PDF. The $t\bar{t}$, single top and $t\bar{t}X$ are combined into a single process named top background in the analysis.
+
+The $W$+jets, $Z$+jets and diboson backgrounds are simulated using Sherpa 2.2.1 \cite{Sherpa} with NNPDF30NNLO PDF \cite{NNPDF30NLO}.
+
+The $\tau$ decay in the single top samples is handled by Tauola \cite{Tauola}. All samples showered by Pythia8 (Sherpa) have the $\tau$ decays also handled by Pythia8 (Sherpa). All the decay modes of the $\tau$ lepton are allowed in the event generators (but may be subject to generator filters). The summary of used generators for matrix element and parton shower is given in Tab. \ref{mob}.
+
+All Monte-Carlo (MC) samples were passed through the full GEANT4 \cite{GEANT4} simulation of the ATLAS detector, except for two extra \ttbar samples with Pythia8 and Herwig7 \cite{Herwig} parton showering which are simulated with ATLFAST-II \cite{AFII} for systematics (Sec. \ref{sec:systematics}). In the analysis, the simulated events were reweighted based on their pile-up to match the pile-up profile observed in data.
+
+The full list of MC samples and their corresponding cross sections are given in App. \ref{app:mc_sample_list}. The single boson and diboson cross sections are calculated to NNLO \cite{bosonXsec}. The $t\bar{t}$ cross section is calculated at NNLO in QCD including resummation of NNLL soft gluon terms for a top-quark mass of 172.5 GeV \cite{ttXsec}. The $t\bar{t}H$ and $t\bar{t}V$ are normalized to NLO cross sections according to \cite{HiggsBR} and \cite{ttVXsec}. The $t$-channel and $s$-channel single top cross sections are calculated at NLO with Hathor v2.1 \cite{Hather1,Hather2}, while the $Wt$ channel is calculated at NLO+NNLL \cite{WtXsec}.
+
+\begin{table}
+\footnotesize
+\centering
+\caption{Overview of the MC generators used for the main signal and background samples}
+\begin{tabular}[h]{l|c|c|c|c|c|c}
+\hline \hline
+\multirow{2}{*}{Process} & \multicolumn{2}{c|}{Generator} & \multicolumn{2}{c|}{PDF set} & \multirow{2}{*}{Tune} & \multirow{2}{*}{Order} \\ \cline{2-5}
+        &  ME   &  PS    &  ME  & PS &   &  \\\hline
+TT Signal & Powheg & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+ST Signal & MadGraph5\_aMC@NLO & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+$W/Z$+jets & \multicolumn{2}{c|}{Sherpa 2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & Sherpa & NLO/LO \\ \hline
+\ttbar & Powheg & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+Single top & Powheg & Pythia6 & CT10(NLO) & CTEQ6L1\cite{CTEQ} & Perugia2012 & NLO \\ \hline
+$t\bar{t}X$ & MadGraph5\_aMC@NLO & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+Diboson & \multicolumn{2}{c|}{Sherpa 2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & Sherpa & NLO/LO \\ \hline\hline
+\end{tabular}
+\label{mob}
+\end{table}
+
+
+\section{Object reconstruction}
+\label{sec:obj_reco}
+
+In this section, various objects used in this analysis are defined, namely jets, electrons, muons, hadronically decaying taus and missing transverse energy. 
+
+\subsection{Jets}
+Jets are reconstructed using the anti-$k_t$ algorithm \cite{antikt} with a distance parameter $R=0.4$ applied to the three-dimensional topological clusters taken in the calorimeter cells. Only jets with $\pt>25$~GeV and $|\eta|<4.5$ are considered by the analysis. To suppress jets produced in additional pile-up interactions, jets with $\pt<60$~GeV and $|\eta|<2.4$ are required to have a Jet Vertex Tagger (JVT \cite{JVT}) parameter larger than 0.59. The JVT is the output of the jet vertex tagger algorithm used to identify and select jets originating from the hard-scatter interaction through the use of tracking and vertexing information. In the forward region pile-up jets are supressed by requiring that jets with $\pt < 60$ GeV and $|\eta|$>2.5 pass the selection of fJVT \texttt{Medium} working point \cite{fJVT}\footnote{Neither JVT nor fJVT is applied to the tracking edge region 2.4<$|\eta|$<2.5.}. About $10\%$ of selected jets in the signal are in the forward detector region. Figure \ref{fig:etaJ4} shows the $\eta$ of the 4th leading jet in the analysis. After the above selection and overlap removal, a ``jet cleaning'' cut is applied on all the jets, and the events with jets not passing this cut are discarded.
+
+\subsection{b-tagging}
+The {\tt\scriptsize MV2c10} \cite{btag1} algorithm is used to identify the jets initiated by $b$-quarks. A working point corresponding to an average efficiency of 70\% for jets containing $b$-quarks is chosen. For $c$- and light-jets, the rejection factors are about 12 and 381, respectively \cite{btag2}.
+
+\subsection{Electrons}
+Electron candidates are identified by tracks reconstructed in the inner detector and the matched cluster of energy deposited in the electromagnetic calorimeter. Electrons candidates are required to have $E_{\text{T}} > 15 (10)$ GeV and $|\eta|<2.47$ for the $\thadhad$ (leptonic) channels. The transition region, $1.37<|\eta|<1.52$, between the barrel and end-cap calorimeters is excluded. They are further required to pass a \texttt{loose + b-layer} likelihood-based identification point \cite{ElectronID} and a \texttt{FCLoose} isolation working point \cite{IsolationWP}. The electrions are further removed  if its cluster is affected by the presence of a dead frontend board in the first or second sampling or by the presence of a dead high voltage region affecting the three samplings or by the presence of a masked cell in the core.
+
+\subsection{Muons}
+Muon reconstruction begins with tracks reconstructed in the MS and is matched to tracks reconstructed in the inner detector. Muon candidates are required to have $\pt>10$~GeV and $|\eta|<2.5$. A \texttt{Loose} identification selection \cite{MuonSelectionTool} based on the requirements on the number of hits in the ID and the MS is satisfied. A \texttt{Gradient} isolation \cite{IsolationWP} criterion is also required.
+
+\subsection{Hadronic tau decays}
+The hadronic tau candidates \cite{tau_sys1} are seeded by jets reconstructed by the anti-$k_t$ algorithm \cite{antikt}, which is applied on calibrated topo clusters \cite{topocluster} with a distance parameter of R=0.4. They are required to have $\pt > 20$~GeV and $|\eta|<2.5$. The transition region between the barrel and end-cap calorimeters ($1.37<|\eta|<1.52$) is excluded. An identification algorithm based on Recursive Neural Network \cite{tau_sys2} is applied to discriminate the visible decay products of hadronically decaying tau lepton $\tauhad$ from jets initiated by quarks or gluons. Different RNN working points are provided and required at different levels depending on the analysis channel. %For the loose ID, the tau efficiency is constant at 95~\% in $\eta$ and $\pt$.
+The \texttt{Loose} ID taus are used for the overlap removal and missing transverse energy calculation.
+In the analysis event selection, the hadronic tau candidates are required to have one or three charged tracks and an absolute charge of one, and pass the \texttt{Medium} tau ID to reject the jets.
+For the \texttt{Medium} ID, the tau efficiency is about 75\% (60\%) for 1-prong (3-prong) candidates. The ID efficiencies are optimized to be flat versus the tau $\pt$ and pileup.
+The tau candidates are required to not overlap with a very loose electron candidate, and a dedicated BDT variable is also used to veto the taus which are actually electrons.
+%The $Z\to ee,\mu\mu$ background mainly contains lepton faking tau events, and special scale factors are applied on them. 
+If the $\tauhad$ candidate is also tagged as a $b$-jet, then this tau object is also not used. Efficiency scale factors for tau reconstruction, ID and electron BDT rejection \cite{TauCP} are applied on tau candidates in MC.
+
+\subsection{Missing transverse energy}
+The missing transverse energy $\met$ is computed using the fully calibrated and reconstructed physics objects as described above. The TrackSoftTerm (TST) algorithm is used to compute the SoftTerm of the $\met$ \cite{MET}. 
+
+\subsection{Overlap removal}
+For the objects passing the selection above, a geometric overlap removal is applied to eliminate the ambiguity in the object identification.  When two objects are close geometrically with $\Delta R$ less than a certain threshold, or satisfy some certain requirements, one of them will be removed. The overlap removal is done by the official overlap removal tool provided by ASG group. The "Standard" working point is used. The rules are discribed as follows in sequence:
+
+\begin{itemize}
+\item If two electrons have overlapped second-layer cluser, or shared tracks, the electron with lower $\pt$ is removed.
+\item $\tauhad$ within a $\Delta R=0.2$ cone of an electron or muon are removed.
+\item If a muon sharing an ID track with an electron and the muon is calo-tagged, the muon is removed. Otherwise the electron is removed.
+\item Jets within a $\Delta R=0.2$ cone of an electron are removed.
+\item Electrons within a $\Delta R=0.4$ cone of a jet are removed.
+\item When a muon ID track is ghost associated to a jet or within a $\Delta R=0.2$ cone of a jet, the jet is removed if it has less than 3 tracks with $\pt>500$ MeV or has a relative small $\pt$ ($\pt^{\mu}>0.5\pt^{\text{jet}} \text{ and } \pt^{\mu}>0.7[\text{the scalar sum of the } \pt \text{'s of the jet tracks with } \pt>500$ MeV]).
+\item Muons within a $\Delta R=0.4$ cone of a jet are removed.
+\item Jets within a $\Delta R=0.2$ cone of the leading $\tauhad$ ($\tlhad$), or with the two leading $\tauhad$'s ($\thadhad$), are excluded. The overlap also works for the reverted tau ID regions used in the analysis, since the tau ID information is not used.
+\item If a tau object is also tagged as a $b$-jet, then this tau object is removed.
+\end{itemize}
+
+Note that the $\met$ calculation package has its own overlap removal procedure. Taus that fail \texttt{Loose} ID are also passed to the package. Only two leading taus are considered in the calculation.
