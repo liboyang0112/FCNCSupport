@@ -19,13 +19,13 @@
 
 #-------------------------------------------------------------------------------
 # Check which TeX Live installation you have with the command pdflatex --version
-TEXLIVE  = 2015
-LATEX    = /usr/local/texlive/2015/bin/universal-darwin/latex
-PDFLATEX = /usr/local/texlive/2015/bin/universal-darwin/pdflatex
-BIBTEX   = /usr/local/texlive/2015/bin/universal-darwin/bibtex
+TEXLIVE  = 2020
+LATEX    = latex
+PDFLATEX = pdflatex
+BIBTEX   = bibtex
 # BIBTEX = biber
-DVIPS    = /usr/local/texlive/2015/bin/universal-darwin/dvips
-DVIPDF   = /usr/local/texlive/2015/bin/universal-darwin/dvipdf
+DVIPS    = dvips
+DVIPDF   = dvipdf
 
 #-------------------------------------------------------------------------------
 # The main document filename
@@ -39,8 +39,9 @@ FIGSDIR  = figs
 # EPSTOPDFFILES = `find . -name \*eps-converted-to.pdf`
 rwildcard=$(foreach d,$(wildcard $1*),$(call rwildcard,$d/,$2) $(filter $(subst *,%,$2),$d))
 EPSTOPDFFILES = $(call rwildcard, $(FIGSDIR), *eps-converted-to.pdf)
-texs = $(wildcard *.tex)
-
+sections = $(wildcard sections/*.tex)
+tables = $(shell find ../FCNCTables/ | grep tex)
+figures = $(shell find ../FCNCFigures/tex/ | grep tex)
 # Default target - make mydocument.pdf with pdflatex
 default: run_pdflatex
 
@@ -50,12 +51,12 @@ default: run_pdflatex
 # Standard pdflatex target
 run_pdflatex: $(BASENAME).pdf
 	@echo "Made $<"
-	@echo $(texs)
+	@echo $(sections) $(tables) $(figures)
 #-------------------------------------------------------------------------------
 # Specify the tex and bib file dependencies for running pdflatex
 # If your bib files are not in the main directory adjust this target accordingly
 #%.pdf:	%.tex *.tex bibtex/bib/*.bib
-%.pdf:	%.tex $(texs) *.bib tables/*.tex tables/*/*.tex sections/*.tex
+%.pdf:	%.tex $(sections) *.bib $(figures) $(tables)
 	$(PDFLATEX) $<
 	-$(BIBTEX)  $(basename $<)
 	$(PDFLATEX) $<
