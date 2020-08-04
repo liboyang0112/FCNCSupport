@@ -33,14 +33,7 @@ To give a better impression on the numbers, we use $\text{BR}(t\to qH)=1(0.2)\%$
 
 In this article, a search for the decay $t\to qH$ in the $t\bar{t}$ production (TT) and single-top, Higgs associated production (ST) with $H\to\tau\tau$  as shown in Fig \ref{fig:diagrams} using 140~fb$^{-1}$ of proton-proton collision data at 13~TeV, taken with the ATLAS detector at the Large Hadron Collider (LHC), is presented. The final state is characterized by one top and one Higgs. In TT, there is an additional u/c quark forming a top resonance with Higgs.
 
-\begin{figure}[htb]
-\centering
-\includegraphics[width=0.4\textwidth]{../FCNCFigures/r21/diagrams/TT.pdf}
-\includegraphics[width=0.4\textwidth]{../FCNCFigures/r21/diagrams/ST.pdf}\\
-\caption{ Diagrams of FCNC TT(left) and ST(right) process. }
-\label{fig:diagrams}
-\end{figure}
-
+\input{\FCNCFigures/tex/diagrams}
 
 \section{Detector, data set and Monte Carlo simulation}
 
@@ -61,13 +54,13 @@ A muon spectrometer (MS) comprises separate trigger and high-precision tracking 
 This analysis is based on the full proton-proton data at a center-of-mass energy $\sqrt{s}=13$~TeV with a bunch spacing of 25~ns collected by ATLAS in Run-2. The following good run list (GRL) was used for the 2015 dataset:
 
 
-{\tt\scriptsize data15\_13TeV.periodAllYear\_DetStatus-v89-pro21-02\_Unknown\_PHYS\_StandardGRL\_All\_Good\_25ns.xml}
+{\texttt\scriptsize data15\_13TeV.periodAllYear\_DetStatus-v89-pro21-02\_Unknown\_PHYS\_StandardGRL\_All\_Good\_25ns.xml}
 
 which corresponds to an integrated luminosity of 3.22 fb$^{-1}$.
 
 The GRL used for the 2016 dataset:
 
-{\tt\scriptsize data16\_13TeV.periodAllYear\_DetStatus-v89-pro21-01\_DQDefects-00-02-04\_PHYS\_StandardGRL\_All\_Good\_25ns.xml}
+{\texttt\scriptsize data16\_13TeV.periodAllYear\_DetStatus-v89-pro21-01\_DQDefects-00-02-04\_PHYS\_StandardGRL\_All\_Good\_25ns.xml}
 
 corresponds to an integrated luminosity of 32.88 fb$^{-1}$.
 
@@ -75,13 +68,13 @@ These GRLs exclude data where the IBL was not fully operational. The uncertainty
 
 The GRL used for the 2017 dataset:
 
-{\tt\scriptsize data17\_13TeV.periodAllYear\_DetStatus-v99-pro22-01\_Unknown\_PHYS\_StandardGRL\_All\_Good\_25ns\_Triggerno17e33prim.xml}
+{\texttt\scriptsize data17\_13TeV.periodAllYear\_DetStatus-v99-pro22-01\_Unknown\_PHYS\_StandardGRL\_All\_Good\_25ns\_Triggerno17e33prim.xml}
 
 corresponds to an integrated luminosity of 44.307 fb$^{-1}$.
 
 The GRL used for the 2018 dataset:
 
-{\tt\scriptsize  data18\_13TeV.periodAllYear\_DetStatus-v102-pro22-04\_Unknown\_PHYS\_StandardGRL\_All\_Good\_25ns\_Triggerno17e33prim.xml}
+{\texttt\scriptsize  data18\_13TeV.periodAllYear\_DetStatus-v102-pro22-04\_Unknown\_PHYS\_StandardGRL\_All\_Good\_25ns\_Triggerno17e33prim.xml}
 
 corresponds to an integrated luminosity of 59.937 fb$^{-1}$. The final luminosity used for the analysis is 140.45 fb$^{-1}$.
 %The integrated luminosity is 36.1~fb$^{-1}$ with a relative uncertainty of 3.2\% after the application of data-quality requirements.
@@ -143,7 +136,7 @@ In this section, various objects used in this analysis are defined, namely jets,
 Jets are reconstructed using the anti-$k_t$ algorithm \cite{antikt} with a distance parameter $R=0.4$ applied to the particle flow candidates. Only jets with $\pt>25$~GeV and $|\eta|<4.5$ are considered by the analysis. To suppress jets produced in additional pile-up interactions, jets with $\pt<60$~GeV and $|\eta|<2.4$ are required to have a Jet Vertex Tagger (JVT \cite{JVT}) parameter larger than 0.2 (Medium working point). The JVT is the output of the jet vertex tagger algorithm used to identify and select jets originating from the hard-scatter interaction through the use of tracking and vertexing information. About $10\%$ of selected jets in the signal are in the forward detector region. Figure \ref{fig:etaJ4} shows the $\eta$ of the 4th leading jet in the analysis. After the above selection and overlap removal, a ``jet cleaning'' cut is applied on all the jets, and the events with jets not passing this cut are discarded.
 
 \subsection{b-tagging}
-The {\tt\scriptsize DL1r} \cite{btag1} algorithm is used to identify the jets initiated by $b$-quarks. A working point corresponding to an average efficiency of 70\% for jets containing $b$-quarks is chosen.
+The {\texttt\scriptsize DL1r} \cite{btag1} algorithm is used to identify the jets initiated by $b$-quarks. A working point corresponding to an average efficiency of 70\% for jets containing $b$-quarks is chosen.
 
 \subsection{Electrons}
 Electron candidates are identified by tracks reconstructed in the inner detector and the matched cluster of energy deposited in the electromagnetic calorimeter. Electrons candidates are required to have $E_{\text{T}} > 15$ GeV and $|\eta|<2.47$. The transition region, $1.37<|\eta|<1.52$, between the barrel and end-cap calorimeters is excluded. They are further required to pass a \texttt{loose + b-layer} likelihood-based identification point \cite{ElectronID} and a \texttt{FCLoose} isolation working point \cite{IsolationWP}. The electrions are further removed  if its cluster is affected by the presence of a dead frontend board in the first or second sampling or by the presence of a dead high voltage region affecting the three samplings or by the presence of a masked cell in the core.

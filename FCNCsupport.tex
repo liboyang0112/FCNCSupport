@@ -10,7 +10,7 @@
 % Use this variant if the files are in a central location, e.g. $HOME/texmf.
 % \newcommand*{\ATLASLATEXPATH}{}
 %-------------------------------------------------------------------------------
-\documentclass[UKenglish,texlive=2015]{\ATLASLATEXPATH atlasdoc}
+\documentclass[UKenglish,texlive=2020]{\ATLASLATEXPATH atlasdoc}
 \usepackage{multirow}
 % The language of the document must be set: usually UKenglish or USenglish.
 % british and american also work!
@@ -68,6 +68,7 @@
 
 % Add you own definitions here (file FCNCsupport-defs.sty).
 \usepackage{FCNCsupport-defs}
+\usepackage{FCNCpaths}
 \usepackage{lscape}
 
 %for sidewaystable added by Michel 2017-05-11
@@ -93,7 +94,6 @@
 \input{FCNCsupport-metadata}
 % Author and title for the PDF file
 \hypersetup{pdftitle={ATLAS document},pdfauthor={The ATLAS Collaboration}}
-
 %-------------------------------------------------------------------------------
 % Content
 %-------------------------------------------------------------------------------
@@ -111,7 +111,7 @@
 \newpage
 
 \linenumbers
-
+\section{Introduction}
 \include{sections/sec1_introduction}
 \include{sections/sec2_reconstruction}
 \include{sections/sec3_selection}
@@ -157,7 +157,8 @@
 \begin{itemize}
 \item Boyang Li: main analyser, signal generation; ntuple production; fake tau estimation; BDT analysis; systematics; fit; support note.
 \item Weiming Yao: main analyser, \texttt{ttHML} ntuple skimming and support; fake tau estimation; BDT analysis; cross check; support note.
-\item Xin Chen: Supervisor of Boyang Li
+\item MingMing Xia: main analyser, \texttt{xTauFramework} n-tuple production; production validation.
+\item Xin Chen: Supervisor of Boyang Li and MingMing Xia
 \end{itemize}
 
 \end{document}

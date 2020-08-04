@@ -117,38 +117,14 @@ the same-sign control region where the di-tau have the same-sign charge (SS).
 The distributions are shown in Figure~\ref{fig:lhsf_validation}. The data are in good agreement with MC predictions, 
 which indicated the fake tau is well modeled in MC. 
 
-\begin{figure}[htb]
-\centering
-\includegraphics[page=6,width=0.34\textwidth]{figures/r21/thq1lntau/MCDataComparisonBeforeAnyBkgModelling/ShowContributionFromRealBkgAndFake/plots_NOMINAL/reg1l2tau1bnj_ss/taupt_0.pdf}
-\put(-75, 110){\textbf{(a)}}
-\put(-100, 100){\footnotesize{$l\thadhad$ SS}}
-\includegraphics[page=6,width=0.34\textwidth]{figures/r21/thq1lntau/MCDataComparisonBeforeAnyBkgModelling/ShowContributionFromRealBkgAndFake/plots_NOMINAL/reg1l1tau1b2j_ss/taupt_0.pdf}
-\put(-75, 110){\textbf{(b)}}
-\put(-100, 100){\footnotesize{STH $\tlhad$ SS}}
-\includegraphics[page=6,width=0.34\textwidth]{figures/r21/thq1lntau/MCDataComparisonBeforeAnyBkgModelling/ShowContributionFromRealBkgAndFake/plots_NOMINAL/reg1l1tau1b3j_ss/taupt_0.pdf}
-\put(-75, 110){\textbf{(c)}}
-\put(-100, 100){\footnotesize{TTH $\tlhad$ SS}}\\
-\includegraphics[page=6,width=0.34\textwidth]{figures/r21/thq1lntau/MCBasedBkgModellingWithttHMLNumbers/reg1l2tau1bnj_ss/plots_NOMINAL/taupt_0.pdf}
-\put(-75, 110){\textbf{(d)}}
-\put(-100, 100){\footnotesize{$l\thadhad$ SS-cor.}}
-\includegraphics[page=6,width=0.34\textwidth]{figures/r21/thq1lntau/MCBasedBkgModellingWithttHMLNumbers/reg1l1tau1b2j_ss/plots_NOMINAL/taupt_0.pdf}
-\put(-75, 110){\textbf{(e)}}
-\put(-100, 100){\footnotesize{STH $\tlhad$ SS-cor.}}
-\includegraphics[page=6,width=0.34\textwidth]{figures/r21/thq1lntau/MCBasedBkgModellingWithttHMLNumbers/reg1l1tau1b3j_ss/plots_NOMINAL/taupt_0.pdf}
-\put(-75, 110){\textbf{(f)}}
-\put(-100, 100){\footnotesize{TTH $\tlhad$ SS-cor.}}\\
-\caption{ The distributions of tau $\pt$ are compared between data and MC predictions in the $l\thadhad$ (left), the STH $\tlhad$ (middle), and the TTH $\tlhad$ (right) same-sign control regions before (top row) and after (bottom row) the fake-tau SF corrections.}
-\label{fig:lhsf_validation}
-\end{figure}
-
 \subsection{MC fake $\tauhad$ estimation}
 \label{sec:sf_method}
 
 Although the method mentioned in the \ref{sec:sf_method_obsolete} was adopted by the tthML analysis, the attempt of the method fails in this case. As shown in the Figure \ref{fig:pt_raw}, the data is generally over-estimated in the OS regions while it is opposite in the SS region. If the fake taus are corrected by the same scale factors, this mismodelling will never get solved. This asymmetry of the SS and OS fake taus can be interpreted by the mis-modelling of the fake tau charges. Since the fake taus mainly come from light-flavored jets as shown in Figure \ref{fig:lh_fake_comp}, the mis-modelling is related to the charge carried by the jets. In conclusion, the mis-modelling is originated from the charge correlation between the jet which is faking a tau and the lepton. So the parent of the jet is believed to be charge correlated with the lepton. Considering the main background is $\bar{t}t$ process. The only suspect is the $W$ boson. In order to find the contribution of this process ($W$-jet-fake taus, $\tau_{W-jet}$ in short). The truth matching to the $W$-decaying jets is done to the fake taus (The condition is $\Delta R < 0.2$). As shown in the Figure \ref{fig:pt_prefit}, there is a considerable amount of $\tau_{W-jet}$'s in both SS and OS regions which is enough for us to play around. There are three kinds of fake taus that needs to be calibrated: Type1) $\tau_{W-jet}$'s with the opposite charge of the lepton; Type2) $\tau_{W-jet}$'s with the same charge of the lepton; Type3) the fake taus that are not from $W$-decay jets. Many control regions are used to calibrate the three components:
 
 \begin{itemize}
-\item{$2l1tau2b1j$: 2 leptons with different flavors or away from Z pole, exactly 1 tau candidate, 3 jets with exactly 2 b-tagged jets.}
-\item{$2l1tau2b$: 2 leptons with different flavors or away from Z pole, exactly 1 tau candidate, 2 jets with exactly 2 b-tagged jets.}
+\item{$2l1tau1bnj$: 2 leptons with different flavors or away from Z pole, exactly 1 tau candidate, at least 1 jet with exactly 1 b-tagged jets.}
+\item{$2l1tau2bnj$: 2 leptons with different flavors or away from Z pole, exactly 1 tau candidate, at least 2 jets with exactly 2 b-tagged jets.}
 \item{$1l1tau2b2j SS$: Exactly 1 lepton, exactly 1 tau candidate, exactly 4 jets with exactly 2 b-tagged. Tau candidate and lepton have the same charge.}
 \item{$1l1tau2b2j OS$: Exactly 1 lepton, exactly 1 tau candidate, exactly 4 jets with exactly 2 b-tagged. Tau candidate and lepton have the opposite charge.}
 \item{$1l1tau2b3j SS$: Exactly 1 lepton, exactly 1 tau candidate, at least 5 jets with exactly 2 b-tagged. Tau candidate and lepton have the same charge.}
@@ -158,89 +134,7 @@ Although the method mentioned in the \ref{sec:sf_method_obsolete} was adopted by
 Where di-lep regions ($2l1tau2b$ and $2l1tau2b1j$) are used to calibrate the Type3 fake taus. As explained in the \ref{sec:fake_origin}, these regions are dominated by the radiation faking taus. 2bOS regions ($1l1tau2b2j OS$ and $1l1tau2b3j OS$) are used to calibrate Type1 fake taus. Compared to the signal region, this region has an additional b-jet. So the $\bar{t}t$ background is enhanced in this region and signal is depleted. Similarly for the Type2 we can use 2bSS regions ($1l1tau2b2j SS$
 and $1l1tau2b3j SS$) to calibrate. The components of these regions are shown in Figure \ref{fig:wjet_pt}. Then two fits are made to derive the scale factors for the fake taus. There are three parameters needed to be decided (the scale factors for the 3 types). But considering the $p_{T}$ depencence of the tau reconstruction, the scale factors are derived in 3 $\pt$ slices (25-35,35-45,45-inf)GeV. So there are 9 parameters in the fit. In order to have a cross check, we use two fits. In the first fit, the di-lep regions and 2bSS regions are used. A fit is done to the MC to match the data in these control regions by floating the scale factor of Type2 and Type3 fake taus. Then the di-lep and 2bSS regions are used to derive the scale factor of Type1 and Type3. The results is shown in table \ref{tab:scale_factors}. It is observed that for both fit, the scale factors of the Type3 fake taus are consistent. The post-fit plots are shown in Figure \ref{fig:wjet_pt_postfit_2b}. Then the scale factors are applied to the corresponding single b-jet regions. In $l\thadhad$ channel, both taus can be fake, so the calibration is done to them separately, following the same procedure as $\tlhad$ channels using the lepton and fake tau charges, then the scale factors are multiplied together. The data-MC comparison is show in Figure \ref{fit:wjet_pt_postfit}.
 
-\begin{figure}[htb]
-\centering
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq1lntau/Wfake/prefit/plots_NOMINAL/reg1e1mu1tau2b1j/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(a1)}}
-\put(-120, 130){\footnotesize{$2l1tau2b1j$}
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq1lntau/Wfake/prefit/plots_NOMINAL/reg1e1mu1tau2b/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(a2)}}
-\put(-120, 130){\footnotesize{$2l1tau2b$}
-
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq1lntau/Wfake/prefit/plots_NOMINAL/reg1l1tau2b2j_os/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(b1)}
-\put(-120, 130){\footnotesize{$2l1tau2b1j$}
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq1lntau/Wfake/prefit/plots_NOMINAL/reg1l1tau2b3j_os/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(b2)}}
-\put(-120, 130){\footnotesize{$2l1tau2b$}
-
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq1lntau/Wfake/prefit/plots_NOMINAL/reg1l1tau2b2j_ss/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(c1)}}
-\put(-120, 130){\footnotesize{$2l1tau2b1j$}
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq1lntau/Wfake/prefit/plots_NOMINAL/reg1l1tau2b3j_ss/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(c2)}}
-\put(-120, 130){\footnotesize{$2l1tau2b$}
-
-\caption{ The distributions of $\tau$ $\pt$ in the control regions used to calibrate the fake taus. }
-\label{fig:wjet_pt}
-\end{figure}
-
-
-\begin{figure}[htb]
-\centering
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq1lntau/Wfake/doublecount/plots_NOMINAL/reg1e1mu1tau2b1j/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(a1)}}
-\put(-120, 130){\footnotesize{$2l1tau2b1j$}
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq1lntau/Wfake/doublecount/plots_NOMINAL/reg1e1mu1tau2b/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(a2)}}
-\put(-120, 130){\footnotesize{$2l1tau2b$}
-
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq1lntau/Wfake/doublecount/plots_NOMINAL/reg1l1tau2b2j_os/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(b1)}
-\put(-120, 130){\footnotesize{$2l1tau2b1j$}
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq1lntau/Wfake/doublecount/plots_NOMINAL/reg1l1tau2b3j_os/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(b2)}}
-\put(-120, 130){\footnotesize{$2l1tau2b$}
-
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq1lntau/Wfake/doublecount/plots_NOMINAL/reg1l1tau2b2j_ss/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(c1)}}
-\put(-120, 130){\footnotesize{$2l1tau2b1j$}
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq1lntau/Wfake/doublecount/plots_NOMINAL/reg1l1tau2b3j_ss/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(c2)}}
-\put(-120, 130){\footnotesize{$2l1tau2b$}
-
-\caption{ The distributions of $\tau$ $\pt$ in the control regions used to calibrate the fake taus. }
-\label{fig:wjet_pt_postfit_2b}
-\end{figure}
-
-
-\begin{figure}[htb]
-\centering
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq1lntau/Wfake/doublecount/plots_NOMINAL/reg1l1tau1b2j_os/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(a1)}
-\put(-120, 130){\footnotesize{$2l1tau2b1j$}
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq1lntau/Wfake/doublecount/plots_NOMINAL/reg1l1tau1b2j_ss/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(a2)}}
-\put(-120, 130){\footnotesize{$2l1tau2b$}
-
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq1lntau/Wfake/doublecount/plots_NOMINAL/reg1l1tau1b3j_os/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(b1)}}
-\put(-120, 130){\footnotesize{$2l1tau2b1j$}
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq1lntau/Wfake/doublecount/plots_NOMINAL/reg1l1tau1b3j_ss/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(b2)}}
-\put(-120, 130){\footnotesize{$2l1tau2b$}
-
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq1lntau/Wfake/doublecount/plots_NOMINAL/reg1l2tau1bnj_os/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(c1)}}
-\put(-120, 130){\footnotesize{$2l1tau2b1j$}
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq1lntau/Wfake/doublecount/plots_NOMINAL/reg1l2tau1bnj_ss/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(c2)}}
-\put(-120, 130){\footnotesize{$2l1tau2b$}
-
-
-\caption{ The distributions of $\tau$ $\pt$ in the control regions used to calibrate the fake taus. }
-\label{fig:wjet_pt_postfit}
-\end{figure}
+\input{\FCNCFigures/tex/fakeEstimation_lep}
 
 
 \subsection{QCD fake $\tauhad$ estimate in $\thadhad$}
@@ -250,24 +144,7 @@ Figure \ref{fig:os_pre_hadhad} shows the $\tauhad$ $\pt$ spectra in the $\thadha
 is not added yet so the data have more than the background prediction. The top fake are dominated by fakes with one real tau.
 It is found, based on the MC prediction, that the QCD fake is the dominant fake process in the $\thadhad$ channel.
 
-\begin{figure}[htb]
-\centering
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq2tau/MCDataComparisonBeforeAnyBkgModelling/reg2mtau1b2jss/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(a)}}
-\put(-120, 130){\footnotesize{STH $\thadhad$ (SS)}}
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq2tau/MCDataComparisonBeforeAnyBkgModelling/reg2mtau1b2jos/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(b)}}
-\put(-120, 130){\footnotesize{STH $\thadhad$ (OS)}}\\
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq2tau/MCDataComparisonBeforeAnyBkgModelling/reg2mtau1b3jss/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(c)}}
-\put(-120, 130){\footnotesize{TTH $\thadhad$ (SS)}}
-\includegraphics[page=6,width=0.45\textwidth]{figures/r21/thq2tau/MCDataComparisonBeforeAnyBkgModelling/reg2mtau1b3jos/tau_0_pt.pdf}
-\put(-100, 140){\textbf{(d)}}
-\put(-120, 130){\footnotesize{TTH $\thadhad$ (OS)}}
-\caption{ The distributions of $\tau$ $\pt$ in the STH $\thadhad$ (SS)(a), STH $\thadhad$ (OS) (b), TTH $\thadhad$ (SS) (c) 
-and TTH $\thadhad$ (OS) (d), to illustrate the background composition. Data is more than the prediction because the fake tau backgrounds are missing. }
-\label{fig:os_pre_hadhad}
-\end{figure}
+\input{\FCNCFigures/tex/fakeEstimation_had}
 
 The excess of the SS events over MC are used to estimate the fake tau background in OS from QCD multi-jets in the $\thadhad$ + jets channel:   
 \begin{equation}

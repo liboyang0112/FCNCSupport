@@ -35,7 +35,7 @@
 % and
 %   eprint   = "hep-th/9605023"
 % both produce 
-%    \href{http://arxiv.org/abs/hep-th/9605023}{{\tt hep-th/9605023}}
+%    \href{http://arxiv.org/abs/hep-th/9605023}{{\texttt hep-th/9605023}}
 % in the bibliographic output at the appropriate point. If you are using a
 % hypertex macropackage, like hyperref.sty, this will create a link to Los
 % Alamos. 
@@ -277,18 +277,18 @@ FUNCTION {format.authors}
 FUNCTION {format.eprint.newarXivid}
 { eprint #1 #6 substring$ "arXiv:" =
     {"\href{http://xxx.lanl.gov/abs/" eprint #7 #9 substring$ * "}" *
-        "{{\tt " * eprint #7 #9 substring$ * "}}" *}
+        "{{\texttt " * eprint #7 #9 substring$ * "}}" *}
     {"\href{http://xxx.lanl.gov/abs/" eprint #1 #9 substring$  * "}" *
-        "{{\tt arXiv:" * eprint #1 #9 substring$ * "}}" *}
+        "{{\texttt arXiv:" * eprint #1 #9 substring$ * "}}" *}
   if$
 }
 
 FUNCTION {format.eprint.oldarXivid}
 { archive empty$
     {"\href{http://xxx.lanl.gov/abs/" eprint * "}" *
-        "{{\tt " * eprint * "}}" *}
+        "{{\texttt " * eprint * "}}" *}
     {"\href{http://xxx.lanl.gov/abs/" archive *  "/" * eprint * "}" *
-        "{{\tt " * archive * "/" * eprint * "}}" *}
+        "{{\texttt " * archive * "/" * eprint * "}}" *}
   if$
 }
 

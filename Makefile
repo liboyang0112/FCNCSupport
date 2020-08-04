@@ -49,14 +49,17 @@ default: run_pdflatex
 	clean cleanpdf help
 
 # Standard pdflatex target
-run_pdflatex: $(BASENAME).pdf
+run_pdflatex: FCNCpaths.sty $(BASENAME).pdf
 	@echo "Made $<"
 	@echo $(sections) $(tables) $(figures)
+
+FCNCpaths.sty: generatePath.sh
+	./generatePath.sh
 #-------------------------------------------------------------------------------
 # Specify the tex and bib file dependencies for running pdflatex
 # If your bib files are not in the main directory adjust this target accordingly
 #%.pdf:	%.tex *.tex bibtex/bib/*.bib
-%.pdf:	%.tex $(sections) *.bib $(figures) $(tables)
+%.pdf:	%.tex $(sections) *.bib $(figures) $(tables) 
 	$(PDFLATEX) $<
 	-$(BIBTEX)  $(basename $<)
 	$(PDFLATEX) $<

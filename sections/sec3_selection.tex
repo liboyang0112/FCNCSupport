@@ -100,7 +100,7 @@ is required. The two $\tauhad$ candidates are matched to the respective legs of 
 \subsection{Event cuts and regions}
 \label{sec:cuts}
 
-A number of event cuts are applied before getting to the signal enhanced regions with the background suppressed. Then the DAOD$\_$HIGG8D1 (DAOD$\_$HIGG4D3) derivation is feed to {\tt ttHMultiAna} ({\tt xTauFramework}) to produce n-tuples for analysis. The list of event-level selection criteria is as follows:
+A number of event cuts are applied before getting to the signal enhanced regions with the background suppressed. Then the DAOD$\_$HIGG8D1 (DAOD$\_$HIGG4D3) derivation is feed to {\texttt ttHMultiAna} ({\texttt xTauFramework}) to produce n-tuples for analysis. The list of event-level selection criteria is as follows:
 
 \begin{enumerate}
 \item DAOD$\_$HIGG8D1 (leptonic channels) and DAOD$\_$HIGG4D3 ($\thadhad$) derivations are used for this analysis. At the derivation level, the following cuts are applied:
@@ -111,12 +111,12 @@ A number of event cuts are applied before getting to the signal enhanced regions
   \item In DAOD$\_$HIGG4D3, no trigger skimming. Offline skimming: 2taus
   \end{itemize}
 
-\item At the {\tt xTauFramework} level, skim cuts are applied to reduce the ntuple size:
+\item At the {\texttt xTauFramework} level, skim cuts are applied to reduce the ntuple size:
   \begin{itemize}
   \item No leptons, at least 1 medium tau and 1 loose tau, at least 3 jets with $\pt>30$ GeV, $|\eta|<4.5$ and passing either central or forward JVT cuts and with at least 1 b-tagged, pass di-tau trigger, LooseBad Event Cleaning, leading tau $\pt>40~\GeV$, sub-leading tau $\pt>30~\GeV$, two taus comes from a single vertex, leading jet $\pt>60~\GeV$, leading jet $|\eta|<3.2$, $\met>15~\GeV$. In the case of data, GRL cut as defined in Sec. \ref{sec:dataset} is also applied.
   \end{itemize}
 
-\item At the {\tt ttHMultiAna} level, skim cuts \cite{ATL-COM-PHYS-2018-410} are applied to reduce the ntuple size.
+\item At the {\texttt ttHMultiAna} level, skim cuts \cite{ATL-COM-PHYS-2018-410} are applied to reduce the ntuple size.
 
 \item A least one primary vertex exists in the event. The primary vertex is defined as the vertex that has the largest sum of track $\pt^2$ associated to it, and has at least 4 tracks with $|z_0|<100$ mm.
 \item The tau candidtes expected from Higgs decay should pass the \texttt{Medium} ID and the other quality cuts in Sec. \ref{sec:obj_reco}.
@@ -128,36 +128,24 @@ A number of event cuts are applied before getting to the signal enhanced regions
 
 %\begin{figure}[htb]
 %\centering
-%\includegraphics[width=0.4\textwidth]{../FCNCFigures/lephad/lh_njet30_os.eps}
+%\includegraphics[width=0.4\textwidth]{\FCNCFigures/lephad/lh_njet30_os.eps}
 %\put(-50, 80){\textbf{(a)}}
 %\put(-50, 95){\footnotesize{$lh$}}
-%\includegraphics[width=0.4\textwidth]{../FCNCFigures/hadhad/hh_njet30_os.eps}
+%\includegraphics[width=0.4\textwidth]{\FCNCFigures/hadhad/hh_njet30_os.eps}
 %\put(-50, 80){\textbf{(b)}}
 %\put(-50, 95){\footnotesize{$hh$}}
 %\caption{ The distributions of the number of jets in the $\tlhad$ (left) and $\thadhad$ (right) channels. }
 %\label{fig:njet30}
 %\end{figure}
 
-\begin{figure}[htb]
-\centering
-\includegraphics[page=6,width=0.4\textwidth]{../FCNCFigures/r21/thq1lntau/MCBasedBkgModellingWithttHMLNumbers/reg1l1tau1b3j_os_vetobtagwp70/x1fit.pdf}
-\put(-140, 92){\footnotesize{TTH $\tlhad$}}
-\includegraphics[page=6,width=0.4\textwidth]{../FCNCFigures/r21/thq1lntau/MCBasedBkgModellingWithttHMLNumbers/reg1l1tau1b3j_os_vetobtagwp70/x2fit.pdf}
-\put(-140, 92){\footnotesize{TTH $\tlhad$}}\\
-\includegraphics[page=4,width=0.4\textwidth]{../FCNCFigures/r21/thq2tau/SSOSWithFakeMCCalibrated/reg2mtau1b3jos/x1fit.pdf}
-\put(-140, 92){\footnotesize{TTH $\thadhad$}}
-\includegraphics[page=4,width=0.4\textwidth]{../FCNCFigures/r21/thq2tau/SSOSWithFakeMCCalibrated/reg2mtau1b3jos/x2fit.pdf}
-\put(-140, 92){\footnotesize{TTH $\thadhad$}}
-\caption{ The distributions of $x_{1,2}^{\text{fit}}$ in the TTH $\tlhad$ (top) and $\thadhad$ (bottom) channels. }
-\label{fig:x12_fit}
-\end{figure}
+\input{\FCNCFigures/tex/x12fit}
 
 %\begin{figure}[htb]
 %\centering
-%\includegraphics[width=0.4\textwidth]{../FCNCFigures/lephad/nbjet_4j.eps}
+%\includegraphics[width=0.4\textwidth]{\FCNCFigures/lephad/nbjet_4j.eps}
 %\put(-50, 80){\textbf{(a)}}
 %\put(-57, 95){\footnotesize{$lh$ 4-jet}}
-%\includegraphics[width=0.4\textwidth]{../FCNCFigures/hadhad/nbjet_4j.eps}
+%\includegraphics[width=0.4\textwidth]{\FCNCFigures/hadhad/nbjet_4j.eps}
 %\put(-50, 80){\textbf{(b)}}
 %\put(-57, 95){\footnotesize{$hh$ 4-jet}}
 %\caption{ The distributions of the number of $b$-tagged jets in the $\tlhad$ 4-jet (a) and $\thadhad$ 4-jet (b) categories, before the $N_{\text{bjet}}$=1 cut is applied. The definition of 4-jet categories is given in Sec. \ref{sec:reconstruction}. }
@@ -204,7 +192,7 @@ $N_{\text{bjet}}$=1 & $ 757.3 \pm 20.8$ & $ 1019.7 \pm 136.8$ & $ 147.9 \pm 2.5$
 \begin{table}
 %\small
 \footnotesize
-\caption{ The expected event yields (corresponds to 140 fb$^{-1}$) for different MC processes and data after the cuts applied before the n-tuples produced by the {\tt xTauFramework}. The signal yields are obtained by assuming BR($t\to Hq$)=$1\%$. The uncertainties are statistical only.}
+\caption{ The expected event yields (corresponds to 140 fb$^{-1}$) for different MC processes and data after the cuts applied before the n-tuples produced by the {\texttt xTauFramework}. The signal yields are obtained by assuming BR($t\to Hq$)=$1\%$. The uncertainties are statistical only.}
 \centering
 \begin{tabular}{|c|c|c|c|c|c|} \hline
 
@@ -334,15 +322,15 @@ drtautau > 3.4 & $165.44 \pm 3.69$ & $22.14 \pm 0.94$ & $213.75 \pm 6.60$ & $328
 \label{tab:yields_hh_3}
 \end{table}
 
-\input{../FCNCTables/cutflow/tthML/cutflow_all}
-\input{../FCNCTables/cutflow/tthML/cutflow_reg1l1tau1b2j_os}
-\input{../FCNCTables/cutflow/tthML/cutflow_reg1l1tau1b2j_ss}
-\input{../FCNCTables/cutflow/tthML/cutflow_reg1l1tau1b3j_os}
-\input{../FCNCTables/cutflow/tthML/cutflow_reg1l1tau1b3j_ss}
-\input{../FCNCTables/cutflow/tthML/cutflow_reg1l2tau1bnj_os}
-\input{../FCNCTables/cutflow/tthML/cutflow_reg1l2tau1bnj_ss}
+\input{\FCNCTables/cutflow/tthML/cutflow_all}
+\input{\FCNCTables/cutflow/tthML/cutflow_reg1l1tau1b2j_os}
+\input{\FCNCTables/cutflow/tthML/cutflow_reg1l1tau1b2j_ss}
+\input{\FCNCTables/cutflow/tthML/cutflow_reg1l1tau1b3j_os}
+\input{\FCNCTables/cutflow/tthML/cutflow_reg1l1tau1b3j_ss}
+\input{\FCNCTables/cutflow/tthML/cutflow_reg1l2tau1bnj_os}
+\input{\FCNCTables/cutflow/tthML/cutflow_reg1l2tau1bnj_ss}
 
 The summery of the yields and signal significance in leptonic channels are shown in table \ref{yield_prefit_tthML} and \ref{significance_prefit_tthML}.
 
-\input{../FCNCTables/tthML/faketau/prefit/NOMINAL/yield_chart_tthML}
-\input{../FCNCTables/tthML/faketau/prefit/NOMINAL/significance_chart_tthML}
+\input{\FCNCTables/tthML/raw/faketau/prefit/NOMINAL/yield_chart}
+\input{\FCNCTables/tthML/raw/faketau/prefit/NOMINAL/significance_chart}

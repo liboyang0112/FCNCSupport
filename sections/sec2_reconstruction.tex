@@ -72,12 +72,8 @@ In STH and TTH channels , the method introduced in \cite{fcnc_PRD} is used to re
 \end{eqnarray}
 where $\mathcal{P}_i(\Delta R)$ are the probability distributions of the angular distance of the visible and invisible decay products in the tau decay, parametrized as a function of the momentum of the tau lepton. In the $\taulep$ mode where two neutrinos are present, it is extended to be the joint probability distribution of $\Delta R$ and $m_{\text{mis}}$ with $m_{\text{mis}}$ being the invariant mass of the neutrinos, denoted by $\mathcal{P}(\Delta R, m_{\text{mis}})$. These probability density functions are obtained from the MC simulation. Figure \ref{fig:tau_prob} illustrates the distributions of $\mathcal{P}(\Delta R, m_{\text{mis}})$ for $\taulep$, and $\mathcal{P}(\Delta R)$ for $\tauhad$, with the original tau's momentum in the range 60 GeV$<p<80$ GeV. Figures \ref{fig:chi2terms_hh3j}-\ref{fig:chi2terms_lh4j} in App. \ref{app:reco} show the distributions for each term in Eq. \ref{eq:eq2}.
 
-\begin{figure}[htb]
-\centering
-\includegraphics[width=0.4\textwidth]{../FCNCFigures/tau_prob_lep.eps}
-\put(-60, 130){\textbf{{\color{white} (a)}}}\hspace{0.02\textwidth}
-\includegraphics[width=0.4\textwidth]{../FCNCFigures/tau_prob_had.eps}
-\put(-60, 130){\textbf{(b)}}
+\input{\FCNCFigures/tex/tau_probs}
+
 \caption{ The distributions of (a) $\mathcal{P}(\Delta R, m_{\text{mis}})$ for $\taulep$, and (b) $\mathcal{P}(\Delta R)$ for $\tauhad$, with the original tau's momentum in the range 60 GeV$<p<80$ GeV. }
 \label{fig:tau_prob}
 \end{figure}
@@ -91,23 +87,7 @@ where $\Sigma E_\text{T}$ (in GeV) is the scalar sum of transverse energy deposi
 The coarse global minimum of the $\chi^2$ in Eq. \ref{eq:eq2} is first obtained by scanning the ($\eta$, $\phi$) of the netrino(s) from one tau, and repeating for the other tau. Then a final minimum is obtained around it with the MINUIT packge \cite{MINUIT}.
 }. By adding the Higgs mass constraint term in the kinematic fit, not only is the Higgs mass resolution improved, but also the resolutions of the Higgs boson's four-momentum, and the mass of the top from which the Higgs comes. Figure \ref{fig:chi2} shows the distributions of $\chi^2$ in different regions. Good agreement between data and background predictions are achieved.
 
-\begin{figure}[htb]
-\centering
-\includegraphics[page=6,width=0.4\textwidth]{../FCNCFigures/r21/thq2tau/SSOSWithFakeMCCalibrated/reg2mtau1b3jos/chi2.pdf}
-\put(-50, 80){\textbf{(a)}}
-\put(-57, 95){\footnotesize{$lh$ 3-jet}}
-\includegraphics[page=6,width=0.4\textwidth]{../FCNCFigures/r21/thq2tau/SSOSWithFakeMCCalibrated/reg2mtau1b2jos/chi2.pdf}
-\put(-50, 80){\textbf{(b)}}
-\put(-57, 95){\footnotesize{$lh$ 4-jet}}\\
-\includegraphics[page=6,width=0.4\textwidth]{../FCNCFigures/r21/thq1lntau/MCBasedBkgModellingWithttHMLNumbers/reg1l1tau1b3j_os_vetobtagwp70/chi2.pdf}
-\put(-50, 80){\textbf{(c)}}
-\put(-57, 95){\footnotesize{$hh$ 3-jet}}
-\includegraphics[page=6,width=0.4\textwidth]{../FCNCFigures/r21/thq1lntau/MCBasedBkgModellingWithttHMLNumbers/reg1l1tau1b2j_os_vetobtagwp70/chi2.pdf}
-\put(-50, 80){\textbf{(d)}}
-\put(-57, 95){\footnotesize{$hh$ 4-jet}}
-\caption{ The distributions of $\chi^2$ in Eq. \ref{eq:eq2} in the hadronic channels. }
-\label{fig:chi2}
-\end{figure}
+\input{\FCNCFigures/tex/chi2}
 
 In $l\thadhad$ channels, a Higgs resonance formed by the taus is expected. Additionally for TTL $\thadhad$ events, a top resonance formed by the c/u jet and Higgs is expected. Thus the invariant mass of the hadronic tau candidates and the FCNC-jet is required to be less than 125GeV.
 Due to the large amount of neutrinos produced in leptonic channels with a huge degree of freedom. The kinematic fit to reconstruct the neutrinos is given up in $l\thadhad$ channels. The kinematics calculated directly from visible particles and $\met$ are used as BDT input.
