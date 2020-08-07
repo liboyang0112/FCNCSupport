@@ -53,9 +53,9 @@ Within the top fake events, fake taus can come from different origins, i.e., fro
 or leptons (electron or muon). Different fake origins in SS and OS can induce additional systematics. To this end, the tau fake 
 origins are checked with the top MC. Three dedicated top pair production control regions are define for:
 \begin{itemize}
-\item{W-jet faking tau: exactly 1 lepton, exactly 1 tau candidate, exactly 3 jets with exactly 2 b-tagged. Tau candidate and lepton have the same charge.}
+\item{W-jet faking tau: exactly 1 lepton, exactly 1 tau candidate, at least 2 jets with exactly 2 b-tagged. Tau candidate and lepton have the same charge.}
 \item{B-jet faking tau: 2 leptons with different flavors or away from Z pole ($M_{ll}>100\GeV$ or $M_{ll}<90\GeV$), exactly 1 tau candidate, exactly 1 b-tagged jet.}
-\item{Radiation faking tau: 2 leptons with different flavors or away from Z pole, exactly 1 tau candidate, exactly 2 b-tagged jets.}
+\item{Radiation faking tau: 2 leptons with different flavors or away from Z pole, exactly 1 tau candidate, at least two jets with exactly 2 b-tagged jets.}
 \end{itemize}
 Figure \ref{fig:lh_fake_comp} shows the fractions of fake taus from different 
 origins in top control regions and SS, OS signal regions. The matching between tau candidates and truth particles or partons are based on $\Delta R<0.4$. 
@@ -64,30 +64,7 @@ Most of the fake taus come from quark initiated jets, but the flavor distributio
 %Therefore, the VR events are important to cover systematics coming from fake tau origins as well. Similar fake origin 
 %distributions in $\thadhad$ are shown in Fig. \ref{fig:hh_fake_comp}, although the top fake is only subdominant, and statistical errors are larger.
 
-\begin{figure}[htb]
-\centering
-\includegraphics[page=4,width=0.45\textwidth]{\FCNCFigures/thq1lntau/FakeOriginCalibration/prefit/taupt.pdf}
-\put(-100, 140){\textbf{(a)}}
-\put(-75, 140){\footnotesize{$W$-jet fake}}
-\includegraphics[page=4,width=0.45\textwidth]{\FCNCFigures/thq1lntau/FakeOriginCalibration/prefit/taulmass.pdf}
-\put(-110, 140){\textbf{(b)}}
-\put(-75, 140){\footnotesize{$W$-jet fake}}\\
-\includegraphics[page=6,width=0.45\textwidth]{\FCNCFigures/thq1lntau/FakeOriginCalibration/prefit/taupt.pdf}
-\put(-100, 140){\textbf{(c)}}
-\put(-75, 140){\footnotesize{b-jet fake}}
-\includegraphics[page=2,width=0.45\textwidth]{\FCNCFigures/thq1lntau/FakeOriginCalibration/prefit/taupt.pdf}
-\put(-110, 140){\textbf{(d)}}
-\put(-75, 140){\footnotesize{Radiation fake}}\\
-\includegraphics[width=0.45\textwidth]{\FCNCFigures/thq1l2tau/Plots_h1l2tau_Ltauosfakeorig_thuguth.pdf}
-\put(-100, 97){\textbf{(e)}}
-\put(-75, 97){\footnotesize{$l+hh$ OS}}
-\includegraphics[width=0.45\textwidth]{\FCNCFigures/thq1l2tau/Plots_h1l2tau_Ltaussfakeorig_thuguth.pdf}
-\put(-100, 97){\textbf{(f)}}
-\put(-75, 97){\footnotesize{$l+hh$ SS}}\\
-\caption{ The origins of fake $\tau$'s in the top fake MC for W-jet fake control region (a,b), b-jet fake control region (c), radiation control region (d); 
- in the leptonic OS (e) and SS (f) categories. The flavor distributions are quite similar between OS and SS.}
-\label{fig:lh_fake_comp}
-\end{figure}
+\input{\FCNCFigures/tex/fake_comp}
 
 \subsection{MC fake $\tauhad$ estimation (obsolete)}
 \label{sec:sf_method_obsolete}
@@ -124,8 +101,8 @@ which indicated the fake tau is well modeled in MC.
 Although the method mentioned in the \ref{sec:sf_method_obsolete} was adopted by the tthML analysis, a new method is needed in this case. As shown in the Figure \ref{fig:pt_raw}, the data is generally over-estimated in the OS regions while it is opposite in the SS region. If the fake taus are corrected by the same scale factors, this mismodelling will never get solved. This asymmetry of the SS and OS fake taus can be interpreted by the mis-modelling of the fake tau charges. Since the fake taus mainly come from light-flavored jets as shown in Figure \ref{fig:lh_fake_comp}, the mis-modelling is related to the charge carried by the jets. In conclusion, the mis-modelling is originated from the charge correlation between the jet which is faking a tau and the lepton. So the parent of the jet is believed to be charge correlated with the lepton. Considering the main background is $\bar{t}t$ process. The only suspect is the hadronic $W$ boson. In order to find the contribution of w-jet faking taus ($\tau_{W}$).  the truth information is used to match between the w-jet and the fake tau with $\Delta R < 0.2$. As shown in the Figure \ref{fig:wjet_pt}, there is a considerable amount of $\tau_{W}$'s in both SS and OS regions. There are three kinds of fake taus that need to be calibrated: Type1) $\tau_{W}$'s with the opposite charge of the lepton; Type2) $\tau_{W}$'s with the same charge of the lepton; Type3) the fake taus that are not from $W$-decay jets. Many control regions are used to calibrate the three components:
 
 \begin{itemize}
-\item{$2l1tau1b$: 2 leptons with different flavors or away from Z pole, exactly 1 tau candidate,  exactly 1 b-tagged jets.}
-\item{$2l1tau2b$: 2 leptons with different flavors or away from Z pole, exactly 1 tau candidate,  exactly 2 b-tagged jets.}
+\item{$2l1tau1bnj$: 2 leptons with different flavors or away from Z pole, exactly 1 tau candidate,  exactly 1 b-tagged jets.}
+\item{$2l1tau2bnj$: 2 leptons with different flavors or away from Z pole, exactly 1 tau candidate,  exactly 2 b-tagged jets.}
 \item{$1l1tau2b2j SS$: Exactly 1 lepton, exactly 1 tau candidate, exactly 4 jets with exactly 2 b-tagged. Tau candidate and lepton have the same charge.}
 \item{$1l1tau2b2j OS$: Exactly 1 lepton, exactly 1 tau candidate, exactly 4 jets with exactly 2 b-tagged. Tau candidate and lepton have the opposite charge.}
 \item{$1l1tau2b3j SS$: Exactly 1 lepton, exactly 1 tau candidate, at least 5 jets with exactly 2 b-tagged. Tau candidate and lepton have the same charge.}
