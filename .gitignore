@@ -12,7 +12,7 @@ FCNCsupport.blg
 FCNCsupport.run.xml
 mvplots.sh
 test
-test.tex
+test*
 oldtex
 talk
 figures/*
