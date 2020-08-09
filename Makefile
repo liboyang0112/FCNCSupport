@@ -43,11 +43,13 @@ sections = $(wildcard sections/*.tex)
 tables = $(shell find ../FCNCTables/ | grep tex)
 figures = $(shell find ../FCNCFigures/tex/ | grep tex)
 # Default target - make mydocument.pdf with pdflatex
+
 default: run_pdflatex
 
-.PHONY: new newtexmf newbook newbooktexmf draftcover preprintcover auxmat \
+.PHONY: new newtexmf newbook newbooktexmf draftcover preprintcover auxmat test\
 	clean cleanpdf help
 
+test: test.pdf
 # Standard pdflatex target
 run_pdflatex: FCNCpaths.sty $(BASENAME).pdf
 	@echo "Made $<"

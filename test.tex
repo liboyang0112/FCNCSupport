@@ -91,7 +91,6 @@
 %-------------------------------------------------------------------------------
 
 % Title, abstract and document 
-\input{FCNCsupport-metadata}
 % Author and title for the PDF file
 \hypersetup{pdftitle={ATLAS document},pdfauthor={The ATLAS Collaboration}}
 %-------------------------------------------------------------------------------
@@ -99,30 +98,15 @@
 %-------------------------------------------------------------------------------
 \begin{document}
 
-\maketitle
-
-\tableofcontents
-
-% List of contributors - print here or after the Bibliography.
-%\PrintAtlasContribute{0.30}
-%\clearpage
 \newpage
 
 \linenumbers
-\include{sections/sec1_introduction}
-\include{sections/sec2_reconstruction}
-\include{sections/sec3_selection}
-\include{sections/sec4_backgroundnew}
-\include{sections/sec5_mva}
-\include{sections/sec6_systematics}
-\include{sections/sec7_fit}
-\include{sections/sec8_results}
+
+\input{test/significance_chart}
+\input{test/yield_chart}
 
 %-------------------------------------------------------------------------------
 \clearpage
-\appendix
-\part*{Appendix}
-\addcontentsline{toc}{part}{Appendix}
 %-------------------------------------------------------------------------------
 
 %\input{appendix_sample_list}
@@ -134,28 +118,6 @@
 %\input{appendix_fit}
 %\input{appendix_smoothpruneNP}
 \clearpage
-
-%-------------------------------------------------------------------------------
-% If you use biblatex and either biber or bibtex to process the bibliography
-% just say \printbibliography here
-\printbibliography
-% If you want to use the traditional BibTeX you need to use the syntax below.
-%\bibliographystyle{bibtex/bst/atlasBibStyleWoTitle}
-%\bibliography{FCNCsupport,bibtex/bib/ATLAS}
-%-------------------------------------------------------------------------------
-
-%-------------------------------------------------------------------------------
-% Print the list of contributors to the analysis
-% The argument gives the fraction of the text width used for the names
-%-------------------------------------------------------------------------------
-\clearpage
 \PrintAtlasContribute{0.30}
-
-\begin{itemize}
-\item Boyang Li: main analyser, signal generation; ntuple production; fake tau estimation; BDT analysis; systematics; fit; support note.
-\item Weiming Yao: main analyser, \texttt{ttHML} ntuple skimming and support; fake tau estimation; BDT analysis; cross check; support note.
-\item MingMing Xia: main analyser, \texttt{xTauFramework} n-tuple production; production validation.
-\item Xin Chen: Supervisor of Boyang Li and MingMing Xia
-\end{itemize}
 
 \end{document}
