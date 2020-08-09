@@ -1,0 +1,11 @@
+Notice:
+
+The note is a documentation of individual work from certain ATLAS members. The results are not on behalf of the ATLAS collaboration until the analysis is published. Please do not copy or spead the content in any way.
+
+The tables and figures used in the note are stored in
+
+	git@github.com:liboyang0112/FCNCFigures.git
+
+	git@github.com:liboyang0112/FCNCTables.git
+
+To compile, please `git clone git@github.com:liboyang0112/FCNCProject.git` instead and setup the correct environment. Then just do `cd FCNCSupport && make`
