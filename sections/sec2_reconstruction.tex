@@ -62,7 +62,7 @@ among which the one with smallest $\Delta R(p^{\mu}_{\text{jet}},p^{\mu}_{\tau1}
 
 In STH events, there are 3 jets coming from top decay including the b-jet. So a Higgs resonance formed by the taus and a top resonance formed by the jets are expected.
 
-In STH and TTH channels , the method introduced in \cite{fcnc_PRD} is used to recontruct the ditau mass and momentum by taking the $\tau$ decay kinematics into account. To determine the 4-momenta of the invisible decay products of the tau decays, the following $\chi^2$ in Eq.~\ref{eq:eq2}, based on the probability functions above and the constraints from the tau mass, the Higgs mass and the measured $\met$, is defined,
+In STH and TTH channels, the method introduced in \cite{fcnc_PRD} is used to recontruct the ditau mass and momentum by taking the $\tau$ decay kinematics into account. To determine the 4-momenta of the invisible decay products of the tau decays, the following $\chi^2$ in Eq.~\ref{eq:eq2}, based on the probability functions above and the constraints from the tau mass, the Higgs mass and the measured $\met$, is defined,
 \begin{eqnarray}
 \begin{array}{ll}
 \chi^2 = & -2\ln \mathcal{P}_1 -2\ln \mathcal{P}_2 + \left( \frac{m_{\tau_1}^{\text{fit}} - 1.78}{\sigma_{\tau}} \right)^2 +  \left( \frac{m_{\tau_2}^{\text{fit}} - 1.78}{\sigma_{\tau}} \right)^2 +  \left( \frac{m_{H}^{\text{fit}} - 125}{\sigma_{\text{Higgs}}} \right)^2 + \\
@@ -73,10 +73,6 @@ In STH and TTH channels , the method introduced in \cite{fcnc_PRD} is used to re
 where $\mathcal{P}_i(\Delta R)$ are the probability distributions of the angular distance of the visible and invisible decay products in the tau decay, parametrized as a function of the momentum of the tau lepton. In the $\taulep$ mode where two neutrinos are present, it is extended to be the joint probability distribution of $\Delta R$ and $m_{\text{mis}}$ with $m_{\text{mis}}$ being the invariant mass of the neutrinos, denoted by $\mathcal{P}(\Delta R, m_{\text{mis}})$. These probability density functions are obtained from the MC simulation. Figure \ref{fig:tau_prob} illustrates the distributions of $\mathcal{P}(\Delta R, m_{\text{mis}})$ for $\taulep$, and $\mathcal{P}(\Delta R)$ for $\tauhad$, with the original tau's momentum in the range 60 GeV$<p<80$ GeV. Figures \ref{fig:chi2terms_hh3j}-\ref{fig:chi2terms_lh4j} in App. \ref{app:reco} show the distributions for each term in Eq. \ref{eq:eq2}.
 
 \input{\FCNCFigures/tex/tau_probs}
-
-\caption{ The distributions of (a) $\mathcal{P}(\Delta R, m_{\text{mis}})$ for $\taulep$, and (b) $\mathcal{P}(\Delta R)$ for $\tauhad$, with the original tau's momentum in the range 60 GeV$<p<80$ GeV. }
-\label{fig:tau_prob}
-\end{figure}
 
 In Eq. \ref{eq:eq2}, the free parameters scanned are the 4-momentum components of the invisible decay products for each tau decay. In the $\tauhad$ mode, only three momentum components are scanned since a single neutrino is massless. $m_{\tau_{1,2}}^{\text{fit}}$,  $m_{H}^{\text{fit}}$ and $E_{xy,\text{miss}}^{\text{fit}}$ are the calculated tau mass, Higgs mass, and missing transverse energy with the scanned parameters. The corresponding mass resolutions, $\sigma_{\tau}$ and $\sigma_{\text{Higgs}}$, are set to 1.8~GeV and 20~GeV respectively. The $\met$ resolution is parametrized as
 \begin{equation}

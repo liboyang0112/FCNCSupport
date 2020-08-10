@@ -1,101 +1,124 @@
 \section{Selection of events}
 \label{sec:selection}
 
-In the leptonic channels, exactly one lepton with $\pt>10$ GeV passing \texttt{Tight} ID as defined in Sec. \ref{sec:obj_reco} is required. %Trigger cuts can be regarded as independent and additional to these offline cuts.) is required.
-Further more, the $\pt$ of the lepton is required to be 1 GeV above the trigger threshold. After the objetct reconstruction and overlap removal. The events are categorized according to tab. \ref{tab:signalregions}.
+In the leptonic channels, the $\pt$ of the lepton is required to be 1 GeV above the trigger threshold. The leptons are required to have \texttt{Tight} ID as defined in Sec. \ref{sec:obj_reco}. %Trigger cuts can be regarded as independent and additional to these offline cuts.) is required.
 
-
- In the $\thadhad$ channel, no leptons (as defined in Sec. \ref{sec:obj_reco}) should be present in the event, and the two tau candidates with the highest $\pt$ are chosen. They should also pass the \texttt{Medium} tau ID and overlap removal. To account for the trigger thresholds, the two hadronic taus in $\thadhad$ are requried to pass the $\pt>40$ GeV and $\pt>30$ GeV cuts.
+In the hadronic channels, no leptons (as defined in Sec. \ref{sec:obj_reco}) should be present in the event, and the two tau candidates with the highest $\pt$ are chosen. They should also pass the \texttt{Medium} tau ID and overlap removal. To account for the trigger thresholds, the two hadronic taus are requried to pass the $\pt>40$ GeV and $\pt>30$ GeV cuts.
 
 \subsection{Trigger}
 \label{sec:trigger}
 
-In the leptonic channels, the single-lepton triggers are required to select the candidate events. In general, the lowest unprescaled triggers are used in both data-taking periods:
+In the leptonic channels, the single-lepton triggers and di-lepton triggers are required to select the candidate events. In general, the lowest unprescaled triggers are used in every data-taking periods:
 
-\begin{description}
-\item Single-lepton triggers in 2015:
-  
-  \begin{itemize}
-  \item \texttt{HLT\_e24\_lhmedium\_L1EM20VH}, or \texttt{HLT\_e60\_lhmedium}, or \texttt{HLT\_e120\_lhloose}
-  \item \texttt{HLT\_mu20\_iloose\_L1MU15}, or \texttt{HLT\_mu50}
-  \end{itemize}
-  
-\item Single-lepton triggers in 2016:
-  
-  \begin{itemize}
-  \item \texttt{HLT\_e26\_lhtight\_nod0\_ivarloose}, or \texttt{HLT\_e60\_lhmedium\_nod0}, or \texttt{HLT\_e140\_lhloose\\\_nod0}
-  \item \texttt{HLT\_mu26\_ivarmedium}, or \texttt{HLT\_mu50}
-  \end{itemize}
-  
-\end{description}
+To be updated:
+
+Single election:
+
+2016,2017,2018:
+\begin{itemize}
+	\item HLT\_e26\_lhtight\_nod0\_ivarloose
+	\item HLT\_e60\_lhmedium\_nod0
+	\item HLT\_e140\_lhloose\_nod0
+\end{itemize}
+2015:
+\begin{itemize}
+	\item HLT\_e24\_lhmedium\_L1EM20VH
+	\item HLT\_e60\_lhmedium
+	\item HLT\_e120\_lhloose
+\end{itemize}
+
+Single muon:
+
+2016,2017,2018:
+\begin{itemize}
+	\item HLT\_mu26\_ivarmedium
+	\item HLT\_mu50
+\end{itemize}
+2015,2017,2018:
+\begin{itemize}
+	\item HLT\_mu60\_0eta105\_msonly
+\end{itemize}
+2015:
+\begin{itemize}
+	\item HLT\_mu20\_iloose\_L1MU15
+	\item HLT\_mu40
+\end{itemize}
+
+Di-electron:
+
+2018:
+\begin{itemize}
+	\item HLT\_2e17\_lhvloose\_nod0\_L12EM15VHI
+\end{itemize}
+2017,2018:
+\begin{itemize}
+	\item HLT\_2e24\_lhvloose\_nod0
+\end{itemize}
+2016:
+\begin{itemize}
+	\item HLT\_2e17\_lhvloose\_nod0
+\end{itemize}
+2015:
+\begin{itemize}
+	\item HLT\_2e12\_lhloose\_L12EM10VH
+\end{itemize}
+
+Di-muon:
+
+2016,2017,2018:
+\begin{itemize}
+	\item HLT\_2mu14
+	\item HLT\_mu22\_mu8noL1
+\end{itemize}
+2015:
+\begin{itemize}
+	\item HLT\_2mu10
+	\item HLT\_mu18\_mu8noL1
+\end{itemize}
+
+Election+Muon:
+
+2016,2017,2018:
+\begin{itemize}
+	\item HLT\_e17\_lhloose\_nod0\_mu14
+	\item HLT\_e7\_lhmedium\_nod0\_mu24
+	\item HLT\_e26\_lhmedium\_nod0(\_L1EM20VHI in 2016)\_mu8noL1
+\end{itemize}
+2015:
+\begin{itemize}
+	\item HLT\_e17\_lhloose\_mu14
+	\item HLT\_e7\_lhmedium\_mu24
+\end{itemize}
+%\begin{description}
+%\item Single-lepton triggers in 2015:
+%  
+%  \begin{itemize}
+%  \item \texttt{HLT\_e24\_lhmedium\_L1EM20VH}, or \texttt{HLT\_e60\_lhmedium}, or \texttt{HLT\_e120\_lhloose}
+%  \item \texttt{HLT\_mu20\_iloose\_L1MU15}, or \texttt{HLT\_mu50}
+%  \end{itemize}
+%  
+%\item Single-lepton triggers in 2016:
+%  
+%  \begin{itemize}
+%  \item \texttt{HLT\_e26\_lhtight\_nod0\_ivarloose}, or \texttt{HLT\_e60\_lhmedium\_nod0}, or \texttt{HLT\_e140\_lhloose\\\_nod0}
+%  \item \texttt{HLT\_mu26\_ivarmedium}, or \texttt{HLT\_mu50}
+%  \end{itemize}
+%  
+%\end{description}
 
 The trigger matching between the offline and trigger level lepton objects is also required for the corresponding leptons selected for the analysis. The minimum offline lepton $p_{\text{T}}$ should be 1 GeV above the trigger threshold. For the $\tmhad$ channel in 2016, the offline muon $p_{\text{T}}$ is 2 GeV above the trigger threshold due to the trigger scale factors' binning\footnote{The trigger $\pt$ cuts on the leptons are independent of and additional to the other $\pt$ cuts introduced previously. For example, the $\pt$ cuts used in the overlap removal are still as those in Sec. \ref{sec:obj_reco}. It is also the case for the cuts introduced in the AOD derivations (Sec. \ref{sec:cuts}).}.
 
-In the $\thadhad$ channel, for the 2015 data-taking period, events are required to pass the triggers:
-
+The trigger used for hadronic channels in each year are listed as follow:
 \begin{itemize}
-  \item \texttt{HLT\_tau35\_medium1\_tracktwo\_tau25\_medium1\_tracktwo\_L1TAU20IM\_2TAU12IM}
 
-  \item \texttt{HLT\_tau35\_loose1\_tracktwo\_tau25\_loose1\_tracktwo}
-\end{itemize}
+\item 2015: \texttt{HLT\_tau35\_medium1\_tracktwo\_tau25\_medium1\_tracktwo\_L1TAU20IM\_2TAU12IM}
+\item 2016: \texttt{HLT\_tau35\_medium1\_tracktwo\_tau25\_medium1\_tracktwo}
+\item 2017: \texttt{HLT\_tau35\_medium1\_tracktwo\_tau25\_medium1\_tracktwo\_03dR30\_L1DR\_TAU20ITAU12I\_J25}
+\item 2018: \texttt{HLT\_tau35\_medium1\_tracktwoEF\_tau25\_medium1\_tracktwoEF\_03dR30\_L1DR\_TAU20ITAU12I\_J25}
 
-For the 2016 data-taking, events are required to pass the triggers:
+ \end{itemize}
 
-\begin{itemize}
-  \item \texttt{HLT\_tau35\_loose1\_tracktwo\_tau25\_loose1\_tracktwo}
-
-  \item \texttt{HLT\_tau35\_medium1\_tracktwo\_tau25\_medium1\_tracktwo}
-
-  \item \texttt{HLT\_tau80\_medium1\_TAU60\_tau50\_medium1\_L1TAU12}
-
-  \item \texttt{HLT\_tau35\_medium1\_tracktwo\_tau25\_medium1\_tracktwo}
-\end{itemize}
-
-For the 2017 data-taking, events are required to pass the triggers:
-
-\begin{itemize}
-  \item \texttt{HLT\_tau35\_medium1\_tracktwo\_tau25\_medium1\_tracktwo}
-
-  \item \texttt{HLT\_tau35\_medium1\_tracktwo\_tau25\_medium1\_tracktwo\_03dR30\_L1DR\_TAU20ITAU12I\_J25}
-
-  \item \texttt{HLT\_tau35\_medium1\_tracktwo\_tau25\_medium1\_tracktwo\_L1DR\_TAU20ITAU12I\_J25}
-
-  \item \texttt{HLT\_tau40\_medium1\_tracktwo\_tau35\_medium1\_tracktwo}
-
-  \item \texttt{HLT\_tau80\_medium1\_tracktwo\_L1TAU60\_tau50\_medium1\_tracktwo\_L1TAU12}
-
-  \item \texttt{HLT\_tau80\_medium1\_tracktwo\_L1TAU60\_tau35\_medium1\_tracktwo\\\_L1TAU12IM\_L1TAU60\_DR\_TAU20ITAU12I}
-
-  \item \texttt{HLT\_tau80\_medium1\_tracktwo\_L1TAU60\_tau50\_medium1\_tracktwo\_L1TAU12}
-
-  \item \texttt{HLT\_tau80\_medium1\_tracktwo\_L1TAU60\_tau35\_medium1\_tracktwo\\\_L1TAU12IM\_L1TAU60\_DR\_TAU20ITAU12I}
-
-  \item \texttt{HLT\_tau80\_medium1\_tracktwo\_L1TAU60\_tau60\_medium1\_tracktwo\_L1TAU40}
-\end{itemize}
-
-For the 2018 data-taking, events are required to pass the triggers:
-
-\begin{itemize}
-  \item \texttt{HLT\_tau80\_medium1\_tracktwoEF\_L1TAU60\_tau60\_medium1\_tracktwoEF\_L1TAU40}
-
-  \item \texttt{HLT\_tau80\_medium1\_tracktwoEF\_L1TAU60\_tau35\_medium1\_tracktwoEF\\\_L1TAU12IM\_L1TAU60\_DR\_TAU20ITAU12I}
-
-  \item \texttt{HLT\_tau80\_mediumRNN\_tracktwoMVA\_L1TAU60\_tau60\_mediumRNN\_tracktwoMVA\_L1TAU40}
-
-  \item \texttt{HLT\_tau80\_mediumRNN\_tracktwoMVA\_L1TAU60\_tau35\_mediumRNN\_tracktwoMVA\\\_L1TAU12IM\_L1TAU60\_DR\_TAU20ITAU12I}
-
-  \item \texttt{HLT\_tau40\_medium1\_tracktwoEF\_tau35\_medium1\_tracktwoEF}
-
-  \item \texttt{HLT\_tau35\_medium1\_tracktwoEF\_tau25\_medium1\_tracktwoEF\\\_L1DR\_TAU20ITAU12I\_J25}
-
-  \item \texttt{HLT\_tau40\_mediumRNN\_tracktwoMVA\_tau35\_mediumRNN\_tracktwoMVA}
-
-  \item \texttt{HLT\_tau35\_mediumRNN\_tracktwoMVA\_tau25\_mediumRNN\_tracktwoMVA\\\_L1DR\_TAU20ITAU12I\_J25}
-\end{itemize}
-
-
-
-is required. The two $\tauhad$ candidates are matched to the respective legs of the di-tau trigger using the individual single tau trigger objects. The $\pt$ thresholds are chosen such that the selected $\tauhad$ candidate $\pt$ already lies in the plateau of the respective trigger efficiency curve. Due to the rising instantaneous luminosity, the trigger used in the 2016 data taking includes a requirement for an additional level-1 calorimeter trigger jet with $\pt > \SI{25}{\GeV}$ and $|\eta|<3.2$. The leading jet in the 2016 events is required to be matched within $\Delta R < 0.4$ with the jet ROI that fulfilled the jet part of the trigger criteria (trigger jet). Figure \ref{fig:hadhad_trigger} shows the turn-on curves of the additional jet as in \cite{Htautau}, and the leading jet $\pt$ in the $\thadhad$ channel. A cut of $\pt^{\text{L1jet}} > \SI{50}{\GeV}$ is required on the trigger jet, and a leading-jet $\pt > \SI{60}{\GeV}$ cut is applied to remove the effect of turn on curve.
+The two $\tauhad$ candidates are matched to the respective legs of the di-tau trigger using the individual single tau trigger objects. The $\pt$ thresholds are chosen such that the selected $\tauhad$ candidate $\pt$ already lies in the plateau of the respective trigger efficiency curve. Due to the rising instantaneous luminosity, the trigger used in the 2016 data taking includes a requirement for an additional level-1 calorimeter trigger jet with $\pt > \SI{25}{\GeV}$ and $|\eta|<3.2$. The leading jet in the 2016 events is required to be matched within $\Delta R < 0.4$ with the jet ROI that fulfilled the jet part of the trigger criteria (trigger jet). Figure \ref{fig:hadhad_trigger} shows the turn-on curves of the additional jet as in \cite{Htautau}, and the leading jet $\pt$ in the $\thadhad$ channel. A cut of $\pt^{\text{L1jet}} > \SI{50}{\GeV}$ is required on the trigger jet, and a leading-jet $\pt > \SI{60}{\GeV}$ cut is applied to remove the effect of turn on curve.
 
 \subsection{Event cuts and regions}
 \label{sec:cuts}
@@ -126,33 +149,9 @@ A number of event cuts are applied before getting to the signal enhanced regions
 \item  In $l\thadhad$ channels, the lepton and b-jet are from SM top decay, so their invarian mass is expected to be smaller or around top mass: $\tlvismass<190~\GeV$.
 \end{enumerate}
 
-%\begin{figure}[htb]
-%\centering
-%\includegraphics[width=0.4\textwidth]{\FCNCFigures/lephad/lh_njet30_os.eps}
-%\put(-50, 80){\textbf{(a)}}
-%\put(-50, 95){\footnotesize{$lh$}}
-%\includegraphics[width=0.4\textwidth]{\FCNCFigures/hadhad/hh_njet30_os.eps}
-%\put(-50, 80){\textbf{(b)}}
-%\put(-50, 95){\footnotesize{$hh$}}
-%\caption{ The distributions of the number of jets in the $\tlhad$ (left) and $\thadhad$ (right) channels. }
-%\label{fig:njet30}
-%\end{figure}
-
 \input{\FCNCFigures/tex/x12fit}
 
-%\begin{figure}[htb]
-%\centering
-%\includegraphics[width=0.4\textwidth]{\FCNCFigures/lephad/nbjet_4j.eps}
-%\put(-50, 80){\textbf{(a)}}
-%\put(-57, 95){\footnotesize{$lh$ 4-jet}}
-%\includegraphics[width=0.4\textwidth]{\FCNCFigures/hadhad/nbjet_4j.eps}
-%\put(-50, 80){\textbf{(b)}}
-%\put(-57, 95){\footnotesize{$hh$ 4-jet}}
-%\caption{ The distributions of the number of $b$-tagged jets in the $\tlhad$ 4-jet (a) and $\thadhad$ 4-jet (b) categories, before the $N_{\text{bjet}}$=1 cut is applied. The definition of 4-jet categories is given in Sec. \ref{sec:reconstruction}. }
-%\label{fig:nbjet_4j}
-%\end{figure}
-
-The expected event yields for the backgrounds, signal and data after the above cuts are given in Tab. \ref{tab:yields_lh}-\ref{tab:cutflow_reg1l2tau1bnj_ss}, with the exception for the fake background, which is estimated at a later cut stage as detailed in Sec. \ref{sec:background}.
+The cutflow for the preselection and each channel are given in Table \ref{tab:yields_lh} - \ref{tab:cutflow_reg2lSS1tau1bnj_os}.
 
 \begin{table}
 %\small
@@ -331,7 +330,7 @@ drtautau > 3.4 & $165.44 \pm 3.69$ & $22.14 \pm 0.94$ & $213.75 \pm 6.60$ & $328
 \input{\FCNCTables/cutflow/tthML/cutflow_reg1l2tau1bnj_ss}
 \input{\FCNCTables/cutflow/tthML/cutflow_reg2lSS1tau1bnj_os}
 
-The summery of the yields and signal significance are shown in table \ref{yield} and \ref{significance}.
+The summery of the yields and signal significance are shown in table \ref{tab:yield} and \ref{tab:significance}.
 
 \input{\FCNCTables/tthML/raw/faketau/prefit/NOMINAL/yield_chart}
 \input{\FCNCTables/tthML/raw/fakelep/prefit/NOMINAL/yield_chart}
