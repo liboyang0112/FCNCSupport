@@ -46,10 +46,12 @@ figures = $(shell find ../FCNCFigures/tex/ | grep tex)
 
 default: run_pdflatex
 
-.PHONY: new newtexmf newbook newbooktexmf draftcover preprintcover auxmat test\
+.PHONY: new newtexmf newbook newbooktexmf draftcover preprintcover auxmat test talk\
 	clean cleanpdf help
 
 test: test.pdf
+
+talk: FCNCtalk.pdf
 # Standard pdflatex target
 run_pdflatex: FCNCpaths.sty $(BASENAME).pdf
 	@echo "Made $<"

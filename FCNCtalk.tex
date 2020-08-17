@@ -1,0 +1,63 @@
+\documentclass{beamer} 
+\usetheme{uniud}
+\usepackage{xspace}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{FCNCsupport-defs}
+\usepackage{FCNCpaths}
+\usepackage{multirow}
+\setlength{\textwidth}{11cm}
+\setlength{\textheight}{6cm} 
+\usepackage{geometry}
+\geometry{papersize={14.5cm,11cm}} 
+
+\title{Status report}
+\date{\today}
+\author[Boyang Li]{
+  Boyang Li \\
+}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{Updated yield table}
+\begin{tiny} 
+\input{\FCNCTables/tthML/showFake/faketau/postfit/NOMINAL/yield_chart}
+\end{tiny} 
+\newpage
+\frame{
+\begin{footnotesize} 
+\input{\FCNCTables/tthML/showFake/fakelep/postfit/NOMINAL/yield_chart}
+\end{footnotesize} 
+}
+\newpage
+\section{Updated BDT training}
+
+\input{\FCNCFigures/tex/BDT}
+\begin{tiny} 
+\input{\FCNCTables/tthML/Importance}
+\end{tiny} 
+\newpage
+\section{Updated significance table}
+\begin{tiny} 
+\input{\FCNCTables/tthML/showFake/faketau/postfit/NOMINAL/significance_chart}
+\end{tiny} 
+\newpage
+\frame{
+\begin{footnotesize} 
+\input{\FCNCTables/tthML/showFake/fakelep/postfit/NOMINAL/significance_chart}
+\end{footnotesize} 
+}
+\section{Problems and questions}
+\vspace{50pt}
+\begin{itemize}
+	\item $\met$ sum is not saved in the n-tuples, so the resolution cannot be decided in the fit. Set as $\met$ for the time being so the code can run through. Should make sure it is there in the next production.
+	\item Can $\met$ cut be replaced by $\met/\sigma(\met)$.
+	\item Triggers should be updated for 2017 and 2018 data.
+	\item Note is updated but still missing $\thadhad$ part.
+\end{itemize}
+\end{document}
+
