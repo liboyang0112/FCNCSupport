@@ -5,7 +5,10 @@ In this section, we investigate the sensitivity of probing signal using one of t
 
 The signal topology and kinematics are different across all the channels. To maximize the overall sensitivity, separated BDTG trainings are applied to each the signal region. A number of variables as the BDT inputs are used to train and test events in each signal region for maximal signal acceptance and background rejection. They are listed in Tab.~\ref{tab:importance}. 
 
-\input{\FCNCTables/tthML/importance}
+\begin{table}
+\caption{The importance of each variables used in the BDTG training, the two numbers in the each block are from the two training folds.}
+\input{\FCNCTables/Importance/tthML/Merged}
+\end{table}
 
 The signal and background samples are randomly divided into two equal parts (denoted as even and odd parity events). The BDT is trained with one part, and tested on the other part. It is always ensured that the BDT derived from the training events is not applied to the same events, but only to the independent test ones. The sum of all background processes, corrected normalized, are used in the training and testing. The Gradient BDT parameters used are listed in Tab. \ref{tab:bdt_pars}. With the \texttt{IgnoreNegWeightsInTraining} option, only MC events with positive MC weights are used in the traning. The comparison of BDT performances in test-odd and test-even samples is given in Fig. \ref{fig:overtrain_hadhad} and \ref{fig:overtrain_lephad}. The BDT parameters \texttt{NTrees} and \texttt{nCuts} are tuned such that the test-odd and test-even agrees, and the signal sensitivity is optimised.
 
@@ -50,10 +53,16 @@ As a cross check, the comparisons between BDT distributions in testing samples, 
 
 The final yield and stat. only significance is shown in Table \ref{tab:yield} and Table \ref{tab:significance}
 
-
+\begin{table}
+\caption{The yield of the background, data and each signal before the final fit.}
 \input{\FCNCTables/hadhad_yield_chart}
 \input{\FCNCTables/tthML/showFake/faketau/postfit/NOMINAL/yield_chart}
 \input{\FCNCTables/tthML/showFake/fakelep/postfit/NOMINAL/yield_chart}
+\end{table}
+
+\begin{table}
+\caption{The stat. only significance of signal before the final fit.}
 \input{\FCNCTables/hadhad_significance_chart}
 \input{\FCNCTables/tthML/showFake/faketau/postfit/NOMINAL/significance_chart}
 \input{\FCNCTables/tthML/showFake/fakelep/postfit/NOMINAL/significance_chart}
+\end{table}

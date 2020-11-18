@@ -19,7 +19,7 @@
 
 #-------------------------------------------------------------------------------
 # Check which TeX Live installation you have with the command pdflatex --version
-TEXLIVE  = 2020
+TEXLIVE  = 2018
 LATEX    = latex
 PDFLATEX = pdflatex
 BIBTEX   = bibtex
@@ -46,7 +46,7 @@ figures = $(shell find ../FCNCFigures/tex/ | grep tex)
 
 default: run_pdflatex
 
-.PHONY: new newtexmf newbook newbooktexmf draftcover preprintcover auxmat test talk\
+.PHONY: new newtexmf newbook newbooktexmf draftcover preprintcover auxmat test
 	clean cleanpdf help
 
 test: test.pdf

@@ -51,13 +51,32 @@
 \input{\FCNCTables/tthML/showFake/fakelep/postfit/NOMINAL/significance_chart}
 \end{footnotesize} 
 }
-\section{Problems and questions}
+\section{TrexFitter Fit}
 \vspace{50pt}
-\begin{itemize}
-	\item $\met$ sum is not saved in the n-tuples, so the resolution cannot be decided in the fit. Set as $\met$ for the time being so the code can run through. Should make sure it is there in the next production.
-	\item Can $\met$ cut be replaced by $\met/\sigma(\met)$.
-	\item Triggers should be updated for 2017 and 2018 data.
-	\item Note is updated but still missing $\thadhad$ part.
-\end{itemize}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.45\textwidth]{/home/boyang/work/FCNCProject/FCNCAnalysis/run/trex/reg1l1tau1b3j_os_BDTG_test/Plots/reg1l1tau1b3j_os.pdf}
+\includegraphics[width=0.45\textwidth]{/home/boyang/work/FCNCProject/FCNCAnalysis/run/trex/reg1l1tau1b3j_os_BDTG_test/Plots/reg1l1tau1b3j_os_postFit.pdf}
+\label{fig:wjet_pt}
+\end{figure}
+\newpage
+\frame{
+\begin{table}
+\centering
+\footnotesize
+\begin{tabular}{|c|c|c|c|c|} \hline
+ & STH~$\tlhad$~os & TTH~$\tlhad$~os & $l\thadhad$~os & Combined\\\hline
+$\bar{t}t\to bWcH$ & $2.48^{+0.98}_{-0.69}$ & $1.04^{+0.42}_{-0.29}$ & $0.31^{+0.13}_{-0.09}$ & $0.32^{+0.13}_{-0.09}$\\\hline
+$cg\to tH$ & $23.16^{+9.85}_{-6.47}$ & $24.66^{+10.87}_{-6.89}$ & $3.86^{+1.67}_{-1.08}$ & $3.77^{+1.61}_{-1.05}$\\\hline
+tcH merged signal & $2.25^{+0.89}_{-0.63}$ & $1.00^{+0.40}_{-0.28}$ & $0.29^{+0.12}_{-0.08}$ & $0.30^{+0.12}_{-0.08}$\\\hline
+$\bar{t}t\to bWuH$ & $2.44^{+0.97}_{-0.68}$ & $0.99^{+0.40}_{-0.28}$ & $0.29^{+0.12}_{-0.08}$ & $0.30^{+0.12}_{-0.08}$\\\hline
+$ug\to tH$ & $3.70^{+1.54}_{-1.03}$ & $4.30^{+1.96}_{-1.20}$ & $0.82^{+0.36}_{-0.23}$ & $0.81^{+0.34}_{-0.23}$\\\hline
+tuH merged signal & $1.51^{+0.60}_{-0.42}$ & $0.80^{+0.32}_{-0.22}$ & $0.21^{+0.09}_{-0.06}$ & $0.23^{+0.09}_{-0.06}$\\\hline
+\end{tabular}
+\end{table}
+
+
+}
 \end{document}
 
