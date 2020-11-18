@@ -3,42 +3,17 @@
 
 In this section, we investigate the sensitivity of probing signal using one of the Multi-Variate Analysis (MVA) methods, the Gradient Boosted Decision Trees (BDT) method~\cite{BDT,BDT2}, with the {\texttt TMVA} software package. The BDT output score is in the range between -1 and 1. The most signal-like events have scores near 1 while the most background-like events have scores near -1.
 
-The signal topology and kinematics are different across all the channels. To maximize the overall sensitivity, separated BDTG trainings are applied to each the signal region. A number of variables as the BDT inputs are used to train and test events in each signal region for maximal signal acceptance and background rejection. They are listed in Tab.~\ref{tab:importance}. 
+The signal topology and kinematics are different across all the channels. To maximize the overall sensitivity, separated BDTG trainings are applied to each the signal region. A number of variables as the BDT inputs are used to train and test events in each signal region for maximal signal acceptance and background rejection. They are listed in Tab.~\ref{tab:importance}. The most sensitive variables distributions are shown in Fig. \ref{fig:mva_input_hadhad}-\ref{fig:mva_input_lhadhad}
 
 \begin{table}
-\caption{The importance of each variables used in the BDTG training, the two numbers in the each block are from the two training folds.}
+\label{tab:importance}
+\caption{The importance (in \%) of each variables used in the BDTG training, the two numbers in the each block are from the two training folds.}
 \input{\FCNCTables/Importance/tthML/Merged}
 \end{table}
 
-The signal and background samples are randomly divided into two equal parts (denoted as even and odd parity events). The BDT is trained with one part, and tested on the other part. It is always ensured that the BDT derived from the training events is not applied to the same events, but only to the independent test ones. The sum of all background processes, corrected normalized, are used in the training and testing. The Gradient BDT parameters used are listed in Tab. \ref{tab:bdt_pars}. With the \texttt{IgnoreNegWeightsInTraining} option, only MC events with positive MC weights are used in the traning. The comparison of BDT performances in test-odd and test-even samples is given in Fig. \ref{fig:overtrain_hadhad} and \ref{fig:overtrain_lephad}. The BDT parameters \texttt{NTrees} and \texttt{nCuts} are tuned such that the test-odd and test-even agrees, and the signal sensitivity is optimised.
+The signal and background samples are randomly divided into two equal parts (denoted as even and odd parity events). The BDT is trained with one part, and tested on the other part. It is always ensured that the BDT derived from the training events is not applied to the same events, but only to the independent test ones. The sum of all background processes, corrected normalized, are used in the training and testing. %The Gradient BDT parameters used are listed in Tab. \ref{tab:bdt_pars}. 
+With the \texttt{IgnoreNegWeightsInTraining} option, only MC events with positive MC weights are used in the traning. The comparison of BDT performances in test-odd and test-even samples is given in Fig. \ref{fig:overtrain_hadhad}-\ref{fig:overtrain_lhadhad}. The BDT parameters \texttt{NTrees} and \texttt{nCuts} are tuned such that the test-odd and test-even agrees, and the signal sensitivity is optimised.
 
-%\begin{table}
-%\caption{The Gradient BDT hyper parameters used in each FR. }
-%\centering
-%\begin{tabular}{|c|c|c|c|} \hline
-%  & \texttt{NTrees} & \texttt{Shrinkage} & \texttt{BaggedSampleFraction} \\ \hline
-%   $\tlhad$ 3-jet & 500 & \multirow{4}{*}{0.1} & \multirow{4}{*}{0.6} \\ \cline{1-2}
-%   $\tlhad$ 4-jet & 700 &  &  \\ \cline{1-2}
-% $\thadhad$ 3-jet & 600 &  &  \\ \cline{1-2}
-% $\thadhad$ 4-jet & 800 &  &  \\ \hline\hline
-%  & \texttt{nCuts} & \texttt{MaxDepth} & \texttt{NegWeightTreatment} \\ \hline
-%   $\tlhad$ 3-jet & 20 & \multirow{4}{*}{2} & \multirow{4}{*}{\texttt{IgnoreNegWeightsInTraining}} \\ \cline{1-2}
-%   $\tlhad$ 4-jet & 20 &  & \\ \cline{1-2}
-% $\thadhad$ 3-jet & 15 &  & \\ \cline{1-2}
-% $\thadhad$ 4-jet & 15 &  & \\ \hline
-%\end{tabular}
-%\label{tab:bdt_pars}
-%\end{table}
-
-%\texttt{NTrees=1000::BoostType=Grad:Shrinkage=0.1:UseBaggedBoost:BaggedSampleFraction=0.5\\:nCuts=20:MaxDepth=2}.
-
-%The seperation\footnote{
-%The separation is defined by, as in \cite{BDT2},
-%\begin{equation}
-%\langle S^2 \rangle = \frac{1}{2} \int \frac{\left[p_S(y)-p_B(y)\right]^2}{p_S(y)+p_B(y)} dy,
-%\end{equation}
-%where $p_S(y)$ and $p_B(y)$ are the signal and background PDFs of the classifier $y$. The separation is 0 (1) for identical (%non-overlapping) signal and background shapes.
-%} and 
 The importance factors\footnote{
 The importance is evaluated as the total separation gain that this variable had in the decision trees (weighted by the number of events). It is normalized to all variables together, which have an importance of 1.
 }
@@ -51,18 +26,20 @@ As a cross check, the comparisons between BDT distributions in testing samples, 
 
 \input{\FCNCFigures/tex/BDT}
 
-The final yield and stat. only significance is shown in Table \ref{tab:yield} and Table \ref{tab:significance}
+The final yield and stats only significance is shown in Table \ref{tab:yield} and Table \ref{tab:significance}
 
 \begin{table}
 \caption{The yield of the background, data and each signal before the final fit.}
-\input{\FCNCTables/hadhad_yield_chart}
+\label{tab:yield}
+%\input{\FCNCTables/hadhad_yield_chart}
 \input{\FCNCTables/tthML/showFake/faketau/postfit/NOMINAL/yield_chart}
-\input{\FCNCTables/tthML/showFake/fakelep/postfit/NOMINAL/yield_chart}
+%\input{\FCNCTables/tthML/showFake/fakelep/postfit/NOMINAL/yield_chart}
 \end{table}
 
 \begin{table}
 \caption{The stat. only significance of signal before the final fit.}
-\input{\FCNCTables/hadhad_significance_chart}
+\label{tab:significance}
+%\input{\FCNCTables/hadhad_significance_chart}
 \input{\FCNCTables/tthML/showFake/faketau/postfit/NOMINAL/significance_chart}
-\input{\FCNCTables/tthML/showFake/fakelep/postfit/NOMINAL/significance_chart}
+%\input{\FCNCTables/tthML/showFake/fakelep/postfit/NOMINAL/significance_chart}
 \end{table}

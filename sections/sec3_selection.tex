@@ -141,191 +141,25 @@ A number of event cuts are applied before getting to the signal enhanced regions
 
 \item At the {\texttt ttHMultiAna} level, skim cuts \cite{ATL-COM-PHYS-2018-410} are applied to reduce the ntuple size.
 
-\item A least one primary vertex exists in the event. The primary vertex is defined as the vertex that has the largest sum of track $\pt^2$ associated to it, and has at least 4 tracks with $|z_0|<100$ mm.
+\item At least one primary vertex exists in the event. The primary vertex is defined as the vertex that has the largest sum of track $\pt^2$ associated to it, and has at least 4 tracks with $|z_0|<100$ mm.
 \item The tau candidtes expected from Higgs decay should pass the \texttt{Medium} ID and the other quality cuts in Sec. \ref{sec:obj_reco}.
 \item It is required that the tau objects are not $b$-tagged, otherwise the event is rejected.
-\item Exactly one $b$-tagged jets with $\pt>30$ GeV and $|\eta|<2.5$. 
-\item Considering the di-tau are from the Higgs decay, their invariant mass should satisfy $50~\GeV<\ttvismass<130~\GeV$ and $\drtautau<3.4$ in the $\thadhad$ channel and $25~\GeV<\ttvismass<125~\GeV$ in leptonic channels.
-\item  In $l\thadhad$ channels, the lepton and b-jet are from SM top decay, so their invarian mass is expected to be smaller or around top mass: $\tlvismass<190~\GeV$.
+\item Exactly one $b$-tagged jets. 
+%\item Considering the di-tau are from the Higgs decay, their invariant mass should satisfy $50~\GeV<\ttvismass<130~\GeV$ and $\drtautau<3.4$ in the $\thadhad$ channel and $25~\GeV<\ttvismass<125~\GeV$ in leptonic channels.
+%\item  In $l\thadhad$ channels, the lepton and b-jet are from SM top decay, so their invarian mass is expected to be smaller or around top mass: $\tlvismass<190~\GeV$.
 \end{enumerate}
 
 \input{\FCNCFigures/tex/x12fit}
 
-The cutflow for the preselection and each channel are given in Table \ref{tab:yields_lh} - \ref{tab:cutflow_reg2lSS1tau1bnj_os}.
+The cutflow for the preselection and each channel are given in Table \ref{tab:tthML_cutflow_all} - \ref{tab:tthML_cutflow_reg1l2tau1bnj_os}.
 
-The summery of the yields and signal significance are shown in table \ref{tab:yield} and \ref{tab:significance}.
+For the TT channel tcH coupling search, the FCNC jet is from a c-quark. Regarding the similarity between the b-jet and c-jet, the very loose b-tagging is attempted on the FCNC jet in order to further select the tcH signal. However, the dominating background is $\ttbar$ where there are 2 b-jets. This resort does not help with the significance.
+% as shown in the Table \ref{tab:significance_ctag}. The corresponding yield is shown in the Table \ref{tab:yield_ctag}. So it is not adopted.
 
-For the TT channel tcH coupling search, the FCNC jet is from a c-quark. Regarding the similarity between the b-jet and c-jet, the very loose b-tagging is attempted on the FCNC jet in order to further select the tcH signal. However, the dominating background is $\ttbar$ where there are 2 b-jets. This resort does not help with the significance as shown in the Table \ref{tab:significance_ctag}. The corresponding yield is shown in the Table \ref{tab:yield_ctag}. So it is not adopted.
-
-\begin{table}
-%\small
-\footnotesize
-\caption{ The expected event yields (corresponds to 36.1 fb$^{-1}$) for different MC processes and data after each cut in the $\tlhad$ channel. The signal yields are obtained by assuming BR($t\to Hq$)=$1\%$, and BR($t\to Hc$)=BR($t\to Hu$)=$0.5\%$. The uncertainties are statistical only.}
-\centering
-\begin{tabular}{|c|c|c|c|c|} \hline
-  & \multicolumn{2}{c|}{Top} & \multirow{2}{*}{diboson} & \multirow{2}{*}{$Z\to\ell\ell$} \\ \cline{2-3}
-  & real $\tauhad$ & fake $\tauhad$ & & \\ \hline
-     AOD & \multicolumn{2}{c|}{$(3.1881\pm 0.0004)\times10^7$} & $(2.801\pm 0.001)\times10^6$ & $(1.5049\pm0.0005)\times10^8$ \\ \hline
-    DAOD & \multicolumn{2}{c|}{$(1.1555\pm 0.0002)\times10^7$} & $(7.186\pm 0.004)\times10^5$ & $(5.723\pm 0.003)\times10^7$ \\ \hline
-skim & $ 76041.7 \pm 145.9$ & $ 1380820.6 \pm 625.1$ & $ 3735.5 \pm 25.0$ & $ 26761.2 \pm 144.6$ \\ \hline
-vertex & $ 71579.4 \pm 141.6$ & $ 1299919.6 \pm 606.6$ & $ 3515.5 \pm 24.2$ & $ 25208.0 \pm 140.3$ \\ \hline
-trigger & $ 58457.1 \pm 127.9$ & $ 1116757.0 \pm 561.3$ & $ 3094.6 \pm 22.8$ & $ 21913.8 \pm 118.7$ \\ \hline
-tau sel. & $ 26798.8 \pm 99.8$ & $ 23601.1 \pm 97.7$ & $ 119.0 \pm 6.5$ & $ 579.2 \pm 24.8$ \\ \hline
-3jet veto & $ 24427.2 \pm 95.5$ & $ 20198.7 \pm 90.4$ & $ 106.7 \pm 6.2$ & $ 518.4 \pm 23.5$ \\ \hline
-tau not & \multirow{2}{*}{$ 23818.9 \pm 94.3$} & \multirow{2}{*}{$ 17991.9 \pm 84.5$} & \multirow{2}{*}{$ 103.3 \pm 6.2$} & \multirow{2}{*}{$ 493.3 \pm 23.2$} \\
- $b$-tagged & & & & \\ \hline
-$x_{1,2}^{\text{fit}}$ & $ 12833.8 \pm 69.0$ & $ 11784.7 \pm 68.4$ & $ 62.9 \pm 3.9$ & $ 357.0 \pm 22.3$ \\ \hline
-$N_{\text{bjet}}$=1 & $ 7094.9 \pm 50.7$ & $ 7027.7 \pm 52.3$ & $ 53.7 \pm 3.6$ & $ 316.3 \pm 22.0$ \\ \hline\hline
- & $Z\to\tau\tau$ & $W\to l\nu$ & $t\to qH$ & data \\ \hline
-     AOD & $(4.491\pm 0.006)\times10^6$ & $(2.152\pm 0.001)\times10^9$ & $   12126.9 \pm  19.6$ & $(6.32610\pm 0.00008)\times10^9$ \\ \hline
-    DAOD & $(2.951\pm 0.005)\times10^6$ & $(3.945\pm 0.009)\times10^8$ & $    5691.6 \pm  13.5$ & $(8.0089\pm 0.0003)\times10^8$ \\ \hline
-skim & $ 4251.9 \pm 38.3$ & $ 94984.2 \pm 628.6$ & $ 984.8 \pm 5.7$ & $ 1427385.0 \pm 1194.7$ \\ \hline
-vertex & $ 3997.5 \pm 36.8$ & $ 89554.7 \pm 615.6$ & $ 926.0 \pm 5.5$ & $ 1419052.0 \pm 1191.2$ \\ \hline
-trigger & $ 2471.5 \pm 26.4$ & $ 77051.1 \pm 535.5$ & $ 610.4 \pm 4.5$ & $ 1272074.0 \pm 1127.9$ \\ \hline
-tau sel. & $ 998.5 \pm 25.6$ & $ 1851.4 \pm 146.2$ & $ 197.0 \pm 2.9$ & $ 55068.0 \pm 234.7$ \\ \hline
-3jet veto & $ 910.9 \pm 23.4$ & $ 1672.9 \pm 143.3$ & $ 169.8 \pm 2.8$ & $ 48681.0 \pm 220.6$ \\ \hline
-tau not & \multirow{2}{*}{$ 901.1 \pm 23.0$} & \multirow{2}{*}{$ 1597.1 \pm 142.7$} & \multirow{2}{*}{$ 166.8 \pm 2.7$} & \multirow{2}{*}{$ 45319.0 \pm 212.9$} \\
- $b$-tagged & & & & \\ \hline
-$x_{1,2}^{\text{fit}}$ & $ 875.4 \pm 22.8$ & $ 1073.8 \pm 137.0$ & $ 163.8 \pm 2.7$ & $ 27633.0 \pm 166.2$ \\ \hline
-$N_{\text{bjet}}$=1 & $ 757.3 \pm 20.8$ & $ 1019.7 \pm 136.8$ & $ 147.9 \pm 2.5$ & $ 16882.0 \pm 129.9$ \\ \hline
-\end{tabular}
-\label{tab:yields_lh}
-\end{table}
+%include hadhad cutflow here
 
 \begin{table}
-%\small
-\footnotesize
-\caption{ The expected event yields (corresponds to 140 fb$^{-1}$) for different MC processes and data after the cuts applied before the n-tuples produced by the {\texttt xTauFramework}. The signal yields are obtained by assuming BR($t\to Hq$)=$1\%$. The uncertainties are statistical only.}
-\centering
-\begin{tabular}{|c|c|c|c|c|c|} \hline
-
-cut & diboson & fcnc prod ch & fcnc uh qq & wjet & data\\ \hline
-Total Events & $( 2.45 \pm 0.00 ) \times 10^{7}$ & $1060.00 \pm 0.00$ & $25588.00 \pm 0.00$ & $( 1.24 \pm 0.00 ) \times 10^{11}$ & $( 6.35 \pm 0.00 ) \times 10^{9}$\\ \hline
-DAOD & $( 3.46 \pm 0.00 ) \times 10^{6}$ & $668.25 \pm 0.00$ & $14215.19 \pm 0.00$ & $( 3.46 \pm 0.00 ) \times 10^{9}$ & $( 5.29 \pm 0.00 ) \times 10^{8}$\\ \hline
-skim & $69.04 \pm 1.68$ & $39.23 \pm 0.35$ & $611.11 \pm 5.42$ & $451.31 \pm 14.31$ & $( 1.32 \pm 0.00 ) \times 10^{5}$\\ \hline
-LooseBad Event Cleaning & $68.60 \pm 1.67$ & $39.05 \pm 0.35$ & $608.35 \pm 5.40$ & $448.09 \pm 14.28$ & $( 1.30 \pm 0.00 ) \times 10^{5}$\\ \hline
-Tau pT cut & $48.63 \pm 1.34$ & $30.88 \pm 0.31$ & $455.46 \pm 4.68$ & $284.66 \pm 12.34$ & $65257.00 \pm 255.45$\\ \hline
-Di-tau common Vx cut & $48.19 \pm 1.33$ & $30.81 \pm 0.31$ & $454.06 \pm 4.67$ & $276.79 \pm 12.20$ & $60090.00 \pm 245.13$\\ \hline
-Leading jet cut & $46.22 \pm 1.29$ & $30.27 \pm 0.31$ & $446.86 \pm 4.63$ & $261.00 \pm 11.85$ & $55873.00 \pm 236.37$\\ \hline
-MET cut & $43.76 \pm 1.25$ & $27.92 \pm 0.30$ & $399.92 \pm 4.38$ & $238.83 \pm 7.65$ & $46107.00 \pm 214.73$\\ \hline
-trigger matching & $39.19 \pm 2.04$ & $25.24 \pm 0.43$ & $368.62 \pm 4.27$ & $201.55 \pm 20.53$ & $46107.00 \pm 214.73$\\ \hline
-n tracks = 1,3 & $30.98 \pm 1.73$ & $22.38 \pm 0.41$ & $319.22 \pm 3.97$ & $144.95 \pm 18.69$ & $26148.00 \pm 161.70$\\ \hline
-\end{tabular}
-\label{tab:yields_hh_1}
-\begin{tabular}{|c|c|c|c|c|} \hline
-cut & fcnc ch lv & fcnc prod uh & smhiggs & zll\\ \hline
-Total Events & $12299.39 \pm 0.00$ & $5271.38 \pm 0.00$ & $( 1.32 \pm 0.00 ) \times 10^{6}$ & $( 5.56 \pm 0.00 ) \times 10^{9}$\\ \hline
-DAOD & $5590.81 \pm 0.00$ & $3291.00 \pm 0.00$ & $( 4.56 \pm 0.00 ) \times 10^{5}$ & $( 2.77 \pm 0.00 ) \times 10^{8}$\\ \hline
-skim & $149.90 \pm 2.15$ & $185.92 \pm 1.70$ & $110.18 \pm 1.42$ & $9.36 \pm 0.95$\\ \hline
-LooseBad Event Cleaning & $149.26 \pm 2.14$ & $183.98 \pm 1.69$ & $109.70 \pm 1.42$ & $9.36 \pm 0.95$\\ \hline
-Tau pT cut & $113.67 \pm 1.87$ & $150.17 \pm 1.52$ & $84.64 \pm 1.26$ & $7.07 \pm 0.90$\\ \hline
-Di-tau common Vx cut & $113.49 \pm 1.87$ & $149.92 \pm 1.52$ & $84.35 \pm 1.26$ & $6.73 \pm 0.88$\\ \hline
-Leading jet cut & $109.12 \pm 1.83$ & $147.59 \pm 1.51$ & $80.68 \pm 1.22$ & $5.56 \pm 0.65$\\ \hline
-MET cut & $104.39 \pm 1.79$ & $137.01 \pm 1.46$ & $75.62 \pm 1.18$ & $4.50 \pm 0.62$\\ \hline
-trigger matching & $101.25 \pm 1.80$ & $128.57 \pm 2.13$ & $72.23 \pm 1.97$ & $3.11 \pm 1.47$\\ \hline
-n tracks = 1,3 & $88.17 \pm 1.68$ & $111.65 \pm 1.98$ & $63.44 \pm 1.87$ & $1.35 \pm 0.23$\\ \hline
-\end{tabular}
-\label{tab:yields_hh_2}
-\begin{tabular}{|c|c|c|c|c|} \hline
-cut & fcnc ch qq & fcnc uh lv & top & ztautau\\ \hline
-Total Events & $25591.91 \pm 0.00$ & $12297.07 \pm 0.00$ & $( 4.29 \pm 0.00 ) \times 10^{8}$ & $( 1.92 \pm 0.00 ) \times 10^{9}$ \\ \hline
-DAOD & $14182.99 \pm 0.00$ & $5645.15 \pm 0.00$ & $( 9.61 \pm 0.00 ) \times 10^{7}$ & $( 2.13 \pm 0.00 ) \times 10^{7}$ \\ \hline
-skim & $623.70 \pm 6.32$ & $140.81 \pm 2.08$ & $16614.80 \pm 58.13$ & $2275.01 \pm 26.63$ \\ \hline
-LooseBad Event Cleaning & $620.68 \pm 6.30$ & $139.89 \pm 2.07$ & $16533.76 \pm 57.98$ & $2261.00 \pm 26.60$ \\ \hline
-Tau pT cut & $463.75 \pm 5.45$ & $105.99 \pm 1.81$ & $10632.17 \pm 45.97$ & $1439.59 \pm 12.62$ \\ \hline
-Di-tau common Vx cut & $461.83 \pm 5.44$ & $105.54 \pm 1.80$ & $10447.76 \pm 45.53$ & $1431.03 \pm 12.58$ \\ \hline
-Leading jet cut & $454.54 \pm 5.39$ & $101.89 \pm 1.77$ & $10200.06 \pm 45.03$ & $1339.92 \pm 10.98$ \\ \hline
-MET cut & $408.09 \pm 5.11$ & $97.18 \pm 1.73$ & $9428.60 \pm 42.74$ & $1196.00 \pm 10.04$ \\ \hline
-trigger matching & $382.68 \pm 5.03$ & $92.98 \pm 1.72$ & $5118.07 \pm 28.24$ & $1478.04 \pm 25.18$ \\ \hline
-n tracks = 1,3 & $333.62 \pm 4.70$ & $81.22 \pm 1.60$ & $3733.69 \pm 23.89$ & $1293.72 \pm 23.13$ \\ \hline
-\end{tabular}
-\label{tab:yields_hh_3}
-\end{table}
-
-
-\begin{table}
-%\small
-\footnotesize
-\caption{ The expected event yields (corresponds to 140 fb$^{-1}$) for different MC processes and data after each cut in the STH $\thadhad$ channel. The signal yields are obtained by assuming BR($t\to Hq$)=$1\%$. The uncertainties are statistical only.}
-\centering
-\begin{tabular}{|c|c|c|c|c|c|} \hline
-
-cut & diboson & fcnc prod ch & fcnc uh qq & wjet & data\\ \hline
-2 medium OS tau 2 light-j& $9.15 \pm 1.15$ & $9.38 \pm 0.29$ & $75.31 \pm 2.21$ & $26.15 \pm 8.94$ & $3491.00 \pm 59.08$\\ \hline
-true taus & $8.10 \pm 1.01$ & $9.33 \pm 0.29$ & $71.85 \pm 2.17$ & $0.23 \pm 0.17$ & $3491.00 \pm 59.08$\\ \hline
-jet pt cut & $8.10 \pm 1.01$ & $9.33 \pm 0.29$ & $71.85 \pm 2.17$ & $0.23 \pm 0.17$ & $3491.00 \pm 59.08$\\ \hline
-bjet pt eta cut & $7.95 \pm 1.00$ & $8.90 \pm 0.28$ & $69.01 \pm 2.14$ & $0.23 \pm 0.17$ & $3121.00 \pm 55.87$\\ \hline
-tautau vis mass > 50 & $7.26 \pm 0.97$ & $8.75 \pm 0.28$ & $68.67 \pm 2.13$ & $0.23 \pm 0.17$ & $2710.00 \pm 52.06$\\ \hline
-tautau vis mass < 130 & $6.64 \pm 0.96$ & $8.54 \pm 0.28$ & $68.60 \pm 2.13$ & $0.23 \pm 0.17$ & $1875.00 \pm 43.30$\\ \hline
-drtautau > 3.4 & $6.64 \pm 0.96$ & $8.54 \pm 0.28$ & $68.50 \pm 2.13$ & $0.23 \pm 0.17$ & $1856.00 \pm 43.08$\\ \hline
-\end{tabular}
-\label{tab:yields_hh_1}
-\begin{tabular}{|c|c|c|c|c|} \hline
-cut & fcnc ch lv & fcnc prod uh & smhiggs & zll\\ \hline
-2 medium OS tau 2 light-j& $25.43 \pm 1.03$ & $43.13 \pm 1.41$ & $19.73 \pm 0.97$ & $0.35 \pm 0.22$\\ \hline
-true taus & $24.68 \pm 1.01$ & $42.58 \pm 1.41$ & $19.63 \pm 0.97$ & $0.23 \pm 0.17$\\ \hline
-jet pt cut & $24.68 \pm 1.01$ & $42.58 \pm 1.41$ & $19.63 \pm 0.97$ & $0.23 \pm 0.17$\\ \hline
-bjet pt eta cut & $23.51 \pm 0.99$ & $41.29 \pm 1.39$ & $18.20 \pm 0.94$ & $0.23 \pm 0.17$\\ \hline
-tautau vis mass > 50 & $23.11 \pm 0.98$ & $39.87 \pm 1.37$ & $17.73 \pm 0.94$ & $0.23 \pm 0.17$\\ \hline
-tautau vis mass < 130 & $20.07 \pm 0.92$ & $38.57 \pm 1.36$ & $17.61 \pm 0.94$ & $0.23 \pm 0.17$\\ \hline
-drtautau > 3.4 & $20.00 \pm 0.92$ & $38.56 \pm 1.36$ & $17.60 \pm 0.94$ & $0.23 \pm 0.17$\\ \hline
-\end{tabular}
-\label{tab:yields_hh_2}
-\begin{tabular}{|c|c|c|c|c|} \hline
-cut & fcnc ch qq & fcnc uh lv & top & ztautau\\ \hline
-2 medium OS tau 2 light-j & $74.20 \pm 2.39$ & $25.65 \pm 0.98$ & $723.83 \pm 11.95$ & $579.17 \pm 18.36$ \\ \hline
-true taus & $71.97 \pm 2.36$ & $25.04 \pm 0.97$ & $432.75 \pm 9.36$ & $572.12 \pm 18.28$ \\ \hline
-jet pt cut & $71.97 \pm 2.36$ & $25.04 \pm 0.97$ & $432.75 \pm 9.36$ & $572.12 \pm 18.28$ \\ \hline
-bjet pt eta cut & $69.38 \pm 2.32$ & $24.06 \pm 0.95$ & $412.98 \pm 9.18$ & $529.87 \pm 16.43$ \\ \hline
-tautau vis mass > 50 & $69.01 \pm 2.31$ & $23.66 \pm 0.94$ & $390.94 \pm 8.96$ & $471.80 \pm 15.97$ \\ \hline
-tautau vis mass < 130 & $68.94 \pm 2.31$ & $20.40 \pm 0.87$ & $239.37 \pm 6.90$ & $459.53 \pm 15.77$ \\ \hline
-drtautau > 3.4 & $68.94 \pm 2.31$ & $20.33 \pm 0.87$ & $237.10 \pm 6.87$ & $459.50 \pm 15.77$ \\ \hline
-\end{tabular}
-\label{tab:yields_hh_3}
-\end{table}
-
-\begin{table}
-%\small
-\footnotesize
-\caption{ The expected event yields (corresponds to 36.1 fb$^{-1}$) for different MC processes and data after each cut in the TTH $\thadhad$ channel. The signal yields are obtained by assuming BR($t\to Hq$)=$1\%$. The uncertainties are statistical only.}
-\centering
-\begin{tabular}{|c|c|c|c|c|c|} \hline
-
-cut & diboson & fcnc prod ch & fcnc uh qq & wjet & data\\ \hline
-2 medium OS tau 3light-j 1b-j & $14.69 \pm 1.15$ & $9.49 \pm 0.31$ & $180.65 \pm 3.34$ & $21.49 \pm 3.76$ & $2897.00 \pm 53.82$\\ \hline
-true taus & $12.44 \pm 0.81$ & $9.40 \pm 0.31$ & $174.68 \pm 3.29$ & $0.30 \pm 0.18$ & $2897.00 \pm 53.82$\\ \hline
-jet pt cut & $12.44 \pm 0.81$ & $9.40 \pm 0.31$ & $174.68 \pm 3.29$ & $0.30 \pm 0.18$ & $2897.00 \pm 53.82$\\ \hline
-bjet pt eta cut & $11.52 \pm 0.77$ & $8.85 \pm 0.29$ & $166.93 \pm 3.23$ & $0.30 \pm 0.18$ & $2653.00 \pm 51.51$\\ \hline
-tautau vis mass > 50 & $10.08 \pm 0.73$ & $8.61 \pm 0.29$ & $165.48 \pm 3.21$ & $0.30 \pm 0.18$ & $2307.00 \pm 48.03$\\ \hline
-tautau vis mass < 130 & $9.25 \pm 0.72$ & $8.44 \pm 0.29$ & $165.15 \pm 3.21$ & $0.30 \pm 0.18$ & $1558.00 \pm 39.47$\\ \hline
-drtautau > 3.4 & $9.25 \pm 0.72$ & $8.44 \pm 0.29$ & $164.89 \pm 3.21$ & $0.30 \pm 0.18$ & $1542.00 \pm 39.27$\\ \hline
-\end{tabular}
-\label{tab:yields_hh_1}
-\begin{tabular}{|c|c|c|c|c|} \hline
-cut & fcnc ch lv & fcnc prod uh & smhiggs & zll\\ \hline
-2 medium OS tau 3light-j 1b-j & $28.65 \pm 1.03$ & $47.83 \pm 1.54$ & $23.97 \pm 1.39$ & $0.32 \pm 0.13$\\ \hline
-true taus & $28.19 \pm 1.02$ & $47.13 \pm 1.53$ & $22.88 \pm 1.29$ & $0.30 \pm 0.18$\\ \hline
-jet pt cut & $28.19 \pm 1.02$ & $47.13 \pm 1.53$ & $22.88 \pm 1.29$ & $0.30 \pm 0.18$\\ \hline
-bjet pt eta cut & $27.08 \pm 1.00$ & $45.07 \pm 1.51$ & $20.63 \pm 1.22$ & $0.30 \pm 0.18$\\ \hline
-tautau vis mass > 50 & $26.30 \pm 0.98$ & $43.52 \pm 1.48$ & $20.18 \pm 1.22$ & $0.30 \pm 0.18$\\ \hline
-tautau vis mass < 130 & $22.29 \pm 0.90$ & $42.81 \pm 1.47$ & $19.86 \pm 1.22$ & $0.30 \pm 0.18$\\ \hline
-drtautau > 3.4 & $22.22 \pm 0.90$ & $42.75 \pm 1.47$ & $19.85 \pm 1.22$ & $0.30 \pm 0.18$\\ \hline
-\end{tabular}
-\label{tab:yields_hh_2}
-\begin{tabular}{|c|c|c|c|c|} \hline
-cut & fcnc ch qq & fcnc uh lv & top & ztautau\\ \hline
-2 medium OS tau 3light-j 1b-j & $181.51 \pm 3.91$ & $29.03 \pm 1.06$ & $790.24 \pm 12.43$ & $436.60 \pm 13.11$ \\ \hline
-true taus & $176.21 \pm 3.86$ & $28.37 \pm 1.05$ & $414.73 \pm 9.02$ & $429.82 \pm 13.01$ \\ \hline
-jet pt cut & $176.21 \pm 3.86$ & $28.37 \pm 1.05$ & $414.73 \pm 9.02$ & $429.82 \pm 13.01$ \\ \hline
-bjet pt eta cut & $167.96 \pm 3.72$ & $26.92 \pm 1.03$ & $395.17 \pm 8.84$ & $389.90 \pm 11.79$ \\ \hline
-tautau vis mass > 50 & $165.44 \pm 3.69$ & $26.14 \pm 1.01$ & $367.07 \pm 8.38$ & $336.68 \pm 11.46$ \\ \hline
-tautau vis mass < 130 & $165.44 \pm 3.69$ & $22.19 \pm 0.94$ & $215.20 \pm 6.62$ & $328.07 \pm 11.38$ \\ \hline
-drtautau > 3.4 & $165.44 \pm 3.69$ & $22.14 \pm 0.94$ & $213.75 \pm 6.60$ & $328.36 \pm 11.38$ \\ \hline
-\end{tabular}
-\label{tab:yields_hh_3}
-\end{table}
-
-\begin{table}
+\label{tab:tthML_cutflow_all}
 \caption{The cutflow tables for the preselection in the leptonic channels.}
 \footnotesize
 \input{\FCNCTables/cutflow/tthML/cutflow_all}
@@ -349,6 +183,7 @@ drtautau > 3.4 & $165.44 \pm 3.69$ & $22.14 \pm 0.94$ & $213.75 \pm 6.60$ & $328
 \input{\FCNCTables/cutflow/tthML/cutflow_reg1l1tau1b3j_os}
 \end{table}
 \begin{table}
+\label{tab:tthML_cutflow_reg1l2tau1bnj_os}
 \caption{The cutflow tables in the $l\thadhad$ signal region.}
 \input{\FCNCTables/cutflow/tthML/cutflow_reg1l2tau1bnj_os}
 \end{table}

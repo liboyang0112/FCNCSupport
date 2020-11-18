@@ -53,29 +53,38 @@ A muon spectrometer (MS) comprises separate trigger and high-precision tracking 
 
 This analysis is based on the full proton-proton data at a center-of-mass energy $\sqrt{s}=13$~TeV with a bunch spacing of 25~ns collected by ATLAS in Run-2. The following good run list (GRL) was used for the 2015 dataset:
 
+\begin{centering}
+{\texttt data15\_13TeV.periodAllYear\_DetStatus-v89-pro21-02}
 
-{\texttt\scriptsize data15\_13TeV.periodAllYear\_DetStatus-v89-pro21-02\_Unknown\_PHYS\_StandardGRL\_All\_Good\_25ns.xml}
+{\texttt \_Unknown\_PHYS\_StandardGRL\_All\_Good\_25ns.xml}
 
+\end{centering}
 which corresponds to an integrated luminosity of 3.22 fb$^{-1}$.
 
 The GRL used for the 2016 dataset:
 
-{\texttt\scriptsize data16\_13TeV.periodAllYear\_DetStatus-v89-pro21-01\_DQDefects-00-02-04\_PHYS\_StandardGRL\_All\_Good\_25ns.xml}
+\begin{centering}
+{\texttt data16\_13TeV.periodAllYear\_DetStatus-v89-pro21-01\\\_DQDefects-00-02-04\_PHYS\_StandardGRL\_All\_Good\_25ns.xml}
 
+\end{centering}
 corresponds to an integrated luminosity of 32.88 fb$^{-1}$.
 
 These GRLs exclude data where the IBL was not fully operational. The uncertainty in the combined 2015+2016 integrated luminosity, 36.1~fb$^{-1}$, is $2.1\%$. It is derived, following a methodology similar to that detailed in Ref.~\cite{DAPR-2013-01}, from a calibration of the luminosity scale using x-y beam-separation scans performed in August 2015 and May 2016.
 
 The GRL used for the 2017 dataset:
 
-{\texttt\scriptsize data17\_13TeV.periodAllYear\_DetStatus-v99-pro22-01\_Unknown\_PHYS\_StandardGRL\_All\_Good\_25ns\_Triggerno17e33prim.xml}
+\begin{centering}
+{\texttt data17\_13TeV.periodAllYear\_DetStatus-v99-pro22-01\\\_Unknown\_PHYS\_StandardGRL\_All\_Good\_25ns\_Triggerno17e33prim.xml}
 
+\end{centering}
 corresponds to an integrated luminosity of 44.307 fb$^{-1}$.
 
 The GRL used for the 2018 dataset:
 
-{\texttt\scriptsize  data18\_13TeV.periodAllYear\_DetStatus-v102-pro22-04\_Unknown\_PHYS\_StandardGRL\_All\_Good\_25ns\_Triggerno17e33prim.xml}
+\begin{centering}
+{\texttt  data18\_13TeV.periodAllYear\_DetStatus-v102-pro22-04\\\_Unknown\_PHYS\_StandardGRL\_All\_Good\_25ns\_Triggerno17e33prim.xml}
 
+\end{centering}
 corresponds to an integrated luminosity of 59.937 fb$^{-1}$. The final luminosity used for the analysis is 140.45 fb$^{-1}$.
 %The integrated luminosity is 36.1~fb$^{-1}$ with a relative uncertainty of 3.2\% after the application of data-quality requirements.
 %The average number of interactions per bunch crossing, over short time periods of about 1 minute, denoted by $\langle\mu\rangle$, is 13 in 2015 and 25 in 2016. The pile-up background is formed by the inelastic collisions, producing mainly low transverse momentum particles, in addition to the hard interaction.
@@ -133,7 +142,7 @@ Diboson & \multicolumn{2}{c|}{Sherpa 2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} &
 In this section, various objects used in this analysis are defined, namely jets, electrons, muons, hadronically decaying taus and missing transverse energy. 
 
 \subsection{Jets}
-Jets are reconstructed using the anti-$k_t$ algorithm \cite{antikt} with a distance parameter $R=0.4$ applied to the particle flow candidates. Only jets with $\pt>25$~GeV and $|\eta|<4.5$ are considered by the analysis. To suppress jets produced in additional pile-up interactions, jets with $\pt<60$~GeV and $|\eta|<2.4$ are required to have a Jet Vertex Tagger (JVT \cite{JVT}) parameter larger than 0.2 (Medium working point). The JVT is the output of the jet vertex tagger algorithm used to identify and select jets originating from the hard-scatter interaction through the use of tracking and vertexing information. About $10\%$ of selected jets in the signal are in the forward detector region. Figure \ref{fig:etaJ4} shows the $\eta$ of the 4th leading jet in the analysis. After the above selection and overlap removal, a ``jet cleaning'' cut is applied on all the jets, and the events with jets not passing this cut are discarded.
+Jets are reconstructed using the anti-$k_t$ algorithm \cite{antikt} with a distance parameter $R=0.4$ applied to the particle flow candidates. Only jets with $\pt>25$~GeV and $|\eta|<4.5$ are considered by the analysis. To suppress jets produced in additional pile-up interactions, jets with $\pt<60$~GeV and $|\eta|<2.4$ are required to have a Jet Vertex Tagger (JVT \cite{JVT}) parameter larger than 0.2 (Medium working point). The JVT is the output of the jet vertex tagger algorithm used to identify and select jets originating from the hard-scatter interaction through the use of tracking and vertexing information. About $10\%$ of selected jets in the signal are in the forward detector region. After the above selection and overlap removal, a ``jet cleaning'' cut is applied on all the jets, and the events with jets not passing this cut are discarded.
 
 \subsection{b-tagging}
 The {\texttt\scriptsize DL1r} \cite{btag1} algorithm is used to identify the jets initiated by $b$-quarks. A working point corresponding to an average efficiency of 70\% for jets containing $b$-quarks is chosen.
