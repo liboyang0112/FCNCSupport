@@ -102,25 +102,85 @@ Then the QCD contribution in D is then estimated as $rC$. After the ABCD QCD est
 The data-MC comparison after the fake tau and fake lepton estimation is show in Figure \ref{fig:wjet_pt_postfit}.
 
 
-\subsection{QCD fake $\tauhad$ estimate in $\thadhad$}
+\subsection{fake $\tauhad$ estimate in $\thadhad$}
 \label{sec:ss_method}
 
 Figure \ref{fig:os_pre_hadhad} shows the $\tauhad$ $\pt$ spectra in the $\thadhad$ SS and OS. The fake tau background events from QCD multi-jets 
 is not added yet so the data have more than the background prediction. The top fake are dominated by fakes with one real tau.
-It is found, based on the MC prediction, that the QCD fake is the dominant fake process in the $\thadhad$ channel.
+It is found, based on the MC prediction, that the QCD fake is the dominant fake process in the $\thadhad$ channel.Here,we employ a so-called Fake Factor Method developed by  $H\rightarrow$ $\thadhad$ coupling people.If one would like to  investigate the method details about the method,  you will find them in their document( add link). We will demostrate how the method are applied in our analysis.
+
+First, we need to define some regions for estimating the fake:
+
+\begin{itemize}
+\item{$reg2matau1b2jos$:   2 opposite $\tauhad$  with RNN medium ID, one b-jet, 2 exactly light flavor jets.}
+\item{$reg1m1ltau1b2jos$:  2 opposite $\tauhad$  with leading one being RNN medium,subleading being  RNN loose,one b-jet, 2 exactly light flavor jets.}
+\item{$reg1l1mtau1b2jos$:  2 opposite $\tauhad$  with subleading one being RNN medium,leading being  RNN loose,one b-jet, 2 exactly light flavor jets.}
+\item{$reg2ltau1b2jos$:    2 opposite $\tauhad$  with RNN loose but not RNN medium,one b-jet, 2 exactly light flavor jets.}
+\item{$reg1l1ntau1b2jos$:  2 opposite $\tauhad$  with leading one being RNN loose-not-medium,subleading being not RNN medium,one b-jet, 2 exactly light flavor jets.}
+\item{$reg1n1ltau1b2jos$:  2 opposite $\tauhad$  with subleading one being RNN loose-not-medium,leading being not RNN medium,one b-jet, 2 exactly light flavor jets.}
+\end{itemize}
+
+Here, we didn't ultilize the regions with two not loose $\tauhad$ (very loose $\tauhad$ ),since HIGG4D3 derivation removes all events with both $\tauhad$ failing the loose $\tauhad$ ID criteria. So we only concentrate on events with at least tau satisfying the loose RNN ID working point. In this control region, the template for the fake contribution is constructed by subtracting all simulated $\tauhad$ background contributions from the data distribution.
+
+According to the strategy in the note, two sets of fake-factors are needed to be computed in the W+jets control region of $\tlhad$ channel to scale the template.It is necessary to have two sets because of the HIGG4D3 skimming. Therefore, fake-factors derived in a region with a loose minimum ID requirement must be applied in combination with those without it.In addition, we need to adjust some cut in wjet CR to make the fake-factors more applicable to $\tauhad$ channel.Here, we only list the cuts changed for fake-factor calculation:
+
+\begin{itemize}
+\item    Matching of the $\tauhad$ candidate to the tau25\_medium1\_tracktwo(EF) trigger
+
+\item    Changing the b-tagging working point to 70\%
+
+\item    Removing the lower RNN ID cut at 0.01
+
+\item    Requiring $\Delta\eta (l,$\tauhad$)>0.6$
+\end{itemize}
+
+All cuts chosen here are just assure that the fake factor measurement is not biased. The two sets of Fake-factors are completed in three regions, differing in the tau ID working point requirment. We denote the FFs as not-medium FFs(nm) and loose-not-medium FFs(lnm), both of the FFs are the ratio of yields of events in W+jet CR with tau medium tau ID to yields of events fialing the tau ID, for lnm, we require the ID criteria down to loose but not medium tau.The nm are calculated with a denominator where the tau candidates fail the medium ID, More specifically, the FF are deacribes as this: 
+
+\begin{equation}
+F F_{\mathrm{nm}}=(\text { Data }-\mathrm{MC})_{\text {medium } \tau_{\text {had-vis }}}^{\mathrm{WCR}} /(\text { Data }-\mathrm{MC})_{\text {not-medium}\ \tau_{\text{had-vis}}}^{\mathrm{WCR}} 
+\end{equation}
+
+\begin{equation}
+F F_{\mathrm{lnm}}=(\text { Data }-\mathrm{MC})_{\text {medium } \tau_{\text {had-vis }}}^{\mathrm{WCR}} /(\text { Data }-\mathrm{MC})_{\text {loose-not-medium}\ \tau_{\text{had-vis}}}^{\mathrm{WCR}}
+\end{equation}
+
+A 2-dimensional parametrization is employed in the light of the dependence on pt and $\eta$. From the FF definition, we can give a pictorial explanation of the computation of FF.From the idea in the $H\rightarrow$ $\thadhad$ coupling note,the ata-driven method to investigate the Signal Region yields from fakes are organized as follows.
+
+The template for double-fake events is anti-tau region, which could be divided into three smaller regions according to the different taus candidate ID and HIGG4D3 derivation framework:leading tau with loose-not-medium ID and subleading tau with not loose ID which is marked in orange in the figure(add figure), leading tau with not loose ID and subleading tau with loose-not-medium which is marked in green, both of leading tau and subleading pass loose-not-medium working point which locate in the intersection of the previous two regions, which are corresponding to our $reg1l1ntau1b2jos$,$reg1n1ltau1b2jos$,$reg2ltau1b2jos$ respectively.
+
+From the fake-factor definition, $F F_{\operatorname{lnm}}\left(\tau_{0}\right) \cdot F F_{\mathrm{nm}}\left(\tau_{1}\right)$ will scale the $reg1l1ntau1b2jos$ to full expected fake tields in the SR,  in the same way, $F F_{\mathrm{nm}}\left(\tau_{0}\right) \cdot F F_{\mathrm{lnm}}\left(\tau_{1}\right)$, This would result in an overestimation of the SR fake contribution by a factor of two, which is resolved by multiplying the applied product of two fake-factors by $\frac{1}{2}$.
+
+Besides, Events with both $\thadhad$ candidates satisfying the loose criterion are scaled 
+by $\frac{1}{2}\left(F F_{\operatorname{lnm}}\left(\tau_{0}\right) \cdot F F_{\mathrm{nm}}\left(\tau_{1}\right)+F F_{\mathrm{nm}}\left(\tau_{0}\right) \cdot F F_{\operatorname{lnm}}\left(\tau_{1}\right)\right)$ to account for these events being intersection of two template regions.
+
+Finally, we also take events with only one fake $\thadhad$ into account to complete our Fake computation,for these, $reg1m1ltau1b2jos$ and $reg1l1mtau1b2jos$ are needed to be added, which are scaled by $F F_{\mathrm{nm}}\left(\tau_{1}\right)$ and $F F_{\mathrm{nm}}\left(\tau_{0}\right)$,respectively.
+
+The procedure described in the previous paragraphs are summarized in the following equation,
+
+\begin{equation}
+$\tau_{1}^{P} \tau_{2}^{P}=\tau_{1}^{T} \tau_{2}^{T}(\mathrm{MC})+F F_{2} \tau_{1}^{P} \tau_{2}^{F}+F F_{1} \tau_{1}^{F} \tau_{2}^{P}-F F_{1} F F_{2} \tau_{1}^{F} \tau_{2}^{F}$
+\end{equation}
+
+where P means passing $\thadhad$ ID, T means truth $\thadhad$, therefore, the equation illustrates the contribution of events with two RNN medium $\thadhad$ is estimated through the combination of $reg1m1ltau1b2jos$, $reg1l1mtau1b2jos$, $reg2ltau1b2jos$,$reg1l1ntau1b2jos$,$reg1n1ltau1b2jos$.
+
+Since the sample size limitations in the W+jets control region,statistical uncertainties on the regions where the FFs are derived
+and applied need to been considered.We will vary the fake factors by one standard deviation of the statistical uncertainty originating from the limited sample size to implement the systematic variations.The fake-factors from the W+jets CR depending on $\thadhad$ prongness and the type (lnm or nm)are derived separately, so there are four systematic variations to cover for it.
+
+We also derived the fake factors in the SS region using the same binning applied in the W+jets, which are called same-sign CR fake-factors.These fake factors are then applied to SS anti-ID to build the  the fake template for the closure test. In the final fit procedure, this variation is also taken into account.
+
 
 \begin{figure}[htb]
 \centering
-\includegraphics[page=6,width=0.45\textwidth]{\FCNCFigures/xTFW/raw/reg2mtau1b2jss/tau_0_pt.pdf}
+\includegraphics[page=6,width=0.45\textwidth]{\FCNCFigures/xTFW/raw/NOMINAL/reg2mtau1b2jss/tau_pt_0.pdf}
 \put(-100, 140){\textbf{(a)}}
 \put(-120, 130){\footnotesize{STH $\thadhad$ (SS)}}
-\includegraphics[page=6,width=0.45\textwidth]{\FCNCFigures/xTFW/raw/reg2mtau1b2jos/tau_0_pt.pdf}
+\includegraphics[page=6,width=0.45\textwidth]{\FCNCFigures/xTFW/raw/NOMINAL/reg2mtau1b2jos/tau_pt_0.pdf}
 \put(-100, 140){\textbf{(b)}}
 \put(-120, 130){\footnotesize{STH $\thadhad$ (OS)}}\\
-\includegraphics[page=6,width=0.45\textwidth]{\FCNCFigures/xTFW/raw/reg2mtau1b3jss/tau_0_pt.pdf}
+\includegraphics[page=6,width=0.45\textwidth]{\FCNCFigures/xTFW/raw/NOMINAL/reg2mtau1b3jss/tau_pt_0.pdf}
 \put(-100, 140){\textbf{(c)}}
 \put(-120, 130){\footnotesize{TTH $\thadhad$ (SS)}}
-\includegraphics[page=6,width=0.45\textwidth]{\FCNCFigures/xTFW/raw/reg2mtau1b3jos/tau_0_pt.pdf}
+\includegraphics[page=6,width=0.45\textwidth]{\FCNCFigures/xTFW/raw/NOMINAL/reg2mtau1b3jos/tau_pt_0.pdf}
 \put(-100, 140){\textbf{(d)}}
 \put(-120, 130){\footnotesize{TTH $\thadhad$ (OS)}}
 \caption{ The distributions of $\tau$ $\pt$ in the STH $\thadhad$ (SS)(a), STH $\thadhad$ (OS) (b), TTH $\thadhad$ (SS) (c) 
@@ -128,19 +188,21 @@ and TTH $\thadhad$ (OS) (d), to illustrate the background composition. Data is m
 \label{fig:os_pre_hadhad}
 \end{figure}
 
-The excess of the SS events over MC with truth taus are used to estimate the fake tau background in OS from QCD multi-jets in the $\thadhad$ + jets channel:   
-\begin{equation}
-N_{\text{QCD fake}}^{\text{OS}} =f_{\text{norm}}\cdot (N_{\text{data}}^{\text{SS}} - N_{\text{MC}}^{\text{SS}}),
-\label{eq:eq10}
-\end{equation}
+% The excess of the SS events over MC with truth taus are used to estimate the fake tau background in OS from QCD multi-jets in the $% \thadhad$ + jets channel:   
+% \begin{equation}
+% N_{\text{QCD fake}}^{\text{OS}} =f_{\text{norm}}\cdot (N_{\text{data}}^{\text{SS}} - N_{\text{MC}}^{\text{SS}}),
+% \label{eq:eq10}
+% \end{equation}
+% 
+% where $f_{\text{norm}}$ is a ratio of OS and SS from multi-jets QCD, 
+% $N_{\text{data}}^{\text{SS}}$, and $N_{\text{MC}}^{\text{SS}}$ are observed data and estimated MC predictions in the SS regions. 
+% 
+% The $f_{\text{norm}}$ is measured separately to be $1.32\pm 0.03$ in the signal-depleted
+% one $b$-tag events with $BDT<0.5$ and $1.6\pm 0.1$ in the double $b$-tagged  $\thadhad$ +$\ge$ 3jets events,
+% which provides a good closure test of QCD fake tau estimation. We take the difference between these
+% two values as a systematics for the method and assign $f_{\text{norm}}=1.3\pm 0.3$ for the analysis.
 
-where $f_{\text{norm}}$ is a ratio of OS and SS from multi-jets QCD, 
-$N_{\text{data}}^{\text{SS}}$, and $N_{\text{MC}}^{\text{SS}}$ are observed data and estimated MC predictions in the SS regions. 
 
-The $f_{\text{norm}}$ is measured separately to be $1.32\pm 0.03$ in the signal-depleted
-one $b$-tag events with $BDT<0.5$ and $1.6\pm 0.1$ in the double $b$-tagged  $\thadhad$ +$\ge$ 3jets events,
- which provides a good closure test of QCD fake tau estimation. We take the difference between these
-two values as a systematics for the method and assign $f_{\text{norm}}=1.3\pm 0.3$ for the analysis.
 
 \subsection{Fake lepton background}
 \label{sec:fcnc_fakeLep_bkg}
@@ -161,10 +223,10 @@ and the histograms as the expected various backgrounds.
 
 \begin{figure}[htb]
 \centering
-\includegraphics[page=6,width=0.45\textwidth]{\FCNCFigures/xTFW/SSOSWithFakeMCCalibrated/reg2mtau1b2jos/tau_0_pt.pdf}
+\includegraphics[page=6,width=0.45\textwidth]{\FCNCFigures/xTFW/showFake/NOMINAL/reg2mtau1b2jos/tau_pt_0.pdf}
 \put(-100, 140){\textbf{(a)}}
 \put(-120, 130){\footnotesize{STH $\thadhad$ OS}}
-\includegraphics[page=6,width=0.45\textwidth]{\FCNCFigures/xTFW/SSOSWithFakeMCCalibrated/reg2mtau1b3jos/tau_0_pt.pdf}
+\includegraphics[page=6,width=0.45\textwidth]{\FCNCFigures/xTFW/showFake/NOMINAL/reg2mtau1b3jos/tau_pt_0.pdf}
 \put(-100, 140){\textbf{(b)}}
 \put(-120, 130){\footnotesize{TTH $\thadhad$ OS}}\\
 \caption{ The distributions of leading$\tau$ $\pt$ in the $\thadhad$ + 3 jets (a), and 4 jets OS (b)}
