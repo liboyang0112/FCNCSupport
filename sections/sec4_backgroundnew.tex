@@ -121,7 +121,15 @@ First, we need to define some regions for estimating the fake:
 \item{$reg1n1ltau1b2jos$:  2 opposite $\tauhad$  with subleading one being RNN loose-not-medium,leading being not loose(very loose),one b-jet, 2 exactly light flavor jets.}
 \end{itemize}
 
-For 3j region, the definition is same except the number of light jets.Here, we didn't ultilize the regions with two not loose $\tauhad$ (very loose $\tauhad$ ),since HIGG4D3 derivation removes all events with both $\tauhad$ failing the loose $\tauhad$ ID criteria. So we only concentrate on events with at least tau satisfying the loose RNN ID working point. In this control region, the template for the fake contribution is constructed by subtracting all simulated $\tauhad$ background contributions from the data distribution.
+For 3j region, the definition is same except the number of light jets.Here, we didn't ultilize the regions with two not loose $\tauhad$ (very loose $\tauhad$ ),since HIGG4D3 derivation removes all events with both $\tauhad$ failing the loose $\tauhad$ ID criteria.Figure \ref{fig:regions_hadhad} shows the pictorial representation of all regions required by FF.So we only concentrate on events with at least tau satisfying the loose RNN ID working point. In this control region, the template for the fake contribution is constructed by subtracting all simulated $\tauhad$ background contributions from the data distribution.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.45\textwidth]{\FCNCFigures/xTFW/otherPlots/regions.png}
+\caption{ Pictorial representation of the fake-factors relevant region for $\tauhad$ channel.}
+\label{fig:regions_hadhad}
+\end{figure}
+
 
 According to the strategy in the note, two sets of fake-factors are needed to be computed in the W+jets control region of $\tlhad$ channel to scale the template.It is necessary to have two sets because of the HIGG4D3 skimming. Therefore, fake-factors derived in a region with a loose minimum ID requirement must be applied in combination with those without it.In addition, we need to adjust some cut in wjet CR to make the fake-factors more applicable to $\tauhad$ channel.Here, we only list the cuts changed for fake-factor calculation:
 
@@ -161,7 +169,7 @@ Finally, we also take events with only one fake $\thadhad$ into account to compl
 The procedure described in the previous paragraphs are summarized in the following equation,
 
 \begin{equation}
-$\tau_{1}^{P} \tau_{2}^{P}=\tau_{1}^{T} \tau_{2}^{T}(\mathrm{MC})+F F_{2} \tau_{1}^{P} \tau_{2}^{F}+F F_{1} \tau_{1}^{F} \tau_{2}^{P}-F F_{1} F F_{2} \tau_{1}^{F} \tau_{2}^{F}$
+\tau_{1}^{P} \tau_{2}^{P}=\tau_{1}^{T} \tau_{2}^{T}(\mathrm{MC})+F F_{2} \tau_{1}^{P} \tau_{2}^{F}+F F_{1} \tau_{1}^{F} \tau_{2}^{P}-F F_{1} F F_{2} \tau_{1}^{F} \tau_{2}^{F}
 \end{equation}
 
 where P means passing $\thadhad$ ID, T means truth $\thadhad$, therefore, the equation illustrates the contribution of events with two RNN medium $\thadhad$ is estimated through the combination of $reg1m1ltau1b2jos$, $reg1l1mtau1b2jos$, $reg2ltau1b2jos$,$reg1l1ntau1b2jos$,$reg1n1ltau1b2jos$.

@@ -177,7 +177,7 @@ For the objects passing the selection above, a geometric overlap removal is appl
 \item When a muon ID track is ghost associated to a jet or within a $\Delta R=0.2$ cone of a jet, the jet is removed if it has less than 3 tracks with $\pt>500$ MeV or has a relative small $\pt$ ($\pt^{\mu}>0.5\pt^{\text{jet}} \text{ and } \pt^{\mu}>0.7[\text{the scalar sum of the } \pt \text{'s of the jet tracks with } \pt>500$ MeV]).
 \item Muons within a $\Delta R=0.4$ cone of a jet are removed.
 \item Jets within a $\Delta R=0.2$ cone of the leading $\tauhad$ ($\tlhad$), or with the two leading $\tauhad$'s ($\thadhad$), are excluded. The overlap also works for the reverted tau ID regions used in the analysis, since the tau ID information is not used.
-\item If a tau object is also tagged as a $b$-jet, then this tau object is removed.
+\item If a tau object is also tagged as a $b$-jet, then this event is removed.
 \end{itemize}
 
 Note that the $\met$ calculation package has its own overlap removal procedure. Taus that fail \texttt{Loose} ID are also passed to the package. Only two leading taus are considered in the calculation.
