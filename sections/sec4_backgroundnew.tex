@@ -114,14 +114,14 @@ First, we need to define some regions for estimating the fake:
 
 \begin{itemize}
 \item{$reg2matau1b2jos$:   2 opposite $\tauhad$  with RNN medium ID, one b-jet, 2 exactly light flavor jets.}
-\item{$reg1m1ltau1b2jos$:  2 opposite $\tauhad$  with leading one being RNN medium,subleading being  RNN loose,one b-jet, 2 exactly light flavor jets.}
-\item{$reg1l1mtau1b2jos$:  2 opposite $\tauhad$  with subleading one being RNN medium,leading being  RNN loose,one b-jet, 2 exactly light flavor jets.}
-\item{$reg2ltau1b2jos$:    2 opposite $\tauhad$  with RNN loose but not RNN medium,one b-jet, 2 exactly light flavor jets.}
-\item{$reg1l1ntau1b2jos$:  2 opposite $\tauhad$  with leading one being RNN loose-not-medium,subleading being not RNN medium,one b-jet, 2 exactly light flavor jets.}
-\item{$reg1n1ltau1b2jos$:  2 opposite $\tauhad$  with subleading one being RNN loose-not-medium,leading being not RNN medium,one b-jet, 2 exactly light flavor jets.}
+\item{$reg1m1ltau1b2jos$:  2 opposite $\tauhad$  with leading one being RNN medium,subleading being  RNN loose-not-medium,one b-jet, 2 exactly light flavor jets.}
+\item{$reg1l1mtau1b2jos$:  2 opposite $\tauhad$  with subleading one being RNN medium,leading being  RNN loose-not-medium,one b-jet, 2 exactly light flavor jets.}
+\item{$reg2ltau1b2jos$:    2 opposite $\tauhad$  with RNN loose-not-medium,one b-jet, 2 exactly light flavor jets.}
+\item{$reg1l1ntau1b2jos$:  2 opposite $\tauhad$  with leading one being RNN loose-not-medium,subleading being not loose(very loose),one b-jet, 2 exactly light flavor jets.}
+\item{$reg1n1ltau1b2jos$:  2 opposite $\tauhad$  with subleading one being RNN loose-not-medium,leading being not loose(very loose),one b-jet, 2 exactly light flavor jets.}
 \end{itemize}
 
-Here, we didn't ultilize the regions with two not loose $\tauhad$ (very loose $\tauhad$ ),since HIGG4D3 derivation removes all events with both $\tauhad$ failing the loose $\tauhad$ ID criteria. So we only concentrate on events with at least tau satisfying the loose RNN ID working point. In this control region, the template for the fake contribution is constructed by subtracting all simulated $\tauhad$ background contributions from the data distribution.
+For 3j region, the definition is same except the number of light jets.Here, we didn't ultilize the regions with two not loose $\tauhad$ (very loose $\tauhad$ ),since HIGG4D3 derivation removes all events with both $\tauhad$ failing the loose $\tauhad$ ID criteria. So we only concentrate on events with at least tau satisfying the loose RNN ID working point. In this control region, the template for the fake contribution is constructed by subtracting all simulated $\tauhad$ background contributions from the data distribution.
 
 According to the strategy in the note, two sets of fake-factors are needed to be computed in the W+jets control region of $\tlhad$ channel to scale the template.It is necessary to have two sets because of the HIGG4D3 skimming. Therefore, fake-factors derived in a region with a loose minimum ID requirement must be applied in combination with those without it.In addition, we need to adjust some cut in wjet CR to make the fake-factors more applicable to $\tauhad$ channel.Here, we only list the cuts changed for fake-factor calculation:
 
@@ -152,7 +152,9 @@ The template for double-fake events is anti-tau region, which could be divided i
 From the fake-factor definition, $F F_{\operatorname{lnm}}\left(\tau_{0}\right) \cdot F F_{\mathrm{nm}}\left(\tau_{1}\right)$ will scale the $reg1l1ntau1b2jos$ to full expected fake tields in the SR,  in the same way, $F F_{\mathrm{nm}}\left(\tau_{0}\right) \cdot F F_{\mathrm{lnm}}\left(\tau_{1}\right)$, This would result in an overestimation of the SR fake contribution by a factor of two, which is resolved by multiplying the applied product of two fake-factors by $\frac{1}{2}$.
 
 Besides, Events with both $\thadhad$ candidates satisfying the loose criterion are scaled 
-by $\frac{1}{2}\left(F F_{\operatorname{lnm}}\left(\tau_{0}\right) \cdot F F_{\mathrm{nm}}\left(\tau_{1}\right)+F F_{\mathrm{nm}}\left(\tau_{0}\right) \cdot F F_{\operatorname{lnm}}\left(\tau_{1}\right)\right)$ to account for these events being intersection of two template regions.
+by 
+
+$\frac{1}{2}\left(F F_{\operatorname{lnm}}\left(\tau_{0}\right) \cdot F F_{\mathrm{nm}}\left(\tau_{1}\right)+F F_{\mathrm{nm}}\left(\tau_{0}\right) \cdot F F_{\operatorname{lnm}}\left(\tau_{1}\right)\right)$ to account for these events being intersection of two template regions.
 
 Finally, we also take events with only one fake $\thadhad$ into account to complete our Fake computation,for these, $reg1m1ltau1b2jos$ and $reg1l1mtau1b2jos$ are needed to be added, which are scaled by $F F_{\mathrm{nm}}\left(\tau_{1}\right)$ and $F F_{\mathrm{nm}}\left(\tau_{0}\right)$,respectively.
 
@@ -224,10 +226,10 @@ and the histograms as the expected various backgrounds.
 
 \begin{figure}[htb]
 \centering
-\includegraphics[page=6,width=0.45\textwidth]{\FCNCFigures/xTFW/showFake/NOMINAL/reg2mtau1b2jos/tau_pt_0.pdf}
+\includegraphics[page=6,width=0.45\textwidth]{\FCNCFigures/xTFW/showFake/NOMINAL/reg2mtau1b2jos_vetobtagwp70_highmet/tau_pt_0.pdf}
 \put(-100, 140){\textbf{(a)}}
 \put(-120, 130){\footnotesize{STH $\thadhad$ OS}}
-\includegraphics[page=6,width=0.45\textwidth]{\FCNCFigures/xTFW/showFake/NOMINAL/reg2mtau1b3jos/tau_pt_0.pdf}
+\includegraphics[page=6,width=0.45\textwidth]{\FCNCFigures/xTFW/showFake/NOMINAL/reg2mtau1b3jos_vetobtagwp70_highmet/tau_pt_0.pdf}
 \put(-100, 140){\textbf{(b)}}
 \put(-120, 130){\footnotesize{TTH $\thadhad$ OS}}\\
 \caption{ The distributions of leading$\tau$ $\pt$ in the $\thadhad$ + 3 jets (a), and 4 jets OS (b)}

@@ -11,6 +11,13 @@ The signal topology and kinematics are different across all the channels. To max
 \input{\FCNCTables/Importance/tthML/Merged}
 \end{table}
 
+
+\begin{table}
+\label{tab:importance}
+\caption{The importance (in \%) of each variables used in the BDTG training, the two numbers in the each block are from the two training folds.}
+\input{\FCNCTables/Importance/xTFW/Merged}
+\end{table}
+
 The signal and background samples are randomly divided into two equal parts (denoted as even and odd parity events). The BDT is trained with one part, and tested on the other part. It is always ensured that the BDT derived from the training events is not applied to the same events, but only to the independent test ones. The sum of MC all background processes, corrected normalized, are used in the training and testing. %The Gradient BDT parameters used are listed in Tab. \ref{tab:bdt_pars}. 
 With the \texttt{IgnoreNegWeightsInTraining} option, only MC events with positive MC weights are used in the traning. The comparison of BDT performances in test-odd and test-even samples is given in Fig. \ref{fig:overtrain_hadhad}-\ref{fig:overtrain_lhadhad}. The BDT parameters \texttt{NTrees} and \texttt{nCuts} are tuned such that the test-odd and test-even agrees, and the signal sensitivity is optimised.
 
@@ -43,3 +50,23 @@ The final yield and stats only significance is shown in Table \ref{tab:yield} an
 \input{\FCNCTables/tthML/showFake/faketau/postfit/NOMINAL/significance_chart}
 %\input{\FCNCTables/tthML/showFake/fakelep/postfit/NOMINAL/significance_chart}
 \end{table}
+
+
+\begin{table}
+\caption{The yield of the background, data and each signal before the final fit.}
+\label{tab:yield}
+%\input{\FCNCTables/hadhad_yield_chart}
+\input{\FCNCTables/xTFW/showFake/NOMINAL/yield_chart}
+%\input{\FCNCTables/tthML/showFake/fakelep/postfit/NOMINAL/yield_chart}
+\end{table}
+
+\begin{table}
+\caption{The stat. only significance of signal before the final fit.}
+\label{tab:significance}
+%\input{\FCNCTables/hadhad_significance_chart}
+\input{\FCNCTables/xTFW/showFake/NOMINAL/significance_chart}
+%\input{\FCNCTables/tthML/showFake/fakelep/postfit/NOMINAL/significance_chart}
+\end{table}
+
+
+
