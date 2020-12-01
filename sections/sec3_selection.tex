@@ -1,7 +1,7 @@
 \section{Selection of events}
 \label{sec:selection}
 
-In the leptonic channels, the $\pt$ of the lepton is required to be 1 GeV above the trigger threshold. The leptons are required to have \texttt{Tight} ID as defined in Sec. \ref{sec:obj_reco}. %Trigger cuts can be regarded as independent and additional to these offline cuts.) is required.
+In the leptonic channels, the $\pt$ of the lepton is required to be 1 GeV above the trigger threshold. The leptons are required to have \texttt{Tight} ID as defined in Sec. \ref{sec:obj_reco}. The trigger matching between the offline and trigger level lepton objects is also required for the corresponding leptons selected for the analysis.
 
 In the hadronic channels, no leptons (as defined in Sec. \ref{sec:obj_reco}) should be present in the event, and the two tau candidates with the highest $\pt$ are chosen. They should also pass the \texttt{Medium} tau ID and overlap removal. To account for the trigger thresholds, the two hadronic taus are requried to pass the $\pt>40$ GeV and $\pt>30$ GeV cuts.
 
@@ -74,24 +74,6 @@ Election+Muon:
 \begin{itemize}
 	\item HLT\_e17\_lhloose\_mu14
 \end{itemize}
-%\begin{description}
-%\item Single-lepton triggers in 2015:
-%  
-%  \begin{itemize}
-%  \item \texttt{HLT\_e24\_lhmedium\_L1EM20VH}, or \texttt{HLT\_e60\_lhmedium}, or \texttt{HLT\_e120\_lhloose}
-%  \item \texttt{HLT\_mu20\_iloose\_L1MU15}, or \texttt{HLT\_mu50}
-%  \end{itemize}
-%  
-%\item Single-lepton triggers in 2016:
-%  
-%  \begin{itemize}
-%  \item \texttt{HLT\_e26\_lhtight\_nod0\_ivarloose}, or \texttt{HLT\_e60\_lhmedium\_nod0}, or \texttt{HLT\_e140\_lhloose\\\_nod0}
-%  \item \texttt{HLT\_mu26\_ivarmedium}, or \texttt{HLT\_mu50}
-%  \end{itemize}
-%  
-%\end{description}
-
-The trigger matching between the offline and trigger level lepton objects is also required for the corresponding leptons selected for the analysis. The minimum offline lepton $p_{\text{T}}$ should be 1 GeV above the trigger threshold. For the $\tmhad$ channel in 2016, the offline muon $p_{\text{T}}$ is 2 GeV above the trigger threshold due to the trigger scale factors' binning\footnote{The trigger $\pt$ cuts on the leptons are independent of and additional to the other $\pt$ cuts introduced previously. For example, the $\pt$ cuts used in the overlap removal are still as those in Sec. \ref{sec:obj_reco}. It is also the case for the cuts introduced in the AOD derivations (Sec. \ref{sec:cuts}).}.
 
 The trigger used for hadronic channels in each year are listed as follow:
 \begin{itemize}
@@ -103,7 +85,10 @@ The trigger used for hadronic channels in each year are listed as follow:
 
  \end{itemize}
 
-The two $\tauhad$ candidates are matched to the respective legs of the di-tau trigger using the individual single tau trigger objects. The $\pt$ thresholds are chosen such that the selected $\tauhad$ candidate $\pt$ already lies in the plateau of the respective trigger efficiency curve. Due to the rising instantaneous luminosity, the trigger used in the 2016 data taking includes a requirement for an additional level-1 calorimeter trigger jet with $\pt > \SI{25}{\GeV}$ and $|\eta|<3.2$. The leading jet in the 2016 events is required to be matched within $\Delta R < 0.4$ with the jet ROI that fulfilled the jet part of the trigger criteria (trigger jet). Figure \ref{fig:hadhad_trigger} shows the turn-on curves of the additional jet as in \cite{Htautau}, and the leading jet $\pt$ in the $\thadhad$ channel. A cut of $\pt^{\text{L1jet}} > \SI{50}{\GeV}$ is required on the trigger jet, and a leading-jet $\pt > \SI{60}{\GeV}$ cut is applied to remove the effect of turn on curve.
+The two $\tauhad$ candidates are matched to the respective legs of the di-tau trigger using the individual single tau trigger objects. The $\pt$ thresholds are chosen such that the selected $\tauhad$ candidate $\pt$ already lies in the plateau of the respective trigger efficiency curve. Due to the rising instantaneous luminosity, the trigger used in the 2016-2018 data taking includes a requirement for an additional level-1 calorimeter trigger jet 
+%with $\pt > \SI{25}{\GeV}$ and $|\eta|<3.2$
+. The leading jet in those events is required to be matched within $\Delta R < 0.4$ with the jet ROI that fulfilled the jet part of the trigger criteria (trigger jet). The $\pt > \SI{60}{\GeV}$ cut is applied to make sure that the jet is in the trigger $\pt$ plateau.
+%Figure \ref{fig:hadhad_trigger} shows the turn-on curves of the additional jet as in \cite{Htautau}, and the leading jet $\pt$ in the $\thadhad$ channel. A cut of $\pt^{\text{L1jet}} > \SI{50}{\GeV}$ is required on the trigger jet, and a leading-jet $\pt > \SI{60}{\GeV}$ cut is applied to remove the effect of turn on curve.
 
 \subsection{Event cuts and regions}
 \label{sec:cuts}
@@ -121,7 +106,15 @@ A number of event cuts are applied before getting to the signal enhanced regions
 
 \item At the {\texttt xTauFramework} level, skim cuts are applied to reduce the ntuple size:
   \begin{itemize}
-  \item No leptons, at least 1 medium tau and 1 loose tau, at least 3 jets with $\pt>30$ GeV, $|\eta|<4.5$ and passing either central or forward JVT cuts and with at least 1 b-tagged, pass di-tau trigger, LooseBad Event Cleaning, leading tau $\pt>40~\GeV$, sub-leading tau $\pt>30~\GeV$, two taus comes from a single vertex, leading jet $\pt>60~\GeV$, leading jet $|\eta|<3.2$, $\met>15~\GeV$. In the case of data, GRL cut as defined in Sec. \ref{sec:dataset} is also applied.
+  \item No leptons.
+  \item At least 1 medium tau and 1 loose tau.
+  \item At least 3 jets with $\pt>30$ GeV, $|\eta|<4.5$ and passing either central or forward JVT cuts, with at least 1 b-tagged
+  \item Pass di-tau trigger
+  \item LooseBad Event Cleaning
+  \item Leading tau $\pt>40~\GeV$, sub-leading tau $\pt>30~\GeV$, two taus comes from a single vertex.
+  \item Leading jet $\pt>60~\GeV$, $|\eta|<3.2$
+  \item $\met>15~\GeV$.
+  \item In the case of data, GRL cut as defined in Sec. \ref{sec:dataset} is also applied.
   \end{itemize}
 
 \item At the {\texttt ttHMultiAna} level, skim cuts \cite{ATL-COM-PHYS-2018-410} are applied to reduce the ntuple size.
@@ -136,7 +129,7 @@ A number of event cuts are applied before getting to the signal enhanced regions
 
 \input{\FCNCFigures/tex/x12fit}
 
-The cutflow for the preselection and each channel are given in Table \ref{tab:tthML_cutflow_all} - \ref{tab:tthML_cutflow_reg1l2tau1bnj_os}.
+The cutflow for the preselection and each channel are given in Table \ref{tab:xTFW_cutflow_all} - \ref{tab:tthML_cutflow_reg1l2tau1bnj_os}. The summary of the yields are given in \ref{tab:tthML_yield_raw}.
 
 For the TT channel tcH coupling search, the FCNC jet is from a c-quark. Regarding the similarity between the b-jet and c-jet, the very loose b-tagging is attempted on the FCNC jet in order to further select the tcH signal. However, the dominating background is $\ttbar$ where there are 2 b-jets. This resort does not help with the significance.
 % as shown in the Table \ref{tab:significance_ctag}. The corresponding yield is shown in the Table \ref{tab:yield_ctag}. So it is not adopted.
@@ -149,28 +142,19 @@ For the TT channel tcH coupling search, the FCNC jet is from a c-quark. Regardin
 \input{\FCNCTables/cutflow/xTFW/cutflow_all}
 \end{table}
 
-
-
-
 \begin{table}
-\caption{The cutflow tables in the $\tauhad$ 2j signal region.}
+\caption{The cutflow tables in the STH $\thadhad$ signal region.}
 \input{\FCNCTables/cutflow/xTFW/cutflow_reg2mtau1b2jos}
 \end{table}
 
-
-
-
 \begin{table}
-\caption{The cutflow tables in the $\tauhad$ 3j signal region.}
+\caption{The cutflow tables in the TTH $\thadhad$ 3j signal region.}
 \input{\FCNCTables/cutflow/xTFW/cutflow_reg2mtau1b3jos}
 \end{table}
 
-
-
-
 \begin{table}
-\label{tab:tthML_cutflow_all}
 \caption{The cutflow tables for the preselection in the leptonic channels.}
+\label{tab:tthML_cutflow_all}
 \footnotesize
 \input{\FCNCTables/cutflow/tthML/cutflow_all}
 \end{table}
@@ -193,31 +177,7 @@ For the TT channel tcH coupling search, the FCNC jet is from a c-quark. Regardin
 \input{\FCNCTables/cutflow/tthML/cutflow_reg1l1tau1b3j_os}
 \end{table}
 \begin{table}
-\label{tab:tthML_cutflow_reg1l2tau1bnj_os}
 \caption{The cutflow tables in the $l\thadhad$ signal region.}
+\label{tab:tthML_cutflow_reg1l2tau1bnj_os}
 \input{\FCNCTables/cutflow/tthML/cutflow_reg1l2tau1bnj_os}
 \end{table}
-
-
-
-
-
-
-%\begin{table}
-%\caption{The yield of the background, data and each signal after the final selection in the leptonic regions.}
-%\input{\FCNCTables/tthML/raw/faketau/prefit/NOMINAL/yield_chart}
-%\input{\FCNCTables/tthML/raw/fakelep/prefit/NOMINAL/yield_chart}
-%\end{table}
-%\begin{table}
-%\caption{The significance of each signal after the final selection in the leptonic regions.}
-%\input{\FCNCTables/tthML/raw/faketau/prefit/NOMINAL/significance_chart}
-%\input{\FCNCTables/tthML/raw/fakelep/prefit/NOMINAL/significance_chart}
-%\end{table}
-%\begin{table}
-%\caption{The yield of the background, data and each signal after the final selection with the loose b-tagged FCNC jet in the %leptonic regions.}
-%\input{\FCNCTables/tthML/showFake/faketau/ctagfcnc/yield_chart}
-%\end{table}
-%\begin{table}
-%\caption{The significance of each signal after the final selection with the loose b-tagged FCNC jet in the leptonic regions.}
-%\input{\FCNCTables/tthML/showFake/faketau/ctagfcnc/significance_chart}
-%\end{table}

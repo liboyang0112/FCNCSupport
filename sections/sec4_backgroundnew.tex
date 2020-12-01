@@ -1,10 +1,9 @@
 \section{FCNC signal samples}
 \label{sec:fcncbkg}
 
-The targeted signal in this analysis is $tqH/tH$ with $\Htautau$ (samples 411170-411177 and 412098-412105) in App. \ref{app:mc_sample_list}).
+The targeted signal in this analysis is $tqH/tH$ with $\Htautau$ (samples 411170-411177 and 412098-412105) in App. \ref{sec:DSIDlist}).
 %In addition to the jet faking $\tauhad$ background, there is also background from fake leptons that do not come from prompt decays of $W$, $Z$ or tau lepton.
-However, if the FCNC processes exists, the other decays of the Higgs can be part of the signal.
-Therefore, samples xxxxxx-xxxxxx with inclusive $W$ and Higgs decays are also included. These sample have a one-lepton (electron or muon) filter at truth level (either coming from $W$ or Higgs decays). Events overlapping with xxxxxx-xxxxxx are removed based on truth information.
+However, considering the other decays of the Higgs can be part of the signal, samples xxxxxx-xxxxxx with inclusive $W$ and Higgs decays are also included. These sample have a one-lepton (electron or muon) filter at truth level (either coming from $W$ or Higgs decays). Events overlapping with xxxxxx-xxxxxx are removed based on truth information.
 
 It is checked that after the final selection, there are 110 overlapped signal events caused by different overlap removal and object definition in xTauFramework and ttHMultiAna (27140 in total for hadhad channel and 95253 in total for lepton channels) but there is no overlap in the signal enriched region (BDT > 0.5).
 
@@ -15,24 +14,19 @@ The total FCNC signal with fake taus in this analysis is not used in the MVA tra
 
 The background events with real tau leptons are represented by Monte Carlo (MC) samples. These include $t\bar{t}$, $t\bar{t}+H/V$ and 
 single top events with real taus, and $Z\to\tau\tau$+jets. The $Z\to ee,\mu\mu$ processes are included for lepton faking 
-tau background, and the contribution from jet faking tau.
+tau background.
 The fake background with one or more taus faked by jets consists of the top fake (with at least one fake tau from jets in the top events), 
-QCD multijet, $W$+jets and diboson events. Where the top is dominant as shown in Figure \ref{fig:pt_raw}.
+QCD multijet, $W$+jets and diboson events. Where the $t\bar t$ is dominant as shown in Figure \ref{fig:pt_raw}.
 
 \input{\FCNCFigures/tex/pt_raw}
 
-However, the charge of two taus candidates might be correlated in the $t\bar t$ events
-when one of taus is a real tau from the $W\rightarrow \tau \nu$ decay while the other tau is a fake from a jet from other $W\rightarrow jj$ decay.
-They are likely to carry the opposite charges to each other.  
-Because of this charge asymmetry we have to calibrate the fake-tau modeling using a Data-Driven (DD) Scale Factor (SF) 
-method by comparing the normalization of fake-tau events in MC to data in the control regions.
-This SF is then applied to correct the normalization of tau fakes in the MC yields.
-The excess of the events over these MC background is then from the multi-jets (QCD) faking background.
+\subsection{Fake tau estimation in leptonic channels}
+\label{sec:sf_method}
 
-\subsection{Origin of fake $\tauhad$}
-\label{sec:fake_origin}
+Due to the large yield in the leptonic channels, tighter tau selection is applied, which limits the use of control regions with loosened tau identifications. the QCD background is much smaller than Monte Carlo events, so the MC events are used to model the fake taus. The fake taus are calibrated using Data-Driven (DD) Scale Factors (SF) derived by comparing the normalization of fake-tau events in MC to data in the control regions.
+This SF is then applied to correct the normalization of tau fakes in the MC yields. The excess of the events over these MC background is then from the multi-jets (QCD) faking background.
 
-Top fake is the largest fake background in the total fake in the leptonic channels. 
+Top fake is the largest fake background in the total fake in the leptonic channels, which contributes around 70\% to 99\% in different regions.
 Within the top fake events, fake taus can come from different origins, i.e., from jets (heavy/light flavor quark or gluon initiated) 
 or leptons (electron or muon). The tau fake 
 origins are checked with the top MC. Three dedicated top pair production control regions are define for:
@@ -43,12 +37,10 @@ origins are checked with the top MC. Three dedicated top pair production control
 \end{itemize}
 $\met > 20$GeV is required for the top control regions to ensure that QCD contribution is negligible. The detailed categorisation and plots are shown in section \ref{sec:sf_method}.
 Most of the fake taus come from quark initiated jets, but the flavor distributions in OS are similar to those in SS. 
+
 %However, these differences are well reproduced in the VR regions, which are also shown in Fig. \ref{fig:lh_fake_comp}. 
 %Therefore, the VR events are important to cover systematics coming from fake tau origins as well. Similar fake origin 
 %distributions in $\thadhad$ are shown in Fig. \ref{fig:hh_fake_comp}, although the top fake is only subdominant, and statistical errors are larger.
-
-\subsection{MC fake $\tauhad$ estimation}
-\label{sec:sf_method}
 
 %Although the method mentioned in the \ref{sec:sf_method_obsolete} was adopted by the tthML analysis, a new method is needed in this case. 
 As shown in the Figure \ref{fig:pt_raw}, the data is generally over-estimated in the OS regions while it is opposite in the SS region. If the fake taus are corrected by the same scale factors, this mismodelling will never get solved. This asymmetry of the SS and OS fake taus can be interpreted by the mis-modelling of the fake tau charges. Since the fake taus mainly come from light-flavored jets as shown in Figure \ref{fig:wjet_pt}, the mis-modelling is related to the charge carried by the jets. In conclusion, the mis-modelling is originated from the charge correlation between the jet which is faking a tau and the lepton. So the parent of the jet is believed to be charge correlated with the lepton. Considering the main background is $\bar{t}t$ process. The only suspect is the hadronic $W$ boson. In order to find the contribution of w-jet faking taus ($\tau_{W}$).  the truth information is used to match between the w-jet and the fake tau with $\Delta R < 0.4$. As shown in the Figure \ref{fig:wjet_pt}, there is a considerable amount of $\tau_{W}$'s in both SS and OS regions. There are four kinds of fake taus that need to be calibrated: Type1) $\tau_{W}$'s with the opposite charge of the lepton; Type2) $\tau_{W}$'s with the same charge of the lepton; Type 3) the fake taus from b-jets; Type4) the fake taus from other origins(mainly radiations). Many control regions are used to calibrate the four types.
@@ -83,7 +75,7 @@ Where di-lep regions ($2l1tau1b$ and $2l1tau2b$) are used to calibrate the Type3
 
 \subsection{QCD fake background in $\tlhad$ and $l\thad$ regions}
 
-After the fake tau calibration, the fake lepton contribution from QCD is also estimated using ABCD method. For each $\tlhad$ and $l\thad$signal regions, 4 blocks are defined as follows:
+After the fake tau calibration, the fake contribution from QCD with both fake lepton and fake tau is also estimated using ABCD method. For each $\tlhad$ and $l\thad$ signal regions, 4 blocks are defined as follows:
 
 \begin{itemize}
 	\item A: $E_T^{miss}<20$GeV, PLV not tight
@@ -103,35 +95,35 @@ Then the QCD contribution in D is then estimated as $rC$. After the ABCD QCD est
 The data-MC comparison after the fake tau and fake lepton estimation is show in Figure \ref{fig:wjet_pt_postfit}.
 
 
-\subsection{fake $\tauhad$ estimate in $\thadhad$}
+\subsection{Fake tau estimate in hadronic channels}
 \label{sec:ss_method}
 
-Figure \ref{fig:os_pre_hadhad} shows the $\tauhad$ $\pt$ spectra in the $\thadhad$ SS and OS. The fake tau background events from QCD multi-jets 
-is not added yet so the data have more than the background prediction. The top fake are dominated by fakes with one real tau.
-It is found, based on the MC prediction, that the QCD fake is the dominant fake process in the $\thadhad$ channel.Here,we employ a so-called Fake Factor Method developed by  $H\rightarrow$ $\thadhad$ coupling people.If one would like to  investigate the method details about the method,  you will find them in their document( add link). We will demostrate how the method are applied in our analysis.
+In the hadronic channels, the QCD also contributes to the fake tau background. So the QCD and top fake background are estimated together using loose tau control regions.
 
-First, we need to define some regions for estimating the fake:
+The $\tauhad$ $\pt$ spectra in the $\thadhad$ SS and OS are shown in Figure \ref{fig:os_pre_hadhad}, where the data is far beyond the background prediction, which only contains real tau background. A Fake Factor Method developed by $H\rightarrow\thadhad$ group \cite{Htautau-note} is adopted and customized for this analysis. 
+
+The following regions are defined to estimate the fake taus in STH $\thadhad$:
 
 \begin{itemize}
-\item{$reg2matau1b2jos$:   2 opposite $\tauhad$  with RNN medium ID, one b-jet, 2 exactly light flavor jets.}
-\item{$reg1m1ltau1b2jos$:  2 opposite $\tauhad$  with leading one being RNN medium,subleading being  RNN loose-not-medium,one b-jet, 2 exactly light flavor jets.}
-\item{$reg1l1mtau1b2jos$:  2 opposite $\tauhad$  with subleading one being RNN medium,leading being  RNN loose-not-medium,one b-jet, 2 exactly light flavor jets.}
-\item{$reg2ltau1b2jos$:    2 opposite $\tauhad$  with RNN loose-not-medium,one b-jet, 2 exactly light flavor jets.}
-\item{$reg1l1ntau1b2jos$:  2 opposite $\tauhad$  with leading one being RNN loose-not-medium,subleading being not loose(very loose),one b-jet, 2 exactly light flavor jets.}
-\item{$reg1n1ltau1b2jos$:  2 opposite $\tauhad$  with subleading one being RNN loose-not-medium,leading being not loose(very loose),one b-jet, 2 exactly light flavor jets.}
+\item{$2mtau1b2jos$: 2 opposite charged $\tauhad$ with medium RNN ID, one b-jet, exactly 2 light flavor jets.}
+\item{$1m1ltau1b2jos$: 2 opposite charged $\tauhad$ with leading one RNN medium, subleading one RNN loose-not-medium, one b-jet, exactly 2 light flavor jets.}
+\item{$1l1mtau1b2jos$: 2 opposite charged $\tauhad$ with subleading one RNN medium,leading one RNN loose-not-medium, one b-jet, exactly 2 light flavor jets.}
+\item{$2ltau1b2jos$: 2 opposite charged RNN loose-not-medium $\tauhad$, one b-jet, exactly 2 light flavor jets.}
+\item{$1l1ntau1b2jos$: 2 opposite charged $\tauhad$ with leading one RNN loose-not-medium, subleading one not loose (very loose), one b-jet, exactly 2 light flavor jets.}
+\item{$1n1ltau1b2jos$: 2 opposite charged $\tauhad$ with subleading one RNN loose-not-medium, leading one not loose (very loose), one b-jet, exactly 2 light flavor jets.}
 \end{itemize}
 
-For 3j region, the definition is same except the number of light jets.Here, we didn't ultilize the regions with two not loose $\tauhad$ (very loose $\tauhad$ ),since HIGG4D3 derivation removes all events with both $\tauhad$ failing the loose $\tauhad$ ID criteria.Figure \ref{fig:regions_hadhad} shows the pictorial representation of all regions required by FF.So we only concentrate on events with at least tau satisfying the loose RNN ID working point. In this control region, the template for the fake contribution is constructed by subtracting all simulated $\tauhad$ background contributions from the data distribution.
+For TTH $\thadhad$ region, the definition is the same except that the number of light jets requirement is at least 3. Figure \ref{fig:regions_hadhad} shows the pictorial representation of all regions required by FF. In these control regions, the template for the fake tau contribution aquired by subtracting all real $\tauhad$ background contributions from data.
 
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.45\textwidth]{\FCNCFigures/xTFW/otherPlots/regions.png}
-\caption{ Pictorial representation of the fake-factors relevant region for $\tauhad$ channel.}
+\caption{Pictorial representation of the fake-factors relevant region for $\tauhad$ channel.}
 \label{fig:regions_hadhad}
 \end{figure}
 
 
-According to the strategy in the note, two sets of fake-factors are needed to be computed in the W+jets control region of $\tlhad$ channel to scale the template.It is necessary to have two sets because of the HIGG4D3 skimming. Therefore, fake-factors derived in a region with a loose minimum ID requirement must be applied in combination with those without it.In addition, we need to adjust some cut in wjet CR to make the fake-factors more applicable to $\tauhad$ channel.Here, we only list the cuts changed for fake-factor calculation:
+Two sets of fake-factors need to be computed in the W+jets control region of $\tlhad$ channel to scale the template. It is necessary to have two sets because of the HIGG4D3 skimming. Therefore, fake-factors derived in a region with a loose minimum ID requirement must be applied in combination with those without. In addition, we need to adjust some cut in wjet CR to make the fake-factors more applicable to $\tauhad$ channel.Here, we only list the cuts changed for fake-factor calculation:
 
 \begin{itemize}
 \item    Matching of the $\tauhad$ candidate to the tau25\_medium1\_tracktwo(EF) trigger
@@ -155,16 +147,16 @@ F F_{\mathrm{lnm}}=(\text { Data }-\mathrm{MC})_{\text {medium } \tau_{\text {ha
 
 A 2-dimensional parametrization is employed in the light of the dependence on pt and $\eta$. From the FF definition, we can give a pictorial explanation of the computation of FF.From the idea in the $H\rightarrow$ $\thadhad$ coupling note,the ata-driven method to investigate the Signal Region yields from fakes are organized as follows.
 
-The template for double-fake events is anti-tau region, which could be divided into three smaller regions according to the different taus candidate ID and HIGG4D3 derivation framework:leading tau with loose-not-medium ID and subleading tau with not loose ID which is marked in orange in the figure(add figure), leading tau with not loose ID and subleading tau with loose-not-medium which is marked in green, both of leading tau and subleading pass loose-not-medium working point which locate in the intersection of the previous two regions, which are corresponding to our $reg1l1ntau1b2jos$,$reg1n1ltau1b2jos$,$reg2ltau1b2jos$ respectively.
+The template for double-fake events is anti-tau region, which could be divided into three smaller regions according to the different taus candidate ID and HIGG4D3 derivation framework:leading tau with loose-not-medium ID and subleading tau with not loose ID which is marked in orange in the figure(add figure), leading tau with not loose ID and subleading tau with loose-not-medium which is marked in green, both of leading tau and subleading pass loose-not-medium working point which locate in the intersection of the previous two regions, which are corresponding to our $1l1ntau1b2jos$,$1n1ltau1b2jos$,$2ltau1b2jos$ respectively.
 
-From the fake-factor definition, $F F_{\operatorname{lnm}}\left(\tau_{0}\right) \cdot F F_{\mathrm{nm}}\left(\tau_{1}\right)$ will scale the $reg1l1ntau1b2jos$ to full expected fake tields in the SR,  in the same way, $F F_{\mathrm{nm}}\left(\tau_{0}\right) \cdot F F_{\mathrm{lnm}}\left(\tau_{1}\right)$, This would result in an overestimation of the SR fake contribution by a factor of two, which is resolved by multiplying the applied product of two fake-factors by $\frac{1}{2}$.
+From the fake-factor definition, $F F_{\operatorname{lnm}}\left(\tau_{0}\right) \cdot F F_{\mathrm{nm}}\left(\tau_{1}\right)$ will scale the $1l1ntau1b2jos$ to full expected fake tields in the SR,  in the same way, $F F_{\mathrm{nm}}\left(\tau_{0}\right) \cdot F F_{\mathrm{lnm}}\left(\tau_{1}\right)$, This would result in an overestimation of the SR fake contribution by a factor of two, which is resolved by multiplying the applied product of two fake-factors by $\frac{1}{2}$.
 
 Besides, Events with both $\thadhad$ candidates satisfying the loose criterion are scaled 
 by 
 
 $\frac{1}{2}\left(F F_{\operatorname{lnm}}\left(\tau_{0}\right) \cdot F F_{\mathrm{nm}}\left(\tau_{1}\right)+F F_{\mathrm{nm}}\left(\tau_{0}\right) \cdot F F_{\operatorname{lnm}}\left(\tau_{1}\right)\right)$ to account for these events being intersection of two template regions.
 
-Finally, we also take events with only one fake $\thadhad$ into account to complete our Fake computation,for these, $reg1m1ltau1b2jos$ and $reg1l1mtau1b2jos$ are needed to be added, which are scaled by $F F_{\mathrm{nm}}\left(\tau_{1}\right)$ and $F F_{\mathrm{nm}}\left(\tau_{0}\right)$,respectively.
+Finally, we also take events with only one fake $\thadhad$ into account to complete our Fake computation,for these, $1m1ltau1b2jos$ and $1l1mtau1b2jos$ are needed to be added, which are scaled by $F F_{\mathrm{nm}}\left(\tau_{1}\right)$ and $F F_{\mathrm{nm}}\left(\tau_{0}\right)$,respectively.
 
 The procedure described in the previous paragraphs are summarized in the following equation,
 
@@ -172,7 +164,7 @@ The procedure described in the previous paragraphs are summarized in the followi
 \tau_{1}^{P} \tau_{2}^{P}=\tau_{1}^{T} \tau_{2}^{T}(\mathrm{MC})+F F_{2} \tau_{1}^{P} \tau_{2}^{F}+F F_{1} \tau_{1}^{F} \tau_{2}^{P}-F F_{1} F F_{2} \tau_{1}^{F} \tau_{2}^{F}
 \end{equation}
 
-where P means passing $\thadhad$ ID, T means truth $\thadhad$, therefore, the equation illustrates the contribution of events with two RNN medium $\thadhad$ is estimated through the combination of $reg1m1ltau1b2jos$, $reg1l1mtau1b2jos$, $reg2ltau1b2jos$,$reg1l1ntau1b2jos$,$reg1n1ltau1b2jos$.
+where P means passing $\thadhad$ ID, T means truth $\thadhad$, therefore, the equation illustrates the contribution of events with two RNN medium $\thadhad$ is estimated through the combination of $1m1ltau1b2jos$, $1l1mtau1b2jos$, $2ltau1b2jos$,$1l1ntau1b2jos$,$1n1ltau1b2jos$.
 
 Since the sample size limitations in the W+jets control region,statistical uncertainties on the regions where the FFs are derived
 and applied need to been considered.We will vary the fake factors by one standard deviation of the statistical uncertainty originating from the limited sample size to implement the systematic variations.The fake-factors from the W+jets CR depending on $\thadhad$ prongness and the type (lnm or nm)are derived separately, so there are four systematic variations to cover for it.
@@ -212,16 +204,6 @@ and TTH $\thadhad$ (OS) (d), to illustrate the background composition. Data is m
 % one $b$-tag events with $BDT<0.5$ and $1.6\pm 0.1$ in the double $b$-tagged  $\thadhad$ +$\ge$ 3jets events,
 % which provides a good closure test of QCD fake tau estimation. We take the difference between these
 % two values as a systematics for the method and assign $f_{\text{norm}}=1.3\pm 0.3$ for the analysis.
-
-
-
-\subsection{Fake lepton background}
-\label{sec:fcnc_fakeLep_bkg}
-
-The fake lepton background in $\tlhad$ and lepton+$\thadhad$, which is estimated from MC\footnote{This includes fake lepton + real tau events
-from all MC samples, namely, top, $W/Z$+jets, diboson}, is about $0.3$-$0.5\%$ of the total background. It constitutes
-such a negligible fraction because a very high lepton $\pt$ threshold is already required at the trigger level. This
-background is varied by $100\%$ as a conservative systematics.
 
 \subsection{Summary of signal and background events}
 \label{sec:background_hadhad}
