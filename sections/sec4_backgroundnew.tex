@@ -113,16 +113,15 @@ The following regions are defined to estimate the fake taus in STH $\thadhad$ ch
 
 \begin{itemize}
 \item{$2mtau1b2jos$ (SR): 2 opposite charged $\tauhad$ with medium RNN ID, one b-jet, exactly 2 light flavor jets.}
-\item{$1m1ltau1b2jos$ (Purple): 2 opposite charged $\tauhad$ with leading one RNN medium, subleading one RNN loose-not-medium, one b-jet, exactly 2 light flavor jets.}
-\item{$1l1mtau1b2jos$ (Blue): 2 opposite charged $\tauhad$ with subleading one RNN medium,leading one RNN loose-not-medium, one b-jet, exactly 2 light flavor jets.}
-\item{$2ltau1b2jos$ (Shade): 2 opposite charged RNN loose-not-medium $\tauhad$, one b-jet, exactly 2 light flavor jets.}
-\item{$1l1ntau1b2jos$ (Orange): 2 opposite charged $\tauhad$ with leading one RNN loose-not-medium, subleading one not loose (very loose), one b-jet, exactly 2 light flavor jets.}
-\item{$1n1ltau1b2jos$ (Green): 2 opposite charged $\tauhad$ with subleading one RNN loose-not-medium, leading one not loose (very loose), one b-jet, exactly 2 light flavor jets.}
+\item{$1m1ntau1b2jos$ (Purple): 2 opposite charged $\tauhad$ with leading one passing RNN medium, subleading one failing RNN medium, one b-jet, exactly 2 light flavor jets.}
+\item{$1n1mtau1b2jos$ (Blue): 2 opposite charged $\tauhad$ with subleading one passing RNN medium,leading one failing RNN medium, one b-jet, exactly 2 light flavor jets.}
+\item{$1l1ntau1b2jos$ (Orange): 2 opposite charged $\tauhad$ with leading one RNN loose-not-medium, subleading one failing RNN medium, one b-jet, exactly 2 light flavor jets.}
+\item{$1n1ltau1b2jos$ (Green): 2 opposite charged $\tauhad$ with subleading one RNN loose-not-medium, leading one failing RNN medium, one b-jet, exactly 2 light flavor jets.}
 \end{itemize}
 
 The fake events in the signal regions will be represented by the templates of fake taus in these control regions with proper fake factors. The templates are aquired by subtracting all real $\tauhad$ background contributions from data.
 
-Two sets of fake-factors (FF) were computed in the W+jets control region (1 lepton + 1 tau, no b-jet) by the $\Htautau$ group \cite{Htautau-note} as listed in Table \ref{tab:FF_htautau}, defined as not-medium FFs(nm) and loose-not-medium FFs(lnm) in Eq. \ref{eq:hadhad_FF}. They are computed in three regions with different tau ID requirment. The FFs(nm) is the ratio of the Data-MC(real tau) yields with passing medium tau ID to which failing the medium tau ID. For FFs(lnm) calculation, the only difference is that the loose tau ID is further required for the events failing the medium tau ID. A 2-dimensional parametrization for the FFs is employed relying on $\pt$ and $\eta$.
+Two sets of fake-factors (FF) were computed in the W+jets control region (1 lepton + 1 tau, no b-jet) by the $\Htautau$ group \cite{Htautau-note} as listed in Table \ref{tab:FF_htautau}, defined as not-medium FFs (nm) and loose-not-medium FFs (lnm) in Eq. \ref{eq:hadhad_FF}. They are computed in three regions with different tau ID requirment. The FFs(nm) is the ratio of the Data-MC(real tau) yields with passing medium tau ID to which failing the medium tau ID. For FFs(lnm) calculation, the only difference is that the loose tau ID is further required for the events failing the medium tau ID. A 2-dimensional parametrization for the FFs is employed relying on $\pt$ and $\eta$.
 
 \begin{table}
 \caption{The FFs derived by the $\Htautau$ group.}
@@ -141,13 +140,13 @@ F F_{\mathrm{lnm}}&=(\text { Data }-\mathrm{MC})_{\text {medium } \tau_{\text {h
 
 From the fake-factor definition, the events with both taus fake in the SR can be represented either by $F F_{\operatorname{lnm}}\left(\tau_{0}\right) \cdot F F_{\mathrm{nm}}\left(\tau_{1}\right)$ times $1l1ntau1b2jos$ or $F F_{\mathrm{nm}}\left(\tau_{0}\right) \cdot F F_{\mathrm{lnm}}\left(\tau_{1}\right)$ times $1n1ltau1b2jos$. So the final estimation is the average of those two.
 
-The events with only one fake $\tauhad$ is represented by the events in $1m1ltau1b2jos$ and $1l1mtau1b2jos$, which are scaled by $F F_{\mathrm{nm}}\left(\tau_{1}\right)$ and $F F_{\mathrm{nm}}\left(\tau_{0}\right)$,respectively. The procedure is summarized as:
+The events with only one fake $\tauhad$ is represented by the events in $1m1ntau1b2jos$ and $1n1mtau1b2jos$, which are scaled by $F F_{\mathrm{nm}}\left(\tau_{1}\right)$ and $F F_{\mathrm{nm}}\left(\tau_{0}\right)$,respectively. The procedure is summarized as:
 
 \begin{equation}
 \tau_{1}^{P} \tau_{2}^{P}=\tau_{1}^{T} \tau_{2}^{T}(\mathrm{MC})+F F_{2} \tau_{1}^{P} \tau_{2}^{F}+F F_{1} \tau_{1}^{F} \tau_{2}^{P}-F F_{1} F F_{2} \tau_{1}^{F} \tau_{2}^{F}
 \end{equation}
 
-where P means passing $\thadhad$ ID, T means truth $\tauhad$, therefore, the equation illustrates the contribution of events with two RNN medium $\thadhad$ is estimated through the combination of $1m1ltau1b2jos$, $1l1mtau1b2jos$, $2ltau1b2jos$,$1l1ntau1b2jos$,$1n1ltau1b2jos$.
+where P means passing $\thadhad$ ID, T means truth $\tauhad$, therefore, the equation illustrates the contribution of events with two RNN medium $\thadhad$ is estimated through the combination of $1m1ntau1b2jos$, $1n1mtau1b2jos$, $2ltau1b2jos$,$1l1ntau1b2jos$,$1n1ltau1b2jos$.
 
 For TTH $\thadhad$ region, the definition is the same except that the number of light jets requirement is at least 3 ($*3jos$). 
 
@@ -156,9 +155,9 @@ The uncertainties of this method consists of three parts:
 
 \item The statistical uncertainties during the FF derivation, one for each FF.
 
-\item The FF is rederived in the SS CR using $1m1ltau1b2jss+1m1ltau1b3jss$, $1l1mtau1b2jss+1l1mtau1b2jss$, and $2mtau1b2jss+2mtau1b3jss$ to account for the limitations of the parametrization of the fake-factors.
+\item The FF is rederived in the SS CR using $1m1ntau1b2jss+1m1ntau1b3jss$, $1n1mtau1b2jss+1n1mtau1b2jss$, and $2mtau1b2jss+2mtau1b3jss$ to account for the limitations of the parametrization of the fake-factors.
 
-\item The FF is rederived in the OS SR side band with $m_{\tau\tau,vis}>130GeV$ using $1m1ltau1b2jos+1m1ltau1b3jos$, $1l1mtau1b2jos+1l1mtau1b2jos$, and $2mtau1b2jos+2mtau1b3jos$ to account for the different contribution from each origin of the fake taus.
+\item The FF is rederived in the OS SR side band with $m_{\tau\tau,vis}>130$GeV using $1m1ntau1b2jos+1m1ntau1b3jos$, $1n1mtau1b2jos+1n1mtau1b2jos$, and $2mtau1b2jos+2mtau1b3jos$ to account for the different contribution from each origin of the fake taus.
 
 \end{itemize}
 

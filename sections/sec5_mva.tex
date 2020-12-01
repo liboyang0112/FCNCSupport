@@ -3,18 +3,18 @@
 
 In this section, we investigate the sensitivity of probing signal using one of the Multi-Variate Analysis (MVA) methods, the Gradient Boosted Decision Trees (BDT) method~\cite{BDT,BDT2}, with the {\texttt TMVA} software package. The BDT output score is in the range between -1 and 1. The most signal-like events have scores near 1 while the most background-like events have scores near -1.
 
-The signal topology and kinematics are different across all the channels. To maximize the overall sensitivity, separated BDTG trainings are applied to each the signal region. A number of variables as the BDT inputs are used to train and test events in each signal region for maximal signal acceptance and background rejection. They are listed in Tab.~\ref{tab:importance}. The most sensitive variables distributions are shown in Fig. \ref{fig:mva_input_hadhad}-\ref{fig:mva_input_lhadhad}
+The signal topology and kinematics are different across all the channels. To maximize the overall sensitivity, separated BDTG trainings are applied to each the signal region. A number of variables as the BDT inputs are used to train and test events in each signal region for maximal signal acceptance and background rejection. They are listed in Tab.~\ref{tab:importance_tthML} and Tab.~\ref{tab:importance_xTFW}. The most sensitive variables distributions are shown in Fig. \ref{fig:mva_input_hadhad}-\ref{fig:mva_input_lhadhad}
 
 \begin{table}
-\label{tab:importance}
-\caption{The importance (in \%) of each variables used in the BDTG training, the two numbers in the each block are from the two training folds.}
+\caption{The importance (in \%) of each variables used in the BDTG training for leptonic channels, the two numbers in the each block are from the two training folds.}
+\label{tab:importance_tthML}
 \input{\FCNCTables/Importance/tthML/Merged}
 \end{table}
 
 
 \begin{table}
-\label{tab:importance}
-\caption{The importance (in \%) of each variables used in the BDTG training, the two numbers in the each block are from the two training folds.}
+\caption{The importance (in \%) of each variables used in the BDTG training for hadronic channels, the two numbers in the each block are from the two training folds.}
+\label{tab:importance_xTFW}
 \input{\FCNCTables/Importance/xTFW/Merged}
 \end{table}
 
