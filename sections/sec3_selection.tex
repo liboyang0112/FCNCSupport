@@ -103,6 +103,14 @@ A number of event cuts are applied before getting to the signal enhanced regions
   \item In DAOD$\_$HIGG8D1, trigger skimming: all election, muon, tau triggers; Offline skimming: at least 2 light leptons or at least 1 lepton plus 1 tau.
   \item In DAOD$\_$HIGG4D3, no trigger skimming. Offline skimming: 2taus
   \end{itemize}
+%wmyao: define ttHML skim cuts
+\item At the {\texttt ttHMultiAna} level, skim cuts \cite{ATL-COM-PHYS-2018-410} are applied to reduce the ntuple size:
+  \begin{itemize}
+  \item at least two light leptons passing loose identification criteria with leading lepton $\pt > 15$ GeV and subleading
+    lepton $\pt > 5$ GeV within $|\eta|<2.6$.
+  \item at least one light lepton passing loose identification criterua with $\pt >15$ GeV and $|\eta|<2.5$, and at least
+    one hadronic tau. The tau lepton has to pass RNN loose requirement with $\pt >15$ GeV and $|\eta|<2.5$.
+  \end{itemize}
 
 \item At the {\texttt xTauFramework} level, skim cuts are applied to reduce the ntuple size:
   \begin{itemize}
@@ -117,8 +125,6 @@ A number of event cuts are applied before getting to the signal enhanced regions
   \item In the case of data, GRL cut as defined in Sec. \ref{sec:dataset} is also applied.
   \end{itemize}
 
-\item At the {\texttt ttHMultiAna} level, skim cuts \cite{ATL-COM-PHYS-2018-410} are applied to reduce the ntuple size.
-
 \item At least one primary vertex exists in the event. The primary vertex is defined as the vertex that has the largest sum of track $\pt^2$ associated to it, and has at least 4 tracks with $|z_0|<100$ mm.
 \item The tau candidates expected from Higgs decay should pass the \texttt{Medium} ID and the other quality cuts in Sec. \ref{sec:obj_reco}.
 \item It is required that the tau objects are not $b$-tagged, otherwise the event is rejected.
@@ -129,7 +135,9 @@ A number of event cuts are applied before getting to the signal enhanced regions
 
 \input{\FCNCFigures/tex/x12fit}
 
-The cutflow for the preselection and each channel are given in Table \ref{tab:xTFW_cutflow_all} - \ref{tab:tthML_cutflow_reg1l2tau1bnj_os}.
+%wmyao: need to define signal regions
+The signal regions are defined in Tab.~\ref{tab:signalregions} for the most senstive channels. 
+The corresponding cutflow for the preselection and each channel are given in Table \ref{tab:xTFW_cutflow_all} - \ref{tab:tthML_cutflow_reg1l2tau1bnj_os}.
 
 For the TT channel tcH coupling search, the FCNC jet is from a c-quark. Regarding the similarity between the b-jet and c-jet, the very loose b-tagging is attempted on the FCNC jet in order to further select the tcH signal. However, the dominating background is $\ttbar$ where there are 2 b-jets. This resort does not help with the significance.
 % as shown in the Table \ref{tab:significance_ctag}. The corresponding yield is shown in the Table \ref{tab:yield_ctag}. So it is not adopted.
