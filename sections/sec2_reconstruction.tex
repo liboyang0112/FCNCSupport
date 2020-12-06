@@ -18,15 +18,14 @@ In order to keep the analysis unbiased from artificial cut tunings, data histogr
 %\end{tabular}
 %\label{tab:blinding}
 %\end{table}
-
-\section{Reconstruction of event topology}
-\label{sec:reconstruction}
-
-Depending on the production modes and the decay of the $W$ boson from top quark, the analysis is split into 4 categories as shown in table \ref{tab:signalevents}. Except events with 2 leptons (leptonic tau included) or no hadronic tau in the final states, all of the decay modes are considered in the analysis. The selection requirement
-dedicated for most sensitive decay modes are listed in table \ref{tab:signalregions} where the sensitive cut off is 1 sigma for B(t->Hq) of 0.2\%. 
-%wmyao: define Plv cut here for ltau channels. 
-For the $l\thad$ channels, the light lepton is required to pass tight Plv isolation to further reduce the non-prompt lepton contributions.   
+\section{Signal regions}
+\label{sec:SRs}
+Depending on the production modes and the decay of the $W$ boson from top quark, the analysis is split into 4 categories as shown in table \ref{tab:signalevents}. Except events with 2 leptons (leptonic tau included) or no hadronic tau in the final states, all of the decay modes are considered in the analysis.
+%wmyao: define Plv cut here for ltau channels.
+%Boyang: This is explained in the fake modelling part since we don't apply PLV until then.
 Due to the low statistics when STL cuts are applied, the STL and TTL are included in a single region $l\thadhad$ for $H\to\thadhad$ where there is no light jet multiplicity requirement. However due to the low tau reconstruction rate, it is not rare that one of tau fails the reconstruction and remains as a jet. So the $l\thad$ 1j and $l\thad$ 2j are included as signal regions where the lepton and $\thad$ are same charged to reduce background.
+
+The summary for the signal regions are listed in table \ref{tab:signalregions}.
 
 For the future convenience, STH $\tlhad$ and TTH $\tlhad$ are indicated by $\tlhad$; STH $\thadhad$ and TTH $\thadhad$ are indicated by $\thadhad$; $l\tauhad$ 2j and $l\tauhad$ 1j are indicated by $l\tauhad$. All the channels involving leptons (including $\taulep$) are indicated by leptonic channels.
 
@@ -51,15 +50,18 @@ For the future convenience, STH $\tlhad$ and TTH $\tlhad$ are indicated by $\tlh
 \begin{tabular}[h]{c|c|c|c|c|c}
 \hline \hline
 Signal regions & b-jet & light flavor jets	& lepton & hadronic taus & charge\\ \hline
-$l\tauhad$ 2j  & 1     & 2					& 1(Plv)      & 1			 & $l\tauhad$ SS\\ \hline
-$l\tauhad$ 1j  & 1     & 1					& 1(Plv)      & 1			 & $l\tauhad$ SS\\ \hline
+$l\tauhad$ 2j  & 1     & 2					& 1      & 1			 & $l\tauhad$ SS\\ \hline
+$l\tauhad$ 1j  & 1     & 1					& 1      & 1			 & $l\tauhad$ SS\\ \hline
 $l\thadhad$	   & 1     & $\ge0$ 			& 1      & 2             & $\thadhad$ OS\\ \hline
 STH $\thadhad$ & 1     & 2      			& 0      & 2             & $\thadhad$ OS\\ \hline
 TTH $\thadhad$ & 1     & $\ge3$ 			& 0      & 2             & $\thadhad$ OS\\ \hline
-STH $\tlhad$   & 1     & 2      			& 1(Plv)      & 1             & $\tlhad$ OS\\ \hline
-TTH $\tlhad$   & 1     & $\ge3$ 			& 1(Plv)      & 1             & $\tlhad$ OS\\ \hline
+STH $\tlhad$   & 1     & 2      			& 1      & 1             & $\tlhad$ OS\\ \hline
+TTH $\tlhad$   & 1     & $\ge3$ 			& 1      & 1             & $\tlhad$ OS\\ \hline
 \end{tabular}
 \end{table}
+
+\section{Reconstruction of event topology}
+\label{sec:reconstruction}
 
 To comply with the signal topology, in each channel, exactly one jet should be tagged as a $b$-jet. 
 

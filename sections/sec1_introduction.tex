@@ -90,10 +90,7 @@ corresponds to an integrated luminosity of 59.937 fb$^{-1}$. The final luminosit
 %The average number of interactions per bunch crossing, over short time periods of about 1 minute, denoted by $\langle\mu\rangle$, is 13 in 2015 and 25 in 2016. The pile-up background is formed by the inelastic collisions, producing mainly low transverse momentum particles, in addition to the hard interaction.
 
 %wmyao: define derivation for tthML and Htautau framework 
-The analysis uses data produced in DxAOD format using HIGG8D1 derivation framework for the $t\bar{t}H$ events with multileptons
-in the final states and HIGG4DxAOD derivation for the $H\rightarrow \tauhad\tauhad$ events containing two hadronic-$\tau$
-in the final states. All multilepton samples are processed with AnalysisTop(version 21.2.147)~\cite{AnalysisTop} and the TTWHMultiLeptonAnalysis
-framework (tag v6-1)~\cite{ttHMLFW}. The di-tau samples are processed with xTauFramework (tag r21\_v11)~\cite{xTauFW}.
+%Boyang: this is done in the selection section.
 
 \subsection{Signal and background simulation}
 \label{sec:generator}
@@ -179,17 +176,20 @@ The missing transverse energy $\met$ is computed using the fully calibrated and 
 %wmyao add PromptLeptonVeto 
 \subsection{Tight lepton isolation: \texttt{PromptLeptonVeto}(Plv)}
 \label{sec:Plv}
-A dedicated isolation boosted decision tree has been trained to better reject non-prompt leptons and fakes produced in hadron decays. The main idea is to identify non-prompt light
-leptons using lifetime information associated with a track jet that matches the selected light lepton. These additional reconstructed charged particle tracks inside the jet can be used to 
-increase the precision of identifying the displaced decay vertex of heavy flavor (b, c) hadrons that produced a non-prompt leptons. \texttt{PromptLeptonVeto} is trained on leptons 
-selected from the Powheg+Pythia8 non-allhad $t\bar t$ sample using eight input variables. Three of the selected variables are used to identify b-tag jets by ATLAS flavor tagging algorithms.
-Two variables are the ratio of the track lepton $\pt$ with respect to the track jet $\pt$ and $\Delta R$ between the lepton and the track jet axis. Finally three
-additional variables are the number of tracks collected by the track jet abd the lepton track and calorimeter isolation variables. The \texttt{PromptLeptonVeto} shows a significant 
-improvemet for non-prompt rejection compared to the cut-based isolation variable. For more details can be found in Ref.~\cite{ATL-COM-PHYS-2018-410}.
+A dedicated isolation boosted decision tree has been trained to better reject non-prompt leptons and fakes produced in hadron decays ~\cite{ATL-COM-PHYS-2018-410}. The main idea is to identify non-prompt light leptons using lifetime information associated with a track jet that matches the selected light lepton. These additional reconstructed charged particle tracks inside the jet can be used to increase the precision of identifying the displaced decay vertex of heavy flavor (b, c) hadrons that produced a non-prompt leptons.
 
-The tight working points are: \texttt{PromptLeptonVeto}$<-0.50$ for muons and \texttt{PromptLeptonVeto}$<-0.70$ for electrons.  The efficiency of the tight \texttt{PromptLeptonVeto} working points is measured using the tag and probe method with $Z\rightarrow l^+l^-$ events. The scale factors are approximately 0.92 for $10<\pt<15$ GeV muons and 0.97 for electrons, and 
-averaging at 0.98 to 0.99 for higher $\pt$ leptons. 
-  
+\texttt{PromptLeptonVeto} is trained on leptons selected from the Powheg+Pythia8 non-allhad $t\bar t$ sample using eight input variables:
+\begin{itemize}
+\item Three of the them are used to identify b-tagged jets by ATLAS flavor tagging algorithms;
+\item Two of them are the ratio of the track lepton $\pt$ with respect to the track jet $\pt$ and $\Delta R$ between the lepton and the track jet axis;
+\item Three of them are the number of tracks collected by the track jet and the lepton track and calorimeter isolation variables. 
+\end{itemize}
+
+The \texttt{PromptLeptonVeto} shows a significant improvement for non-prompt-lepton rejection compared to the cut-based isolation variables.
+
+The tight working points are: \texttt{PromptLeptonVeto}$<-0.50$ for muons and \texttt{PromptLeptonVeto}$<-0.70$ for electrons.  The efficiencies of the tight \texttt{PromptLeptonVeto} working points are measured using the tag and probe method with $Z\rightarrow l^+l^-$ events. The scale factors are approximately 0.92 for $10<\pt<15$ GeV muons and 0.97 for electrons, and 
+averaging at 0.98 to 0.99 for higher $\pt$ leptons.
+
 \subsection{Overlap removal}
 For the objects passing the selection above, a geometric overlap removal is applied to eliminate the ambiguity in the object identification.  When two objects are close geometrically with $\Delta R$ less than a certain threshold, or satisfy some certain requirements, one of them will be removed. The overlap removal is done by the official overlap removal tool provided by ASG group. The "Standard" working point is used. The rules are discribed as follows in sequence:
 
