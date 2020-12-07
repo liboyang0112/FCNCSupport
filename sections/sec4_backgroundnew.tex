@@ -121,44 +121,44 @@ The following regions are defined to estimate the fake taus in STH $\thadhad$ ch
 
 The fake events in the signal regions will be represented by the templates of fake taus in these control regions with proper fake factors. The templates are aquired by subtracting all real $\tauhad$ background contributions from data.
 
-Two sets of fake-factors (FF) were computed in the W+jets control region (1 lepton + 1 tau, no b-jet) by the $\Htautau$ group \cite{Htautau-note} as listed in Table \ref{tab:FF_htautau_1p},Table \ref{tab:FF_htautau_3p}, defined as not-medium FFs (nm) and loose-not-medium FFs (lnm) in Eq. \ref{eq:hadhad_FF}. They are computed in three regions with different tau ID requirment. The FFs(nm) is the ratio of the Data-MC(real tau) yields with passing medium tau ID to which failing the medium tau ID. For FFs(lnm) calculation, the only difference is that the loose tau ID is further required for the events failing the medium tau ID. A 2-dimensional parametrization for the FFs is employed relying on $\pt$ and $\eta$.
+Two sets of fake-factors (FF) were computed in the W+jets control region (1 lepton + 1 tau, no b-jet) by the $\Htautau$ group \cite{Htautau-note} as listed in Table \ref{tab:FF_htautau_1p}, Table \ref{tab:FF_htautau_3p}, defined as not-medium FFs (nm) and loose-not-medium FFs (lnm) in Eq. \ref{eq:hadhad_FF}. They are computed in three regions with different tau ID requirment. The FFs(nm) is the ratio of the Data-MC(real tau) yields with passing medium tau ID to which failing the medium tau ID. For FFs(lnm) calculation, the only difference is that the loose tau ID is further required for the events failing the medium tau ID. A 2-dimensional parametrization for the FFs is employed relying on $\pt$ and $\eta$.
 
 \begin{table}
+\caption{$FF_{lnm}$ (first) and $FF_{nm}$ (second) for 1p taus derived by the $\Htautau$ group.}
 \label{tab:FF_htautau_1p}
-\caption{The FFs derived by the $\Htautau$ group.The first table represent lnm FF for 1p,The second table represent nm FF for 1p}
 \input{\FCNCTables/xTFW/FF/FF_nominal_1p}
 \end{table}
 
 \begin{table}
-\caption{The FFs derived by the $\Htautau$ group.The first table represent lnm FF for 3p,The second table represent nm FF for 3p}
+\caption{$FF_{lnm}$ (first) and $FF_{nm}$ (second) for 3p taus derived by the $\Htautau$ group.}
 \label{tab:FF_htautau_3p}
 \input{\FCNCTables/xTFW/FF/FF_nominal_3p}
 \end{table}
 
 \begin{table}
+\caption{$FF_{lnm}$ (first) and $FF_{nm}$ (second) for 1p taus derived by us in same-sign regions.}
 \label{tab:FF_ss_1p}
-\caption{The FFs derived by us in same-sign regions,The first table represent lnm FF for 1p,The second table represent nm FF for 1p}
 %\input{\FCNCTables/xTFW/FF_htautau}
 \input{\FCNCTables/xTFW/FF/FF_sys_ss_1p}
 \end{table}
 
 \begin{table}
+\caption{$FF_{lnm}$ (first) and $FF_{nm}$ (second) for 3p taus derived by us in same-sign regions.}
 \label{tab:FF_ss_3p}
-\caption{The FFs derived by us in same-sign regions,The first table represent lnm FF for 3p,The second table represent nm FF for 3p}
 %\input{\FCNCTables/xTFW/FF_htautau}
 \input{\FCNCTables/xTFW/FF/FF_sys_ss_3p}
 \end{table}
 
 \begin{table}
+\caption{$FF_{lnm}$ (first) and $FF_{nm}$ (second) for 1p taus derived by us in sideband regions.}
 \label{tab:FF_sb_1p}
-\caption{The FFs derived by us in sideband regions,The first table represent lnm FF for 1p,The second table represent nm FF for 1p}
 %\input{\FCNCTables/xTFW/FF_htautau}
 \input{\FCNCTables/xTFW/FF/FF_sys_sb_1p}
 \end{table}
 
 \begin{table}
+\caption{$FF_{lnm}$ (first) and $FF_{nm}$ (second) for 3p taus derived by us in sideband regions.}
 \label{tab:FF_sb_3p}
-\caption{The FFs derived by us in sideband regions,The first table represent lnm FF for 3p,The second table represent nm FF for 3p}
 %\input{\FCNCTables/xTFW/FF_htautau}
 \input{\FCNCTables/xTFW/FF/FF_sys_sb_3p}
 \end{table}
@@ -174,7 +174,7 @@ F F_{\mathrm{lnm}}&=(\text { Data }-\mathrm{MC})_{\text {medium } \tau_{\text {h
 
 From the fake-factor definition, the events with both taus fake in the SR can be represented either by $F F_{\operatorname{lnm}}\left(\tau_{0}\right) \cdot F F_{\mathrm{nm}}\left(\tau_{1}\right)$ times $1l1ntau1b2jos$ or $F F_{\mathrm{nm}}\left(\tau_{0}\right) \cdot F F_{\mathrm{lnm}}\left(\tau_{1}\right)$ times $1n1ltau1b2jos$. So the final estimation is the average of those two.
 
-The events with only one fake $\tauhad$ is represented by the events in $1m1ntau1b2jos$ and $1n1mtau1b2jos$, which are scaled by $F F_{\mathrm{nm}}\left(\tau_{1}\right)$ and $F F_{\mathrm{nm}}\left(\tau_{0}\right)$,respectively. The procedure is summarized as:
+The events with only one fake $\tauhad$ is represented by the events in $1m1ntau1b2jos$ and $1n1mtau1b2jos$, which are scaled by $F F_{\mathrm{nm}}\left(\tau_{1}\right)$ and $F F_{\mathrm{nm}}\left(\tau_{0}\right)$ respectively. The procedure is summarized as:
 
 \begin{equation}
 \tau_{1}^{P} \tau_{2}^{P}=\tau_{1}^{T} \tau_{2}^{T}(\mathrm{MC})+F F_{2} \tau_{1}^{P} \tau_{2}^{F}+F F_{1} \tau_{1}^{F} \tau_{2}^{P}-F F_{1} F F_{2} \tau_{1}^{F} \tau_{2}^{F}
@@ -189,9 +189,9 @@ The uncertainties of this method consists of three parts:
 
 \item The statistical uncertainties during the FF derivation, one for each FF.
 
-\item The FF is rederived in the SS CR using $1m1ntau1b2jss+1m1ntau1b3jss$, $1n1mtau1b2jss+1n1mtau1b2jss$, and $2mtau1b2jss+2mtau1b3jss$ to account for the limitations of the parametrization of the fake-factors.The fake factor are presented in Table \ref{tab:FF_ss_1p},Table \ref{tab:FF_ss_3p}
+\item The FF is rederived in the SS CR using $1m1ntau1b2jss+1m1ntau1b3jss$, $1n1mtau1b2jss+1n1mtau1b2jss$, and $2mtau1b2jss+2mtau1b3jss$ to account for the limitations of the parametrization of the fake-factors. The fake factor are presented in Table \ref{tab:FF_ss_1p}, \ref{tab:FF_ss_3p}.
 
-\item The FF is rederived in the OS SR side band with $m_{\tau\tau,vis}>130$GeV using $1m1ntau1b2jos+1m1ntau1b3jos$, $1n1mtau1b2jos+1n1mtau1b2jos$, and $2mtau1b2jos+2mtau1b3jos$ to account for the different contribution from each origin of the fake taus.Table \ref{tab:FF_sb_1p},Table \ref{tab:FF_sb_3p}show FF calculated in this region for two different types.
+\item The FF is rederived in the OS SR side band with $m_{\tau\tau,vis}>130$GeV using $1m1ntau1b2jos+1m1ntau1b3jos$, $1n1mtau1b2jos+1n1mtau1b2jos$, and $2mtau1b2jos+2mtau1b3jos$ to account for the different contribution from each origin of the fake taus. Table \ref{tab:FF_sb_1p}, Table \ref{tab:FF_sb_3p}show FF calculated in this region for two different types.
 
 \end{itemize}
 
