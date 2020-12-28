@@ -12,78 +12,51 @@ In the leptonic channels, the single-lepton triggers are required to select the 
 
 Single election:
 
-2016,2017,2018:
 \begin{itemize}
-	\item HLT\_e26\_lhtight\_nod0\_ivarloose
-	\item HLT\_e60\_lhmedium\_nod0
-	\item HLT\_e140\_lhloose\_nod0
-\end{itemize}
-2015:
-\begin{itemize}
-	\item HLT\_e24\_lhmedium\_L1EM20VH
-	\item HLT\_e60\_lhmedium
-	\item HLT\_e120\_lhloose
+\item 2015: HLT\_e24\_lhmedium\_L1EM20VH\\
+HLT\_e60\_lhmedium, HLT\_e120\_lhloose
+\item 2016, 2017, 2018: HLT\_e26\_lhtight\_nod0\_ivarloose\\
+HLT\_e60\_lhmedium\_nod0, HLT\_e140\_lhloose\_nod0
 \end{itemize}
 
 Single muon:
 
-2016,2017,2018:
 \begin{itemize}
-	\item HLT\_mu26\_ivarmedium
-	\item HLT\_mu50
-\end{itemize}
-2015:
-\begin{itemize}
-	\item HLT\_mu20\_iloose\_L1MU15
-	\item HLT\_mu50
+\item 2015: HLT\_mu20\_iloose\_L1MU15, HLT\_mu50
+\item 2016, 2017, 2018: HLT\_mu26\_ivarmedium, HLT\_mu50
 \end{itemize}
 
 The di-lepton control regions to estimate fake taus are required to pass di-lepton triggers:
 
 Di-electron:
 
-2017,2018:
 \begin{itemize}
-	\item HLT\_2e24\_lhvloose\_nod0
-\end{itemize}
-2016:
-\begin{itemize}
-	\item HLT\_2e17\_lhvloose\_nod0
-\end{itemize}
-2015:
-\begin{itemize}
-	\item HLT\_2e12\_lhloose\_L12EM10VH
+\item 2015: HLT\_2e12\_lhloose\_L12EM10VH
+\item 2016: HLT\_2e17\_lhvloose\_nod0
+\item 2017, 2018: HLT\_2e24\_lhvloose\_nod0
 \end{itemize}
 
 Di-muon:
 
-2016,2017,2018:
 \begin{itemize}
-	\item HLT\_mu22\_mu8noL1
-\end{itemize}
-2015:
-\begin{itemize}
-	\item HLT\_mu18\_mu8noL1
+\item 2015: HLT\_mu18\_mu8noL1
+\item 2016, 2017, 2018: HLT\_mu22\_mu8noL1
 \end{itemize}
 
 Election+Muon:
 
-2016,2017,2018:
 \begin{itemize}
-	\item HLT\_e17\_lhloose\_nod0\_mu14
-\end{itemize}
-2015:
-\begin{itemize}
-	\item HLT\_e17\_lhloose\_mu14
+\item 2015: HLT\_e17\_lhloose\_mu14
+\item 2016, 2017, 2018: HLT\_e17\_lhloose\_nod0\_mu14
 \end{itemize}
 
 The trigger used for hadronic channels in each year are listed as follow:
 \begin{itemize}
-
-\item 2015: \texttt{HLT\_tau35\_medium1\_tracktwo\_tau25\_medium1\_tracktwo\_L1TAU20IM\_2TAU12IM}
-\item 2016: \texttt{HLT\_tau35\_medium1\_tracktwo\_tau25\_medium1\_tracktwo}
-\item 2017: \texttt{HLT\_tau35\_medium1\_tracktwo\_tau25\_medium1\_tracktwo\_03dR30\_L1DR\_TAU20ITAU12I\_J25}
-\item 2018: \texttt{HLT\_tau35\_medium1\_tracktwoEF\_tau25\_medium1\_tracktwoEF\_03dR30\_L1DR\_TAU20ITAU12I\_J25}
+\small
+\item 2015: HLT\_tau35\_medium1\_tracktwo\_tau25\_medium1\_tracktwo\_L1TAU20IM\_2TAU12IM
+\item 2016: HLT\_tau35\_medium1\_tracktwo\_tau25\_medium1\_tracktwo
+\item 2017: HLT\_tau35\_medium1\_tracktwo\_tau25\_medium1\_tracktwo\_03dR30\_L1DR\_TAU20ITAU12I\_J25
+\item 2018: HLT\_tau35\_medium1\_tracktwoEF\_tau25\_medium1\_tracktwoEF\_03dR30\_L1DR\_TAU20ITAU12I\_J25
 
  \end{itemize}
 
@@ -113,12 +86,12 @@ A number of event cuts are applied before getting to the signal enhanced regions
 \item At the {\texttt xTauFramework} level, skim cuts are applied to reduce the ntuple size:
   \begin{itemize}
   \item No leptons.
-  \item At least 1 medium tau and 1 loose tau.
-  \item At least 3 jets with $\pt>30$ GeV, $|\eta|<4.5$ and passing either central or forward JVT cuts, with at least 1 b-tagged
-  \item Pass di-tau trigger
-  \item LooseBad Event Cleaning
+  \item At least 1 RNN Loose tau.
+  \item At least 3 jets with $\pt>30$ GeV, $|\eta|<4.5$ and passing either central or forward JVT cuts, with at least 1 b-tagged.
+  \item Taus trigger matched.
+  \item LooseBad Event Cleaning.
   \item Leading tau $\pt>40~\GeV$, sub-leading tau $\pt>30~\GeV$, two taus comes from a single vertex.
-  \item Leading jet $\pt>60~\GeV$, $|\eta|<3.2$
+  \item Leading jet $\pt>70~\GeV$, $|\eta|<3.2$
   \item $\met>15~\GeV$.
   \item In the case of data, GRL cut as defined in Sec. \ref{sec:dataset} is also applied.
   \end{itemize}

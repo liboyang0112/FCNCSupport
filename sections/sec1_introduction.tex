@@ -109,7 +109,7 @@ The $t\bar{t}X$, where X=$W$, $ee$, $\mu\mu$, $\tau\tau$ or $Z(qq,\nu\nu)$ ($\ta
 
 The $W$+jets, $Z$+jets and diboson backgrounds are simulated using Sherpa 2.2.1 \cite{Sherpa} with NNPDF30NNLO PDF \cite{NNPDF30NLO}.
 
-The $\tau$ decay in the single top samples is handled by Tauola \cite{Tauola}. All samples showered by Pythia8 (Sherpa) have the $\tau$ decays also handled by Pythia8 (Sherpa). All the decay modes of the $\tau$ lepton are allowed in the event generators (but may be subject to generator filters). The summary of used generators for matrix element and parton shower is given in Tab. \ref{mob}.
+The $\tau$ decay in the single top samples is handled by Tauola \cite{Tauola}. All samples showered by Pythia8 (Sherpa) have the $\tau$ decays also handled by Pythia8 (Sherpa). All the decay modes of the $\tau$ lepton are allowed in the event generators (but may be subject to generator filters). The summary of used generators for matrix element and parton shower is given in Table \ref{mob}.
 
 The SM higgs background includes $ggH$, $VH$, $VBF$ and $t\bar{t}H$, generated from Powheg-Box \cite{Powheg} V2 interfaced with Pythia8. The overall contribution is pretty small. Various PDF and tune options are use for those samples depending on the decay modes.
 
@@ -159,7 +159,7 @@ Muon reconstruction begins with tracks reconstructed in the MS and is matched to
 parameter selection is the same. 
 
 Tight isolation working points are also applied in some channels to reduce fake and non-prompt lepton contributions based a trained isolation boosted decision tree \texttt{PromptLeptonVeto} 
-(Plv), as described in Sec.~\ref{sec:Plv}.
+(PLV), as described in Sec.~\ref{sec:Plv}.
 
 \subsection{Hadronic tau decays}
 The hadronic tau candidates \cite{tau_sys1} are seeded by jets reconstructed by the anti-$k_t$ algorithm \cite{antikt}, which is applied on calibrated topo clusters \cite{topocluster} with a distance parameter of R=0.4. They are required to have $\pt > 20$~GeV and $|\eta|<2.5$. The transition region between the barrel and end-cap calorimeters ($1.37<|\eta|<1.52$) is excluded. In the hadronic channels, these tau candidates are then considered in the overlap removal procedure and missing transverse energy calculation, following the Htautau group \cite{Htautaugroup}. In the leptonic channels, an identification algorithm based on Recursive Neural Network \cite{tau_sys2} is applied to discriminate the visible decay products of hadronically decaying tau lepton $\tauhad$ from jets initiated by quarks or gluons. The taus passing the Medium working point are considered in the overlap removal procedure and missing transverse energy calculation, following the ttW multi-lepton group \cite{tthMLgroup}. Different RNN working points are used at different levels depending on the analysis channel. %For the loose ID, the tau efficiency is constant at 95~\% in $\eta$ and $\pt$.
@@ -174,7 +174,7 @@ If the $\tauhad$ candidate is also tagged as a $b$-jet, then this tau object is 
 The missing transverse energy $\met$ is computed using the fully calibrated and reconstructed physics objects as described above. The TrackSoftTerm (TST) algorithm is used to compute the SoftTerm of the $\met$ \cite{MET}. 
 
 %wmyao add PromptLeptonVeto 
-\subsection{Tight lepton isolation: \texttt{PromptLeptonVeto}(Plv)}
+\subsection{Tight lepton isolation: \texttt{PromptLeptonVeto}(PLV)}
 \label{sec:Plv}
 A dedicated isolation boosted decision tree has been trained to better reject non-prompt leptons and fakes produced in hadron decays ~\cite{ATL-COM-PHYS-2018-410}. The main idea is to identify non-prompt light leptons using lifetime information associated with a track jet that matches the selected light lepton. These additional reconstructed charged particle tracks inside the jet can be used to increase the precision of identifying the displaced decay vertex of heavy flavor (b, c) hadrons that produced a non-prompt leptons.
 
@@ -191,7 +191,9 @@ The tight working points are: \texttt{PromptLeptonVeto}$<-0.50$ for muons and \t
 averaging at 0.98 to 0.99 for higher $\pt$ leptons.
 
 \subsection{Overlap removal}
-For the objects passing the selection above, a geometric overlap removal is applied to eliminate the ambiguity in the object identification.  When two objects are close geometrically with $\Delta R$ less than a certain threshold, or satisfy some certain requirements, one of them will be removed. The overlap removal is done by the official overlap removal tool provided by ASG group. The "Standard" working point is used. The rules are discribed as follows in sequence:
+For the objects passing the selection above, a geometric overlap removal is applied to eliminate the ambiguity in the object identification.  When two objects are close geometrically with $\Delta R$ less than a certain threshold, or satisfy some certain requirements, one of them will be removed. 
+
+In the hadronic channels, the overlap removal is done by the official overlap removal tool provided by ASG group. The "Standard" working point is used. The rules are discribed as follows in sequence:
 
 \begin{itemize}
 \item If two electrons have overlapped second-layer cluser, or shared tracks, the electron with lower $\pt$ is removed.
@@ -202,6 +204,16 @@ For the objects passing the selection above, a geometric overlap removal is appl
 \item When a muon ID track is ghost associated to a jet or within a $\Delta R=0.2$ cone of a jet, the jet is removed if it has less than 3 tracks with $\pt>500$ MeV or has a relative small $\pt$ ($\pt^{\mu}>0.5\pt^{\text{jet}} \text{ and } \pt^{\mu}>0.7[\text{the scalar sum of the } \pt \text{'s of the jet tracks with } \pt>500$ MeV]).
 \item Muons within a $\Delta R=0.4$ cone of a jet are removed.
 \item Jets within a $\Delta R=0.2$ cone of the leading $\tauhad$ ($\tlhad$), or with the two leading $\tauhad$'s ($\thadhad$), are excluded. The overlap also works for the reverted tau ID regions used in the analysis, since the tau ID information is not used.
+\item If a tau candidate is tagged as b-jet with 70\% working point, the tau is removed.
 \end{itemize}
 
+In the leptonic channels, the overlap removal is done using the heavy flavor overlap removal working point, which gives precedence to the b-tagged jet as follows:
+\begin{itemize}
+\item Jet is not tagged as b-jet and within a $\Delta R=0.2$ cone of an electron is removed.
+\item When a muon ID track is ghost associated to a jet or within a $\Delta R=0.2$ cone of a jet, the jet is removed if it is not tagged as b-jet and has either less than 3 tracks with $\pt>500$ MeV or
+  has a relative small $\pt$ ($\pt^{\mu}>0.5\pt^{\text{jet}} \text{ and } \pt^{\mu}>0.7[\text{the scalar sum of the } \pt \text{'s of the jet tracks with } \pt>500$ MeV]).
+\item Jet is not tagged as b-jet and within a $\Delta R=0.2$ cone of the $\tlhad$ is removed. The overlap also works for the reverted tau ID regions used in the analysis.
+\end{itemize}
+
+The rest of overlap removal procedures are the same as used in the hadronic channels above. 
 Note that the $\met$ calculation package has its own overlap removal procedure. Taus that fail \texttt{Loose} ID are also passed to the package. Only two leading taus are considered in the calculation.
