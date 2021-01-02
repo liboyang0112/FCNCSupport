@@ -19,12 +19,12 @@ The signal topology and kinematics are different across all the channels. To max
 \end{table}
 
 The signal and background samples are randomly divided into two equal parts (denoted as even and odd parity events). The BDT is trained with one part, and tested on the other part. It is always ensured that the BDT derived from the training events is not applied to the same events, but only to the independent test ones. The sum of MC all background processes, corrected normalized, are used in the training and testing. %The Gradient BDT parameters used are listed in Table \ref{tab:bdt_pars}. 
-With the \texttt{IgnoreNegWeightsInTraining} option, only MC events with positive MC weights are used in the traning. The comparison of BDT performances in test-odd and test-even samples is given in Figure \ref{fig:overtrain_hadhad}-\ref{fig:overtrain_lhadhad}. The BDT parameters \texttt{NTrees} and \texttt{nCuts} are tuned such that the test-odd and test-even agrees, and the signal sensitivity is optimised.
+With the \texttt{IgnoreNegWeightsInTraining} option, only MC events with positive MC weights are used in the traning. In The hadronic channels, due to the fake is modelled by the not medium control region, the data events in the not medium control region is also used in the training with a weight of 0.3 to take the FFs into account. The comparison of BDT performances in test-odd and test-even samples is given in Figure \ref{fig:overtrain_hadhad}-\ref{fig:overtrain_lhadhad}. The BDT parameters \texttt{NTrees} and \texttt{nCuts} are tuned such that the test-odd and test-even agrees, and the signal sensitivity is optimised.
 
 The importance factors\footnote{
 The importance is evaluated as the total separation gain that this variable had in the decision trees (weighted by the number of events). It is normalized to all variables together, which have an importance of 1.
 }
-of different variables used in the training is listed in Table \ref{tab:importance}. The two numbers in each block represent the importance factor of the two models trained from even and odd parts. The consistency of these factors implies that the training models are stable.
+of different variables used in the training is listed in Table \ref{tab:importance_tthML} and \ref{tab:importance_xTFW}. The two numbers in each block represent the importance factor of the two models trained from even and odd parts. The consistency of these factors implies that the training models are stable.
 
 
 \input{\FCNCFigures/tex/BDTinput}
@@ -38,9 +38,7 @@ The statistical only significance based on BDT discriminant is shown in Table \r
 \begin{table}
 \caption{The statistical only significance in leptonic channels based on BDT discriminant.}
 \label{tab:tthML_significance}
-%\input{\FCNCTables/hadhad_significance_chart}
 \input{\FCNCTables/tthML/showFake/faketau/postfit/NOMINAL/significance_chart}
-%\input{\FCNCTables/tthML/showFake/fakelep/postfit/NOMINAL/significance_chart}
 \end{table}
 
 \begin{table}

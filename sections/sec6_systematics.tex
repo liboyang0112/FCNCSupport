@@ -6,9 +6,6 @@ The signal efficiency and the background estimations are affected by uncertainti
 
 Any systematic effect on the the overall normalisation or shape of the final BDT distribution in the signal region is considered. In \texttt{TRExFitter} \cite{TRExFitter}, the NP pruning is applied, which means that NPs whose impact are less than a certain threshold are discarded. The lower thresholds to remove a shape systematic and a normalisation systematic from the fit are both $1\%$ in the fit.
 
-Table \ref{tab:tab_norm_NP} gives the QCD fake estimation for $\thadhad$ channel in \ref{sec:ss_method} and 24 scale factor NPs and 2 transfer factor for fake method mentioned in \ref{sec:sf_method}.
-The lists of systematic NPs that survive the pruning are in Table \ref{tab:tab_specific_NP} and \ref{tab:tab_common_NP}, and their meanings are given below. All the NPs in Table \ref{tab:tab_common_NP} and the fake method NP in \ref{tab:tab_norm_NP} are fully correlated in all signal regions.
-
 %\input{\FCNCTables/NPlist}
 %Ztautau theory Xsec
 %top theory Xsec
@@ -39,9 +36,9 @@ JVT is applied in the analysis to select jets from hard-scattered vertices. It w
 
 Systematic uncertainties as described in Sec. \ref{sec:background} are considered in the final fit. The uncertainties of the fake estimation for the leptonic channels and hadronic channels are correlated respectively but independent between them.
 
-In the leptonic channels, they are named \texttt{fakeSFNP_Xprong_ptbinX_*} for tau fakings modelled by MC and \texttt{ABCD*} for QCD faking modelled by DD.
+In the leptonic channels, they are named \texttt{fakeSFNP\_Xprong\_ptbinX\_*} for tau fakings modelled by MC and \texttt{ABCD*} for QCD faking modelled by DD.
 
-In the hadronic channels, they are named \texttt{FFNP_Xprong_ptbinX_etabin*} for the statistical uncertainties of the FFs derived from the W+jets control region. \texttt{FFNP_OS_CR} and \texttt{FFNP_SS_CR} are for the systematic uncertainties of the FFs derived in the OS and SS control region respectively. \texttt{only $\tau_\mathrm{sub}$ real modelling} is the uncertainty of the MC modelling of the events with leading tau fake but sub-leading tau real, which is varied by 50\% to be conservative according to the study in the leptonic channels.
+In the hadronic channels, they are named \texttt{FFNP\_Xprong\_ptbinX\_etabin*} for the statistical uncertainties of the FFs derived from the W+jets control region. \texttt{FFNP\_OS\_CR} and \texttt{FFNP\_SS\_CR} are for the systematic uncertainties of the FFs derived in the OS and SS control region respectively. \texttt{only $\tau_\mathrm{sub}$ real modelling} is the uncertainty of the MC modelling of the events with leading tau fake but sub-leading tau real, which is varied by 50\% to be conservative according to the study in the leptonic channels.
 
 \subsection{Theoretical uncertainties on the background (TBD)}
 
