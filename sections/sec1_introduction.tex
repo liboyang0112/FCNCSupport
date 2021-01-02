@@ -105,7 +105,7 @@ The FCNC TT signal is simulated using Powheg-Box \cite{Powheg} V2 interfaced wit
 
 The dominant background is the $t\bar{t}$ production. The $t\bar{t}$ process and the single top process are generated with Powheg-Box \cite{Powheg} V2, and Pythia8 is used for the parton shower. NNPDF30NLO \cite{NNPDF30NLO} and A14 tune \cite{A14} are used for $t\bar{t}$(single top). The $t\bar{t}$ sample is also generated with different generators and parton showers models, as well as different amount of radiations, for systematics as detailed in Sec. \ref{sec:systematics}.
 
-The $t\bar{t}X$, where X=$W$, $ee$, $\mu\mu$, $\tau\tau$ or $Z(qq,\nu\nu)$ ($\tau\tau$ has the Higgs resonance excluded), are generated with MadGraph5\_aMC@NLO and inferfaced with Pythia8 for the parton shower. The NNPDF30NLO \cite{NNPDF30NLO} is used for the matrix element PDF. The $t\bar{t}$, single top and $t\bar{t}X$ are combined into a single process named top background in the analysis.
+The $t\bar{t}X$, where X=$W$, $ee$, $\mu\mu$, $\tau\tau$ or $Z(qq,\nu\nu)$ are generated with MadGraph5\_aMC@NLO and inferfaced with Pythia8 for the parton shower. The NNPDF30NLO \cite{NNPDF30NLO} is used for the matrix element PDF. The $t\bar{t}$, single top and $t\bar{t}X$ are combined into a single process named top background in the analysis.
 
 The $W$+jets, $Z$+jets and diboson backgrounds are simulated using Sherpa 2.2.1 \cite{Sherpa} with NNPDF30NNLO PDF \cite{NNPDF30NLO}.
 
@@ -114,6 +114,8 @@ The $\tau$ decay in the single top samples is handled by Tauola \cite{Tauola}. A
 The SM higgs background includes $ggH$, $VH$, $VBF$ and $t\bar{t}H$, generated from Powheg-Box \cite{Powheg} V2 interfaced with Pythia8. The overall contribution is pretty small. Various PDF and tune options are use for those samples depending on the decay modes.
 
 The $tH$ associated production is negligible but we still considered it. The sample is generated using MadGraph5 and interfaced with pythia8 for parton shower. CT10 PDF and A14 tune are used. It is treated as part of SM higgs background explained in above.
+
+Except the major background $V+$jets, $t\bar{t}$, SM higgs, Diboson, the other minor background are categorised into "Rare" processes in this analysis, which doesn't necessarily mean it's rare in the pp collision.
 
 All Monte-Carlo (MC) samples were passed through the full GEANT4 \cite{GEANT4} simulation of the ATLAS detector, except for two extra \ttbar samples with Pythia8 and Herwig7 \cite{Herwig} parton showering which are simulated with ATLFAST-II \cite{AFII} for systematics (Sec. \ref{sec:systematics}). In the analysis, the simulated events were reweighted based on their pile-up to match the pile-up profile observed in data.
 

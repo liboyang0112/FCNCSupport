@@ -13,11 +13,11 @@ The lists of systematic NPs that survive the pruning are in Table \ref{tab:tab_s
 %Ztautau theory Xsec
 %top theory Xsec
 
-\subsection{Luminosity}
+\subsection{Luminosity (TBD)}
 \label{sec:systematic_Luminosity}
 The integrated luminosity measurement has an uncertainty of $1.7\%$ for the combined Run-2 data, and it is applied to all simulated event samples.
 
-\subsection{Detector-related uncertainties}
+\subsection{Detector-related uncertainties (TBD)}
 \label{sec:syst_det}
 
 Uncertainties related to the detector are included for the signal and backgrounds that are estimated using simulation. These uncertainties are also taken into account for the simulated events that enter the data-driven background estimations. All instrumental systematic uncertainties arising from the reconstruction, identification and energy scale of electrons, muons, ($b$-)jets and the soft term of the $\met$ measurement are considered. The effect of the energy scale uncertainties on the objects is propagated to the $\met$ calculation. These systematics include uncertainty associated with:
@@ -37,9 +37,13 @@ JVT is applied in the analysis to select jets from hard-scattered vertices. It w
 \subsection{Uncertainties on fake background estimations}
 \label{sec:syst_datadriven}
 
-Systematic uncertainties resulting from the data-driven background estimation and usage of SS events as described in Sec. \ref{sec:background}. They are named \texttt{fakeSF*prong*Ptbin} and \texttt{norm\_factor\_hh} in Table \ref{tab:tab_common_NP}.
+Systematic uncertainties as described in Sec. \ref{sec:background} are considered in the final fit. The uncertainties of the fake estimation for the leptonic channels and hadronic channels are correlated respectively but independent between them.
 
-\subsection{Theoretical uncertainties on the background}
+In the leptonic channels, they are named \texttt{fakeSFNP_Xprong_ptbinX_*} for tau fakings modelled by MC and \texttt{ABCD*} for QCD faking modelled by DD.
+
+In the hadronic channels, they are named \texttt{FFNP_Xprong_ptbinX_etabin*} for the statistical uncertainties of the FFs derived from the W+jets control region. \texttt{FFNP_OS_CR} and \texttt{FFNP_SS_CR} are for the systematic uncertainties of the FFs derived in the OS and SS control region respectively. \texttt{only $\tau_\mathrm{sub}$ real modelling} is the uncertainty of the MC modelling of the events with leading tau fake but sub-leading tau real, which is varied by 50\% to be conservative according to the study in the leptonic channels.
+
+\subsection{Theoretical uncertainties on the background (TBD)}
 
 Theoretical uncertainties have been applied to the MC background in this analysis. The NNPDF3.0 systematic set (which has 100 variations) is used to get the variation envelope around the nominal PDF, and the renormalization and factorization scales are varied by a factor of 0.5 and 2.0 around the nominal values. There are eight such variations. In the final BDT distributions, the largest variations of the eight per bin are taken.
 
@@ -51,8 +55,8 @@ The Powheg+Pythia8 $t\bar{t}$ MC is also generated with different shower radiati
 
 Uncertainty affecting the normalisation of the $V$+jets background is estimated to be about $30\%$ according to the study done in the FCNC $H\to b\bar{b}$ channel \cite{FCNC_Hbb}. The uncertainty on the diboson cross section is $5\%$ \cite{VV_uncert}, on single top $+5\%$/$-4\%$ \cite{WtXsec}\cite{st_uncert_1,st_uncert_2}, on $t\bar{t}V$ $15\%$ \cite{ttV_uncert_1,ttV_uncert_2}, and on $t\bar{t}H$ $+10\%$/$-13\%$ \cite{ttH_uncert}.
 
-\subsection{Uncertainties on the signal modelling}
+\subsection{Uncertainties on the signal modelling (TBD)}
 
-Since the signal samples share the same production as the $\ttbar$ process, the systematics listed above for $\ttbar$ also apply to the signal. However, because the systematics variation samples are only generated for the SM decays of $\ttbar$, only the integral change of the yields observed for the $t\bar{t}$ background with real taus in the FR is used, and applied on the signal in the same region in a fully correlated way. An additional $1.6\%$ uncertainty on BR($H\to\tau\tau$) is also assigned \cite{HiggsBR}.
+Since the TT signal samples share the same production as the $\ttbar$ process, the systematics listed above for $\ttbar$ also apply to the signal. However, because the systematics variation samples are only generated for the SM decays of $\ttbar$, only the integral change of the yields observed for the $t\bar{t}$ background with real taus in the FR is used, and applied on the signal in the same region in a fully correlated way. An additional $1.6\%$ uncertainty on BR($H\to\tau\tau$) is also assigned \cite{HiggsBR}.
 
 The fake calibration is also applied to the fake tau part of the signal the same way as the background. The 6 NPs are also applied to the signal and fully correlated with the background.
