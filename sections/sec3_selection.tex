@@ -100,6 +100,8 @@ A number of event cuts are applied before getting to the signal enhanced regions
 \item The tau candidates expected from Higgs decay should pass the \texttt{Medium} ID and the other quality cuts in Sec. \ref{sec:obj_reco}.
 \item It is required that the tau objects are not $b$-tagged, otherwise the event is rejected.
 \item Exactly one $b$-tagged jets. 
+
+\item kinematics cuts in Table \ref{tab:cutflow_STHhadhad} and \ref{tab:cutflow_TTHhadhad} to reduce background and provide control region for fake tau estimation.
 %\item Considering the di-tau are from the Higgs decay, their invariant mass should satisfy $50~\GeV<\ttvismass<130~\GeV$ and $\drtautau<3.4$ in the $\thadhad$ channel and $25~\GeV<\ttvismass<125~\GeV$ in leptonic channels.
 %\item  In $l\thadhad$ channels, the lepton and b-jet are from SM top decay, so their invarian mass is expected to be smaller or around top mass: $\tlvismass<190~\GeV$.
 \end{enumerate}
@@ -123,11 +125,13 @@ For the TT channel tcH coupling search, the FCNC jet is from a c-quark. Regardin
 
 \begin{table}
 \caption{The cutflow tables in the STH $\thadhad$ signal region.}
+\label{tab:cutflow_STHhadhad}
 \input{\FCNCTables/cutflow/xTFW/cutflow_reg2mtau1b2jos}
 \end{table}
 
 \begin{table}
-\caption{The cutflow tables in the TTH $\thadhad$ 3j signal region.}
+\caption{The cutflow tables in the TTH $\thadhad$ signal region.}
+\label{tab:cutflow_TTHhadhad}
 \input{\FCNCTables/cutflow/xTFW/cutflow_reg2mtau1b3jos}
 \end{table}
 
