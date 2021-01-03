@@ -29,7 +29,7 @@ The Wilson coefficient $C_{u\phi}$'s can be extracted as
 \label{eq:eq02}
 \end{equation}
 
-To give a better impression on the numbers, we use $\text{BR}(t\to qH)=1(0.2)\%$ as benchmark, which is corresponding to ($C^{13}_{u\phi})^2 + (C^{31}_{u\phi})^2=19.47(3.89)$, $\sigma(ug\to tH)=7109.0(1421.8)$ pb, $\sigma(cg\to tH)=1029.8(206.0)$ pb.
+To give a better impression on the numbers, we use $\text{BR}(t\to qH)=1(0.2)\%$ as benchmark, which is corresponding to ($C^{13}_{u\phi})^2 + (C^{31}_{u\phi})^2=19.47(3.89)$, $\sigma(ug\to tH)=7109.0(1421.8)$ fb, $\sigma(cg\to tH)=1029.8(206.0)$ fb.
 
 In this article, a search for the decay $t\to qH$ in the $t\bar{t}$ production (TT) and single-top, Higgs associated production (ST) with $H\to\tau\tau$  as shown in Fig \ref{fig:diagrams} using 140~fb$^{-1}$ of proton-proton collision data at 13~TeV, taken with the ATLAS detector at the Large Hadron Collider (LHC), is presented. The final state is characterized by one top and one Higgs. In TT, there is an additional u/c quark forming a top resonance with Higgs.
 
@@ -164,7 +164,7 @@ Tight isolation working points are also applied in some channels to reduce fake 
 (PLV), as described in Sec.~\ref{sec:Plv}.
 
 \subsection{Hadronic tau decays}
-The hadronic tau candidates \cite{tau_sys1} are seeded by jets reconstructed by the anti-$k_t$ algorithm \cite{antikt}, which is applied on calibrated topo clusters \cite{topocluster} with a distance parameter of R=0.4. They are required to have $\pt > 20$~GeV and $|\eta|<2.5$. The transition region between the barrel and end-cap calorimeters ($1.37<|\eta|<1.52$) is excluded. In the hadronic channels, these tau candidates are then considered in the overlap removal procedure and missing transverse energy calculation, following the Htautau group \cite{Htautaugroup}. In the leptonic channels, an identification algorithm based on Recursive Neural Network \cite{tau_sys2} is applied to discriminate the visible decay products of hadronically decaying tau lepton $\tauhad$ from jets initiated by quarks or gluons. The taus passing the Medium working point are considered in the overlap removal procedure and missing transverse energy calculation, following the ttW multi-lepton group \cite{tthMLgroup}. Different RNN working points are used at different levels depending on the analysis channel. %For the loose ID, the tau efficiency is constant at 95~\% in $\eta$ and $\pt$.
+The hadronic tau candidates \cite{tau_sys1} are seeded by jets reconstructed by the anti-$k_t$ algorithm \cite{antikt}, which is applied on calibrated topo clusters \cite{topocluster} with a distance parameter of R=0.4. They are required to have $\pt > 20$~GeV and $|\eta|<2.5$. The transition region between the barrel and end-cap calorimeters ($1.37<|\eta|<1.52$) is excluded. In the hadronic channels, these tau candidates are then considered in the overlap removal procedure and missing transverse energy calculation, following the Htautau group \cite{Htautau-note}. In the leptonic channels, an identification algorithm based on Recursive Neural Network \cite{tau_sys2} is applied to discriminate the visible decay products of hadronically decaying tau lepton $\tauhad$ from jets initiated by quarks or gluons. The taus passing the Medium working point are considered in the overlap removal procedure and missing transverse energy calculation, following the ttW multi-lepton group \cite{tthMLgroup}. Different RNN working points are used at different levels depending on the analysis channel. %For the loose ID, the tau efficiency is constant at 95~\% in $\eta$ and $\pt$.
 The \texttt{Loose} ID taus are used for the overlap removal and missing transverse energy calculation.
 In the analysis event selection, the hadronic tau candidates are required to have one or three charged tracks and an absolute charge of one, and pass the \texttt{Medium} tau ID to reject the jets.
 For the \texttt{Medium} ID, the tau efficiency is about 75\% (60\%) for 1-prong (3-prong) candidates. The ID efficiencies are optimized to be flat versus the tau $\pt$ and pileup.
@@ -182,7 +182,7 @@ A dedicated isolation boosted decision tree has been trained to better reject no
 
 \texttt{PromptLeptonVeto} is trained on leptons selected from the Powheg+Pythia8 non-allhad $t\bar t$ sample using eight input variables:
 \begin{itemize}
-\item Three of the them are used to identify b-tagged jets by ATLAS flavor tagging algorithms;
+\item Three of them are used to identify b-tagged jets by ATLAS flavor tagging algorithms;
 \item Two of them are the ratio of the track lepton $\pt$ with respect to the track jet $\pt$ and $\Delta R$ between the lepton and the track jet axis;
 \item Three of them are the number of tracks collected by the track jet and the lepton track and calorimeter isolation variables. 
 \end{itemize}
@@ -191,6 +191,8 @@ The \texttt{PromptLeptonVeto} shows a significant improvement for non-prompt-lep
 
 The tight working points are: \texttt{PromptLeptonVeto}$<-0.50$ for muons and \texttt{PromptLeptonVeto}$<-0.70$ for electrons.  The efficiencies of the tight \texttt{PromptLeptonVeto} working points are measured using the tag and probe method with $Z\rightarrow l^+l^-$ events. The scale factors are approximately 0.92 for $10<\pt<15$ GeV muons and 0.97 for electrons, and 
 averaging at 0.98 to 0.99 for higher $\pt$ leptons.
+
+There is a new improved PLV or PLIV available sooner and we will update the tight isolation working point cut accoringly in next update.
 
 \subsection{Overlap removal}
 For the objects passing the selection above, a geometric overlap removal is applied to eliminate the ambiguity in the object identification.  When two objects are close geometrically with $\Delta R$ less than a certain threshold, or satisfy some certain requirements, one of them will be removed. 
@@ -218,4 +220,4 @@ In the leptonic channels, the overlap removal is done using the heavy flavor ove
 \end{itemize}
 
 The rest of overlap removal procedures are the same as used in the hadronic channels above. 
-Note that the $\met$ calculation package has its own overlap removal procedure. Taus that fail \texttt{Loose} ID are also passed to the package. Only two leading taus are considered in the calculation.
+Note that the $\met$ calculation package has its own overlap removal procedure. Only two leading taus are considered in the calculation.
