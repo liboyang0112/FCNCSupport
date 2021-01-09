@@ -9,17 +9,14 @@ Upper $95\%$ CL limits on BR($t\to Hq$) have been obtained by ATLAS based on the
 
 The $t\to Hq$ decay and $gq\to tH$ production are also searched by CMS based on the data from 2015 and 2016\cite{CMS-TOP-17-003}. 
 
-The FCNC coupling is parametrised using dim-6 operators \cite{fcnc_production_theory}. The effective Lagrangian regarding $tqH$ interaction before spontaneously symmetry breaking is:
+The FCNC coupling is parametrised using dim-6 operators \cite{fcnc_production_theory}. The effective Lagrangian regarding $tqH$ interaction is:
 %
 \begin{equation}
-\mathcal{L}_{EFT} = \frac{C^{i3}_{u\phi}}{\Lambda^{2}}(\phi^{\dagger}\phi)(\bar{q_{i}}t)\tilde{\phi} + \frac{C^{3i}_{u\phi}}{\Lambda^{2}}(\phi^{\dagger}\phi)(\bar{Q}u_{i})\tilde{\phi} + H.c
+\mathcal{L}_{EFT} = \frac{C^{i3}_{u\phi}}{\Lambda^{2}}(\phi^{\dagger}\phi)(\bar{q_{i}}t)\tilde{\phi} + \frac{C^{3i}_{u\phi}}{\Lambda^{2}}(\phi^{\dagger}\phi)(\bar{t_{i}}q)\tilde{\phi}
 \label{eq:eq01}
 \end{equation}
 %
-
-Where the the operator notation is consistent with \cite{fcnc_production_theory}. $C^{i3}$ is the Wilson coefficient of the 6-dim operator with $i=1,2$ denoting the flavor of upper type quark. $\Lambda$ is the scale of the new physics where the UV cut off happens which is set as 1~TeV as benchmark. $\phi$ is the SM higgs doublet. $\tilde{\phi}=\epsilon\phi^\ast$ where $\epsilon$ is the antisymmetric matrix with $\epsilon_{12}=-\epsilon_{21}=1$.
-
-The Wilson coefficient $C_{u\phi}$'s can be extracted as
+Where the operator notation is consistent with \cite{fcnc_production_theory}. The coefficient $C_{u\phi}$'s can be extracted as
 \begin{equation}
 \begin{array}{l}
 (C^{i3}_{u\phi})^2 + (C^{3i}_{u\phi})^2 = 1946.6~\text{BR}(t\to qH)\\
@@ -29,11 +26,104 @@ The Wilson coefficient $C_{u\phi}$'s can be extracted as
 \label{eq:eq02}
 \end{equation}
 
-To give a better impression on the numbers, we use $\text{BR}(t\to qH)=1(0.2)\%$ as benchmark, which is corresponding to ($C^{13}_{u\phi})^2 + (C^{31}_{u\phi})^2=19.47(3.89)$, $\sigma(ug\to tH)=7109.0(1421.8)$ fb, $\sigma(cg\to tH)=1029.8(206.0)$ fb.
+To give a better impression on the numbers, we use $\text{BR}(t\to qH)=1(0.2)\%$ as benchmark, which is corresponding to ($C^{13}_{u\phi})^2 + (C^{31}_{u\phi})^2=19.47(3.89)$, $\sigma(ug\to tH)=7109.0(1421.8)$ pb, $\sigma(cg\to tH)=1029.8(206.0)$ pb.
 
-In this article, a search for the decay $t\to qH$ in the $t\bar{t}$ production (TT) and single-top, Higgs associated production (ST) with $H\to\tau\tau$  as shown in Fig \ref{fig:diagrams} using 140~fb$^{-1}$ of proton-proton collision data at 13~TeV, taken with the ATLAS detector at the Large Hadron Collider (LHC), is presented. The final state is characterized by one top and one Higgs. In TT, there is an additional u/c quark forming a top resonance with Higgs.
+In this article, a search for the decay $t\to qH$ in the $t\bar{t}$ production (PP) and single-top, Higgs associated production (ST) with $H\to\tau\tau$  as shown in Fig \ref{fig:diagrams} using 140~fb$^{-1}$ of proton-proton collision data at 13~TeV, taken with the ATLAS detector at the Large Hadron Collider (LHC), is presented. The final state is characterized by one top and one Higgs. In PP, there is an additional u/c quark forming a top resonance with Higgs.
 
-\input{\FCNCFigures/tex/diagrams}
+\input{../FCNCFigures/tex/diagrams}
+
+\section{Analysis outline}
+
+\subsection{Signal regions}
+\label{sec:SRs}
+As demonstrated in the Figure \ref{fig:diagrams}, depending on the production modes and the decay of the $W$ boson from top quark, the analysis is split into 4 kinds of final states as shown in table \ref{tab:signalevents}. Except events with 2 leptons (leptonic tau included) or no hadronic tau in the final states, all of the decay modes are considered in the analysis.
+
+Due to the low statistics when STL cuts are applied, the STL and TTL are included in a single region $l\thadhad$ for $H\to\thadhad$ where there is no light jet multiplicity requirement. However due to the low tau reconstruction rate, it is not rare that one of tau fails the reconstruction and remains as a jet. So the $l\thad$ 1j and $l\thad$ 2j are included as signal regions where the lepton and $\thad$ are same charged to reduce background.
+
+The summary for the signal regions are listed in Table \ref{tab:signalregions}. With corresponding yield after fake estimation in Table \ref{tab:yield_raw}.
+
+For the future convenience, STH $\tlhad$ and TTH $\tlhad$ are indicated by $\tlhad$; STH $\thadhad$ and TTH $\thadhad$ are indicated by $\thadhad$; $l\tauhad$ 2j and $l\tauhad$ 1j are indicated by $l\tauhad$. All the of regions involving leptons (including $\taulep$) are indicated by "leptonic channels", otherwise "hadronic channels".
+
+\begin{table}
+\footnotesize
+\centering
+\caption{Overview of the final states of signal events.}
+\label{tab:signalevents}
+\begin{tabular}[h]{c|c|c|c|c|c|c}
+\hline \hline
+
+\multicolumn{2}{c|}{\# of particles}	& alias & b-jet & jets & lepton & taus\\ \hline
+\multirow{2}{*}{ST}	& $W\to l\nu$		& STL   & 1	    & 1    & 1      & 2   \\ \cline{2-7}
+					& $W\to q\bar{q}$	& STH   & 1	    & 3    & 0      & 2   \\ \hline
+\multirow{2}{*}{PP}	& $W\to l\nu$		& TTL   & 1	    & 2    & 1      & 2   \\ \cline{2-7}
+					& $W\to q\bar{q}$	& TTH   & 1	    & 4    & 0      & 2   \\ \hline
+\end{tabular}
+\footnotesize
+\centering
+\caption{Overview of the signal regions.}
+\label{tab:signalregions}
+\begin{tabular}[h]{c|c|c|c|c|c}
+\hline \hline
+Signal regions & b-jet & light flavor jets	& lepton & hadronic taus & charge\\ \hline
+$l\tauhad$ 2j  & 1     & 2					& 1      & 1			 & $l\tauhad$ SS\\ \hline
+$l\tauhad$ 1j  & 1     & 1					& 1      & 1			 & $l\tauhad$ SS\\ \hline
+$l\thadhad$	   & 1     & any				& 1      & 2             & $\thadhad$ OS\\ \hline
+STH $\thadhad$ & 1     & 2      			& 0      & 2             & $\thadhad$ OS\\ \hline
+TTH $\thadhad$ & 1     & $\ge3$ 			& 0      & 2             & $\thadhad$ OS\\ \hline
+STH $\tlhad$   & 1     & 2      			& 1      & 1             & $\tlhad$ OS\\ \hline
+TTH $\tlhad$   & 1     & $\ge3$ 			& 1      & 1             & $\tlhad$ OS\\ \hline
+\end{tabular}
+\end{table}
+
+
+\subsection{Analysis strategy for leptonic channels}
+
+The main background contributing to the leptonic channels, defined in the last section, is top pair production as shown in Figure \ref{fig:pt_raw}. It can either contribute as reducible and irreducible background.
+
+As irreducible background, when the top pair decays full-leptonically to a $l$ and a $\tau$, and one of the $b$-jet from top decay fails the b-tagging, the event ends up in STH $\tlhad$ region. If there are rediation or pile-up jets, the event ends up TTH $\tlhad$ region.
+
+The irreducible background is modelled directly by Monte Carlo.
+
+As reducible background, when the top pair decays full-leptonically, to a $l$ and a $\tauhad$, and one of the $b$-jet from top decay fails the b-tagging, if the $b$-jet or one of the radiation jet is reconstructed as a $\tauhad$ the event ends up in the $l\thadhad$ region. When the top pair decays semi-leptonically, but one of the W-decaying jet or the radiation jet or pile-up jet fakes a $\tauhad$. Depending on the jet multiplicity, the event ends up in STH $\tlhad$ or TTH $\tlhad$ if the fake tau has the opposite charge to the lepton or in $l\tau$ 1j/2j if the fake tau has the same charge as the lepton. 
+
+The reducible background except QCD is also modelled by Monte Carlo but with scale factors derived from the $t\bar{t}$ control regions in Table \ref{tab:sfcr} and explained in \ref{sec:sf_method}.
+
+\begin{table}
+\centering
+\caption{Overview of the control regions used for fake tau scale factor derivation in leptonic channels.}
+\label{tab:sfcr}
+\begin{tabular}[h]{c|c|c|c|c|c}
+\hline \hline
+Control regions & b-jet & light flavor jets	& lepton & hadronic taus & charge\\ \hline
+$2l1tau1bnj$	& 1     & any				& 2      & 1			 & $ll$ OS\\ \hline
+$2l1tau2bnj$	& 2     & any				& 2      & 1			 & $ll$ OS\\ \hline
+$1l1tau2b2j SS$	& 2     & 2 				& 1      & 1             & $l\tau$ SS\\ \hline
+$1l1tau2b2j OS$	& 2     & 2      			& 1      & 1             & $l\tau$ OS\\ \hline
+$1l1tau2b3j SS$	& 2     & $\ge3$ 			& 1      & 1             & $l\tau$ SS\\ \hline
+$1l1tau2b3j OS$	& 2     & $\ge3$      		& 1      & 1             & $l\tau$ OS\\ \hline
+\end{tabular}
+\end{table}
+
+The QCD multi-jets also contribute a small fraction of the reducible background by faking both lepton and taus, especially in the low jet multiplicity region $l\tau$ 1j. This is modelled by the ABCD method by cutting on $\met$ and the PLV defined in Sec. \ref{sec:Plv} as explained in \ref{sec:ABCD}.
+
+\subsection{Analysis strategy for in Hadronic channels}
+
+Similar to STH $\tlhad$ or TTH $\tlhad$, the $t\bar{t}$ also contributes to the hadronic channels as reducible and irreducible background. But in the hadronic channels, much larger contribution is observed from $Z\to \tau\tau$ with radiated $b$-jet and QCD faking both taus as shown in Figure \ref{fig:os_pre_hadhad}. 
+
+The irreducible background is modelled directly by Monte Carlo. The reducible background with sub-leading taus faked is modelled by Fake Factor method while the reducible background with leading taus faked is modelled by Monte Carlo with a conservative uncertainty of 50\% according to Sec. \ref{sec:sf_method}.
+
+\begin{table}
+\caption{The summary for the yield in the signal regions and control regions.}
+\label{tab:yield_raw}
+\small
+\input{\FCNCTables/tthML/showFake/faketau/prefit/NOMINAL/yield_chart}
+\input{\FCNCTables/xTFW/showFake/NOMINAL/yield_chart}
+\end{table}
+
+\subsection{Blinding strategy}
+\label{sec:blind}
+
+In order to keep the analysis unbiased from artificial cut tunings some data histogram bins are blinded. The blinding threshold is quantified as significances reaching 1 when decaying branching ratio is 0.2\% to be conservative enough when the published limit is around 0.1\%. The data is shown in some signal regions where the sensitivities are too low that none of the bins are above the threshold. In addition, the signal enriched high BDT region are blinded (BDT > 0.2).
 
 \section{Detector, data set and Monte Carlo simulation}
 
@@ -86,11 +176,6 @@ The GRL used for the 2018 dataset:
 
 \end{centering}
 corresponds to an integrated luminosity of 59.937 fb$^{-1}$. The final luminosity used for the analysis is 140.45 fb$^{-1}$.
-%The integrated luminosity is 36.1~fb$^{-1}$ with a relative uncertainty of 3.2\% after the application of data-quality requirements.
-%The average number of interactions per bunch crossing, over short time periods of about 1 minute, denoted by $\langle\mu\rangle$, is 13 in 2015 and 25 in 2016. The pile-up background is formed by the inelastic collisions, producing mainly low transverse momentum particles, in addition to the hard interaction.
-
-%wmyao: define derivation for tthML and Htautau framework 
-%Boyang: this is done in the selection section.
 
 \subsection{Signal and background simulation}
 \label{sec:generator}
@@ -99,9 +184,17 @@ The overview of the major samples generated is summarized in table \ref{mob}.
 
 The TopFCNC UFO model \cite{FCNC_UFO1,FCNC_UFO2} with 5-flavour scheme is used for signal simulation.
 
+The targeted signal in this analysis is $tqH/tH$ with $\Htautau$ (samples 411170-411177 and 412098-412105) in App. \ref{sec:DSIDlist}).
+
 The FCNC ST signal is simulated using MadGraph5\_aMC@NLO v2.6.2 \cite{MG5} interfaced with Pythia 8 \cite{Pythia8} with the A14 tune \cite{A14} for the generation of parton showers, hadronisation and multiple interactions and the NNPDF30NLO \cite{NNPDF30NLO} parton distribution functions (PDF) is used to generate $qg$ events at next-to-leading order (NLO) in QCD. Depending on either up quark or charm quark involved in the FCNC decay and either the $W$ bosons decaying hadronically or leptonically, 4 samples are generated for each term of effective Lagrangian, so eight samples in total.
 
 The FCNC TT signal is simulated using Powheg-Box \cite{Powheg} V2 interfaced with Pythia8 \cite{Pythia8} with the A14 tune \cite{A14} for the generation of parton showers, hadronisation and multiple interactions and the NNPDF30NLO \cite{NNPDF30NLO} parton distribution functions (PDF) is used to generate $t\bar{t}$ events at next-to-leading order (NLO) in QCD. Depending on either the top or the anti-top quark decaying to $bW$, either up quark or charm quark involved in the FCNC decay and either the $W$ bosons decaying hadronically or leptonically, eight samples are produced with the Higgs going to a $\tau$-lepton pair.
+
+Considering the other decays of the Higgs can be part of the signal, samples xxxxxx-xxxxxx (To be added with the samples used by tH bb/ML group) with inclusive $W$ and Higgs decays are also included. These sample have a one-lepton (electron or muon) filter at truth level (either coming from $W$ or Higgs decays). The events in xxxxxx-xxxxxx with $\Htautau$ decay are removed based on truth information.
+
+It is checked that after the final selection, there are 110 overlapped signal events caused by different overlap removal and object definition in xTauFramework and ttHMultiAna (27140 in total for hadhad channel and 95253 in total for lepton channels) but there is no overlap in the signal enriched region (BDT > 0.5).
+
+The total FCNC signal with fake taus in this analysis is not used in the MVA training, but is regarded as part of the total signal in the fit. The normalization factor of the other components is common with the signal, so that their yields are fully correlated in the fit.
 
 The dominant background is the $t\bar{t}$ production. The $t\bar{t}$ process and the single top process are generated with Powheg-Box \cite{Powheg} V2, and Pythia8 is used for the parton shower. NNPDF30NLO \cite{NNPDF30NLO} and A14 tune \cite{A14} are used for $t\bar{t}$(single top). The $t\bar{t}$ sample is also generated with different generators and parton showers models, as well as different amount of radiations, for systematics as detailed in Sec. \ref{sec:systematics}.
 
@@ -164,7 +257,7 @@ Tight isolation working points are also applied in some channels to reduce fake 
 (PLV), as described in Sec.~\ref{sec:Plv}.
 
 \subsection{Hadronic tau decays}
-The hadronic tau candidates \cite{tau_sys1} are seeded by jets reconstructed by the anti-$k_t$ algorithm \cite{antikt}, which is applied on calibrated topo clusters \cite{topocluster} with a distance parameter of R=0.4. They are required to have $\pt > 20$~GeV and $|\eta|<2.5$. The transition region between the barrel and end-cap calorimeters ($1.37<|\eta|<1.52$) is excluded. In the hadronic channels, these tau candidates are then considered in the overlap removal procedure and missing transverse energy calculation, following the Htautau group \cite{Htautau-note}. In the leptonic channels, an identification algorithm based on Recursive Neural Network \cite{tau_sys2} is applied to discriminate the visible decay products of hadronically decaying tau lepton $\tauhad$ from jets initiated by quarks or gluons. The taus passing the Medium working point are considered in the overlap removal procedure and missing transverse energy calculation, following the ttW multi-lepton group \cite{tthMLgroup}. Different RNN working points are used at different levels depending on the analysis channel. %For the loose ID, the tau efficiency is constant at 95~\% in $\eta$ and $\pt$.
+The hadronic tau candidates \cite{tau_sys1} are seeded by jets reconstructed by the anti-$k_t$ algorithm \cite{antikt}, which is applied on calibrated topo clusters \cite{topocluster} with a distance parameter of R=0.4. They are required to have $\pt > 20$~GeV and $|\eta|<2.5$. The transition region between the barrel and end-cap calorimeters ($1.37<|\eta|<1.52$) is excluded. In the hadronic channels, these tau candidates are then considered in the overlap removal procedure and missing transverse energy calculation, following the Htautau group \cite{Htautau-note}. In the leptonic channels, an identification algorithm based on Recursive Neural Network \cite{tau_sys2} is applied to discriminate the visible decay products of hadronically decaying tau lepton $\tauhad$ from jets initiated by quarks or gluons. The taus passing the Medium working point are considered in the overlap removal procedure and missing transverse energy calculation, following the ttW multi-lepton group \cite{ttHMLgroup}. Different RNN working points are used at different levels depending on the analysis channel. %For the loose ID, the tau efficiency is constant at 95~\% in $\eta$ and $\pt$.
 The \texttt{Loose} ID taus are used for the overlap removal and missing transverse energy calculation.
 In the analysis event selection, the hadronic tau candidates are required to have one or three charged tracks and an absolute charge of one, and pass the \texttt{Medium} tau ID to reject the jets.
 For the \texttt{Medium} ID, the tau efficiency is about 75\% (60\%) for 1-prong (3-prong) candidates. The ID efficiencies are optimized to be flat versus the tau $\pt$ and pileup.
@@ -213,10 +306,15 @@ In the hadronic channels, the overlap removal is done by the official overlap re
 
 In the leptonic channels, the overlap removal is done using the heavy flavor overlap removal working point, which gives precedence to the b-tagged jet as follows:
 \begin{itemize}
+\item If two electrons have overlapped second-layer cluser, or shared tracks, the electron with lower $\pt$ is removed.
+\item $\tauhad$ within a $\Delta R=0.2$ cone of an electron or muon are removed.
+\item If a muon sharing an ID track with an electron and the muon is calo-tagged, the muon is removed. Otherwise the electron is removed.
 \item Jet is not tagged as b-jet and within a $\Delta R=0.2$ cone of an electron is removed.
 \item When a muon ID track is ghost associated to a jet or within a $\Delta R=0.2$ cone of a jet, the jet is removed if it is not tagged as b-jet and has either less than 3 tracks with $\pt>500$ MeV or
   has a relative small $\pt$ ($\pt^{\mu}>0.5\pt^{\text{jet}} \text{ and } \pt^{\mu}>0.7[\text{the scalar sum of the } \pt \text{'s of the jet tracks with } \pt>500$ MeV]).
-\item Jet is not tagged as b-jet and within a $\Delta R=0.2$ cone of the $\tlhad$ is removed. The overlap also works for the reverted tau ID regions used in the analysis.
+\item Muons within a $\Delta R=0.4$ cone of a jet are removed.
+\item Jet is not tagged as b-jet and within a $\Delta R=0.2$ cone of the $\thad$ is removed. The overlap also works for the reverted tau ID regions used in the analysis.
+\item The event is removed if a tau candidate is tagged as b-jet with 70\% working point.
 \end{itemize}
 
 The rest of overlap removal procedures are the same as used in the hadronic channels above. 

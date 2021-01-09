@@ -1,64 +1,3 @@
-\section{Blinding strategy}
-\label{sec:blind}
-
-In order to keep the analysis unbiased from artificial cut tunings, data histogram bins with significances greater than 1 when decaying branching ratio is 0.2\% are blinded. In addition, the signal enriched high BDT region are blinded (BDT > 0.2).
-%%
-%\begin{equation}
-%Z = \sqrt{2(s+b)\ln\left(1+\frac{s}{b}\right)-2s},
-%\end{equation}
-%%
-%where $s$ and $b$ are the expected numbers of signal and background events per bin.
-
-%\begin{table}[htb]
-%\caption{The upper cuts on the significance per bin for different categories applied for blinding. }
-%\centering
-%\begin{tabular}{|c|c|c|c|} \hline
-% $\tlhad$ 4-jet & $\tlhad$ 3-jet & $\thadhad$ 4-jet & $\thadhad$ 3-jet \\ \hline
-% 0.90 & 0.25 & 2.10 & 0.50 \\ \hline
-%\end{tabular}
-%\label{tab:blinding}
-%\end{table}
-\section{Signal regions}
-\label{sec:SRs}
-Depending on the production modes and the decay of the $W$ boson from top quark, the analysis is split into 4 categories as shown in table \ref{tab:signalevents}. Except events with 2 leptons (leptonic tau included) or no hadronic tau in the final states, all of the decay modes are considered in the analysis.
-%wmyao: define Plv cut here for ltau channels.
-%Boyang: This is explained in the fake modelling part since we don't apply PLV until then.
-Due to the low statistics when STL cuts are applied, the STL and TTL are included in a single region $l\thadhad$ for $H\to\thadhad$ where there is no light jet multiplicity requirement. However due to the low tau reconstruction rate, it is not rare that one of tau fails the reconstruction and remains as a jet. So the $l\thad$ 1j and $l\thad$ 2j are included as signal regions where the lepton and $\thad$ are same charged to reduce background.
-
-The summary for the signal regions are listed in table \ref{tab:signalregions}.
-
-For the future convenience, STH $\tlhad$ and TTH $\tlhad$ are indicated by $\tlhad$; STH $\thadhad$ and TTH $\thadhad$ are indicated by $\thadhad$; $l\tauhad$ 2j and $l\tauhad$ 1j are indicated by $l\tauhad$. All the channels involving leptons (including $\taulep$) are indicated by leptonic channels.
-
-\begin{table}
-\footnotesize
-\centering
-\caption{Overview of the final states of signal events}
-\label{tab:signalevents}
-\begin{tabular}[h]{c|c|c|c|c|c|c}
-\hline \hline
-
-\multicolumn{2}{c|}{\# of particles}	& alias & b-jet & jets & lepton & taus\\ \hline
-\multirow{2}{*}{ST}	& $W\to l\nu$		& STL   & 1	    & 1    & 1      & 2   \\ \cline{2-7}
-					& $W\to q\bar{q}$	& STH   & 1	    & 3    & 0      & 2   \\ \hline
-\multirow{2}{*}{TT}	& $W\to l\nu$		& TTL   & 1	    & 2    & 1      & 2   \\ \cline{2-7}
-					& $W\to q\bar{q}$	& TTH   & 1	    & 4    & 0      & 2   \\ \hline
-\end{tabular}
-\footnotesize
-\centering
-\caption{Overview of the signal regions}
-\label{tab:signalregions}
-\begin{tabular}[h]{c|c|c|c|c|c}
-\hline \hline
-Signal regions & b-jet & light flavor jets	& lepton & hadronic taus & charge\\ \hline
-$l\tauhad$ 2j  & 1     & 2					& 1      & 1			 & $l\tauhad$ SS\\ \hline
-$l\tauhad$ 1j  & 1     & 1					& 1      & 1			 & $l\tauhad$ SS\\ \hline
-$l\thadhad$	   & 1     & $\ge0$ 			& 1      & 2             & $\thadhad$ OS\\ \hline
-STH $\thadhad$ & 1     & 2      			& 0      & 2             & $\thadhad$ OS\\ \hline
-TTH $\thadhad$ & 1     & $\ge3$ 			& 0      & 2             & $\thadhad$ OS\\ \hline
-STH $\tlhad$   & 1     & 2      			& 1      & 1             & $\tlhad$ OS\\ \hline
-TTH $\tlhad$   & 1     & $\ge3$ 			& 1      & 1             & $\tlhad$ OS\\ \hline
-\end{tabular}
-\end{table}
 
 \section{Reconstruction of event topology}
 \label{sec:reconstruction}
@@ -96,6 +35,7 @@ The Higgs mass resolution is set to 20~GeV respectively. The $\met$ resolution i
 where $\Sigma E_\text{T}$ (in GeV) is the scalar sum of transverse energy depositions of all objects and clusters. The invisible 4-momenta are obtained by minimizing the combined $\chi^2$ for each event. By adding the Higgs mass constraint term in the kinematic fit, not only is the Higgs mass resolution improved, but also the resolutions of the Higgs boson's four-momentum, and the mass of the top from which the Higgs comes. Figure \ref{fig:chi2} shows the distributions of $\chi^2$ in different regions. Good agreement between data and background predictions are achieved.
 
 \input{\FCNCFigures/tex/chi2}
+\input{\FCNCFigures/tex/x12fit}
 
 In $l\thadhad$ channels, a Higgs resonance formed by the taus is expected. Additionally for TTL $\thadhad$ events, a top resonance formed by the c/u jet and Higgs is expected.
 
@@ -142,5 +82,31 @@ m^{T}_{W} = \sqrt{2 p_{\text{T,lep}} E_{\text{T}}^{\text{miss}} \left(1-\cos\Del
 \item $\Delta R(\tau,\tau)$ is the angular distance between two tau candidates.
 \item $\Delta R(\tau,light-jet,min)$ is the angular distance between the closest tau candidate and light-flavor jet.
 \item $\Delta\phi(\tau\tau,P^{T}_{miss})$ is the azimuthal angle between the $\met$ and di-tau $\pt$.
+
+The distributions of those variables are shown in:
+\begin{itemize}
+	\item $l\thad$ 1j: Figure  		\ref{fig:var_reg1l1tau1b1j_ss_vetobtagwp70_highmet_1}
+								-	\ref{fig:var_reg1l1tau1b1j_ss_vetobtagwp70_highmet}
+	\item $l\thad$ 2j: Figure  		\ref{fig:var_reg1l1tau1b2j_ss_vetobtagwp70_highmet_1}
+								-	\ref{fig:var_reg1l1tau1b2j_ss_vetobtagwp70_highmet}
+	\item STH $\tlhad$: Figure 		\ref{fig:var_reg1l1tau1b2j_os_vetobtagwp70_highmet_1}
+							 	-	\ref{fig:var_reg1l1tau1b2j_os_vetobtagwp70_highmet}
+	\item TTH $\tlhad$: Figure 		\ref{fig:var_reg1l1tau1b3j_os_vetobtagwp70_highmet_1}
+								-	\ref{fig:var_reg1l1tau1b3j_os_vetobtagwp70_highmet}
+	\item $l\thadhad$: Figure 		\ref{fig:var_reg1l2tau1bnj_os_1}
+								-	\ref{fig:var_reg1l2tau1bnj_os}
+	\item STH $\thadhad$: Figure 	\ref{fig:var_reg2mtau1b2jos_vetobtagwp70_highmet_1}
+								-	\ref{fig:var_reg2mtau1b2jos_vetobtagwp70_highmet}
+	\item TTH $\thadhad$: Figure 	\ref{fig:var_reg2mtau1b3jos_vetobtagwp70_highmet_1}
+								-	\ref{fig:var_reg2mtau1b3jos_vetobtagwp70_highmet}
+\end{itemize}
+
+\input{\FCNCFigures/tex/variables/reg1l1tau1b1j_ss_vetobtagwp70_highmet}
+\input{\FCNCFigures/tex/variables/reg1l1tau1b2j_ss_vetobtagwp70_highmet}
+\input{\FCNCFigures/tex/variables/reg1l1tau1b2j_os_vetobtagwp70_highmet}
+\input{\FCNCFigures/tex/variables/reg1l1tau1b3j_os_vetobtagwp70_highmet}
+\input{\FCNCFigures/tex/variables/reg1l2tau1bnj_os}
+\input{\FCNCFigures/tex/variables/reg2mtau1b2jos_vetobtagwp70_highmet}
+\input{\FCNCFigures/tex/variables/reg2mtau1b3jos_vetobtagwp70_highmet}
 
 \end{enumerate}

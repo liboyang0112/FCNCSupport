@@ -1,0 +1,90 @@
+\section{Derivation and framework level cuts}
+\label{app:cuts}
+A number of event cuts are applied before getting to the signal enhanced regions with the background suppressed. Then the DAOD$\_$HIGG8D1 (DAOD$\_$HIGG4D3) derivation is feed to {\texttt ttHMultiAna} ({\texttt xTauFramework}) to produce n-tuples for leptonic (hadronic) channels, where ttHMultiAna is AnalysisTop \cite{AnalysisTop} based. The list of event-level selection criteria is as follows:
+
+\begin{enumerate}
+\item DAOD$\_$HIGG8D1 and DAOD$\_$HIGG4D3 ($\thadhad$) derivations are used for this analysis. At the derivation level, the following cuts are applied:
+  \begin{itemize}
+  \item In DAOD$\_$HIGG8D1, trigger skimming: all election, muon, tau triggers; Offline skimming: at least 2 light leptons or at least 1 lepton plus 1 tau.
+  \item In DAOD$\_$HIGG4D3, no trigger skimming. Offline skimming: 2taus
+  \end{itemize}
+%wmyao: define ttHML skim cuts
+\item At the {\texttt ttHMultiAna} level, skim cuts in \cite{ATL-COM-PHYS-2018-410} are applied , then only the events passing either of the following cut are saved for the n-tuples:
+  \begin{itemize}
+  \item At least two light leptons passing loose identification criteria with leading lepton $\pt > 15$ GeV and subleading lepton $\pt > 5$ GeV within $|\eta|<2.6$.
+  \item At least one light lepton passing loose identification criterua with $\pt >15$ GeV and $|\eta|<2.5$, and at least one hadronic tau. The tau lepton has to pass RNN loose requirement with $\pt >15$ GeV and $|\eta|<2.5$.
+  \end{itemize}
+\item If the tau candidate overlaps with a muon or fails Loose electron-BDT cut, the event is removed.
+\item If the event neither fires single lepton nor dilepton trigger, the event is removed.
+\item If the lepton fails tight lepton selection, the event is removed.
+\item If the leading or sub-leading tau candidate has $\pt$ less than 25GeV or fails RNN medium criteria, the event is removed.
+\item If the event has two same-charged lepton, the electrons are required to pass Loose charge BDT. (Not affecting this analysis.)
+\item If the tau is tagged as $b$-jet by 70\% WP, the event is removed.
+
+
+
+\item At the {\texttt xTauFramework} level, skim cuts are applied to reduce the ntuple size:
+  \begin{itemize}
+  \item No leptons.
+  \item At least 1 RNN Loose tau.
+  \item At least 3 jets with $\pt>30$ GeV, $|\eta|<4.5$ and passing either central or forward JVT cuts, with at least 1 b-tagged. (The jets are further required to have $|\eta|<2.5$ at n-tuple level to be consistent with leptonic channels.)
+  \item Taus trigger matched.
+  \item LooseBad Event Cleaning.
+  \item Leading tau $\pt>40~\GeV$, sub-leading tau $\pt>30~\GeV$, two taus comes from a single vertex.
+  \item Leading jet $\pt>70~\GeV$, $|\eta|<3.2$
+  \item $\met>15~\GeV$.
+  \item In the case of data, GRL cut as defined in Sec. \ref{sec:dataset} is also applied.
+  \end{itemize}
+
+\item At least one primary vertex exists in the event. The primary vertex is defined as the vertex that has the largest sum of track $\pt^2$ associated to it, and has at least 4 tracks with $|z_0|<100$ mm.
+\end{enumerate}
+
+The corresponding cutflow for the n-tuple level selection and each channel are given in Table \ref{tab:xTFW_cutflow_all} - \ref{tab:tthML_cutflow_reg1l2tau1bnj_os}.
+\begin{table}
+\caption{The cutflow tables for the preselection in the hadronic channels.}
+\label{tab:xTFW_cutflow_all}
+\footnotesize
+\input{\FCNCTables/cutflow/xTFW/cutflow_all}
+\end{table}
+
+\begin{table}
+\caption{The cutflow tables in the STH $\thadhad$ signal region.}
+\label{tab:cutflow_STHhadhad}
+\input{\FCNCTables/cutflow/xTFW/cutflow_reg2mtau1b2jos}
+\end{table}
+
+\begin{table}
+\caption{The cutflow tables in the TTH $\thadhad$ signal region.}
+\label{tab:cutflow_TTHhadhad}
+\input{\FCNCTables/cutflow/xTFW/cutflow_reg2mtau1b3jos}
+\end{table}
+
+\begin{table}
+\caption{The cutflow tables for the preselection in the leptonic channels.}
+\label{tab:tthML_cutflow_all}
+\footnotesize
+\input{\FCNCTables/cutflow/tthML/cutflow_all}
+\end{table}
+
+
+\begin{table}
+\caption{The cutflow tables in the $l\tauhad$ 1j signal region.}
+\input{\FCNCTables/cutflow/tthML/cutflow_reg1l1tau1b1j_ss}
+\end{table}
+\begin{table}
+\caption{The cutflow tables in the STH $\tlhad$ signal region.}
+\input{\FCNCTables/cutflow/tthML/cutflow_reg1l1tau1b2j_os}
+\end{table}
+\begin{table}
+\caption{The cutflow tables in the $l\tauhad$ 2j signal region.}
+\input{\FCNCTables/cutflow/tthML/cutflow_reg1l1tau1b2j_ss}
+\end{table}
+\begin{table}
+\caption{The cutflow tables in the TTH $\tlhad$ region.}
+\input{\FCNCTables/cutflow/tthML/cutflow_reg1l1tau1b3j_os}
+\end{table}
+\begin{table}
+\caption{The cutflow tables in the $l\thadhad$ signal region.}
+\label{tab:tthML_cutflow_reg1l2tau1bnj_os}
+\input{\FCNCTables/cutflow/tthML/cutflow_reg1l2tau1bnj_os}
+\end{table}
