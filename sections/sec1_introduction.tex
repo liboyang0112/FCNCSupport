@@ -1,13 +1,14 @@
 \section{Introduction}
+\label{sec:intro}
 Since the discovery of the Higgs boson in 2012, great efforts are made to study its properties. As the mass of the Higgs boson is about 125 GeV \cite{HiggsMass}, it is kinematically allowed that a top quark decays to a Higgs boson and an up-type quark via the flavour-changing neutral current (FCNC). In the Standard Model (SM), the FCNC interaction is forbidden at tree level and suppressed at higher orders due to the Glashow-Iliopoulos-Maiani (GIM) mechanism \cite{GIM}. The $t\to u/c+H$ branching fraction in the SM is calculated to be around $10^{-15}$ \cite{brtch3}. It would be enhanced in many models beyond the SM (BSM). Examples are the quark-singlet model \cite{quarkSinglet1,quarkSinglet2}, the two-Higgs doublet model with or without the flavour violation \cite{2hdm1,2hdm2}, the minimal supersymmetric standard model (MSSM) \cite{2hdm3}, supersymmetry with R-parity violation \cite{Rparity},
 the Topcolour-assisted Technicolour model \cite{Techni} or models with warped extra dimensions \cite{extraD}, the little Higgs model with T-parity conservation \cite{littleH} and the composite Higgs models \cite{compositeH}.
 Especially, the ansatz of Cheng and Sher \cite{Sher} allows a branching fraction of about $10^{-3}$ \cite{FCNC_rate}. Therefore, an observation of this decay would be a clear evidence for new physics.
 
 On the other hand, if the $tHq$ interaction exists, the single-top, Higgs associated production through this interaction should also be enhanced. The $tH$ associated production in the SM prediction is expected to be small at LHC\cite{tHjb_production}. So the study on this process will also contribute to the FCNC interaction searches.
 
-Upper $95\%$ CL limits on BR($t\to Hq$) have been obtained by ATLAS based on the data from 2015 and 2016, in the $H\to\gamma\gamma$ \cite{fcncgmgm}, $H\to WW/\tll$ multilepton \cite{fcncml} and  $\Htautau$, $H\to b\bar{b}$ \cite{fcnctautau} channels. The combined expected (observed) limits are $0.083\%$ ($0.11\%$) and $0.083\%$ ($0.12\%$) for $t\to Hc$ and $t\to Hu$, respectively.
+Upper $95\%$ CL limits on BR($t\to Hq$) have been obtained by ATLAS based on the data from 2015 and 2016, in the $H\to\gamma\gamma$ \cite{fcncgmgm}, $H\to WW/\tll$ multilepton \cite{fcncml} and  $\Htautau$, $H\to b\bar{b}$ \cite{fcnctautau} channels. The combined expected (observed) limits are $0.083\%$ ($0.11\%$) and $0.083\%$ ($0.12\%$) for $t\to Hc$ and $t\to Hu$ decay branching ratio, respectively.
 
-The $t\to Hq$ decay and $gq\to tH$ production are also searched by CMS based on the data from 2015 and 2016\cite{CMS-TOP-17-003}. 
+The $t\to Hq$ decay and $gq\to tH$ production are also searched by CMS based on the data from 2015 and 2016\cite{CMS-TOP-17-003} using the $H\to b\bar{b}$ decay. The branching ratio derived for $t\to Hc$ and $t\to Hu$ decay are $0.47\%$ ($0.44\%$) and $0.47\%$ ($0.34\%$) respectively.
 
 The FCNC coupling is parametrised using dim-6 operators \cite{fcnc_production_theory}. The effective Lagrangian regarding $tqH$ interaction is:
 %
@@ -240,7 +241,7 @@ Diboson & \multicolumn{2}{c|}{Sherpa 2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} &
 In this section, various objects used in this analysis are defined, namely jets, electrons, muons, hadronically decaying taus and missing transverse energy. 
 
 \subsection{Jets}
-Jets are reconstructed using the anti-$k_t$ algorithm \cite{antikt} with a distance parameter $R=0.4$ applied to the particle flow candidates. Only jets with $\pt>25$~GeV and $|\eta|<4.5$ are considered by the analysis. To suppress jets produced in additional pile-up interactions, jets with $\pt<60$~GeV and $|\eta|<2.4$ are required to have a Jet Vertex Tagger (JVT \cite{JVT}) parameter larger than 0.2 (Medium working point). The JVT is the output of the jet vertex tagger algorithm used to identify and select jets originating from the hard-scatter interaction through the use of tracking and vertexing information. About $10\%$ of selected jets in the signal are in the forward detector region. After the above selection and overlap removal, a ``jet cleaning'' cut performed by JetCleaningTool with LooseBad working point is applied on all the jets, and the events with jets not passing this cut are discarded.
+Jets are reconstructed using the anti-$k_t$ algorithm \cite{antikt} with a distance parameter $R=0.4$ applied to the particle flow candidates. Only jets with $\pt>25$~GeV and $|\eta|<4.5$ are considered by the $\met$ calculation and overlap removal procedure. To suppress jets produced in additional pile-up interactions, jets with $\pt<60$~GeV and $|\eta|<2.4$ are required to have a Jet Vertex Tagger (JVT \cite{JVT}) parameter larger than 0.2 (Medium working point). The JVT is the output of the jet vertex tagger algorithm used to identify and select jets originating from the hard-scatter interaction through the use of tracking and vertexing information. About $10\%$ of selected jets in the signal are in the forward detector region. After the above selection and overlap removal, a ``jet cleaning'' cut performed by JetCleaningTool with LooseBad working point is applied on all the jets, and the events with jets not passing this cut are discarded. Only the central jets with $|\eta|<2.4$ are considered in the analysis to reject pile-up contamination.
 
 \subsection{b-tagging}
 The {\texttt\scriptsize DL1r} \cite{btag1} algorithm is used to identify the jets initiated by $b$-quarks. A working point corresponding to an average efficiency of 70\% for jets containing $b$-quarks is chosen.
@@ -257,13 +258,18 @@ Tight isolation working points are also applied in some channels to reduce fake 
 (PLV), as described in Sec.~\ref{sec:Plv}.
 
 \subsection{Hadronic tau decays}
-The hadronic tau candidates \cite{tau_sys1} are seeded by jets reconstructed by the anti-$k_t$ algorithm \cite{antikt}, which is applied on calibrated topo clusters \cite{topocluster} with a distance parameter of R=0.4. They are required to have $\pt > 20$~GeV and $|\eta|<2.5$. The transition region between the barrel and end-cap calorimeters ($1.37<|\eta|<1.52$) is excluded. In the hadronic channels, these tau candidates are then considered in the overlap removal procedure and missing transverse energy calculation, following the Htautau group \cite{Htautau-note}. In the leptonic channels, an identification algorithm based on Recursive Neural Network \cite{tau_sys2} is applied to discriminate the visible decay products of hadronically decaying tau lepton $\tauhad$ from jets initiated by quarks or gluons. The taus passing the Medium working point are considered in the overlap removal procedure and missing transverse energy calculation, following the ttW multi-lepton group \cite{ttHMLgroup}. Different RNN working points are used at different levels depending on the analysis channel. %For the loose ID, the tau efficiency is constant at 95~\% in $\eta$ and $\pt$.
-The \texttt{Loose} ID taus are used for the overlap removal and missing transverse energy calculation.
-In the analysis event selection, the hadronic tau candidates are required to have one or three charged tracks and an absolute charge of one, and pass the \texttt{Medium} tau ID to reject the jets.
+\label{sec:taurecon}
+The hadronic tau candidates \cite{tau_sys1} are seeded by jets reconstructed by the anti-$k_t$ algorithm \cite{antikt}, which is applied on calibrated topo clusters \cite{topocluster} with a distance parameter of R=0.4. They are required to have $\pt > 20$~GeV and $|\eta|<2.5$. The transition region between the barrel and end-cap calorimeters ($1.37<|\eta|<1.52$) is excluded.
+
+In the hadronic channels, these tau candidates are considered in the overlap removal procedure and missing transverse energy calculation, following the Htautau group \cite{Htautau-note}. In the analysis event selection, the hadronic tau candidates are required to have one or three charged tracks and an absolute charge of one. An identification algorithm based on Recursive Neural Network (RNN) \cite{tau_sys2} is applied to discriminate the visible decay products of hadronically decaying tau lepton $\tauhad$ from jets initiated by quarks or gluons. Different RNN working points are used at different levels depending on the analysis channel. Only events with RNN Medium taus are considered to be signal in the hadronic channels while loose taus are only used in the control regions for fake tau estimation.
+
+In the leptonic channels, the taus passing the RNN Medium working point are considered in the overlap removal procedure and missing transverse energy calculation, following the ttW multi-lepton group \cite{ttHMLgroup}.
+
 For the \texttt{Medium} ID, the tau efficiency is about 75\% (60\%) for 1-prong (3-prong) candidates. The ID efficiencies are optimized to be flat versus the tau $\pt$ and pileup.
+
 The tau candidates are required to not overlap with a very loose electron candidate, and a dedicated BDT variable is also used to veto the taus which are actually electrons.
-%The $Z\to ee,\mu\mu$ background mainly contains lepton faking tau events, and special scale factors are applied on them. 
-If the $\tauhad$ candidate is also tagged as a $b$-jet, then this tau object is also not used. Efficiency scale factors for tau reconstruction, ID and electron BDT rejection \cite{TauCP} are applied on tau candidates in MC.
+
+Efficiency scale factors for tau reconstruction, ID and electron BDT rejection \cite{TauCP} are applied on tau candidates in MC.
 
 \subsection{Missing transverse energy}
 The missing transverse energy $\met$ is computed using the fully calibrated and reconstructed physics objects as described above. The TrackSoftTerm (TST) algorithm is used to compute the SoftTerm of the $\met$ \cite{MET}. 

@@ -70,7 +70,7 @@ Minor, more detailed comments, where we felt the text can be improved for clarit
 
 - l.329 and Eq. (4): Can you motivate the Higgs and MET resolutions, i.e. their exact values?
 
-~~~~~~Those values are also used in the 36fb-1. Higgs mass is read from published Htautau analysis reconstructed from MMC method, which is 20GeV. The MET resolution is shown in eq (4). This is the MET resolution using calorimeters which is an approximation.
+~~~~~~Those values are also used in the 36fb-1. Higgs mass is read from published Htautau analysis (https://cds.cern.ch/record/2261605) reconstructed from MMC method, which is 20GeV. The MET resolution is shown in eq (4). This is the MET resolution using calorimeters which is an approximation.
 
 - l.362: What is the physical interpretation of variables 15 and 16?
 
@@ -111,7 +111,7 @@ Minor, more detailed comments, where we felt the text can be improved for clarit
 
 - Can you show that the ABCD method closes?
 
-~~~~~~We haven't done the closure test. We are planning to find CRs such as low BDT regions (BDT<-0.6) for the closure test. Is it acceptible from your perspective?
+~~~~~~Low BDT regions (BDT<-0.6) are studied for the closure test.
 
 - Fig. 8: We are confused: Why is there data shown here in the SRs? Are these CRs in the end?
 
