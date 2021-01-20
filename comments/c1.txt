@@ -36,7 +36,7 @@ Structure of the note:
 
 - Plots: We are afraid that almost all legends and axis labels are so small that it's very difficult to read them. Please enlarge them (preferably using the ATLAS style). Also, please move all plots closer to the text where they are described and avoid cluttering the end of the sections with sets of plots and tables.
 
-~~~~~~Working on it.
+~~~~~~Done
 
 - Abbreviations: You use quite some abbreviations in your note, which the reader must memorize. One abbreviation that we found rather confusing is "TT" for ttbar. We associate TT with the pair production of up-type vector-like quarks and we suggest to use a different abbreviation here, for example "PP".
 
@@ -50,11 +50,11 @@ Minor, more detailed comments, where we felt the text can be improved for clarit
 
 - l.227: This sentence begins with “In the leptonic channels” and it is not clear to what that refers? Leptonic tau decays? Or hadronic tau decays in selections with at least one additional electron or muon? What do you do in “hadronic channels”? Please clarify these points in the text.
 
-~~~~~~This was indeed specified in the note 312. The rest are “hadronic channels”. Will add a line for “hadronic channels”.
+~~~~~~This was indeed specified in the note 312. The rest are “hadronic channels”. Added a line for “hadronic channels”.
 
 - l.229: Here you say that you use medium taus for OR and MET, but in l.231, you say that you use loose taus for OR and MET. Which one is true? Please clarify in the text.
 
-~~~~~~Sorry since we are using two sets of n-tuples produced by different groups. The OLR and MET calculation are different. We will make it clearer.
+~~~~~~Sorry since we are using two sets of n-tuples produced by different groups. The OLR and MET calculation are different. Added in the note.
 
 - l.294: “The rest of the overlap removal procedure” - given that the OR is different in the leptonic and hadronic channels, it would be good to be very explicit here: Which of the other cuts from the hadronic channel are used in the leptonic channel? All OR cuts from the hadronic channel - only a subset? In addition, it would be good to give a brief motivation why the OR in the two channels must be different. (It may be obvious to you, but it may not be obvious to others.)
 
@@ -99,7 +99,7 @@ Minor, more detailed comments, where we felt the text can be improved for clarit
 
 - l.473: Please explicitly state how truth information is used to remove the overlap.
 
-~~~~~~Check the Higgs decay mode. If it is to tau tau, then the event from additional samples will be removed. Added.
+~~~~~~Check the Higgs decay mode. If it is to tau tau, then the event from additional samples will be removed. Added explanation.
 
 - l.500: Why do you have a lower bound on the Z-mass window of 90 GeV? Wouldn’t it be useful to have it significantly below the Z mass of 91 GeV?
 
@@ -119,7 +119,7 @@ Minor, more detailed comments, where we felt the text can be improved for clarit
 
 - l.576-l.581: This should be backed up by numbers / plots / etc. for your analysis.
 
-~~~~~~Will add tables for the yields.
+~~~~~~Added tables for the yields.
 
 - l.597: If the fake factors can go negative - wouldn’t it be more appropriate to use a more sophisticated statistical extraction of the fake factors that avoids them going negative?
 
@@ -131,17 +131,17 @@ Minor, more detailed comments, where we felt the text can be improved for clarit
 
 - Please use a human-readable NP naming.
 
-~~~~~~Will explain the NP names in the systematics section.
+~~~~~~NP names are explained in the systematics section.
 
 - Once you have more systematic uncertainties included, you will also need to add a background-only to those bins that you do not blind in addition to the Asimov fit.
 
 - Left plot of Figure 22: Why is the impact of the NPs so asymmetric?
 
-~~~~~~We didn't symmetrise the first two NPs. Will do.
+~~~~~~We didn't symmetrise the first two NPs. symmetrized now.
 
 - l.621-622: Please document the results of the BDT optimization.
 
-~~~~~~Will do.
+~~~~~~Done.
 
 - l.628: We believe the significances should rather go to the results section.
 
@@ -153,4 +153,4 @@ Minor, more detailed comments, where we felt the text can be improved for clarit
 
 - Please add a comparison with the previous FCNC tqH combination and with the CMS results (We suggest to compare in particular expected limits, so that the reader can estimate the gain in sensitivity from this analysis.)
 
-~~~~~~This is explained in the introduction section. We will add more numbers.
+~~~~~~This is shown in the introduction section. Added reference.
