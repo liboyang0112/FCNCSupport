@@ -40,6 +40,7 @@ FIGSDIR  = figs
 rwildcard=$(foreach d,$(wildcard $1*),$(call rwildcard,$d/,$2) $(filter $(subst *,%,$2),$d))
 EPSTOPDFFILES = $(call rwildcard, $(FIGSDIR), *eps-converted-to.pdf)
 sections = $(wildcard sections/*.tex)
+appendices = $(wildcard appendix/*.tex)
 tables = $(shell find ../FCNCTables/ | grep tex)
 figures = $(shell find ../FCNCFigures/tex/ | grep tex)
 # Default target - make mydocument.pdf with pdflatex
@@ -55,7 +56,7 @@ talk: FCNCtalk.pdf
 # Standard pdflatex target
 run_pdflatex: FCNCpaths.sty $(BASENAME).pdf
 	@echo "Made $<"
-	@echo $(sections) $(tables) $(figures)
+	@echo $(sections) $(tables) $(figures) $(appendices)
 
 FCNCpaths.sty: generatePath.sh
 	./generatePath.sh
@@ -63,7 +64,7 @@ FCNCpaths.sty: generatePath.sh
 # Specify the tex and bib file dependencies for running pdflatex
 # If your bib files are not in the main directory adjust this target accordingly
 #%.pdf:	%.tex *.tex bibtex/bib/*.bib
-%.pdf:	%.tex $(sections) *.bib $(figures) $(tables) 
+%.pdf:	%.tex $(sections) *.bib $(figures) $(tables) $(appendices)
 	$(PDFLATEX) $<
 	-$(BIBTEX)  $(basename $<)
 	$(PDFLATEX) $<

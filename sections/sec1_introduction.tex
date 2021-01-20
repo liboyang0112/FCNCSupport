@@ -41,7 +41,7 @@ As demonstrated in the Figure \ref{fig:diagrams}, depending on the production mo
 
 Due to the low statistics in STL and TTL regions, the STL and TTL are included in a single region $l\thadhad$ for $H\to\thadhad$ where there is no light jet multiplicity requirement. However due to the low tau reconstruction rate, it is not rare that one of tau fails the reconstruction and remains as a jet. So the $l\thad$ 1j and $l\thad$ 2j are included as signal regions where the lepton and $\thad$ are required to have the same charged to reduce background.
 
-The summary for the signal regions are listed in Table \ref{tab:signalregions}. With corresponding yield after fake estimation in Table \ref{tab:yield_SR} and \ref{tab:yield_SR_1}.
+The summary for the signal regions are listed in Table \ref{tab:signalregions}. With corresponding yield after fake estimation in Table \ref{tab:yield_SR}.
 
 For the future convenience, STH $\tlhad$ and TTH $\tlhad$ are indicated by $\tlhad$; STH $\thadhad$ and TTH $\thadhad$ are indicated by $\thadhad$; $l\tauhad$ 2j and $l\tauhad$ 1j are indicated by $l\tauhad$. All the of regions involving leptons (including $\taulep$) are indicated by "leptonic channels", otherwise "hadronic channels".
 
@@ -76,6 +76,13 @@ TTH $\tlhad$   & 1     & $\ge3$ 			& 1      & 1             & $\tlhad$ OS\\ \hli
 \end{tabular}
 \end{table}
 
+\begin{table}
+\caption{The summary for the yield in the signal regions.}
+\label{tab:yield_SR}
+\small
+\input{\FCNCTables/tthML/showFake/faketau/postfit/NOMINAL_SROnly/yield_chart}
+\input{\FCNCTables/xTFW/showFake/NOMINAL/yield_chart}
+\end{table}
 
 \subsection{Analysis strategy for leptonic channels}
 
@@ -109,17 +116,17 @@ The QCD multi-jets also contribute a small fraction of the reducible background 
 
 \subsection{Analysis strategy for in Hadronic channels}
 
-Similar to STH $\tlhad$ or TTH $\tlhad$, the $t\bar{t}$ also contributes to the hadronic channels as reducible and irreducible background. But in the hadronic channels, much larger contribution is observed from $Z\to \tau\tau$ with radiated $b$-jet and QCD faking both taus as shown in Figure \ref{fig:os_pre_hadhad}. 
+Similar to STH $\tlhad$ or TTH $\tlhad$, the $t\bar{t}$ also contributes to the hadronic channels as reducible and irreducible background. But in the hadronic channels, much larger contribution is observed both from $Z\to \tau\tau$ with radiated $b$-jet and QCD with double fake taus as shown in Figure \ref{fig:os_pre_hadhad}. 
 
-The irreducible background is modelled directly by Monte Carlo. The reducible background with sub-leading taus faked is modelled by Fake Factor method while the reducible background with leading taus faked is modelled by Monte Carlo with a conservative uncertainty of 50\% according to Sec. \ref{sec:sf_method}.
+The irreducible background is modelled directly by Monte Carlo. The reducible background with sub-leading taus faked is modelled by Fake Factor (FF) method. The FFs are calculated from three different control regions:
 
-\begin{table}
-\caption{The summary for the yield in the signal regions.}
-\label{tab:yield_SR}
-\small
-\input{\FCNCTables/tthML/showFake/faketau/postfit/NOMINAL_SROnly/yield_chart}
-\input{\FCNCTables/xTFW/showFake/NOMINAL/yield_chart}
-\end{table}
+\begin{itemize}
+	\item W+jet control region in the SM $\Htautau$ (Calculated by the $\Htautau$ group).
+	\item SS control region, the two taus have the same charge. The rest are the same as signal region.
+	\item OS control region, the events in the signal region that failing the kinematics cut defined in the Sec. \ref{sec:cut}.
+\end{itemize}
+
+The the FF is applied to the fake tau control region where the subleading tau fails the medium requirement, to model the event with sub-leading taus faked in the signal region. The events with leading taus faked are modelled by Monte Carlo with a conservative uncertainty of 50\% according to Sec. \ref{sec:sf_method}.
 
 \subsection{Blinding strategy}
 \label{sec:blind}
