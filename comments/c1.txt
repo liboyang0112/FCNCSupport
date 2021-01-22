@@ -26,7 +26,7 @@ Structure of the note:
 
 - Background estimation: A key point of the analysis is the estimation of the fake-tau background. We feel, however, that the description of the procedure should be improved, so that we cannot say that we have fully understood the fake-tau estimate (in particular in the leptonic channels) from the description as it is right now. Some of our confusion can probably be addressed by the central discussion of SRs and CRs as mentioned above. In particular, l.487-492 should be revisited for clarity and the relation of the CRs in l.519-530 and 497-502 should be discussed.
 
-~~~~~~Working on it.
+~~~~~~Done.
 
 - We find the long list of (partly rather involved) variable definitions in Section 6 (reconstruction) difficult to follow. We suggest to show plots comparing signal and background of these variables that help to understand the physical properties of these variables. You do have some of the variables shown in Section 9, but we suggest to show a plot comparing background and signal for each of the variables already here.
 
