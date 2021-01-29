@@ -1,0 +1,109 @@
+Hello:
+
+The following comment was sent to CERN Document Server by Jacob Julian Kempster:
+(<http://cds.cern.ch/record/2687866>)
+
+
+Dear Editors,
+
+Thank you very much for considering our comments and for improving in particular the structure of the note. We believe that this will indeed help future EB members in getting familiar with the analysis. We do have some more comments, please see below.
+
+Best,
+
+Johannes and Jacob
+
+------
+
+Some specific comments on the new 'Analysis outline' section for clarity:
+
+- The analysis outline has added a lot of much needed clarity, thank you for including these. We do think it's still worth having a single sentence very early on to describe that, after defining all of your signal regions and fakes etc, you plan to make a (simultaneous) profile likelihood fit in the SRs and using NPs relating to the systematic uncertainties in order to set limits on the signal strength(s).  Then it is very clear to the reader what the very 'end' step is and justifies the process of setting up the SRs and defining the fakes before you begin describing those steps. 
+
+- L118 Are the numbers in parentheses still 'observed' values? 
+
+~~~~~Yes, made it clear in the note.
+
+- L122-124 Are the numbers in parentheses uncertainties? Where do these values come from?
+
+~~~~~We were using two benchmarks, both 1% and 0.2%. Now we only use 0.2% to be consistent. The values are from madgraph calculation. Added to the text.
+
+- L134 Can you explain briefly this statement? Why can the H->tautau only be identified in particular circumstances?
+
+~~~~~Rephrased and added explanation: The decay mode $\tll$ is dropped because this final state will be considered in the multi-lepton analysis. The mode $\tlhad$ is dropped when $W$ decay leptonically because in this case, the lepton fake will be significant when there are two charge uncorrelated leptons, the overlap of the fake lepton and fake taus can be quite hard to solve due to the low statistics.
+
+- Table 1: Is this table defining the 'final state' prior to the tau decay? (i.e. not quite the actual final state?) (Otherwise we would expect it to be much longer, with combinations of hadronic and leptonic tau decays included)
+
+~~~~~Yes
+
+- L137 Why are the two tau_had required to have the same charge? Shouldn't they always be opposite charge for H->tautau? [There must be a reason, as otherwise the signal regions of l tauhad 1Xj SS and l tauhad tauhad OS would not coexist. We are just not understanding it currently from the text].
+
+~~~~~Typo, opposite charge. The one in the table is correct. Fixed.
+
+- L140 What background is reduced by same charge requirement for W-lepton and tau had? This kills 50% of signal presumably.
+
+~~~~~Almost all background with real taus, mostly ttbar and Ztautau. Actually the other half of ltau 2j signal events goes into STH lephad region.
+
+- L150 You refer to Fig 22 here which is almost 40 pages away in the INT note.  Please bring an example plot forward to make this easier for the reader.
+
+- L169 You refer to Fig 21 here which is almost 40 pages away in the INT note.  Please bring an example plot forward to make this easier for the reader
+
+~~~~~Added figures.
+
+- Table 4: We suggest to add the SR definitions here, too, so that the reader doesn’t need to go back to the SR table and is presented with a comparison side-by-side. The same argument holds for the definition of the QCD regions in Section 7.2.
+
+~~~~~Added
+
+- Background estimation: A key point of the analysis is the estimation of the fake-tau background. We feel, however, that the description of the procedure should be improved, so that we cannot say that we have fully understood the fake-tau estimate (in particular in the leptonic channels) from the description as it is right now. Some of our confusion can probably be addressed by the central discussion of SRs and CRs as mentioned above. In particular, l.487-492 should be revisited for clarity and the relation of the CRs in l.519-530 and 497-502 should be discussed.
+~~~~~~Done.
+Follow-up: We apologize if we are mistaken, but may it be that you have not reworked the text in this section?
+~~~~~~We added these to solve your confusions in V3:
+1. "central discussion of SRs and CRs" are added in section 4.2.
+2. "clarity and the relation of the CRs": We added L598-600.
+3. Added relations between two control region lists in L586-592.
+We changed more now in V4 in case you still do not feel enough.
+
+- Plots: We are afraid that almost all legends and axis labels are so small that it's very difficult to read them. Please enlarge them (preferably using the ATLAS style). Also, please move all plots closer to the text where they are described and avoid cluttering the end of the sections with sets of plots and tables.
+~~~~~~Done
+Follow-up: We see still a lot of plots with very small legend and axis labels. When do you plan to improve their readability?  Almost all of the plots also have very poorly placed labels (see Fig 30 as an example, placement of 'a1, 'a2' etc which should be written as captions to each histogram) and for many plots the legend is not within the plot boundaries (also Fig 30 as an example) - these both harm the readability of the Figures.
+~~~~~~We enlarged most of legends and labels except the labels in ROCs which we forgot to change, appologies. Is the current ones for most of plots still not large enough? For instance a and b in Figure 30. For the legends, it is hard to manage since they have a lot of contents. If we want to put the legend into the plots, we will have to compromise by either suppressing the maximum of the histograms or letting the text in the legend get smaller. Which one do you prefer?
+
+- Abbreviations: You use quite some abbreviations in your note, which the reader must memorize. One abbreviation that we found rather confusing is "TT" for ttbar. We associate TT with the pair production of up-type vector-like quarks and we suggest to use a different abbreviation here, for example "PP".
+~~~~~~The convention is adopted earlier by CMS: https://link.springer.com/article/10.1007/JHEP06(2018)102, which I believe is the only published top FCNC search using production mode and decay mode at the same time. I believe it would be the best to be consistent.
+Follow-up: We are afraid, but we disagree. We will not insist on it for the INT note, as it would require a significant amount of work for you. But for the publication, we will keep the argument: TT is an established abbreviation for VLT pair production (with many publications from ATLAS and CMS on the topic), while it is not an established abbreviation for top-quark pair production (the quoted example from CMS being an exception to the rule).
+~~~~~~~~~~~~Ok, will do.
+
+Minor, more detailed comments, where we felt the text can be improved for clarity:
+- In several instances, there is the typo "election" instead of "electron".
+~~~~~~Fixed
+Follow-up: Please also fix the 2 instances in lines 442 and 916.
+~~~~~~Fixed
+
+- l.229: Here you say that you use medium taus for OR and MET, but in l.231, you say that you use loose taus for OR and MET. Which one is true? Please clarify in the text.
+~~~~~~Sorry since we are using two sets of n-tuples produced by different groups. The OLR and MET calculation are different. Added in the note.
+Follow-up: Do you plan to change this for the publication or do you plan to enter the review with two different OR and MET definitions? Are these well motivated, so that they can be defended in ATLAS and to journal referees?
+~~~~~~Added to the text: The OLR and MET calculation procedure in hadronic channels are more forgiving in terms of taus since there are constantly two hadronic taus, and in the fake estimation, the loose taus are used. This way we can benefit from better statistics. While in the leptonic channels, due to the super high statistics, we are not be able to save loose taus due to the limitation of the computing resources. The loose taus are not used in the leptonic channels, and the fakes are calibrated in the control regions with medium taus.
+
+- l.294: “The rest of the overlap removal procedure” - given that the OR is different in the leptonic and hadronic channels, it would be good to be very explicit here: Which of the other cuts from the hadronic channel are used in the leptonic channel? All OR cuts from the hadronic channel - only a subset? In addition, it would be good to give a brief motivation why the OR in the two channels must be different. (It may be obvious to you, but it may not be obvious to others.)
+~~~~~~Done.
+Follow-up: We are afraid, but it looks like the text has not changed here?
+~~~~~~We added the full procedure. This sentence is removed.
+
+- l.316: Can you motivate (with a plot for example) that the smallest-dR jet is a good choice as the jet coming from the FCNC decay?
+~~~~~~The FCNC decaying jet has no reason to be close to other jets and it's from top decay which should be hard enough. The t->qH->qtautau. The 2 tau candidates are reconstructed as lepton or hadronic taus so the jet is obviously on its own.
+Follow-up: Please add this chain of argumentation to the note.
+~~~~~~Added
+
+- l.597: If the fake factors can go negative - wouldn’t it be more appropriate to use a more sophisticated statistical extraction of the fake factors that avoids them going negative?
+~~~~~~Sorry I don't quite follow this question. The fake factors can go negative because in the CR, some bins have MC higher than data. The 0 is chosen simply means in the final fit we will vary the FF from 0 to 2 times of the nominal value. I believe this is conservative enough. 
+Follow-up: Yes, this is exactly the point. Cropping the FFs at zero is one option. There are certainly other, more sophisticated options, such as using priors that avoid that a parameter of interest enters the unphysical part of the phase space. If you want to stick with the current method: Can you show that cropping the values at 0 is indeed conservative? How do estimate the uncertainties on that value of 0?
+
+~~~~~~Of course we can have a prior that the FFs are positive, then do the fit. But this doesn't change the result. The best fit value will still go to 0, just with a proper error, for example 0^+0.1. In the final fit, we do not use this error. What we do is to take the difference between two medians, the 0.1 is not used and we are not interested in it, same as the errors in "Table 21: FF derived in SS CR." and "Table 22: FF derived in OS CR.".
+
+- Once you have more systematic uncertainties included, you will also need to add a background-only to those bins that you do not blind in addition to the Asimov fit.
+Follow-up: Did you already start working on this part?
+~~~~~~We are still working on the systematics. Although I think I need more explanation for this comment. What do you mean by "add a background-only to those bins that you do not blind"?
+
+- l.621-622: Please document the results of the BDT optimization.
+~~~~~~Done.
+Follow-up: Please add a few explanatory sentences to the tables you have added in App. C.
+~~~~~~Done.
+
