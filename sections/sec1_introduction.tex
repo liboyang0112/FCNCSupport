@@ -29,7 +29,7 @@ Where the operator notation is consistent with \cite{fcnc_production_theory}. Th
 
 To give a better impression on the numbers, we use $\text{BR}(t\to qH)=0.2\%$ as benchmark, which is corresponding to ($C^{13}_{u\phi})^2 + (C^{31}_{u\phi})^2=3.89$, $\sigma(ug\to tH)=1421.8$ pb, $\sigma(cg\to tH)=206.0$ pb.
 
-In this article, a search for the decay $t\to qH$ in the $t\bar{t}$ production (TT) and single-top, Higgs associated production (ST) with $H\to\tau\tau$  as shown in Fig \ref{fig:diagrams} using 140~fb$^{-1}$ of proton-proton collision data at 13~TeV, taken with the ATLAS detector at the Large Hadron Collider (LHC), is presented. The final state is characterized by one top and one Higgs. In TT, there is an additional u/c quark forming a top resonance with Higgs.
+In this article, a search for the decay $t\to qH$ from one of top quarks in the $t\bar{t}$ production (TT) and single-top, Higgs associated production (ST) with $H\to\tau\tau$  as shown in Fig \ref{fig:diagrams} using 140~fb$^{-1}$ of proton-proton collision data at 13~TeV, taken with the ATLAS detector at the Large Hadron Collider (LHC), is presented. The final state is characterized by one top and one Higgs. In TT, there is an additional u/c quark forming a top resonance with Higgs.
 
 \input{../FCNCFigures/tex/diagrams}
 
@@ -43,11 +43,12 @@ A profile likelihood fit of the BDT discriminant in the SRs with NPs relating to
 
 \subsection{Signal regions}
 \label{sec:SRs}
-As demonstrated in the Figure \ref{fig:diagrams}, depending on the production modes and the decay of the $W$ boson from top quark, the analysis is split into 4 kinds of final states as shown in table \ref{tab:signalevents}. The $\Htautau$ decay are required to be either in $\tlhad$ or $\thadhad$ final states when the $W$ decays hadronically and only in $\thadhad$ when the $W$ decay leptonically. The decay mode $\tll$ is dropped because this final state will be considered in the multi-lepton analysis. The mode $\tlhad$ is dropped when $W$ decay leptonically because in this case, the lepton fake will be significant, the overlap of the fake lepton and fake taus can be quite hard to solve due to the low statistics.
+As shown in the Figure \ref{fig:diagrams}, depending on the production modes and the decay of the $W$ boson from the SM top-quark decay, the signal is split into 4 kinds of final states as shown in table \ref{tab:signalevents}. The $\Htautau$ decay are required to be either in $\tlhad$ or $\thadhad$ final states when the $W$ decays hadronically and only in $\thadhad$ when the $W$ decay leptonically. The decay mode $\tll$ is dropped because this final state will be considered in the multi-lepton analysis. The mode $\tlhad$ is dropped when $W$ decay leptonically because in this case, the lepton fake will be significant when both leptons have the same sign of charges, the overlap of the fake lepton and fake taus can be quite hard to solve due to the low statistics.
 
-Due to the low statistics in STL and TTL regions, the STL and TTL are merged into a single region $l\thadhad$ for $H\to\thadhad$ where there is no light jet multiplicity requirement and the two $\tauhad$ are required to have the opposite charge. However due to the low tau reconstruction rate, it is not rare that one of the taus fails the reconstruction and remains as a jet or goes missing. So the $l\thad$ 1j and $l\thad$ 2j are included as signal regions where the lepton and $\thad$ are required to have the same charged to reduce background. For the STH/TTH channels, the two tau candidates (including both $\taulep$ and $\tauhad$) are required to have opposite charges.  
+Due to the low statistics in STL and TTL regions, the STL and TTL are merged into a single region $l\thadhad$ for $H\to\thadhad$ where there is no light jet multiplicity requirement and the two $\tauhad$ are required to have the opposite charge. However due to the low tau reconstruction efficiency, it is not rare that one of the taus fails the reconstruction and remains as a jet or goes missing. So the $l\thad$ 1j and $l\thad$ 2j are also included as signal regions where the lepton and $\thad$ are required to have the same sign of charges to reduce $t\bar t$ background. For the STH/TTH channels, the two tau candidates (including both $\taulep$ and $\tauhad$) are required to have opposite charges.  
 
-The summary for the signal regions are listed in Table \ref{tab:signalregions}. With corresponding yield after fake estimation in Table \ref{tab:yield_SR}.
+The summary for the signal regions are listed in Table \ref{tab:signalregions} and their corresponding signal and background yields after fake estimation are shown
+in Table \ref{tab:yield_SR}.
 
 For the future convenience, STH $\tlhad$ and TTH $\tlhad$ are indicated by $\tlhad$; STH $\thadhad$ and TTH $\thadhad$ are indicated by $\thadhad$; $l\tauhad$ 2j and $l\tauhad$ 1j are indicated by $l\tauhad$. All the of regions involving leptons (including $\taulep$) are indicated by "leptonic channels", otherwise "hadronic channels".
 
@@ -96,13 +97,14 @@ The main background contributing to the leptonic channels, defined in the last s
 
 \input{\FCNCFigures/tex/intro_pt_raw}
 
-As irreducible background, when the top pair decays full-leptonically to a $l$ and a $\tau$, and one of the $b$-jet from top decay fails the b-tagging, the event ends up in STH $\tlhad$ region. If there are rediation or pile-up jets, the event ends up TTH $\tlhad$ region.
+As irreducible background, when the top pair decays full-leptonically to a $l$ and a $\tau$, and one of the $b$-jets from top decay fails the b-tagging, the event ends up in the STH $\tlhad$ region. If there are radiation or pile-up jets, the event could end up in the TTH $\tlhad$ region.
+This irreducible background is modelled directly by Monte Carlo.
 
-The irreducible background is modelled directly by Monte Carlo.
+As reducible background, when the top pair decays full-leptonically, to a $l$ and a $\tauhad$, and one of the $b$-jets from top decay fails the b-tagging, if the $b$-jet or one of the radiation jets is reconstructed as a $\tauhad$, the event could end up in the $l\thadhad$ region if two $\tauhad$ have the same sign of charges. When the top pair decays semi-leptonically, and one of jets fakes a $\tauhad$, the event could end up in STH $\tlhad$ or TTH $\tlhad$ if the fake tau has the opposite charge to the lepton or in $l\tauhad$ 1j or $l\tauhad$ 2j if the fake tau has the same charge as the lepton. 
 
-As reducible background, when the top pair decays full-leptonically, to a $l$ and a $\tauhad$, and one of the $b$-jet from top decay fails the b-tagging, if the $b$-jet or one of the radiation jet is reconstructed as a $\tauhad$ the event ends up in the $l\thadhad$ region. When the top pair decays semi-leptonically, but one of the W-decaying jet or the radiation jet or pile-up jet fakes a $\tauhad$. Depending on the jet multiplicity, the event ends up in STH $\tlhad$ or TTH $\tlhad$ if the fake tau has the opposite charge to the lepton or in $l\tau$ 1j/2j if the fake tau has the same charge as the lepton. 
-
-The reducible background except QCD is also modelled by Monte Carlo but with scale factors derived from the $t\bar{t}$ control regions in Table \ref{tab:sfcr} and explained in \ref{sec:sf_method}.
+The reducible background except QCD multi-jets fakes is modelled by Monte Carlo but with scale factors derived from the dedicated $t\bar{t}$ control regions using the
+dilepton events and the double-btagged lepton-jets events listed
+in Table \ref{tab:sfcr} and explained in \ref{sec:sf_method}.
 
 \begin{table}
 \centering
@@ -125,15 +127,17 @@ The reducible background except QCD is also modelled by Monte Carlo but with sca
 \end{tabular}
 \end{table}
 
-The QCD multi-jets also contribute a small fraction of the reducible background by faking both lepton and taus, especially in the low jet multiplicity region $l\tau$ 1j. This is modelled by the ABCD method by cutting on $\met$ and the PLV defined in Sec. \ref{sec:Plv} as explained in \ref{sec:ABCD}.
+The QCD multi-jets also contribute a small fraction of the reducible background by faking both lepton and taus, especially in the low jet multiplicity region $l\tauhad$ 1j. This is modelled by the ABCD method by cutting on $\met$ and the PLV defined in Sec. \ref{sec:Plv} as explained in \ref{sec:ABCD}.
 
 \subsection{Analysis strategy for in Hadronic channels}
 
-Similar to STH $\tlhad$ or TTH $\tlhad$, the $t\bar{t}$ also contributes to the hadronic channels as reducible and irreducible background. But in the hadronic channels, much larger contribution is observed both from $Z\to \tau\tau$ with radiated $b$-jet and QCD with double fake taus as shown in Figure \ref{fig:intro_os_pre_hadhad}. 
+Similar to STH $\tlhad$ or TTH $\tlhad$, the $t\bar{t}$ also contributes to the hadronic channels as reducible and irreducible background. But in the hadronic channels, much larger contribution is observed both from $Z\to \tau\tau$ plus $b$-jet and QCD multi-jets  with double fake taus as the excess of events shown in Figure \ref{fig:intro_os_pre_hadhad}. 
 
 \input{\FCNCFigures/tex/intro_os_pre_hadhad}
 
-The irreducible background is modelled directly by Monte Carlo. The reducible background with sub-leading taus faked is modelled by Fake Factor (FF) method. The FFs are calculated from three different control regions:
+The irreducible background is modelled directly by Monte Carlo. The reducible background with sub-leading taus faked is modelled by Fake Factor (FF) method using the
+fake tau enriched control regions. The FFs are calculated from three different control regions where one of taus failed the medium RNN tau cut, but passed
+a minimum RNN cut:
 
 \begin{itemize}
 	\item W+jet control region in the SM $\Htautau$ (Calculated by the $\Htautau$ group).
@@ -141,12 +145,19 @@ The irreducible background is modelled directly by Monte Carlo. The reducible ba
 	\item OS control region, the events in the signal region that failing the kinematics cut defined in the Sec. \ref{sec:cuts}.
 \end{itemize}
 
-The the FF is applied to the fake tau control region where the subleading tau fails the medium requirement, to model the event with sub-leading taus faked in the signal region. The events with leading taus faked are modelled by Monte Carlo with a conservative uncertainty of 50\% according to Sec. \ref{sec:sf_method}.
+The FF is applied to the fake tau control region where the subleading tau fails the medium requirement, to model the event with sub-leading taus faked in the signal region. The events with leading fake-tau are modelled by Monte Carlo with a conservative uncertainty of 50\% according to Sec. \ref{sec:sf_method}.
+
+\subsection{Statistical strategy}
+\label{sec:statStrategy}
+
+After fake estimation, BDT discriminants are trained in order to separate signal and backgrounds in each signal region.
+
+A profile likelihood fit of the BDT discriminant in the SRs with NPs relating to the systematic uncertainties is made in order to set limits on the signal strengths.
 
 \subsection{Blinding strategy}
 \label{sec:blind}
 
-In order to keep the analysis unbiased from artificial cut tunings some data histogram bins are blinded. The blinding threshold is quantified as significances reaching 1 when decaying branching ratio is 0.2\% to be conservative enough when the published limit is around 0.1\%. The data is shown in some signal regions where the sensitivities are too low that none of the bins are above the threshold. In addition, the signal enriched high BDT region are blinded (BDT > 0.2).
+In order to keep the analysis unbiased from artificial cut tunings some data histogram bins are blinded. The blinding threshold is quantified as significances reaching 1 $\sigma$ when assuming $B(t\rightarrow Hq)$ is 0.2\% to be conservative enough when the published limit is around 0.1\%. The data is shown in some signal regions where the sensitivities are too low that none of the bins are above the threshold. In addition, the signal enriched high BDT region are blinded (BDT > 0.2).
 
 \section{Detector, data set and Monte Carlo simulation}
 
