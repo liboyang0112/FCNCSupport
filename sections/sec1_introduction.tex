@@ -35,6 +35,12 @@ In this article, a search for the decay $t\to qH$ in the $t\bar{t}$ production (
 
 \section{Analysis outline}
 
+In order to search for the FCNC coupling, various signal regions will be defined as shown in \ref{sec:SRs}. The background modelling will be focused on the fake taus.
+
+BDT models are trained against main background in order to separate signal and backgrounds in each signal region.
+
+A profile likelihood fit of the BDT discriminant in the SRs with NPs relating to the systematic uncertainties is made in order to set limits on the signal strengths.
+
 \subsection{Signal regions}
 \label{sec:SRs}
 As demonstrated in the Figure \ref{fig:diagrams}, depending on the production modes and the decay of the $W$ boson from top quark, the analysis is split into 4 kinds of final states as shown in table \ref{tab:signalevents}. The $\Htautau$ decay are required to be either in $\tlhad$ or $\thadhad$ final states when the $W$ decays hadronically and only in $\thadhad$ when the $W$ decay leptonically. The decay mode $\tll$ is dropped because this final state will be considered in the multi-lepton analysis. The mode $\tlhad$ is dropped when $W$ decay leptonically because in this case, the lepton fake will be significant, the overlap of the fake lepton and fake taus can be quite hard to solve due to the low statistics.
@@ -136,13 +142,6 @@ The irreducible background is modelled directly by Monte Carlo. The reducible ba
 \end{itemize}
 
 The the FF is applied to the fake tau control region where the subleading tau fails the medium requirement, to model the event with sub-leading taus faked in the signal region. The events with leading taus faked are modelled by Monte Carlo with a conservative uncertainty of 50\% according to Sec. \ref{sec:sf_method}.
-
-\subsection{Statistical strategy}
-\label{sec:statStrategy}
-
-After fake estimation, BDT models are trained in order to separate signal and backgrounds in each signal region.
-
-A profile likelihood fit of the BDT discriminant in the SRs with NPs relating to the systematic uncertainties is made in order to set limits on the signal strengths.
 
 \subsection{Blinding strategy}
 \label{sec:blind}
@@ -291,11 +290,11 @@ Tight isolation working points are also applied in some channels to reduce fake 
 \label{sec:taurecon}
 The hadronic tau candidates \cite{tau_sys1} are seeded by jets reconstructed by the anti-$k_t$ algorithm \cite{antikt}, which is applied on calibrated topo clusters \cite{topocluster} with a distance parameter of R=0.4. They are required to have $\pt > 20$~GeV and $|\eta|<2.5$. The transition region between the barrel and end-cap calorimeters ($1.37<|\eta|<1.52$) is excluded.
 
-In the hadronic channels, these tau candidates are considered in the overlap removal procedure and missing transverse energy calculation, following the Htautau group \cite{Htautau-note}. In the analysis event selection, the hadronic tau candidates are required to have one or three charged tracks and an absolute charge of one. An identification algorithm based on Recursive Neural Network (RNN) \cite{tau_sys2} is applied to discriminate the visible decay products of hadronically decaying tau lepton $\tauhad$ from jets initiated by quarks or gluons. Different RNN working points are used at different levels depending on the analysis channel. Only events with RNN Medium taus are considered to be signal in the hadronic channels while loose taus are only used in the control regions for fake tau estimation.
+In the hadronic channels, these tau candidates are considered in the overlap removal procedure and missing transverse energy calculation, following the Htautau group \cite{Htautau-note}. In the analysis event selection, the hadronic tau candidates are required to have one or three charged tracks and an absolute charge of one. An identification algorithm based on Recursive Neural Network (RNN) \cite{tau_sys2} is applied to discriminate the visible decay products of hadronically decaying tau lepton $\tauhad$ from jets initiated by quarks or gluons. Different RNN working points are used at different levels depending on the analysis channel. Only events with RNN Medium taus are considered to be signal in the hadronic channels while taus not passing the RNN Medium are only used in the control regions for fake tau estimation.
 
-In the leptonic channels, the taus passing the RNN Medium working point are considered in the overlap removal procedure and missing transverse energy calculation, following the ttW multi-lepton group \cite{ttHMLgroup}.
+In the leptonic channels, the taus passing the RNN Loose working point are considered in the overlap removal procedure and missing transverse energy calculation, following the ttW multi-lepton group \cite{ttHMLgroup}.
 
-The OLR and MET calculation procedure in hadronic channels are more forgiving in terms of taus since there are constantly two hadronic taus, and in the fake estimation, the loose taus are used. This way we can benefit from better statistics. While in the leptonic channels, due to the super high statistics, we are not be able to save loose taus due to the limitation of the computing resources. The loose taus are not used in the leptonic channels, and the fakes are calibrated in the control regions with medium taus. 
+The OLR and MET calculation procedures in hadronic channels are more forgiving in terms of taus since there are constantly two hadronic taus, and in the fake estimation, the taus not passing the RNN Medium are used. This way we can benefit from better statistics. While in the leptonic channels, due to the super high statistics, we are not be able to save the events with only one loose tau due to the limitation of the computing resources, so the loose taus are not used in the leptonic channels, and the fakes are calibrated in the control regions with medium taus. 
 
 For the \texttt{Medium} ID, the tau efficiency is about 75\% (60\%) for 1-prong (3-prong) candidates. The ID efficiencies are optimized to be flat versus the tau $\pt$ and pileup.
 

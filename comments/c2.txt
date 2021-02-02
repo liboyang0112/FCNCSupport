@@ -1,22 +1,19 @@
-Hello:
+Dear conveners,
 
-The following comment was sent to CERN Document Server by Jacob Julian Kempster:
-(<http://cds.cern.ch/record/2687866>)
+We are making changes to the note. We have some problems on the plots regarding this comment：
 
+-We see still a lot of plots with very small legend and axis labels. When do you plan to improve their readability?  Almost all of the plots also have very poorly placed labels (see Fig 30 as an example, placement of 'a1, 'a2' etc which should be written as captions to each histogram) and for many plots the legend is not within the plot boundaries (also Fig 30 as an example) - these both harm the readability of the Figures.
 
-Dear Editors,
+We enlarged most of legends and labels except the labels in ROCs which we forgot to change, appologies. Is the current ones for most of plots still not large enough? For instance a and b in Figure 30. For the legends, it is hard to manage since they have a lot of contents for example in Figure 8. If we want to put the legend into the plots, we will have to compromise by either suppressing the maximum of the histograms or letting the text in the legend get smaller. Which one do you prefer?
 
-Thank you very much for considering our comments and for improving in particular the structure of the note. We believe that this will indeed help future EB members in getting familiar with the analysis. We do have some more comments, please see below.
+And for the rest of comments we have mostly done. The following here are our replies. We will upload the note after we fix the plots.
 
-Best,
-
-Johannes and Jacob
-
-------
-
-Some specific comments on the new 'Analysis outline' section for clarity:
+Thanks,
+Boyang
 
 - The analysis outline has added a lot of much needed clarity, thank you for including these. We do think it's still worth having a single sentence very early on to describe that, after defining all of your signal regions and fakes etc, you plan to make a (simultaneous) profile likelihood fit in the SRs and using NPs relating to the systematic uncertainties in order to set limits on the signal strength(s).  Then it is very clear to the reader what the very 'end' step is and justifies the process of setting up the SRs and defining the fakes before you begin describing those steps. 
+
+~~~~~Added right after title "Analysis outline".
 
 - L118 Are the numbers in parentheses still 'observed' values? 
 
@@ -24,7 +21,7 @@ Some specific comments on the new 'Analysis outline' section for clarity:
 
 - L122-124 Are the numbers in parentheses uncertainties? Where do these values come from?
 
-~~~~~We were using two benchmarks, both 1% and 0.2%. Now we only use 0.2% to be consistent. The values are from madgraph calculation. Added to the text.
+~~~~~We were using two benchmarks, both 1% and 0.2%. Now we only use 0.2% to be consistent. The values are from madgraph calculation. Fixed the text.
 
 - L134 Can you explain briefly this statement? Why can the H->tautau only be identified in particular circumstances?
 
@@ -60,11 +57,6 @@ Follow-up: We apologize if we are mistaken, but may it be that you have not rewo
 2. "clarity and the relation of the CRs": We added L598-600.
 3. Added relations between two control region lists in L586-592.
 We changed more now in V4 in case you still do not feel enough.
-
-- Plots: We are afraid that almost all legends and axis labels are so small that it's very difficult to read them. Please enlarge them (preferably using the ATLAS style). Also, please move all plots closer to the text where they are described and avoid cluttering the end of the sections with sets of plots and tables.
-~~~~~~Done
-Follow-up: We see still a lot of plots with very small legend and axis labels. When do you plan to improve their readability?  Almost all of the plots also have very poorly placed labels (see Fig 30 as an example, placement of 'a1, 'a2' etc which should be written as captions to each histogram) and for many plots the legend is not within the plot boundaries (also Fig 30 as an example) - these both harm the readability of the Figures.
-~~~~~~We enlarged most of legends and labels except the labels in ROCs which we forgot to change, appologies. Is the current ones for most of plots still not large enough? For instance a and b in Figure 30. For the legends, it is hard to manage since they have a lot of contents. If we want to put the legend into the plots, we will have to compromise by either suppressing the maximum of the histograms or letting the text in the legend get smaller. Which one do you prefer?
 
 - Abbreviations: You use quite some abbreviations in your note, which the reader must memorize. One abbreviation that we found rather confusing is "TT" for ttbar. We associate TT with the pair production of up-type vector-like quarks and we suggest to use a different abbreviation here, for example "PP".
 ~~~~~~The convention is adopted earlier by CMS: https://link.springer.com/article/10.1007/JHEP06(2018)102, which I believe is the only published top FCNC search using production mode and decay mode at the same time. I believe it would be the best to be consistent.
