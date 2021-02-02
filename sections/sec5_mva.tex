@@ -3,7 +3,7 @@
 
 In this section, we investigate the sensitivity of probing signal using one of the Multi-Variate Analysis (MVA) methods, the Gradient Boosted Decision Trees (BDT) method~\cite{BDT,BDT2}, with the {\texttt TMVA} software package. The BDT output score is in the range between -1 and 1. The most signal-like events have scores near 1 while the most background-like events have scores near -1.
 
-The signal topology and kinematics are different across all the channels. To maximize the overall sensitivity, separated BDTG trainings are applied to each the signal region. A number of variables as the BDT inputs are used to train and test events in each signal region for maximal signal acceptance and background rejection. They are listed in Table~\ref{tab:importance_tthML} and Table~\ref{tab:importance_xTFW}. 
+The signal topology and kinematics are different across all the channels. To maximize the overall sensitivity, separated BDTG trainings are applied to each signal region. A number of variables as the BDT inputs are used to train and test events in each signal region for maximal signal acceptance and background rejection. They are listed in Table~\ref{tab:importance_tthML} and Table~\ref{tab:importance_xTFW}. 
 %The most sensitive variables distributions are shown in Figure \ref{fig:mva_input_hadhad}-\ref{fig:mva_input_lhadhad}
 
 \begin{table}
@@ -24,7 +24,7 @@ With the \texttt{IgnoreNegWeightsInTraining} option, only MC events with positiv
 
 The BDT parameters \texttt{NTrees} and \texttt{nCuts} are tuned based on the integration of the ROC's. The best choice for each channel depends on the number of variables used and the statistics. The optimisation factor is defined as $L=S_\mathrm{avg}-xS_\mathrm{diff}$, where $S_\mathrm{avg}$ is the average integration value of the two folds, indicating the separation power of the model, meaning the larger it is, the better. $S_\mathrm{diff}$ is the difference between the integration values of the two folds, indicating the unstability of the models, meaning the smaller it is, the better. The factor $x$ is chosen depending on how important the stability is regarded over the separation power, where there is no common standard. In this analysis $x=1$ is chosen.
 
-The optimisation process uses a gradient method with a step of 5 for \texttt{nCuts} and 10 for \texttt{NTrees}. The optimisation stops when the smallest value of the optimisation factor $L$ is found. The steps taken is listed in the App. \ref{sec:BDTOptim}. The final result is shown in Table \ref{tab:BDTOptim}.
+The optimisation process uses a gradient method with a step of 5 for \texttt{nCuts} and 10 for \texttt{NTrees}. The optimisation stops when the maximum value of the optimisation factor $L$ is found. The steps taken is listed in the App. \ref{sec:BDTOptim}. The final result is shown in Table \ref{tab:BDTOptim}.
 
 %\input{\FCNCFigures/tex/BDTinput}
 
@@ -38,7 +38,7 @@ The optimisation process uses a gradient method with a step of 5 for \texttt{nCu
 The importance factors\footnote{
 The importance is evaluated as the total separation gain that this variable had in the decision trees (weighted by the number of events). It is normalized to all variables together, which have an importance of 1.
 }
-of different variables used in the training is listed in Table \ref{tab:importance_tthML} and \ref{tab:importance_xTFW}. The two numbers in each block represent the importance factor of the two models trained from even and odd parts. The consistency of these factors implies that the training models are stable. The variables with importance less than 1 are dropped from the training.
+of different variables used in the training is listed in Table \ref{tab:importance_tthML} and \ref{tab:importance_xTFW}. The two numbers in each block represent the importance factor of the two models trained from even and odd parts. The consistency of these factors implies that the training models are stable. The variables with importance less than 1\% are dropped from the training.
 
 
 
