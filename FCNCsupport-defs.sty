@@ -118,13 +118,18 @@
 \newcommand*{\metproj}{\ensuremath{E_{\text{T,proj}}^{\text{miss}}}\xspace}
 \newcommand*{\metperp}{\ensuremath{E_{\text{T,perp}}^{\text{miss}}}\xspace}
 
+\def\gettexliveversion#1(#2 #3 #4#5#6#7#8)#9\relax{#4#5#6#7}
+\edef\texliveversion{\expandafter\gettexliveversion\pdftexbanner\relax}
 
-%\renewcommand\section{\@startsection {section}{1}{\z@}%
-%                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
-%                                   {2.3ex \@plus.2ex}%
-%                                   {\normalfont\Large\bfseries}}
-
-%\renewcommand\subsection{\@startsection {subsection}{1}{\z@}%
-%                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
-%                                   {2.3ex \@plus.2ex}%
-%                                   {\normalfont\Large\bfseries}}%
+\ifnum\texliveversion<2020
+\else
+	\renewcommand\section{\@startsection {section}{1}{\z@}%
+	                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+	                                   {2.3ex \@plus.2ex}%
+	                                   {\normalfont\Large\bfseries}}
+	
+	\renewcommand\subsection{\@startsection {subsection}{1}{\z@}%
+	                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+	                                   {2.3ex \@plus.2ex}%
+	                                   {\normalfont\Large\bfseries}}%
+\fi
