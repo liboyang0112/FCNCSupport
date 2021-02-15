@@ -1,0 +1,42 @@
+Dear conveners,
+
+I didn't upload the new version because I want to do it after fixing the plots and we were still working on it. Now I uploaded new version. Please have a look at our replies.
+
+Thanks,
+Boyang
+
+With regards to the plots - this is just a matter of finding the right parameters for the layout of the histogram.  Generally your problems can be solved by 'zooming out' somewhat, we would advise to take a look at other analyses' INT notes to see how their plots are structured - it is possible to fit a lot more information even onto a single histogram and also to maintain the readability.  You could take a look at Figure 5 (page 30, or many others) in the FCNC tZq note for an example https://cds.cern.ch/record/2712343/files/ATL-COM-PHYS-2020-191.pdf .  You also have the option to make the plots themselves larger if this helps, but that should not be necessary to just fit the relevant information on.  If you are using ROOT, you should use the AtlasStyle class in the AtlasStyle.cxx and AtlasStyle.h.  If you are using Python, we believe that there are multiple adaptions of that particular style for PyROOT, Matplotlib etc. by other members of the collaboration.
+
+~~~~~~I had a look at https://cds.cern.ch/record/2712343/files/ATL-COM-PHYS-2020-191.pdf and I saw a bunch of plots with Legends overlapping with histograms. We are actually using ATLAS style indeed. We just adjust a few parameters to resolve the overlappings. Now we have lower histogram maximum and fitted the legends into the plots. Please let us know if further adjustment is still needed.
+
+Apologies for the wrong reference in this statement: "The same argument holds for the definition of the QCD regions in Section 7.2." It was meant to refer to Section 9.2. Could you please add information here that shows that the QCD regions are orthogonal to the SRs?
+
+~~~~~~D in the ABCD method is the SR, Labeled in L662
+
+L581 "space usage" = "disk space usage" ?
+~~~~~~Yes, Fixed
+L593-594 The same CR has been listed 4 times
+~~~~~~Fixed
+L599 We think this reference should be to Figure 24, not Figure 23
+~~~~~~Fixed
+
+~~~~~~Added to the text: The OLR and MET calculation procedure in hadronic channels are more forgiving in terms of taus since there are constantly two hadronic taus, and in the fake estimation, the loose taus are used. This way we can benefit from better statistics. While in the leptonic channels, due to the super high statistics, we are not be able to save loose taus due to the limitation of the computing resources. The loose taus are not used in the leptonic channels, and the fakes are calibrated in the control regions with medium taus."
+-> Thank you for adding this explanation. We are afraid that limited computing resources is a rather weak argument for using two different object selections in one analysis. Can you make a physics argument?
+~~~~~~We had a double check, loose taus are actually used for OLR and MET calculation in the leptonic channels, which is recommended. While in the hadronic channels, taus failing the loose selection are also used because this way we can have more statistics to calculate the FFs and also be consistent with the FF derivation in the SM Htautau analysis. This part is rephrased in the note. Please let us know if this is persuasive enough.
+
+- l.316: Can you motivate (with a plot for example) that the smallest-dR jet is a good choice as the jet coming from the FCNC decay?
+~~~~~~The FCNC decaying jet has no reason to be close to other jets and it's from top decay which should be hard enough. The t->qH->qtautau. The 2 tau candidates are reconstructed as lepton or hadronic taus so the jet is obviously on its own.
+Follow-up: Please add this chain of argumentation to the note.
+~~~~~~Added
+-> As a general note, when you tell us that content has been added can you please point to the exact line number of where it exists in the newest version? Otherwise we have to hunt for it.  We cannot see any difference in this text between version 2 and version 4 ("FCNCSupport.pdf").
+~~~~~~Sorry I forgot to save the changes. Added in L498-499
+
+"In the final fit, we do not use this error. What we do is to take the difference between two medians, the 0.1 is not used and we are not interested in it, same as the errors in "Table 21: FF derived in SS CR." and "Table 22: FF derived in OS CR."."
+-- The difference of two medians? Which medians? Could you please extend on this response a little or clarify where in the text it is most clearly explained? Please also state clearly in the captions of the tables that these uncertainties are not used.
+~~~~~~Added explanation in L709, L713 and captions.
+
+- Once you have more systematic uncertainties included, you will also need to add a background-only to those bins that you do not blind in addition to the Asimov fit.
+Follow-up: Did you already start working on this part?
+~~~~~~We are still working on the systematics. Although I think I need more explanation for this comment. What do you mean by "add a background-only to those bins that you do not blind"?
+-> "background-only fit" - sorry for the typo
+~~~~~~Sure, we will add them when systematics are ready.
