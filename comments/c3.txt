@@ -29,11 +29,11 @@ L599 We think this reference should be to Figure 24, not Figure 23
 Follow-up: Please add this chain of argumentation to the note.
 ~~~~~~Added
 -> As a general note, when you tell us that content has been added can you please point to the exact line number of where it exists in the newest version? Otherwise we have to hunt for it.  We cannot see any difference in this text between version 2 and version 4 ("FCNCSupport.pdf").
-~~~~~~Sorry I forgot to save the changes. Added in L498-499
+~~~~~~Sorry I forgot to save the changes. Added in L503-504
 
 "In the final fit, we do not use this error. What we do is to take the difference between two medians, the 0.1 is not used and we are not interested in it, same as the errors in "Table 21: FF derived in SS CR." and "Table 22: FF derived in OS CR."."
 -- The difference of two medians? Which medians? Could you please extend on this response a little or clarify where in the text it is most clearly explained? Please also state clearly in the captions of the tables that these uncertainties are not used.
-~~~~~~Added explanation in L709, L713 and captions.
+~~~~~~Added explanation in L715, L720 and captions.
 
 - Once you have more systematic uncertainties included, you will also need to add a background-only to those bins that you do not blind in addition to the Asimov fit.
 Follow-up: Did you already start working on this part?
