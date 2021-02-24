@@ -27,12 +27,14 @@ Due to the large yield in the leptonic channels, tighter tau selection is applie
 
 The QCD multi-jet background is dominated by the fake taus as well as the fake lepton. These events will be modelled by ABCD method in the next section.
 
-Top fake is the largest background in the total fake in the leptonic channels as shown in Figure \ref{fig:pt_raw}, which contributes around 70\% to 99\% in different regions. A large fraction of top background contains fake taus, so the fake tau SFs are derived from $t\bar{t}$ control regions, aimed at fake taus from different origins.
+Top fake is the largest background in the total fake in the leptonic channels as shown in Figure \ref{fig:pt_raw}, which contributes around 70\% to 99\% in different regions. A large fraction of top background contains fake taus, so the fake tau SFs are derived from $t\bar{t}$ control regions (CRtt) using the SM $t\bar t$ decay of dilepton events and semileptonically double-btagged lepton-jets events listed in Table \ref{tab:sfcr}, aimed at fake taus from different origins.
 Within the top fake events, fake taus can come from different origins, i.e., from jets (heavy/light flavor quark or gluon initiated) or leptons (electron or muon). The tau fake origins are checked with the top MC. Dedicated top pair production control regions are define for:
 \begin{itemize}
-\item{W-jet faking tau: exactly 1 lepton, exactly 1 tau candidate, at least 4 jets with exactly 2 b-tagged. Tau candidate and lepton have the same charge, separated into $1l1tau2b2j SS$, $1l1tau2b3j SS$, $1l1tau2b2j OS$, $1l1tau2b3j OS$.}
-\item{B-jet faking tau: 2 leptons with different flavors or away from Z pole ($M_{ll}>100\GeV$ or $M_{ll}<80\GeV$), exactly 1 tau candidate, exactly 1 b-tagged jet, later refered as $2l1tau1bnj$.}
-\item{Radiation faking tau: 2 leptons with different flavors or away from Z pole, exactly 1 tau candidate, at least two jets with exactly 2 b-tagged jets, later refered as $2l1tau2bnj$.}
+\item{W-jet faking tau from the double b-tagged $t\bar t$ semileptonically decay: exactly 1 lepton, exactly 1 tau candidate, at least 4 jets with exactly 2 b-tagged. Tau candidate and lepton have the same charge, separated into
+  $t_lt_h2b\thad$-2jSS, $t_lt_h2b\thad$-3jSS, $t_lt_h2b\thad$-2jOS, $t_lt_h2b\thad$-3jOS.}
+\item{B-jet faking tau from the single b-tagged $t\bar t$ dilepton events: 2 leptons with different flavors or away from Z pole ($M_{ll}>100\GeV$ or $M_{ll}<80\GeV$), exactly 1 tau candidate, exactly 1 b-tagged jet, later refered as
+  $t_lt_l1b\thad$.}
+\item{Other jets faking tau from the double b-tagged $t\bar t$ dilepton events: 2 leptons with different flavors or away from Z pole, exactly 1 tau candidate, at least two jets with exactly 2 b-tagged jets, later refered as $t_lt_l2b\thad$.}
 \end{itemize}
 
 \input{\FCNCFigures/tex/wjet_pt}
@@ -43,12 +45,12 @@ $t\bar t$ control regions are used to calibrate the four types.
 These control regions are similar to the signal regions but with an additional b-jet or lepton as defined below. In the control regions with single lepton, $\met > 20$GeV and at least 2 light jets and 2 b-tagged jets are required to ensure that QCD contribution is negligible. The yield of the control regions are listed in Table \ref{tab:SFCR_yield} and \ref{tab:SFCR_yield_1}.
 
 \begin{itemize}
-\item{$2l1tau1bnj$: 2 leptons with different flavors or away from Z pole, exactly 1 tau candidate,  exactly 1 b-tagged jets.}
-\item{$2l1tau2bnj$: 2 leptons with different flavors or away from Z pole, exactly 1 tau candidate,  exactly 2 b-tagged jets.}
-\item{$1l1tau2b2j SS$: Exactly 1 lepton, exactly 1 tau candidate, exactly 4 jets with exactly 2 b-tagged. Tau candidate and lepton have the same charge.}
-\item{$1l1tau2b2j OS$: Exactly 1 lepton, exactly 1 tau candidate, exactly 4 jets with exactly 2 b-tagged. Tau candidate and lepton have the opposite charge.}
-\item{$1l1tau2b3j SS$: Exactly 1 lepton, exactly 1 tau candidate, at least 5 jets with exactly 2 b-tagged. Tau candidate and lepton have the same charge.}
-\item{$1l1tau2b3j OS$: Exactly 1 lepton, exactly 1 tau candidate, at least 5 jets with exactly 2 b-tagged. Tau candidate and lepton have the opposite charge.}
+\item{$t_lt_l1b\thad$: 2 leptons with different flavors or away from Z pole, exactly 1 tau candidate,  exactly 1 b-tagged jets.}
+\item{$t_lt_l2b\thad$: 2 leptons with different flavors or away from Z pole, exactly 1 tau candidate,  exactly 2 b-tagged jets.}
+\item{$t_lt_h2b\thad$-2jSS: Exactly 1 lepton, exactly 1 tau candidate, exactly 4 jets with exactly 2 b-tagged. Tau candidate and lepton have the same charge.}
+\item{$t_lt_h2b\thad$-2jOS: Exactly 1 lepton, exactly 1 tau candidate, exactly 4 jets with exactly 2 b-tagged. Tau candidate and lepton have the opposite charge.}
+\item{$t_lt_h2b\thad$-3jSS: Exactly 1 lepton, exactly 1 tau candidate, at least 5 jets with exactly 2 b-tagged. Tau candidate and lepton have the same charge.}
+\item{$t_lt_h2b\thad$-3jOS: Exactly 1 lepton, exactly 1 tau candidate, at least 5 jets with exactly 2 b-tagged. Tau candidate and lepton have the opposite charge.}
 \end{itemize}
 
 
@@ -63,7 +65,8 @@ These control regions are similar to the signal regions but with an additional b
 \input{\FCNCTables/tthML/showFake/faketau/prefit/NOMINAL_SFCR/yield_chart_1}
 \end{table}
 
-Where di-lepton regions ($2l1tau1b$ and $2l1tau2b$) are used to calibrate the Type3 and Type4 fake taus. These regions are dominated by the bjet and the radiation jet faking taus. The regions of $1l1tau2b2j OS$ and $1l1tau2b3j OS$ are used to calibrate Type1 fake taus. Compared to the signal region, this region has an additional b-jet. So the $\bar{t}t$ background is enhanced in this region and signal is depleted. Similarly for the Type2, the regions of $1l1tau2b2j SS$ and $1l1tau2b3j SS$ are chosen. The components of these regions are shown in Figure \ref{fig:wjet_pt_CR}. A simultaneous fit to data is made to derive the scale factors for the fake taus. There are four parameters needed to be decided (the scale factors for the 4 types). But considering the $p_{T}$ and number of tracks depencence of the tau reconstruction, the scale factors are derived in 3 $\pt$ slices (25-35, 35-45, 45-)GeV for 1/3 prong taus separately. So there are total 24 parameters to be determined. The results are shown in table \ref{tab:scale_factor_1prong_statonly} and \ref{tab:scale_factor_3prong_statonly}. Where the errors are statistical only. The post-fit plots are shown in Figure \ref{fig:wjet_pt_postfit_CR}. Then the scale factors are applied to the corresponding signal regions with single b-tagged jet. In $l\thadhad$ channel, both taus can be fake, so the calibration is done to them separately, following the same procedure as $\tlhad$ channels using the lepton and fake tau charges, then the scale factors are multiplied together. The nominal value of the scale factors will vary along with other uncertainties from combined preformace (CP) recommendations and theory uncertainties in the final fit.
+Where di-lepton regions ($t_lt_l1b\thad$ and $t_lt_l2b\thad$) are used to calibrate the Type3 and Type4 fake taus. These regions are dominated by the bjet and the radiation jet faking taus. The regions of
+$t_lt_h2b\thad$-2jOS and $t_lt_h2b\thad$-3jOS are used to calibrate Type1 fake taus. Compared to the signal region, this region has an additional b-jet. So the $\bar{t}t$ background is enhanced in this region and signal is depleted. Similarly for the Type2, the regions of $t_lt_h2b\thad$-2jSS and $t_lt_h2b\thad$-3jSS are chosen. The components of these regions are shown in Figure \ref{fig:wjet_pt_CR}. A simultaneous fit to data is made to derive the scale factors for the fake taus. There are four parameters needed to be decided (the scale factors for the 4 types). But considering the $p_{T}$ and number of tracks depencence of the tau reconstruction, the scale factors are derived in 3 $\pt$ slices (25-35, 35-45, 45-)GeV for 1/3 prong taus separately. So there are total 24 parameters to be determined. The results are shown in table \ref{tab:scale_factor_1prong_statonly} and \ref{tab:scale_factor_3prong_statonly}. Where the errors are statistical only. The post-fit plots are shown in Figure \ref{fig:wjet_pt_postfit_CR}. Then the scale factors are applied to the corresponding signal regions with single b-tagged jet. In $t_l\thadhad$ channel, both taus can be fake, so the calibration is done to them separately, following the same procedure as $\tlhad$ channels using the lepton and fake tau charges, then the scale factors are multiplied together. The nominal value of the scale factors will vary along with other uncertainties from combined preformace (CP) recommendations and theory uncertainties in the final fit.
 
 \begin{table}
 \caption{The scale factors for 1 prong fake taus in different $\pt$ bins derived from the fit.}
@@ -79,9 +82,9 @@ Where di-lepton regions ($2l1tau1b$ and $2l1tau2b$) are used to calibrate the Ty
 \input{\FCNCFigures/tex/wjet_pt_CR}
 \input{\FCNCFigures/tex/wjet_pt_postfit_CR}
 
-\subsection{QCD fake background in $\tlhad$ and $l\thad$ regions}
+\subsection{QCD fake background in $t_h\tlhad$ and $t_l\thad$ regions}
 \label{sec:ABCD}
-After the fake tau calibration, the fake contribution from QCD with both lepton and tau fakes is estimated using ABCD method. For each $\tlhad$ and $l\thad$ signal regions, 3 control regions (ABC) are defined as follows compared to signal region (D):
+After the fake tau calibration, the fake contribution from QCD with both lepton and tau fakes is estimated using ABCD method. For each $t_h\tlhad$ and $t_l\thad$ signal regions, 3 control regions (ABC) are defined as follows compared to signal region (D):
 
 \begin{itemize}
 	\item A: $E_T^{miss}<20$GeV, PLV not tight
@@ -154,7 +157,7 @@ A closure test is made for the background estimations in the low BDT region (BDT
 In the hadronic channels, the QCD also contributes to the fake tau background which doesn't have MC samples. The $\tauhad$ $\pt$ spectra in the $\thadhad$ SS and OS are shown in Figure \ref{fig:os_pre_hadhad}, where the data is far beyond the background prediction, which only contains real tau background. A Fake Factor Method developed by $\Htautau$ group \cite{Htautau-note} is adopted and customized for this analysis. The QCD and part of MC fake background are estimated together using anti-tau ID control regions defined below. The yield in the Fake-CR is shown in the Table \ref{tab:hadronic_nm_yield}. 
 
 \begin{itemize}
-\item{Fake-CR: 2 opposite charged $\tauhad$ with leading one passing RNN medium, subleading one failing RNN medium, other requirements are the same as SR (one for each STH $\thadhad$ and TTH $\thadhad$ SR).}
+\item{Fake-CR: 2 opposite charged $\tauhad$ with leading one passing RNN medium, subleading one failing RNN medium, other requirements are the same as SR (one for each  $t_h\thadhad$-2j and $t_h\thadhad$-3j SR).}
 \end{itemize}
 
 \begin{table}

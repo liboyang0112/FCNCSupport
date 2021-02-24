@@ -29,28 +29,34 @@ Where the operator notation is consistent with \cite{fcnc_production_theory}. Th
 
 To give a better impression on the numbers, we use $\text{BR}(t\to qH)=0.2\%$ as benchmark, which is corresponding to ($C^{13}_{u\phi})^2 + (C^{31}_{u\phi})^2=3.89$, $\sigma(ug\to tH)=1421.8$ pb, $\sigma(cg\to tH)=206.0$ pb.
 
-In this article, a search for the decay $t\to qH$ from one of top quarks in the $t\bar{t}$ production (TT) and single-top, Higgs associated production (ST) with $H\to\tau\tau$  as shown in Fig \ref{fig:diagrams} using 140~fb$^{-1}$ of proton-proton collision data at 13~TeV, taken with the ATLAS detector at the Large Hadron Collider (LHC), is presented. The final state is characterized by one top and one Higgs. In TT, there is an additional u/c quark forming a top resonance with Higgs.
+In this article, a search for the decay $t\to qH$ from one of top quarks in the $t\bar{t}$ production (\textit{TT}) and single-top, Higgs associated production (\textit{ST}) with $H\to\tau\tau$ and the remaining top decays into a $W$ boson and a $b$ quark as shown in Fig \ref{fig:diagrams} using 140~fb$^{-1}$ of proton-proton collision data at 13~TeV, taken with the ATLAS detector at the Large Hadron Collider (LHC), is presented. The final state is characterized by one top and one Higgs. In \textit{TT}, there is an additional $u$ or $c$ as $q$ quark forming a top resonance with Higgs.
 
 \input{../FCNCFigures/tex/diagrams}
 
 \section{Analysis outline}
 
-In order to search for the FCNC coupling, various signal regions will be defined as shown in \ref{sec:SRs}. The background modelling will be focused on the fake taus.
-
-BDT models are trained against main background in order to separate signal and backgrounds in each signal region.
-
-A profile likelihood fit of the BDT discriminant in the SRs with NPs relating to the systematic uncertainties is made in order to set limits on the signal strengths.
+In order to search for the FCNC coupling, we separate events in various signal regions (SR) defined in \ref{sec:SRs}, each focuses on
+different $t\to Wb$ and $H\to\tau\tau$ decay final states in order to suppress the background.
+The analysis also uses various $t\bar{t}$ control regions (CRtt) for calibration of tau fakes in Monte Carlo as well as
+data-driven fake estimations from QCD multi-jet background, and finally BDT is trained to separate the
+siganl and background processes in each SR. The output of
+the SR BDT is used in a profile-likelihood fit in order to extract limits on the FCNC signal processes including all systematic uncertainties.
 
 \subsection{Signal regions}
 \label{sec:SRs}
-As shown in the Figure \ref{fig:diagrams}, depending on the production modes and the decay of the $W$ boson from the SM top-quark decay, the signal is split into 4 kinds of final states as shown in table \ref{tab:signalevents}. The $\Htautau$ decay are required to be either in $\tlhad$ or $\thadhad$ final states when the $W$ decays hadronically and only in $\thadhad$ when the $W$ decay leptonically. The decay mode $\tll$ is dropped because this final state will be considered in the multi-lepton analysis. The mode $\tlhad$ is dropped when $W$ decay leptonically because in this case, the lepton fake will be significant when both leptons have the same sign of charges, the overlap of the fake lepton and fake taus can be quite hard to solve due to the low statistics.
+As shown in the Figure \ref{fig:diagrams} in the final states containing $tt(qH)$ and $tH$, depending on the production modes and
+the decay of $W$ boson hadronically and leptonically from the $t\to Wb$ decay referred as $t_h$ and $t_l$,
+the signal is split into 4 kinds of final states as shown in table \ref{tab:signalevents}. The $\Htautau$ decay are detected to be in either $\tlhad$ or $\thadhad$ final states when the top decays hadronically ($t_h$) and only in $\thadhad$ when the top decay leptonically ($t_l$). The decay of $H\to\tll$ is dropped because this final state will be considered in the multi-lepton analysis. The decay of $H\to\tlhad$ is also dropped when top decay leptonically because in this case, the lepton fake could be important when both leptons have same-sign charge
+and the overlap of the fake lepton and fake taus can be difficult to estimate.
 
-Due to the low statistics in STL and TTL regions, the STL and TTL are merged into a single region $l\thadhad$ for $H\to\thadhad$ where there is no light jet multiplicity requirement and the two $\tauhad$ are required to have the opposite charge. However due to the low tau reconstruction efficiency, it is not rare that one of the taus fails the reconstruction and remains as a jet or goes missing. So the $l\thad$ 1j and $l\thad$ 2j are also included as signal regions where the lepton and $\thad$ are required to have the same sign of charges to reduce $t\bar t$ background. For the STH/TTH channels, the two tau candidates (including both $\taulep$ and $\tauhad$) are required to have opposite charges.  
+Due to the low statistics in $t_lH$ and $t_lt(qH)$ processes, they are merged into a single region $t_l\thadhad$ where there is no light jet multiplicity requirement and the two $\tauhad$ are required to have opposite-sign charge. However there is a sizeable fraction of these events that one of the taus fails the reconstruction and remains as a jet or goes missing due to
+the low tau reconstruction efficiency. So the $t_l\thad$-1j and $t_l\thad$-2j are also included as signal regions where the lepton from $t_l$ and $\thad$ are required to have same-sign
+charge in order to reduce $t\bar t$ background. For the $t_hH$ and $t_ht(qH)$ channels, the two tau candidates from the $\Htautau$ decay (including both $\tlhad$ and $\thadhad$) are required to have opposite-sign charge.  
 
 The summary for the signal regions are listed in Table \ref{tab:signalregions} and their corresponding signal and background yields after fake estimation are shown
 in Table \ref{tab:yield_SR}.
 
-For the future convenience, STH $\tlhad$ and TTH $\tlhad$ are indicated by $\tlhad$; STH $\thadhad$ and TTH $\thadhad$ are indicated by $\thadhad$; $l\tauhad$ 2j and $l\tauhad$ 1j are indicated by $l\tauhad$. All the of regions involving leptons (including $\taulep$) are indicated by "leptonic channels", otherwise "hadronic channels".
+For the future convenience, $t_h\tlhad$-2j and $t_h\tlhad$-3j are indicated by $t_h\tlhad$; $t_h\thadhad$-2j and $t_h\thadhad$-3j are indicated by $t_h\thadhad$; $t_l\tauhad$-2j and $t_l\tauhad$-1j are indicated by $t_l\tauhad$. All the of regions involving leptons from $t_l$ or $\taulep$ are indicated by "leptonic channels", otherwise hadronic channels".
 
 \begin{table}
 \footnotesize
@@ -61,10 +67,10 @@ For the future convenience, STH $\tlhad$ and TTH $\tlhad$ are indicated by $\tlh
 \hline \hline
 
 \multicolumn{2}{c|}{\# of particles}	& alias & b-jet & jets & lepton & taus\\ \hline
-\multirow{2}{*}{ST}	& $W\to l\nu$		& STL   & 1	    & 1    & 1      & 2   \\ \cline{2-7}
-					& $W\to q\bar{q}$	& STH   & 1	    & 3    & 0      & 2   \\ \hline
-\multirow{2}{*}{TT}	& $W\to l\nu$		& TTL   & 1	    & 2    & 1      & 2   \\ \cline{2-7}
-					& $W\to q\bar{q}$	& TTH   & 1	    & 4    & 0      & 2   \\ \hline
+\multirow{2}{*}{\textit{ST}}	& $W\to l\nu$		& $t_lH$   & 1	    & 1    & 1      & 2   \\ \cline{2-7}
+					& $W\to jj'$	& $t_hH$   & 1	    & 3    & 0      & 2   \\ \hline
+\multirow{2}{*}{\textit{TT}}	& $W\to l\nu$		& $t_lt(qH)$   & 1	    & 2    & 1      & 2   \\ \cline{2-7}
+					& $W\to jj'$	& $t_ht(qH)$   & 1	    & 4    & 0      & 2   \\ \hline
 \end{tabular}
 \footnotesize
 \centering
@@ -73,13 +79,13 @@ For the future convenience, STH $\tlhad$ and TTH $\tlhad$ are indicated by $\tlh
 \begin{tabular}[h]{c|c|c|c|c|c}
 \hline \hline
 Signal regions & b-jet & light flavor jets	& lepton & hadronic taus & charge\\ \hline
-$l\tauhad$ 2j  & 1     & 2					& 1      & 1			 & $l\tauhad$ SS\\ \hline
-$l\tauhad$ 1j  & 1     & 1					& 1      & 1			 & $l\tauhad$ SS\\ \hline
-$l\thadhad$	   & 1     & any				& 1      & 2             & $\thadhad$ OS\\ \hline
-STH $\thadhad$ & 1     & 2      			& 0      & 2             & $\thadhad$ OS\\ \hline
-TTH $\thadhad$ & 1     & $\ge3$ 			& 0      & 2             & $\thadhad$ OS\\ \hline
-STH $\tlhad$   & 1     & 2      			& 1      & 1             & $\tlhad$ OS\\ \hline
-TTH $\tlhad$   & 1     & $\ge3$ 			& 1      & 1             & $\tlhad$ OS\\ \hline
+$t_l\tauhad$-2j  & 1     & 2					& 1      & 1			 & $t_l\tauhad$ SS\\ \hline
+$t_l\tauhad$-1j  & 1     & 1					& 1      & 1			 & $t_l\tauhad$ SS\\ \hline
+$t_l\thadhad$	   & 1     & any				& 1      & 2             & $\thadhad$ OS\\ \hline
+$t_h\thadhad$-2j & 1     & 2      			& 0      & 2             & $\thadhad$ OS\\ \hline
+$t_h\thadhad$-3j & 1     & $\ge3$ 			& 0      & 2             & $\thadhad$ OS\\ \hline
+$t_h\tlhad$-2j   & 1     & 2      			& 1      & 1             & $\tlhad$ OS\\ \hline
+$t_h\tlhad$-3j   & 1     & $\ge3$ 			& 1      & 1             & $\tlhad$ OS\\ \hline
 \end{tabular}
 \end{table}
 
@@ -97,13 +103,12 @@ The main background contributing to the leptonic channels, defined in the last s
 
 \input{\FCNCFigures/tex/intro_pt_raw}
 
-As irreducible background, when the top pair decays full-leptonically to a $l$ and a $\tau$, and one of the $b$-jets from top decay fails the b-tagging, the event ends up in the STH $\tlhad$ region. If there are radiation or pile-up jets, the event could end up in the TTH $\tlhad$ region.
-This irreducible background is modelled directly by Monte Carlo.
+As irreducible background, when both tops decay leptonically to a $l$ and a $\tau$, and one of the $b$-jets from top decay fails the b-tagging, the event ends up in the $t_h\tlhad$ regions. This irreducible background is modelled directly by Monte Carlo.
 
-As reducible background, when the top pair decays full-leptonically, to a $l$ and a $\tauhad$, and one of the $b$-jets from top decay fails the b-tagging, if the $b$-jet or one of the radiation jets is reconstructed as a $\tauhad$, the event could end up in the $l\thadhad$ region if two $\tauhad$ have the same sign of charges. When the top pair decays semi-leptonically, and one of jets fakes a $\tauhad$, the event could end up in STH $\tlhad$ or TTH $\tlhad$ if the fake tau has the opposite charge to the lepton or in $l\tauhad$ 1j or $l\tauhad$ 2j if the fake tau has the same charge as the lepton. 
+For reducible background, when the top pair decays dileptonically, to a $l$ and a $\tauhad$, and one of the $b$-jets from top decay fails the b-tagging, if the $b$-jet or one of other jets is reconstructed as a $\tauhad$, the event could end up in the $t_l\thadhad$ regions if two $\tauhad$ have opposite-sign charge. When the top pair decays semi-leptonically, and one of jets fakes a $\tauhad$, the event could end up in the  $t_h\tlhad$ regions if the fake tau has the opposite charge to the lepton or in the $t_l\tauhad$ regions if the fake tau has the same charge as the lepton. 
 
-The reducible background except QCD multi-jets fakes is modelled by Monte Carlo but with scale factors derived from the dedicated $t\bar{t}$ control regions using the
-dilepton events and the double-btagged lepton-jets events listed
+The reducible background except QCD multi-jets fakes is modelled by Monte Carlo but with scale factors derived from the dedicated $t\bar{t}$ control regions (CRtt) using the SM
+$t\bar{t}$ decay of dilepton events and semileptonically double-btagged lepton-jets events listed
 in Table \ref{tab:sfcr} and explained in \ref{sec:sf_method}.
 
 \begin{table}
@@ -113,25 +118,25 @@ in Table \ref{tab:sfcr} and explained in \ref{sec:sf_method}.
 \begin{tabular}[h]{c|c|c|c|c|c|c}
 \hline \hline
 \multicolumn{2}{c|}{Regions} & b-jet & light flavor jets	& lepton & hadronic taus & charge\\ \hline
-\multirow{6}{*}{CR}&$2l1tau1bnj$	& 1     & any				& 2      & 1			 & $ll$ OS\\ \cline{2-7}
-&$2l1tau2bnj$	& 2     & any				& 2      & 1			 & $ll$ OS\\ \cline{2-7}
-&$1l1tau2b2j SS$	& 2     & 2 				& 1      & 1             & $l\tauhad$ SS\\ \cline{2-7}
-&$1l1tau2b2j OS$	& 2     & 2      			& 1      & 1             & $l\tauhad$ OS\\ \cline{2-7}
-&$1l1tau2b3j SS$	& 2     & $\ge3$ 			& 1      & 1             & $l\tauhad$ SS\\ \cline{2-7}
-&$1l1tau2b3j OS$	& 2     & $\ge3$      		& 1      & 1             & $l\tauhad$ OS\\ \hline
-\multirow{5}{*}{SR}&$l\tauhad$ 2j  & 1     & 2					& 1      & 1			 & $l\tauhad$ SS\\ \cline{2-7}
-&$l\tauhad$ 1j  & 1     & 1					& 1      & 1			 & $l\tauhad$ SS\\ \cline{2-7}
-&$l\thadhad$	   & 1     & any				& 1      & 2             & $\thadhad$ OS\\ \cline{2-7}
-&STH $\tlhad$   & 1     & 2      			& 1      & 1             & $\tlhad$ OS\\ \cline{2-7}
-&TTH $\tlhad$   & 1     & $\ge3$ 			& 1      & 1             & $\tlhad$ OS\\ \hline
+\multirow{6}{*}{CRtt}&$t_lt_l1b\tauhad$	& 1     & any				& 2      & 1			 & $t_lt_l$ OS\\ \cline{2-7}
+&$t_lt_l2b\tauhad$	& 2     & any				& 2      & 1			 & $t_lt_l$ OS\\ \cline{2-7}
+&$t_lt_h2b\tauhad$-2jSS	& 2     & 2 				& 1      & 1             & $t_l\tauhad$ SS\\ \cline{2-7}
+&$t_lt_h2b\tauhad$-2jOS	& 2     & 2      			& 1      & 1             & $t_l\tauhad$ OS\\ \cline{2-7}
+&$t_lt_h2b\tauhad$-3jSS	& 2     & $\ge3$ 			& 1      & 1             & $t_l\tauhad$ SS\\ \cline{2-7}
+&$t_lt_h2b\tauhad$-3jOS	& 2     & $\ge3$      		& 1      & 1             & $t_l\tauhad$ OS\\ \hline
+\multirow{5}{*}{SR}&$t_l\tauhad$-2j  & 1     & 2					& 1      & 1			 & $t_l\tauhad$ SS\\ \cline{2-7}
+&$t_l\tauhad$-1j  & 1     & 1					& 1      & 1			 & $t_l\tauhad$ SS\\ \cline{2-7}
+&$t_l\thadhad$	   & 1     & any				& 1      & 2             & $\thadhad$ OS\\ \cline{2-7}
+&$t_h\tlhad$-2j   & 1     & 2      			& 1      & 1             & $\tlhad$ OS\\ \cline{2-7}
+&$t_h\tlhad$-3j   & 1     & $\ge3$ 			& 1      & 1             & $\tlhad$ OS\\ \hline
 \end{tabular}
 \end{table}
 
-The QCD multi-jets also contribute a small fraction of the reducible background by faking both lepton and taus, especially in the low jet multiplicity region $l\tauhad$ 1j. This is modelled by the ABCD method by cutting on $\met$ and the PLV defined in Sec. \ref{sec:Plv} as explained in \ref{sec:ABCD}.
+The QCD multi-jets also contribute a small fraction of the reducible background by faking both lepton and taus, especially in the low jet multiplicity region $t_l\tauhad$-1j. This is modelled by the ABCD method by cutting on $\met$ and the PLIV defined in Sec. \ref{sec:Pliv} as explained in \ref{sec:ABCD}.
 
 \subsection{Analysis strategy for in Hadronic channels}
 
-Similar to STH $\tlhad$ or TTH $\tlhad$, the $t\bar{t}$ also contributes to the hadronic channels as reducible and irreducible background. But in the hadronic channels, much larger contribution is observed both from $Z\to \tau\tau$ plus $b$-jet and QCD multi-jets  with double fake taus as the excess of events shown in Figure \ref{fig:intro_os_pre_hadhad}. 
+Similar to the leptonic channels, the $t\bar{t}$ also contributes to the hadronic channels as reducible and irreducible background. But in the hadronic channels, much larger contribution is observed both from $Z\to \tau\tau$ plus $b$-jet and QCD multi-jets  with double fake taus as the excess of events shown in Figure \ref{fig:intro_os_pre_hadhad}. 
 
 \input{\FCNCFigures/tex/intro_os_pre_hadhad}
 
@@ -218,11 +223,11 @@ The overview of the major samples generated is summarized in table \ref{mob}.
 
 The TopFCNC UFO model \cite{FCNC_UFO1,FCNC_UFO2} with 5-flavour scheme is used for signal simulation.
 
-The targeted signal in this analysis is $tqH/tH$ with $\Htautau$ (samples 411170-411177 and 412098-412105) in App. \ref{sec:DSIDlist}).
+The targeted signal in this analysis is $tt(qH)/tH$ with $\Htautau$ (samples 411170-411177 and 412098-412105) in App. \ref{sec:DSIDlist}).
 
-The FCNC ST signal is simulated using MadGraph5\_aMC@NLO v2.6.2 \cite{MG5} interfaced with Pythia 8 \cite{Pythia8} with the A14 tune \cite{A14} for the generation of parton showers, hadronisation and multiple interactions and the NNPDF30NLO \cite{NNPDF30NLO} parton distribution functions (PDF) is used to generate $qg$ events at next-to-leading order (NLO) in QCD. Depending on either up quark or charm quark involved in the FCNC decay and either the $W$ bosons decaying hadronically or leptonically, 4 samples are generated for each term of effective Lagrangian, so eight samples in total.
+The FCNC \textit{ST} signal is simulated using MadGraph5\_aMC@NLO v2.6.2 \cite{MG5} interfaced with Pythia 8 \cite{Pythia8} with the A14 tune \cite{A14} for the generation of parton showers, hadronisation and multiple interactions and the NNPDF30NLO \cite{NNPDF30NLO} parton distribution functions (PDF) is used to generate $qg$ events at next-to-leading order (NLO) in QCD. Depending on either up quark or charm quark involved in the FCNC decay and either the $W$ bosons decaying hadronically or leptonically, 4 samples are generated for each term of effective Lagrangian, so eight samples in total.
 
-The FCNC TT signal is simulated using Powheg-Box \cite{Powheg} V2 interfaced with Pythia8 \cite{Pythia8} with the A14 tune \cite{A14} for the generation of parton showers, hadronisation and multiple interactions and the NNPDF30NLO \cite{NNPDF30NLO} parton distribution functions (PDF) is used to generate $t\bar{t}$ events at next-to-leading order (NLO) in QCD. Depending on either the top or the anti-top quark decaying to $bW$, either up quark or charm quark involved in the FCNC decay and either the $W$ bosons decaying hadronically or leptonically, eight samples are produced with the Higgs going to a $\tau$-lepton pair.
+The FCNC \textis{TT} signal is simulated using Powheg-Box \cite{Powheg} V2 interfaced with Pythia8 \cite{Pythia8} with the A14 tune \cite{A14} for the generation of parton showers, hadronisation and multiple interactions and the NNPDF30NLO \cite{NNPDF30NLO} parton distribution functions (PDF) is used to generate $t\bar{t}$ events at next-to-leading order (NLO) in QCD. Depending on either the top or the anti-top quark decaying to $bW$, either up quark or charm quark involved in the FCNC decay and either the $W$ bosons decaying hadronically or leptonically, eight samples are produced with the Higgs going to a $\tau$-lepton pair.
 
 Considering the other decays of the Higgs can be part of the signal, these samples are also included:
 
@@ -263,8 +268,8 @@ The full list of MC samples are given in App. \ref{sec:DSIDlist}. The single bos
 \hline \hline
 \multirow{2}{*}{Process} & \multicolumn{2}{c|}{Generator} & \multicolumn{2}{c|}{PDF set} & \multirow{2}{*}{Tune} & \multirow{2}{*}{Order} \\ \cline{2-5}
         &  ME   &  PS    &  ME  & PS &   &  \\\hline
-TT Signal & Powheg & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
-ST Signal & MadGraph5\_aMC@NLO & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+\textit{TT} Signal & Powheg & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
+\textit{ST} Signal & MadGraph5\_aMC@NLO & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
 $W/Z$+jets & \multicolumn{2}{c|}{Sherpa 2.2.1} & \multicolumn{2}{c|}{NNPDF30NNLO} & Sherpa & NLO/LO \\ \hline
 \ttbar & Powheg & Pythia8 & NNPDF30NLO & NNPDF23LO & A14 & NLO \\ \hline
 Single top & Powheg & Pythia6 & CT10(NLO) & CTEQ6L1\cite{CTEQ} & Perugia2012 & NLO \\ \hline
@@ -295,7 +300,7 @@ Muon reconstruction begins with tracks reconstructed in the MS and is matched to
 parameter selection is the same. 
 
 Tight isolation working points are also applied in some channels to reduce fake and non-prompt lepton contributions based a trained isolation boosted decision tree \texttt{PromptLeptonVeto} 
-(PLV), as described in Sec.~\ref{sec:Plv}.
+(PLIV), as described in Sec.~\ref{sec:Pliv}.
 
 \subsection{Hadronic tau decays}
 \label{sec:taurecon}
@@ -316,24 +321,22 @@ Efficiency scale factors for tau reconstruction, ID and electron BDT rejection \
 \subsection{Missing transverse energy}
 The missing transverse energy $\met$ is computed using the fully calibrated and reconstructed physics objects as described above. The TrackSoftTerm (TST) algorithm is used to compute the SoftTerm of the $\met$ \cite{MET}. 
 
-%wmyao add PromptLeptonVeto 
-\subsection{Tight lepton isolation: \texttt{PromptLeptonVeto}(PLV)}
-\label{sec:Plv}
+%wmyao add Improved PromptLeptonVeto 
+\subsection{Tight lepton isolation: \texttt{PromptLeptonImprovedVeto}(PLIV)}
+\label{sec:Pliv}
 A dedicated isolation boosted decision tree has been trained to better reject non-prompt leptons and fakes produced in hadron decays ~\cite{ATL-COM-PHYS-2018-410}. The main idea is to identify non-prompt light leptons using lifetime information associated with a track jet that matches the selected light lepton. These additional reconstructed charged particle tracks inside the jet can be used to increase the precision of identifying the displaced decay vertex of heavy flavor (b, c) hadrons that produced a non-prompt leptons.
 
-\texttt{PromptLeptonVeto} is trained on leptons selected from the Powheg+Pythia8 non-allhad $t\bar t$ sample using eight input variables:
+The \texttt{PLIV} is trained on leptons selected from the Powheg+Pythia8 non-allhad $t\bar t$ sample using eight input variables:
 \begin{itemize}
 \item Three of them are used to identify b-tagged jets by ATLAS flavor tagging algorithms;
 \item Two of them are the ratio of the track lepton $\pt$ with respect to the track jet $\pt$ and $\Delta R$ between the lepton and the track jet axis;
 \item Three of them are the number of tracks collected by the track jet and the lepton track and calorimeter isolation variables. 
 \end{itemize}
 
-The \texttt{PromptLeptonVeto} shows a significant improvement for non-prompt-lepton rejection compared to the cut-based isolation variables.
+The \texttt{PLIV} shows a significant improvement for non-prompt-lepton rejection compared to the cut-based isolation variables.
 
-The tight working points are: \texttt{PromptLeptonVeto}$<-0.50$ for muons and \texttt{PromptLeptonVeto}$<-0.70$ for electrons.  The efficiencies of the tight \texttt{PromptLeptonVeto} working points are measured using the tag and probe method with $Z\rightarrow l^+l^-$ events. The scale factors are approximately 0.92 for $10<\pt<15$ GeV muons and 0.97 for electrons, and 
-averaging at 0.98 to 0.99 for higher $\pt$ leptons.
-
-There is a new improved PLV or PLIV available sooner and we will update the tight isolation working point cut accoringly in next update.
+The tight working points are: \texttt{PLIV}$<-0.6734$ for high $\pt$ muonss and \texttt{PLIV}$<-0.704$ for hight $\pt$ barrel electrons. The scale factors for the efficiencies of the tight \texttt{PLIV} working points are measured using the tag and probe method with $Z\rightarrow l^+l^-$ events.
+%The scale factors are approximately 0.92 for $10<\pt<15$ GeV muons and 0.97 for electrons, and averaging at 0.98 to 0.99 for higher $\pt$ leptons.
 
 \subsection{Overlap removal}
 For the objects passing the selection above, a geometric overlap removal is applied to eliminate the ambiguity in the object identification.  When two objects are close geometrically with $\Delta R$ less than a certain threshold, or satisfy some certain requirements, one of them will be removed. 
