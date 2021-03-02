@@ -19,7 +19,7 @@
 
 #-------------------------------------------------------------------------------
 # Check which TeX Live installation you have with the command pdflatex --version
-TEXLIVE  = 2018
+TEXLIVE  = 2019
 LATEX    = latex
 PDFLATEX = pdflatex
 BIBTEX   = bibtex
