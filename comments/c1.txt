@@ -1,0 +1,156 @@
+Dear editors,
+
+thank you very much for providing the first version of the INT note. While we see that many pieces of the analysis are already in place, we would like to be honest and state that we found the note sometimes difficult to follow, and there are important parts of the note where we cannot say with confidence that we have fully understand the chain of argumentation. We suggest to improve the note before requesting an EB. A note that is in better shape promises that the EB members can provide a more efficient review. We have noted a few main points below that we suggest you to consider.
+
+Best
+Jacob and Johannes
+
+
+General: Please add a todo list and a change log at the beginning of the note, i.e. between the table of contents and the introduction. This will help future EB members to get a quick overview of the current status of the analysis. (Please also remove the todo list from the abstract.) The todo list should in particular include the change from PLV to PLIV and a list of missing systematic uncertainties.
+
+~~~~~~Done.
+
+Outline of the analysis strategy: Please outline the analysis strategy early in the note in a crystal-clear way. This can be done at the end of the introduction or - preferably - in a separate chapter early in the note. We believe that this is important to help orientate the reader. In particular, this should include the general idea of the signal regions, the main idea behind the background estimates (including control regions and fake tau estimates), and other crucial points (such as the mentioning of the BDT as final discriminant). It can also include the blinding strategy. It would also good to include a discussion of what the main background processes are and what causes them to mimic the signal?
+
+~~~~~~Done
+
+Structure of the note:
+
+- Order of discussion of selection cuts: I find a but confusing that a very detailed discussion of the pre-selection cuts (at derivation level etc.) follow after the analysis regions are already defined and used in the sections before. Perhaps part of this can go to an appendix?
+
+- Definition of SRs and CRs: We find that the definition of SRs and CRs should be shown very clearly in a central place in the note. This could, for example, already be included in the analysis-strategy section. In addition, the definition of the SRs in Section 5 should include all cuts in a well-organized manner, so that we would like to ask you to include the additional cuts introduced in Tables 5 and 6 in the main body of the text (and preferably in a bulleted list or table).
+
+~~~~~~Done
+
+- Please add a yield table of the SRs and CRs in a central place, preferably in Section 5, where you define the SR. The CR yield table could also go to Section 9 (background estimation), where it would be good to split the fake tau processes, so their different contributions can be appreciated. We feel that the "Selection of events" section should be merged with section 5, where you define the SRs. The very detailed discussion of pre-selection cuts in the derivations and ntuples, however, may go to an appendix for better readability of the note.
+
+- Background estimation: A key point of the analysis is the estimation of the fake-tau background. We feel, however, that the description of the procedure should be improved, so that we cannot say that we have fully understood the fake-tau estimate (in particular in the leptonic channels) from the description as it is right now. Some of our confusion can probably be addressed by the central discussion of SRs and CRs as mentioned above. In particular, l.487-492 should be revisited for clarity and the relation of the CRs in l.519-530 and 497-502 should be discussed.
+
+~~~~~~Done.
+
+- We find the long list of (partly rather involved) variable definitions in Section 6 (reconstruction) difficult to follow. We suggest to show plots comparing signal and background of these variables that help to understand the physical properties of these variables. You do have some of the variables shown in Section 9, but we suggest to show a plot comparing background and signal for each of the variables already here.
+
+- MC samples: Section 2.3 includes a list of MC samples, but then Section 8 again introduces the signal samples. We suggest to keep this in a central place (Section 2.3) and add the information from Section 8 there.
+
+~~~~~~Done
+
+- Plots: We are afraid that almost all legends and axis labels are so small that it's very difficult to read them. Please enlarge them (preferably using the ATLAS style). Also, please move all plots closer to the text where they are described and avoid cluttering the end of the sections with sets of plots and tables.
+
+~~~~~~Done
+
+- Abbreviations: You use quite some abbreviations in your note, which the reader must memorize. One abbreviation that we found rather confusing is "TT" for ttbar. We associate TT with the pair production of up-type vector-like quarks and we suggest to use a different abbreviation here, for example "PP".
+
+~~~~~~The convention is adopted earlier by CMS: https://link.springer.com/article/10.1007/JHEP06(2018)102, which I believe is the only published top FCNC search using production mode and decay mode at the same time. I believe it would be the best to be consistent.
+
+
+Minor, more detailed comments, where we felt the text can be improved for clarity:
+- In several instances, there is the typo "election" instead of "electron".
+
+~~~~~~Fixed
+
+- l.227: This sentence begins with “In the leptonic channels” and it is not clear to what that refers? Leptonic tau decays? Or hadronic tau decays in selections with at least one additional electron or muon? What do you do in “hadronic channels”? Please clarify these points in the text.
+
+~~~~~~This was indeed specified in the note 312. The rest are “hadronic channels”. Added a line for “hadronic channels”.
+
+- l.229: Here you say that you use medium taus for OR and MET, but in l.231, you say that you use loose taus for OR and MET. Which one is true? Please clarify in the text.
+
+~~~~~~Sorry since we are using two sets of n-tuples produced by different groups. The OLR and MET calculation are different. Added in the note.
+
+- l.294: “The rest of the overlap removal procedure” - given that the OR is different in the leptonic and hadronic channels, it would be good to be very explicit here: Which of the other cuts from the hadronic channel are used in the leptonic channel? All OR cuts from the hadronic channel - only a subset? In addition, it would be good to give a brief motivation why the OR in the two channels must be different. (It may be obvious to you, but it may not be obvious to others.)
+
+~~~~~~Done.
+
+- l.316: Can you motivate (with a plot for example) that the smallest-dR jet is a good choice as the jet coming from the FCNC decay?
+
+~~~~~~The FCNC decaying jet has no reason to be close to other jets and it's from top decay which should be hard enough. The t->qH->qtautau. The 2 tau candidates are reconstructed as lepton or hadronic taus so the jet is obviously on its own.
+
+- l.328: Why do you consider neutrino masses? As far as we know, they are negligible at our energy scales, no?
+
+~~~~~~Removed neutrino mass floating. It actually has no influence. We had them for a historical reason just because the previous analysis kept them.
+
+- l.329 and Eq. (4): Can you motivate the Higgs and MET resolutions, i.e. their exact values?
+
+~~~~~~Those values are also used in the 36fb-1. Higgs mass is read from published Htautau analysis (https://cds.cern.ch/record/2261605) reconstructed from MMC method, which is 20GeV. The MET resolution is shown in eq (4). This is the MET resolution using calorimeters which is an approximation.
+
+- l.362: What is the physical interpretation of variables 15 and 16?
+
+~~~~~~variables 15 is the invariant masss of the visible FCNC top decaying product.
+~~~~~~variables 16 reflects the invariant mass of the W candidate, an alternative of variable 9 which is the closest to the m_W.
+
+- l.375: Which of the taus is considered here for variable 21 if there are two taus in the event? Same questions in l.379 for variable 24.
+
+~~~~~~The leading one. variable 24 is actually no longer used which is replaced by variable 15. We will revise the variables declared in the note.
+
+- l.376: Can you please elaborate for variable 22 what the larger polar angle is? Isn’t there just one angle between two particles (the two tau candidates) - and that can be split into an azimuthal and a polar angle? What are we missing?
+
+~~~~~~It's actually the maximum eta value among the tau candidates.
+
+- l.447: We are a bit confused: Can you confirm that you use an |eta| cut of 2.5 consistently in the analysis? From what I had understood in sections before, it seemed as if you were using a cut of 4.5. Please clarify.
+
+~~~~~~The two sets of n-tuples are from different framework which has different eta cuts for jets. The hadronic channels require jet to have |eta|<4.5 cut. In the 80fb-1 leptonic n-tuples |eta|<2.4 cut is applied. In the latest n-tuples the cut is removed. We applied |eta|<2.4 on the analysis code level just to make sure that they are consistent.
+
+- Figure 3: The caption mentions chi2 but the x-axis says otherwise. What is shown in these plots? Also, what is the difference between the left and right plots? Please clarify these points.
+
+~~~~~~Fixed.
+
+- l.470 and following: Please add here the DSIDs for the signal samples with the other Higgs-boson decays.
+
+~~~~~~TBD. Need to ask tH bb/ML people for their samples.
+
+- l.473: Please explicitly state how truth information is used to remove the overlap.
+
+~~~~~~Check the Higgs decay mode. If it is to tau tau, then the event from additional samples will be removed. Added explanation.
+
+- l.500: Why do you have a lower bound on the Z-mass window of 90 GeV? Wouldn’t it be useful to have it significantly below the Z mass of 91 GeV?
+
+~~~~~~Fixed, it's a typo, it's 80GeV
+
+- l.504: We are afraid, but we do not see the plots in Sec. 9.1.
+
+~~~~~~Fixed.
+
+- Can you show that the ABCD method closes?
+
+~~~~~~Low BDT regions (BDT<-0.6) are studied for the closure test.
+
+- Fig. 8: We are confused: Why is there data shown here in the SRs? Are these CRs in the end?
+
+~~~~~~The Blinding strategy strictly follows the statement in the blinding section. The data is shown simply means that those SRs have little significance. If you compare the final results, they are quite small compared to the sensitive regions. Further more, the BDT distribution is blinded just to make sure that we are not showing data in the signal enriched bins.
+
+- l.576-l.581: This should be backed up by numbers / plots / etc. for your analysis.
+
+~~~~~~Added tables for the yields.
+
+- l.597: If the fake factors can go negative - wouldn’t it be more appropriate to use a more sophisticated statistical extraction of the fake factors that avoids them going negative?
+
+~~~~~~Sorry I don't quite follow this question. The fake factors can go negative because in the CR, some bins have MC higher than data. The 0 is chosen simply means in the final fit we will vary the FF from 0 to 2 times of the nominal value. I believe this is conservative enough. 
+
+- Fig. 11: What is the conclusion of the comparison of the three different sets of FFs?
+
+~~~~~~Just to show that the modelling using FFs derived in our control regions is not far away from using the ones derived by the Htautau group which gives us more confidence.
+
+- Please use a human-readable NP naming.
+
+~~~~~~NP names are explained in the systematics section.
+
+- Once you have more systematic uncertainties included, you will also need to add a background-only to those bins that you do not blind in addition to the Asimov fit.
+
+- Left plot of Figure 22: Why is the impact of the NPs so asymmetric?
+
+~~~~~~We didn't symmetrise the first two NPs. symmetrized now.
+
+- l.621-622: Please document the results of the BDT optimization.
+
+~~~~~~Done.
+
+- l.628: We believe the significances should rather go to the results section.
+
+~~~~~~Done.
+
+- Table 25: Why is there a dash in 4/5 regions for cg->tH? What do the “unmerged” limits mean? Aren’t only the merged limits physically meaningful?
+
+~~~~~~This will give a better understanding of our results. The previous analysis only uses decay mode. It will be a direct comparison. Also it gives an impression how importance production is and make sure that the combined limit makes sense.
+
+- Please add a comparison with the previous FCNC tqH combination and with the CMS results (We suggest to compare in particular expected limits, so that the reader can estimate the gain in sensitivity from this analysis.)
+
+~~~~~~This is shown in the introduction section. Added reference.

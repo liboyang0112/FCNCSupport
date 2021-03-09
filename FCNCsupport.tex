@@ -69,7 +69,7 @@
 \usepackage{FCNCsupport-defs}
 \usepackage{FCNCpaths}
 \usepackage{lscape}
-
+\usepackage{float}
 %for sidewaystable added by Michel 2017-05-11
 \usepackage{rotating}
 \usepackage{longtable}
@@ -79,9 +79,9 @@
 \savesymbol{checkmark}
 \usepackage{dingbat}
 \usepackage{siunitx}
-
+\usepackage{adjustbox}
 \setcounter{secnumdepth}{4}
-
+\usepackage{ulem}
 \titleformat{\paragraph}
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}
@@ -110,10 +110,11 @@
 \newpage
 
 \linenumbers
+\include{sections/todolist}
 \include{sections/sec1_introduction}
-\include{sections/sec2_reconstruction}
-\include{sections/sec3_selection}
-\include{sections/sec4_backgroundnew}
+\include{sections/sec2_signalRegions}
+\include{sections/sec3_topology}
+\include{sections/sec4_background}
 \include{sections/sec5_mva}
 \include{sections/sec6_systematics}
 \include{sections/sec7_fit}
@@ -127,6 +128,8 @@
 %-------------------------------------------------------------------------------
 
 \input{appendix/ap1_sample_list}
+\input{appendix/ap2_derivation_cut_list}
+\input{appendix/ap3_BDTOptim}
 %\input{appendix_fakeTau}
 %\input{appendix_reco}
 %\input{appendix_nOS_split}

@@ -1,0 +1,76 @@
+\section{To do list}
+
+Add signal samples used by FCNC $H\to multilepton$ group (Their AOD files are deleted, still not available).
+
+\sout{PLIV implementation.}(Turns out it's already applied.)
+
+The n-tuples are ready, started working on:
+
+Implementation of theory systematics and instrumental systematics. Including:
+
+\begin{itemize}
+	\item JES, JER
+	\item flavor tagging
+	\item JVT
+	\item MET\_SoftTrk
+	\item PRW
+	\item Tau reconstruction, selection, identification, electron veto, TES
+	\item Renormalisation and factorisation scale
+	\item PDF
+	\item $\ttbar$ and V+jets cross section
+	\item ISR and FSR
+\end{itemize}
+
+Leptonic channels specific:
+\begin{itemize}
+	\item Lepton trigger SF
+	\item Electron reconstruction, identification, isolation
+	\item Muon identification, isolation
+	\item EG\_RESOLUTION, EG\_SCALE
+\end{itemize}
+
+Hadronic channels specific:
+\begin{itemize}
+	\item Tau trigger SF
+\end{itemize}
+
+\section{Change log}
+
+\subsection{From V1 to V2}
+
+Leptonic channels:  80fb-1 $\to$ 140fb-1
+
+BDT tau ID $\to$ RNN tau ID
+
+Updates to PFlow jets with DL1r b-tagging.
+
+Optimised event seletion.
+
+Changed fake estimation method.
+
+Added signal regions $l\tau$ 1j and $l\tau$ 2j.
+
+\subsection{From V2 to V3}
+
+Added to do list and change log.
+
+Added Analysis outline section and moved signal region definition here.
+
+Added yield tables for CRs.
+
+Added plots for the variables defined.
+
+Added closure test for ABCD method.
+
+BDT optimisation.
+
+\subsection{From V3 to V3.1}
+
+Made the note more readable by introducing new names for SR and CR.
+
+...
+\subsection{From V3 to V4}
+
+Updated n-tuples with full systematics (ttWML n-tuple V6).
+
+Improved figures, clarified a few statements.

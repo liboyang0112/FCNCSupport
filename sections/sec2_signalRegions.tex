@@ -1,0 +1,93 @@
+\section{Signal regions}
+\label{sec:selection}
+
+In the leptonic channels, the $\pt$ of the lepton is required to be 1 GeV above the trigger threshold. The leptons are required to have \texttt{Tight} ID as defined in Sec. \ref{sec:obj_reco}. The trigger matching between the offline and trigger level lepton objects is also required for the corresponding leptons selected for the analysis.
+
+In the hadronic channels, the two tau candidates with the highest $\pt$ are chosen. They should also pass the \texttt{Medium} tau ID and overlap removal. To account for the trigger thresholds, the two hadronic taus are requried to pass the $\pt>40$ GeV and $\pt>30$ GeV cuts.
+
+The details of implementation of the event selection before the n-tuples and n-tuple level object quality cuts are listed in the \ref{app:cuts}.
+
+\subsection{Trigger}
+\label{sec:trigger}
+
+In the leptonic channels, the single-lepton triggers are required to select the candidate events. In general, the lowest unprescaled triggers are used in every data-taking periods:
+
+Single electron:
+
+\begin{itemize}
+\item 2015: HLT\_e24\_lhmedium\_L1EM20VH,\\
+HLT\_e60\_lhmedium, HLT\_e120\_lhloose
+\item 2016, 2017, 2018: HLT\_e26\_lhtight\_nod0\_ivarloose,\\
+HLT\_e60\_lhmedium\_nod0, HLT\_e140\_lhloose\_nod0
+\end{itemize}
+
+Single muon:
+
+\begin{itemize}
+\item 2015: HLT\_mu20\_iloose\_L1MU15, HLT\_mu50
+\item 2016, 2017, 2018: HLT\_mu26\_ivarmedium, HLT\_mu50
+\end{itemize}
+
+The di-lepton control regions to estimate fake taus are required to pass di-lepton triggers:
+
+Di-electron:
+
+\begin{itemize}
+\item 2015: HLT\_2e12\_lhloose\_L12EM10VH
+\item 2016: HLT\_2e17\_lhvloose\_nod0
+\item 2017, 2018: HLT\_2e24\_lhvloose\_nod0
+\end{itemize}
+
+Di-muon:
+
+\begin{itemize}
+\item 2015: HLT\_mu18\_mu8noL1
+\item 2016, 2017, 2018: HLT\_mu22\_mu8noL1
+\end{itemize}
+
+Electron+Muon:
+
+\begin{itemize}
+\item 2015: HLT\_e17\_lhloose\_mu14
+\item 2016, 2017, 2018: HLT\_e17\_lhloose\_nod0\_mu14
+\end{itemize}
+
+The trigger used for hadronic channels in each year are listed as follow:
+\begin{itemize}
+\small
+\item 2015: HLT\_tau35\_medium1\_tracktwo\_tau25\_medium1\_tracktwo\_L1TAU20IM\_2TAU12IM
+\item 2016: HLT\_tau35\_medium1\_tracktwo\_tau25\_medium1\_tracktwo
+\item 2017: HLT\_tau35\_medium1\_tracktwo\_tau25\_medium1\_tracktwo\_03dR30\_L1DR\_TAU20ITAU12I\_J25
+\item 2018: HLT\_tau35\_medium1\_tracktwoEF\_tau25\_medium1\_tracktwoEF\_03dR30\_L1DR\_TAU20ITAU12I\_J25
+
+ \end{itemize}
+
+The two $\tauhad$ candidates are matched to the respective legs of the di-tau trigger using the individual single tau trigger objects. The $\pt$ thresholds are chosen such that the selected $\tauhad$ candidate $\pt$ already lies in the plateau of the respective trigger efficiency curve. Due to the rising instantaneous luminosity, the trigger used in the 2016-2018 data taking includes a requirement for an additional level-1 calorimeter trigger jet 
+%with $\pt > \SI{25}{\GeV}$ and $|\eta|<3.2$
+. The leading jet in those events is required to be matched within $\Delta R < 0.4$ with the jet ROI that fulfilled the jet part of the trigger criteria (trigger jet). The $\pt > \SI{60}{\GeV}$ cut is applied to make sure that the jet is in the trigger $\pt$ plateau.
+%Figure \ref{fig:hadhad_trigger} shows the turn-on curves of the additional jet as in \cite{Htautau}, and the leading jet $\pt$ in the $\thadhad$ channel. A cut of $\pt^{\text{L1jet}} > \SI{50}{\GeV}$ is required on the trigger jet, and a leading-jet $\pt > \SI{60}{\GeV}$ cut is applied to remove the effect of turn on curve.
+
+% moving to Cuts 
+%For the TT channel tcH coupling search, the FCNC jet is from a c-quark. Regarding the similarity between the b-jet and c-jet, the very loose b-%tagging is attempted on the FCNC jet in order to further select the tcH signal. However, the dominating background is $\ttbar$ where there are %2 b-jets. This resort does not help with the significance.
+
+\subsection{Cuts}
+\label{sec:cuts}
+
+Kinematics cuts are carefully selected to reduce background and provide control region for fake tau estimation in the hadronic channels:
+\begin{itemize}
+  \item $m_{\tau\tau,vis}>60$
+  \item $m_{\tau\tau,vis}<120$
+  \item $\Delta R(\tau,\tau)<3.4$
+  \item 100GeV<$m_{\tau\tau}<150$GeV
+  \item $m_{t,FCNC}>$140GeV
+\end{itemize}
+
+The S/B is significantly improved after applying these cuts as shown in Table \ref{tab:cutflow_STHhadhad} and \ref{tab:cutflow_TTHhadhad}. The yield of the CR generated are shown in Table \ref{tab:hadronic_CR_yield} indicated by ``OS CR''.
+
+In the leptonic channels, except $t_l\thadhad$, a $\met>20$GeV cut and PLIV tight is used to reduce QCD background and also provide QCD enriched control regions. The yield are shown in Table \ref{tab:ABCDYield} - \ref{tab:ABCDYield_3}
+
+The yields of signal regions for both hadronic and leptonic channels are shown in Table \ref{tab:yield_SR}.
+% summarizing event selections in a table for SR and CR (?)
+For the $tt(cH)$ channel tcH coupling search, the FCNC jet is from a c-quark. Regarding the similarity between the b-jet and c-jet,
+the very loose b-tagging is attempted on the FCNC jet in order to further select the $t\to cH$ signal. However,
+the dominating background is $\ttbar$ where there are 2 b-jets. This resort does not help with the significance.
