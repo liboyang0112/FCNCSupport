@@ -2,38 +2,7 @@
 
 Add signal samples used by FCNC $H\to multilepton$ group (Their AOD files are deleted, still not available).
 
-\sout{PLIV implementation.}(Turns out it's already applied.)
-
-The n-tuples are ready, started working on:
-
-Implementation of theory systematics and instrumental systematics. Including:
-
-\begin{itemize}
-	\item JES, JER
-	\item flavor tagging
-	\item JVT
-	\item MET\_SoftTrk
-	\item PRW
-	\item Tau reconstruction, selection, identification, electron veto, TES
-	\item Renormalisation and factorisation scale
-	\item PDF
-	\item $\ttbar$ and V+jets cross section
-	\item ISR and FSR
-\end{itemize}
-
-Leptonic channels specific:
-\begin{itemize}
-	\item Lepton trigger SF
-	\item Electron reconstruction, identification, isolation
-	\item Muon identification, isolation
-	\item EG\_RESOLUTION, EG\_SCALE
-\end{itemize}
-
-Hadronic channels specific:
-\begin{itemize}
-	\item Tau trigger SF
-\end{itemize}
-
+Implementation of $t\bar{t}$ matrix element systematics (New samples? Not listed in the top systematics recommendation).
 \section{Change log}
 
 \subsection{From V1 to V2}
@@ -71,6 +40,11 @@ Made the note more readable by introducing new names for SR and CR.
 ...
 \subsection{From V3 to V4}
 
-Updated n-tuples with full systematics (ttWML n-tuple V6).
+Updated with full systematics.
 
 Improved figures, clarified a few statements.
+
+Bug fix:
+
+1. Add the missing Double fake contribution in $t_l\tauhad\tauhad$ regioninto the fit.
+2. Require b-veto for the subleading tau in $t_l\tauhad\tauhad$ region

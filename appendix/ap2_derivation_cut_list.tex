@@ -3,7 +3,7 @@
 A number of event cuts are applied before getting to the signal enhanced regions with the background suppressed. Then the DAOD$\_$HIGG8D1 (DAOD$\_$HIGG4D3) derivation is feed to {\texttt ttHMultiAna} ({\texttt xTauFramework}) to produce n-tuples for leptonic (hadronic) channels, where ttHMultiAna is AnalysisTop \cite{AnalysisTop} based. The list of event-level selection criteria is as follows:
 
 \begin{enumerate}
-\item DAOD$\_$HIGG8D1 and DAOD$\_$HIGG4D3 ($\thadhad$) derivations are used for this analysis. At the derivation level, the following cuts are applied:
+\item DAOD\_HIGG8D1 (leptonic) and DAOD\_HIGG4D3 (hadronic) derivations are used for this analysis. At the derivation level, the following cuts are applied:
   \begin{itemize}
   \item In DAOD$\_$HIGG8D1, trigger skimming: all electron, muon, tau triggers; Offline skimming: at least 2 light leptons or at least 1 lepton plus 1 tau.
   \item In DAOD$\_$HIGG4D3, no trigger skimming. Offline skimming: 2taus
@@ -40,26 +40,26 @@ A number of event cuts are applied before getting to the signal enhanced regions
 \end{enumerate}
 
 The corresponding cutflow for the n-tuple level selection and each channel are given in Table \ref{tab:xTFW_cutflow_all} - \ref{tab:tthML_cutflow_reg1l2tau1bnj_os}.
-\begin{table}
+\begin{table}[H]
 \caption{The cutflow tables for the preselection in the hadronic channels.}
 \label{tab:xTFW_cutflow_all}
 \footnotesize
 \input{\FCNCTables/cutflow/xTFW/cutflow_all}
 \end{table}
 
-\begin{table}
-\caption{The cutflow tables in the STH $\thadhad$ signal region.}
+\begin{table}[H]
+\caption{The cutflow tables in the $t_h\thadhad$-2j signal region.}
 \label{tab:cutflow_STHhadhad}
 \input{\FCNCTables/cutflow/xTFW/cutflow_reg2mtau1b2jos}
 \end{table}
 
-\begin{table}
-\caption{The cutflow tables in the TTH $\thadhad$ signal region.}
+\begin{table}[H]
+\caption{The cutflow tables in the $t_h\thadhad$-3j signal region.}
 \label{tab:cutflow_TTHhadhad}
 \input{\FCNCTables/cutflow/xTFW/cutflow_reg2mtau1b3jos}
 \end{table}
 
-\begin{table}
+\begin{table}[H]
 \caption{The cutflow tables for the preselection in the leptonic channels.}
 \label{tab:tthML_cutflow_all}
 \footnotesize
@@ -67,24 +67,24 @@ The corresponding cutflow for the n-tuple level selection and each channel are g
 \end{table}
 
 
-\begin{table}
-\caption{The cutflow tables in the $l\tauhad$ 1j signal region.}
+\begin{table}[H]
+\caption{The cutflow tables in the $t_l\thad$-1j signal region.}
 \input{\FCNCTables/cutflow/tthML/cutflow_reg1l1tau1b1j_ss}
 \end{table}
-\begin{table}
-\caption{The cutflow tables in the STH $\tlhad$ signal region.}
+\begin{table}[H]
+\caption{The cutflow tables in the $t_h\tlhad$-2j signal region.}
 \input{\FCNCTables/cutflow/tthML/cutflow_reg1l1tau1b2j_os}
 \end{table}
-\begin{table}
-\caption{The cutflow tables in the $l\tauhad$ 2j signal region.}
+\begin{table}[H]
+\caption{The cutflow tables in the $t_l\thad$-2j signal region.}
 \input{\FCNCTables/cutflow/tthML/cutflow_reg1l1tau1b2j_ss}
 \end{table}
-\begin{table}
-\caption{The cutflow tables in the TTH $\tlhad$ region.}
+\begin{table}[H]
+\caption{The cutflow tables in the $t_h\tlhad$-3j region.}
 \input{\FCNCTables/cutflow/tthML/cutflow_reg1l1tau1b3j_os}
 \end{table}
-\begin{table}
-\caption{The cutflow tables in the $l\thadhad$ signal region.}
+\begin{table}[H]
+\caption{The cutflow tables in the $t_l\thadhad$ signal region.}
 \label{tab:tthML_cutflow_reg1l2tau1bnj_os}
 \input{\FCNCTables/cutflow/tthML/cutflow_reg1l2tau1bnj_os}
 \end{table}
