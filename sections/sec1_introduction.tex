@@ -35,7 +35,7 @@ In this article, a search for the decay $t\to qH$ from one of top quarks in the 
 
 \section{Analysis outline}
 
-In order to search for the FCNC coupling, we separate events in various signal regions (SR) defined in \ref{sec:SRs}, each focuses on
+In order to search for the FCNC coupling, we separate events in various signal regions (SR) defined in Sec. \ref{sec:SRs}, each focuses on
 different $t\to Wb$ and $H\to\tau\tau$ decay final states in order to suppress the background.
 The analysis also uses various $t\bar{t}$ control regions (CRtt) for calibration of tau fakes in Monte Carlo as well as
 data-driven fake estimations from QCD multi-jet background, and finally BDT is trained to separate the
@@ -46,7 +46,7 @@ the SR BDT is used in a profile-likelihood fit in order to extract limits on the
 \label{sec:SRs}
 As shown in the Figure \ref{fig:diagrams} in the final states containing $tt(qH)$ and $tH$, depending on the production modes and
 the decay of $W$ boson hadronically and leptonically from the $t\to Wb$ decay referred as $t_h$ and $t_l$,
-the signal is split into 4 kinds of final states as shown in table \ref{tab:signalevents}. The $\Htautau$ decay are detected to be in either $\tlhad$ or $\thadhad$ final states when the top decays hadronically ($t_h$) and only in $\thadhad$ when the top decay leptonically ($t_l$). The decay of $H\to\tll$ is dropped because this final state will be considered in the multi-lepton analysis. The decay of $H\to\tlhad$ is also dropped when top decay leptonically because in this case, the lepton fake could be important when both leptons have same-sign charge
+the signal is split into 4 kinds of final states as shown in Table \ref{tab:signalevents}. The $\Htautau$ decay are detected to be in either $\tlhad$ or $\thadhad$ final states when the top decays hadronically ($t_h$) and only in $\thadhad$ when the top decay leptonically ($t_l$). The decay of $H\to\tll$ is dropped because this final state will be considered in the multi-lepton analysis. The decay of $H\to\tlhad$ is also dropped when top decay leptonically because in this case, the lepton fake could be important when both leptons have same-sign charge
 and the overlap of the fake lepton and fake taus can be difficult to estimate.
 
 Due to the low statistics in $t_lH$ and $t_lt(qH)$ processes, they are merged into a single region $t_l\thadhad$ where there is no light jet multiplicity requirement and the two $\tauhad$ are required to have opposite-sign charge. However there is a sizeable fraction of these events that one of the taus fails the reconstruction and remains as a jet or goes missing due to
@@ -109,7 +109,7 @@ For reducible background, when the top pair decays dileptonically, to a $l$ and 
 
 The reducible background except QCD multi-jets fakes is modelled by Monte Carlo but with scale factors derived from the dedicated $t\bar{t}$ control regions (CRtt) using the SM
 $t\bar{t}$ decay of dilepton events and semileptonically double-btagged lepton-jets events listed
-in Table \ref{tab:sfcr} and explained in \ref{sec:sf_method}.
+in Table \ref{tab:sfcr} and explained in Sec. \ref{sec:sf_method}.
 
 \begin{table}
 \centering
@@ -132,21 +132,21 @@ in Table \ref{tab:sfcr} and explained in \ref{sec:sf_method}.
 \end{tabular}
 \end{table}
 
-The QCD multi-jets also contribute a small fraction of the reducible background by faking both lepton and taus, especially in the low jet multiplicity region $t_l\tauhad$-1j. This is modelled by the ABCD method by cutting on $\met$ and the PLIV defined in Sec. \ref{sec:Pliv} as explained in \ref{sec:ABCD}.
+The QCD multi-jets also contribute a small fraction of the reducible background by faking both lepton and taus, especially in the low jet multiplicity region $t_l\tauhad$-1j. This is modelled by the ABCD method by cutting on $\met$ and the lepton isolation variable PLIV defined in Sec. \ref{sec:Pliv} as explained in Sec. \ref{sec:ABCD}.
 
 \subsection{Analysis strategy for in Hadronic channels}
 
-Similar to the leptonic channels, the $t\bar{t}$ also contributes to the hadronic channels as reducible and irreducible background. But in the hadronic channels, much larger contribution is observed both from $Z\to \tau\tau$ plus $b$-jet and QCD multi-jets  with double fake taus as the excess of events shown in Figure \ref{fig:intro_os_pre_hadhad}. 
+Similar to the leptonic channels, the $t\bar{t}$ also contributes to the hadronic channels as reducible and irreducible background. But in the hadronic channels, much larger contribution is observed both from $Z\to \tau\tau$ plus $b$-jet and from QCD multi-jets  with double fake taus as the excess of data events shown in Figure \ref{fig:intro_os_pre_hadhad}. 
 
 \input{\FCNCFigures/tex/intro_os_pre_hadhad}
 
-The irreducible background is modelled directly by Monte Carlo. The reducible background with sub-leading taus faked is modelled by Fake Factor (FF) method using the
-fake tau enriched control regions. The FFs are calculated from three different control regions where one of taus failed the medium RNN tau cut, but passed
+The irreducible background is modelled directly by Monte Carlo. The reducible background with sub-leading tau fake is modelled by Fake Factor (FF) method using the
+fake-tau enriched control regions. The FFs are calculated from three different control regions where one of taus failed the medium RNN tau cut, but passed
 a minimum RNN cut:
 
 \begin{itemize}
 	\item W+jet control region in the SM $\Htautau$ (Calculated by the $\Htautau$ group).
-	\item SS control region, the two taus have the same charge. The rest are the same as signal region.
+	\item SS control region, the two taus have the same charge and the rest selections are the same as signal region.
 	\item OS control region, the events in the signal region that failing the kinematics cut defined in the Sec. \ref{sec:cuts}.
 \end{itemize}
 
@@ -162,7 +162,7 @@ A profile likelihood fit of the BDT discriminant in the SRs with NPs relating to
 \subsection{Blinding strategy}
 \label{sec:blind}
 
-In order to keep the analysis unbiased from artificial cut tunings some data histogram bins are blinded. The blinding threshold is quantified as significances reaching 1 $\sigma$ when assuming $B(t\rightarrow Hq)$ is 0.2\% to be conservative enough when the published limit is around 0.1\%. The data is shown in some signal regions where the sensitivities are too low that none of the bins are above the threshold. In addition, the signal enriched high BDT region are blinded (BDT > 0.2).
+In order to keep the analysis unbiased from artificial cut tunings some data histogram bins are blinded. The blinding threshold is quantified as significances reaching 1 $\sigma$ when assuming $B(t\rightarrow Hq)$ is 0.2\% to be conservative enough when the published limit is around 0.1\%. The data is shown in some signal regions where the sensitivities are too low that none of the bins are above the threshold. In addition, the signal enriched high BDT region are blinded (BDT $>$ 0.2).
 
 \section{Detector, data set and Monte Carlo simulation}
 
@@ -219,7 +219,7 @@ corresponds to an integrated luminosity of 59.937 fb$^{-1}$. The final luminosit
 \subsection{Signal and background simulation}
 \label{sec:generator}
 
-The overview of the major samples generated is summarized in table \ref{mob}.
+The overview of the major samples generated is summarized in Table \ref{mob}.
 
 The TopFCNC UFO model \cite{FCNC_UFO1,FCNC_UFO2} with 5-flavour scheme is used for signal simulation.
 
@@ -227,7 +227,7 @@ The targeted signal in this analysis is $tt(qH)/tH$ with $\Htautau$ (samples 411
 
 The FCNC \textit{ST} signal is simulated using MadGraph5\_aMC@NLO v2.6.2 \cite{MG5} interfaced with Pythia 8 \cite{Pythia8} with the A14 tune \cite{A14} for the generation of parton showers, hadronisation and multiple interactions and the NNPDF30NLO \cite{NNPDF30NLO} parton distribution functions (PDF) is used to generate $qg$ events at next-to-leading order (NLO) in QCD. Depending on either up quark or charm quark involved in the FCNC decay and either the $W$ bosons decaying hadronically or leptonically, 4 samples are generated for each term of effective Lagrangian, so eight samples in total.
 
-The FCNC \textit{TT} signal is simulated using Powheg-Box \cite{Powheg} V2 interfaced with Pythia8 \cite{Pythia8} with the A14 tune \cite{A14} for the generation of parton showers, hadronisation and multiple interactions and the NNPDF30NLO \cite{NNPDF30NLO} parton distribution functions (PDF) is used to generate $t\bar{t}$ events at next-to-leading order (NLO) in QCD. Depending on either the top or the anti-top quark decaying to $bW$, either up quark or charm quark involved in the FCNC decay and either the $W$ bosons decaying hadronically or leptonically, eight samples are produced with the Higgs going to a $\tau$-lepton pair.
+The FCNC \textit{TT} signal is simulated using Powheg-Box \cite{Powheg} V2 interfaced with Pythia8 \cite{Pythia8} with the A14 tune \cite{A14} for the generation of parton showers, hadronisation and multiple interactions and the NNPDF30NLO \cite{NNPDF30NLO} parton distribution functions (PDF) is used to generate $t\bar{t}$ events at next-to-leading order (NLO) in QCD. Depending on either the top or the anti-top quark decaying to $bW$, either up quark or charm quark involved in the FCNC decay and either the $W$ bosons decaying hadronically or leptonically, eight samples are produced with the Higgs decaying into a $\tau$-lepton pair.
 
 Considering the other decays of the Higgs can be part of the signal, these samples are also included:
 
@@ -310,7 +310,7 @@ In the hadronic channels, these tau candidates are considered in the overlap rem
 
 In the leptonic channels, the taus passing the RNN Loose working point are considered in the overlap removal procedure and missing transverse energy calculation, following the ttW multi-lepton group \cite{ttHMLgroup}, which is more focused on leptons.
 
-The OLR and MET calculation procedures in hadronic channels are more forgiving in terms of taus since there are constantly two hadronic taus, and in the fake estimation, the taus not passing the RNN Loose are also used. This way we can benefit from better statistics and also be consistent with the W+jet regions used in the SM $\Htautau$ group where the Fake Factors are derived.
+The OLR and MET calculation procedures in hadronic channels are more forgiving in terms of taus since there are constantly two hadronic taus, and in the fake estimation, the taus not passing the RNN Medium are also used. This way we can benefit from better statistics and also be consistent with the W+jet regions used in the SM $\Htautau$ group where the Fake Factors are derived.
 
 For the \texttt{Medium} ID, the tau efficiency is about 75\% (60\%) for 1-prong (3-prong) candidates. The ID efficiencies are optimized to be flat versus the tau $\pt$ and pileup.
 
@@ -324,7 +324,7 @@ The missing transverse energy $\met$ is computed using the fully calibrated and 
 %wmyao add Improved PromptLeptonVeto 
 \subsection{Tight lepton isolation: \texttt{PromptLeptonImprovedVeto}(PLIV)}
 \label{sec:Pliv}
-A dedicated isolation boosted decision tree has been trained to better reject non-prompt leptons and fakes produced in hadron decays ~\cite{ATL-COM-PHYS-2018-410}. The main idea is to identify non-prompt light leptons using lifetime information associated with a track jet that matches the selected light lepton. These additional reconstructed charged particle tracks inside the jet can be used to increase the precision of identifying the displaced decay vertex of heavy flavor (b, c) hadrons that produced a non-prompt leptons.
+A dedicated isolation boosted decision tree has been trained to better reject non-prompt leptons and fakes produced in hadron decays~\cite{ATL-COM-PHYS-2018-410}. The main idea is to identify non-prompt light leptons using lifetime information associated with a track jet that matches the selected light lepton. These additional reconstructed charged particle tracks inside the jet can be used to increase the precision of identifying the displaced decay vertex of heavy flavor (b, c) hadrons that produced a non-prompt leptons.
 
 The \texttt{PLIV} is trained on leptons selected from the Powheg+Pythia8 non-allhad $t\bar t$ sample using eight input variables:
 \begin{itemize}
