@@ -29,10 +29,8 @@ L599 We think this reference should be to Figure 24, not Figure 23
 
 "In the final fit, we do not use this error. What we do is to take the difference between two medians, the 0.1 is not used and we are not interested in it, same as the errors in "Table 21: FF derived in SS CR." and "Table 22: FF derived in OS CR."."
 -- The difference of two medians? Which medians? Could you please extend on this response a little or clarify where in the text it is most clearly explained? Please also state clearly in the captions of the tables that these uncertainties are not used.
-~~~~~~Added explanation in L715, L720 and captions.
+~~~~~~Added explanation in Table 19 and 20 captions.
 
 - Once you have more systematic uncertainties included, you will also need to add a background-only to those bins that you do not blind in addition to the Asimov fit.
 Follow-up: Did you already start working on this part?
-~~~~~~We are still working on the systematics. Although I think I need more explanation for this comment. What do you mean by "add a background-only to those bins that you do not blind"?
--> "background-only fit" - sorry for the typo
-~~~~~~Sure, we will add them when systematics are ready.
+~~~~~~Added in Figure 38-40
