@@ -2,7 +2,16 @@
 
 Add signal samples used by FCNC $H\to multilepton$ group (Their AOD files are deleted, still not available).
 
-Implementation of $t\bar{t}$ matrix element and parton shower systematics (New samples? Not listed in the top systematics recommendation).
+Generate signal PS (and ME?) systematics samples.
+
+\section{On going studies}
+
+Investigate the constraints of $t\bar{t}$ matrix element and parton shower systematics.
+
+For parton shower systematics, use AFII PowhegPythia instead of FullSim. Switch to 7.1 Herwig sample.
+
+Double check production and decay mode signal cross section.
+
 \section{Change log}
 
 \subsection{From V1 to V2}
@@ -49,3 +58,9 @@ Bug fix:
 1. Add the missing Double fake contribution in $t_l\tauhad\tauhad$ regioninto the fit.
 
 2. Require b-veto for the subleading tau in $t_l\tauhad\tauhad$ region
+
+\subsection{From V4.0 to V5.0}
+
+Added PS and ME systematics for ttbar sample.
+
+Using recommended blinding strategy.
