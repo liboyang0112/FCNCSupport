@@ -1,0 +1,57 @@
+Dear convenors,
+
+   Thank you so much for your comments. We have addressed these comments in the inter-note V5 uploaded in CDS.
+   1) Added PS and ME systematics for ttbar sample as well as correlated systematics for the FCNC top decay signal.
+   2) Updated the plots to use the top group blinding strategy. 
+   
+   We also included the answers to your questions below as starting "===>" and let us know
+   in case of any further questions.
+
+   thanks,
+   FCNC Htautau Analysis team.
+   
+Dear Analysis team, 
+
+Thank you for the updated note! We went through it quickly and we have a few main comments that we would like to try to address/consider
+before we proceed with the EB request. We will post more detailed and less critical comments towards the end of the week. 
+
+===> Thanks
+
+1- Systematic uncertainties:
+
+Section 11.4 Theoretical uncertainties on the background - mainly on ttbar
+
+Any reason to not first consider the samples we have for the generator/ME uncertainty ?  you mention on line 845-847 that you want to 
+consider using the Sherpa samples which we assume are the new Sherpa 2210 samples since the older version os Sherpa (221) is not available 
+for mc16e. We are happy to see that you plan to explore these new samples but as you might already know we are still waiting on the MC-to-MC SFs. 
+Meanwhile why don't you try the various options we have with the available samples? any reason not to? We have samples to try these various 
+options: 
+
+===> Thanks for the suggestions and we have implemented PS and ME ttbar systematics in V5 Line 852-860
+
+a- PW+PY8 vs amc@NLO+PY8 (which is disfavoured due to MEC on/off in the different setups)
+
+b- amc@NLO+PY8 versus amc@NLO+H7
+
+c- PW+PY8* versus amc@NLO+PY8 (MEC is handled the same in both setups).
+
+===>Done, the difference between aMCPythia(410464/5) and MECoff(411288/9) used as "ME"
+
+Also, for the parton shower uncertainty we do have the samples and we don't expect anything to change with respect to the recommended 
+PW+PY8 versus PW+H7. Any reason to not include this already? 
+
+===> Done, the difference between nominal(410470) and PW+H7(410557/8) used as "PS"
+
+Section 11.5 Uncertainties in the signal modelling
+
+You only mention PDF, alpha_s, ISR, FSR, and scale. Any plans to include parton shower or generator/ ME uncertainty? 
+Do you plan to request samples? If so we encourage you to start with the MC request. As you know, MC requests take some time. 
+
+===> Yes, we have included the parton shower and generator/ME uncertainties derived from the ttbar sample for the signal.
+     They are treated fully correlated between ttbar and signal in the fit. See Lines 866-869 in V5. 
+     
+2- Blinding strategy (section 4.5)
+
+You mention on line 194 that the blinding threshold is quantified as significance reaching 1sigma when assuming B(t->Hq) is 0.2%. Any reason to not consider the recommended blinding strategy by the TOP group which is simply blinding bins where MC S/B > 0.1? Did you study this option and decided to not use it? If, so please add some explanation in the note. 
+
+===> We have changed our blinding strategy to follow the top group recommendation, see Line 202-204 in V5.

@@ -1,0 +1,54 @@
+Dear conveners,
+
+Thank you so much for your thoughtful comments. 
+We have uploaded version 4.0 in CDS with many improvements, which are summarized following:
+1) Modified the note more readable by introducing new set of names for the signal regions (SR) and ttbar control regions (CRtt).
+2) Updated with full systematics.
+3) Improved figures and clarified a few statements as well as a few bug fixes.
+
+We have also included the answers to your questions below as starting "===>" and
+let us know in case of any further questions.
+
+Thanks,
+
+-Weiming for the team. 
+
+
+With regards to the plots - this is just a matter of finding the right parameters for the layout of the histogram.  Generally your problems can be solved by 'zooming out' somewhat, we would advise to take a look at other analyses' INT notes to see how their plots are structured - it is possible to fit a lot more information even onto a single histogram and also to maintain the readability.  You could take a look at Figure 5 (page 30, or many others) in the FCNC tZq note for an example https://cds.cern.ch/record/2712343/files/ATL-COM-PHYS-2020-191.pdf .  You also have the option to make the plots themselves larger if this helps, but that should not be necessary to just fit the relevant information on.  If you are using ROOT, you should use the AtlasStyle class in the AtlasStyle.cxx and AtlasStyle.h.  If you are using Python, we believe that there are multiple adaptions of that particular style for PyROOT, Matplotlib etc. by other members of the collaboration.
+===>Thanks for your suggestions. Yes, we are actually using the ATLAS style indeed. We have tried to merge some backgrounds together to simplify the figure with fewer legend.
+    In any case, the figures have been updated and improved.    
+
+Apologies for the wrong reference in this statement: "The same argument holds for the definition of the QCD regions in Section 7.2." It was meant to refer to Section 9.2. Could you please add information here that shows that the QCD regions are orthogonal to the SRs?
+===>The QCD regions are defined in L657-660 in V4.0 with met<20 GeV, or met>29 GeV, but not isolated, compared to SRs (met>20 GeV and isolated). 
+
+L581 "space usage" = "disk space usage" ?
+===>Yes, Fixed
+
+L593-594 The same CR has been listed 4 times
+===>Fixed in L601 in V4.0
+
+L599 We think this reference should be to Figure 24, not Figure 23
+===>Fixed
+
+~~~~~~Added to the text: The OLR and MET calculation procedure in hadronic channels are more forgiving in terms of taus since there are constantly two hadronic taus, and in the fake estimation, the loose taus are used. This way we can benefit from better statistics. While in the leptonic channels, due to the super high statistics, we are not be able to save loose taus due to the limitation of the computing resources. The loose taus are not used in the leptonic channels, and the fakes are calibrated in the control regions with medium taus."
+-> Thank you for adding this explanation. We are afraid that limited computing resources is a rather weak argument for using two different object selections in one analysis. Can you make a physics argument?
+===>Sorry for the confusion. In fact, the loose taus are actually used for OLR and MET calculation in the leptonic channels, which is recommended. While in the hadronic channels, the very loose taus candidates are also used up to two leading taus in order to estimate the QCD fakes properly based on Fake-Factor (FF) method. See L358-361 in V4.0. 
+
+- l.316: Can you motivate (with a plot for example) that the smallest-dR jet is a good choice as the jet coming from the FCNC decay?
+~~~~~~The FCNC decaying jet has no reason to be close to other jets and it's from top decay which should be hard enough. The t->qH->qtautau. The 2 tau candidates are reconstructed as lepton or hadronic taus so the jet is obviously on its own.
+Follow-up: Please add this chain of argumentation to the note.
+~~~~~Added
+-> As a general note, when you tell us that content has been added can you please point to the exact line number of where it exists in the newest version? Otherwise we have to hunt for it.  We cannot see any difference in this text between version 2 and version 4 ("FCNCSupport.pdf").
+===>The delta R between di-tau and FCNC jet vs other jets are plotted in Figure 4 that the top decay products are likely boosted close together than other jets in the event.
+    The text is updated in L404 in V4.0
+
+"In the final fit, we do not use this error. What we do is to take the difference between two medians, the 0.1 is not used and we are not interested in it, same as the errors in "Table 21: FF derived in SS CR." and "Table 22: FF derived in OS CR."."
+-- The difference of two medians? Which medians? Could you please extend on this response a little or clarify where in the text it is most clearly explained? Please also state clearly in the captions of the tables that these uncertainties are not used.
+===>We took the Fake-Factor (FF) difference between the default from Htautau group  and the ones derived in SS CR and OS CR as part of systematic. The text is added in
+    the caption of Table 19 and 20 to make it clear in P68 in V4.0 
+
+- Once you have more systematic uncertainties included, you will also need to add a background-only to those bins that you do not blind in addition to the Asimov fit.
+Follow-up: Did you already start working on this part?
+~~~~~~We are still working on the systematics. Although I think I need more explanation for this comment. What do you mean by "add a background-only to those bins that you do not blind"?
+-> "background-only fit" - sorry for the typo
+===>The "background-only fit" are added in Figure 38-40 for 7 signal channels in V4.0 
