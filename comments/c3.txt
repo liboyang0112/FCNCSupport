@@ -25,18 +25,12 @@ L599 We think this reference should be to Figure 24, not Figure 23
 ~~~~~~We had a double check, loose taus are actually used for OLR and MET calculation in the leptonic channels, which is recommended. While in the hadronic channels, taus failing the loose selection are also used because this way we can have more statistics to calculate the FFs and also be consistent with the FF derivation in the SM Htautau analysis. This part is rephrased in the note. Please let us know if this is persuasive enough.
 
 - l.316: Can you motivate (with a plot for example) that the smallest-dR jet is a good choice as the jet coming from the FCNC decay?
-~~~~~~The FCNC decaying jet has no reason to be close to other jets and it's from top decay which should be hard enough. The t->qH->qtautau. The 2 tau candidates are reconstructed as lepton or hadronic taus so the jet is obviously on its own.
-Follow-up: Please add this chain of argumentation to the note.
-~~~~~~Added
--> As a general note, when you tell us that content has been added can you please point to the exact line number of where it exists in the newest version? Otherwise we have to hunt for it.  We cannot see any difference in this text between version 2 and version 4 ("FCNCSupport.pdf").
-~~~~~~Sorry I forgot to save the changes. Added in L503-504
+~~~~~~added a delta R figure.
 
 "In the final fit, we do not use this error. What we do is to take the difference between two medians, the 0.1 is not used and we are not interested in it, same as the errors in "Table 21: FF derived in SS CR." and "Table 22: FF derived in OS CR."."
 -- The difference of two medians? Which medians? Could you please extend on this response a little or clarify where in the text it is most clearly explained? Please also state clearly in the captions of the tables that these uncertainties are not used.
-~~~~~~Added explanation in L715, L720 and captions.
+~~~~~~Added explanation in Table 19 and 20 captions.
 
 - Once you have more systematic uncertainties included, you will also need to add a background-only to those bins that you do not blind in addition to the Asimov fit.
 Follow-up: Did you already start working on this part?
-~~~~~~We are still working on the systematics. Although I think I need more explanation for this comment. What do you mean by "add a background-only to those bins that you do not blind"?
--> "background-only fit" - sorry for the typo
-~~~~~~Sure, we will add them when systematics are ready.
+~~~~~~Added in Figure 38-40
