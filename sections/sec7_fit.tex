@@ -3,7 +3,7 @@
 
 The parameter of interest in this search is the signal strength of the FCNC interactions, BR($t\to Hq$) and corresponding production mode cross section. The statistical analysis of the data employs a binned likelihood function constructed as the product of Poisson probability terms, in bins of the BDT output.
 
-To take into account the systematic uncertianties associated with the MC estimation from different sources for both the signal and background samples, the fit model incorporates these systematics as extra Gaussian or Log-Normal constraint terms multiplied with the combined likelihood. The fitted central values and errors of the systematics parameters, or NPs, are expected to follow a normal distribution centered around 0 with unit width, when the Asimov data is used. The fit model construction is obtained with the \texttt{RooFit} and \texttt{RooStats} software, and the model configuration and persistence files (as input to \texttt{RooStats}) are produced by \texttt{TRExFitter} \cite{TRExFitter}, which is a software package interface with \texttt{HistFactory}. The \texttt{TRExFitter} includes additional features such as histogram smoothing, NP pruning and error symmetrization before the fits.
+To take into account the systematic uncertianties associated with the MC estimation from different sources for both the signal and background samples, the fit model incorporates these systematics as extra Gaussian or Log-Normal constraint terms multiplied with the combined likelihood. The fitted central values and errors of the systematics parameters, or NPs, are expected to follow a normal distribution centered around 0 with unit width, when the Asimov data is used. The fit model construction is obtained with the \texttt{RooFit} and \texttt{RooStats} software, and the model configuration and persistence files (as input to \texttt{RooStats}) are produced by \texttt{TRExFitter} \cite{TRExFitter}, which is a software package interface with \texttt{HistFactory}. The \texttt{TRExFitter} includes additional features such as histogram smoothing, NP pruning (as shown in Figure \ref{fig:xTFW_pruning}-\ref{fig:tthML_pruning_2}) and error symmetrization before the fits.
 %A procedure called local symmetrization to the systematic variational histograms is implemented to semmetrize bins with one-sided variations which may cause problems in the fit.
 
 The correlated bin-by-bin histogram variation corresponds to the up and down variation of each NP. The independent bin-by-bin fluctuations in the combined MC templates are also treated as NPs. They are incorporated in the model as extra Poisson constraint terms, and are expected to have a fitted value of 1 and a fitted error reflecting the relative statistical error in each particular bin. There is one parameter of interest (POI) freely floating in the fit without any constraints, namely, the signal strength $\mu$ (\texttt{SigXsecOverSM}) which is a multiplicative factor on a presumed branching ratio of BR($t\to Hq$)=$0.2\%$ in this analysis. The errors associated with the different systematics will be properly propogated to the fitted error of $\mu$ in a simultaneous fit of multiple regions via a profiled likelihood scan by the minimization program \texttt{MINUIT}. 
@@ -16,7 +16,7 @@ Normalization and shape systematics whose impact is less than $1\%$ are removed 
 
 %The NP ranking and constraints can be qualitatively understood from the variations of the BDT distributions due to the relevant NPs. Figures \ref{fig:NPvar_rank_data_a}-\ref{fig:NPvar_rank_data_d} show the systematic variations due to the top ranked NPs. %All of them cause large variations in the high-BDT signal region, hence are ranked high. The \texttt{THEORY\_RADIATION} is also constrained to $<80\%$ due to bins where the systematic variation is much bigger than the statistical one. However, after smoothing, this NP is not constrained any more. 
 
-%The latter two cause large variation in the signal region, but small variation in the low BDT background region. Thus, they have large impact on the fitted signal strength but are not much constrained by the fit. The first one causes large variations in the background region, but it is an overall shift effect which can be adjusted by the fit through the floating normalization factors of the fake. Therefore, this NP is not constrained either. The \texttt{NOS\_TOPFRAC\_LH} only affects the $\tlhad$ channel, so the variation in $\thadhad$ is null. It causes up to $10\%$ bin-by-bin variations in both the signal and the background regions, which explains why it has a high ranking and is constrained at the same time.
+%The latter two cause large variation in the signal region, but small variation in the low BDT background region. Thus, they have large impact on the fitted signal strength but are not much constrained by the fit. The first one causes large variations in the background region, but it is an overall shift effect which can be adjusted by the fit through the floating normalization factors of the fake. Therefore, this NP is not constrained either. The \texttt{NOS\_TOPFRAC\_LH} only affects the $\tlhad$ channel, so the variation in hadronic is null. It causes up to $10\%$ bin-by-bin variations in both the signal and the background regions, which explains why it has a high ranking and is constrained at the same time.
 %Figure \ref{fig:NPvar_other} shows the systematic variations due to a few constrained NPs, \texttt{JET\_JES\_PILEUP\_RHOTOPOLOGY}, \texttt{TAU\_TES\_INSITU} and \texttt{MET\_SOFTTRK\_RESOPERP}. They cause about $5-20\%$ bin-by-bin variations in the low BDT region, which can be constrained by the background region events. As a result, their impact on the signal is also reduced. Note that \texttt{MET\_SOFTTRK\_RESOPERP} is a one-sided NP, whose upward and downward variations are set to be the same.
 
 Figure~\ref{fig:fcnc_correl_data} shows the correlation matrix for diffrent NPs. Except for self-correlations, and the correlations between the normalization factors (including POI) and the others, all the NPs have relatively small correlations with each other, which justifies the fit models for independent systematics. %Figure \ref{fig:sig_strength} shows the negative logrithm profile likelihood as a function of the signal strength (BR($t\to Hq$)=$1\%$ is assumed), with the $1\sigma$ confidence interval indicated. The best fit signal strength is $1.00_{-0.21}^{+0.25}$.
@@ -40,15 +40,44 @@ Figure~\ref{fig:fcnc_correl_data} shows the correlation matrix for diffrent NPs.
 %\input{\FCNCFigures/tex/xTFW_trexPrefit}
 
 
-
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.45\textwidth]{\FCNCFigures/xTFW/Limit/tuH_NuisPar.pdf}
-\includegraphics[width=0.45\textwidth,trim=0 0 0 0,clip]{\FCNCFigures/tthML/Limit/tuH_NuisPar.pdf}
-\caption{ The pull distributions of asimov fit in $\thadhad$ channels (left) combined and leptonic channels combined (right) in terms of tuH merged signal . }
+\includegraphics[width=0.45\textwidth]{\FCNCFigures/tthML/Limit/tuH_NuisPar.pdf}
+\caption{ The pull distributions of asimov fit in hadronic channels (left) combined and leptonic channels combined (right) in terms of tuH merged signal . }
 \label{fig:fcnc_pull_data}
 \end{figure}
 
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.49\textwidth]{\FCNCFigures/xTFW/Limit/tuH_Pruning_0.pdf}
+\includegraphics[width=0.49\textwidth]{\FCNCFigures/xTFW/Limit/tuH_Pruning_1.pdf}
+\caption{ The NP pruning in hadronic channels. }
+\label{fig:xTFW_pruning}
+\end{figure}
+
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.99\textwidth]{\FCNCFigures/tthML/Limit/tuH_Pruning_0.pdf}
+\caption{ The NP pruning in leptonic channels part 1. }
+\label{fig:tthML_pruning_0}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.99\textwidth]{\FCNCFigures/tthML/Limit/tuH_Pruning_1.pdf}
+\caption{ The NP pruning in leptonic channels part 2. }
+\label{fig:tthML_pruning_1}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.99\textwidth]{\FCNCFigures/tthML/Limit/tuH_Pruning_2.pdf}
+\caption{ The NP pruning in leptonic channels part 3. }
+\label{fig:tthML_pruning_2}
+\end{figure}
 
 %\begin{figure}[htb]
 %\centering
@@ -63,7 +92,7 @@ Figure~\ref{fig:fcnc_correl_data} shows the correlation matrix for diffrent NPs.
 \includegraphics[width=0.45\textwidth]{\FCNCFigures/xTFW/Limit/tuH_Ranking.pdf}
 \includegraphics[width=0.45\textwidth]{\FCNCFigures/tthML/Limit/tuH_Ranking.pdf}
 %\put(-50, 150){\textbf{(a)}}
-\caption{ The asimov fit ranking of the top 30 NPs for $\thadhad$ channels (left) and leptonic channels (right) in terms of tuH merged signal. The scale of the relative impact on $\mu$ (the pull) of the NPs is shown on the top (bottom) axis.}
+\caption{ The asimov fit ranking of the top 30 NPs for hadronic channels (left) and leptonic channels (right) in terms of tuH merged signal. The scale of the relative impact on $\mu$ (the pull) of the NPs is shown on the top (bottom) axis.}
 \label{fig:fcnc_rank_data}
 \end{figure}
 
@@ -72,6 +101,6 @@ Figure~\ref{fig:fcnc_correl_data} shows the correlation matrix for diffrent NPs.
 \includegraphics[width=0.45\textwidth]{\FCNCFigures/xTFW/Limit/tuH_CorrMatrix.pdf}
 \includegraphics[width=0.45\textwidth]{\FCNCFigures/tthML/Limit/tuH_CorrMatrix.pdf}
 %\put(-50, 150){\textbf{(a)}}
-\caption{ The asimov fit correlation matrix ($\%$) of different NPs, with a threshold of $20\%$ for $\thadhad$ channels (left) combined and lepton channels combined (right). }
+\caption{ The asimov fit correlation matrix ($\%$) of different NPs, with a threshold of $20\%$ for hadronic channels (left) combined and lepton channels combined (right). }
 \label{fig:fcnc_correl_data}
 \end{figure}
