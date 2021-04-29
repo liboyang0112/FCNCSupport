@@ -1,0 +1,153 @@
+Dear FCNC Htautau Analysis team, 
+
+Thanks for your follow up comments, updated note and your EB request presentation at the Top+X meeting (https://indico.cern.ch/event/1019180/). Below please find a few follow up comments on your presentation and INT note version 5.0. Given that your analysis is very stat dominated, we split the comments into two parts. Essential comments that need to be addressed before we move on with the EB formation and important comments which can be addressed in parallel or later. 
+
+Please let us know if you have any questions or if any of our comments/suggestions are not clear. 
+
+Cheers,
+
+     Jacob & Nedaa-Alexandra 
+
+
+
+Essential comments to grant EB request
+
+1- Uncertainty on you signal samples: 
+
+-Line 886-869 in your note and a comment in the last update in the Top+X meeting. 
+
+-It is not clear from the text here how and why we should trust the estimation using the ttbar samples and if this is only a normalization uncertainty. You will need to ask for samples with a different shower to properly assess this uncertainty. No need for a ME or generator uncertainty. Can you please request these samples as soon as possible? The EB request can go on while the samples are being produced, but we would like to see an open JIRA ticket 
+
+-Please add a note around line 886-869 that you requested samples and the uncertainty will be properly estimated.
+
+===> https://its.cern.ch/jira/browse/ATLMCPROD-9264
+
+
+2- PS and ME uncertainty: 
+
+- Are you correlating this uncertainty on your signal and background? If so, please decorrelate them and make it clear in the note as well as in the figure. A proposal name for the NP: ttbar PS, ttbar ME, and signal PS
+
+===> Since the signal PS is not ready yet, we removed it's variation in the fit and the PS and ME now only applies to ttbar and renamed as ttbar PS and ttbar ME.
+
+-In your above CDS comments you list the DSIDs of the alternative ttbar samples. Please document these in the note around line 852-858 and mention which version of these samples you are using. 
+
+===> Done
+
+-Line 858: you mention that you compare the amc@NLO+PY8 sample to your default ttbar but from your above comments you are comparing this to a sample that has Matric Element Correction (MEC) set to off. Please correct this and mention the details about these samples in the text. 
+
+===> Done
+
+-Line 856: You are still comparing AFII and FS for the PS and ME uncertainty. Please fix this and compare AFII with AFII. This might be one of the causes for the very high constraints that you see in Figure 41(right) for example (PS and ME NPs). 
+
+===> Using AFII 411288 (PowhegPythia*) compared with PowhegHerwig for PS variation.
+
+
+3- Result and fits:
+
+- Tables 27-29: Are all of the individual processes in these tables the result of separate fits? I.e. Do you perform one fit per row of each Table?  If so, it would be useful to have an appendix to show the pull+constraint, systematic ranking and correlation plots (Figs 41-43) for each separate fit that is performed - as this will be useful for debugging any issues that arise.
+
+===> The background is the same for each different rows so plots for different row provide little information as seen in the appendix for comparison.
+
+-L895: You mentioned that TRExFitter smoothing is used - we understand that you also prune NPs before the fit.  Can you please provide the usual figures which show the pruned NPs? (“Not Present, Kept, Norm Dropped, Shape Dropped, Dropped”)
+
+For an example please see Figures 33-36 (p66-69) in the Hbb note: https://cds.cern.ch/record/2645330/files/ATL-COM-PHYS-2018-1500.pdf
+
+===> Added Figure 42-45
+
+Detailed comments:  
+
+-Line 274: You still have “XXXXX” When do you expect to update this?
+
+-Line 852: You need to add details about the Herwig 7 sample. Please add the DSIDs you mentioned in your comment on CDS. From your comment it seems you are using Herwig 7.0.X but you can also look into Herwig 7.1.X . The MC-to-MC SFs for the newer PW+H7.1 samples are available for PFlow which you are using in this analysis. Can you please look at these samples given that the PS uncertainty is highest ranked in Figure 42 (right) and very constrained?  
+
+-Line 858: Same comment here! Please add the DSIDs and version of the amc@NLO sample. Also, you are not comparing here with respect to the nominal ttbar PW+PY8 sample since Matrix Element Correction is off (MECoff) according to the comment from Boyang. All this info should be explained. 
+
+-There is no mention of hdamp uncertainty. Did you have a look at it? In other analysis the generator uncertainty (PW vs amc@NLO) was not used and instead an uncertainty on hdamp is used (example FCNC H(bb)). This will be good check - some studies:
+
+compare the Nuisance parameters with the current fit setup (where you include ME uncertainty) and a fit where you add hdamp in addition
+compare the Nuisance parameters with the current fit setup (where you include ME uncertainty) and a fit where you don’t consider ME uncertainty but an uncertainty on hdamp
+compare the Nuisance parameters with the current fit setup (where you include ME uncertainty) and a fit where you don’t consider ME uncertainty 
+-898-903: You need to comment on some of the Nuisance parameters in Figure 41 and 42. 
+
+-Figure 41: PS and ME are constrained in both right and left figure. Much more constrained in the right figure. Also, FSR is constrained in the right figure. These require additional studies and understanding. Have you checked the red/blue plots? You might want to look at various decorrelation scheme to understand the source of these high constraints 
+
+-Figure 42: PS is very constrained and the first ranked! This needs to be understood
+
+-Line 894: Please mention the smoothing algorithm and this needs to be checked carefully for the theory uncertainty (again check carefully the red/blue plots) 
+
+-Line 904-906 & Figure 43: There are some relatively high correlations; example FSR is correlated with Btag_B_0 at 46%; FSR with scale at about 30%; Fakes from ABCD for electrons are correlated with ABCD muons at 60% … Please comment on these.
+
+-The expected results tables quote many numbers but some are missing or disagree with the text
+
+Table 26 (stat only)
+Leptonic tcH merged: 0.25
+Leptonic tuH merged: 0.19
+Table 27 (with syst)
+Leptonic tcH merged: 0.27
+Leptonic tuH merged: 0.20
+Table 28 (with syst)
+Hadronic tcH merged: 0.49
+Hadronic tuH merged: 0.39
+Table 29 (with syst)
+Total tuH merged: 0.23
+Total tcH merged: 0.17
+-Do you have a table for Hadronic stat only?
+===> added
+- Is it possible to get a hadronic+leptonic combined stat only result (to compare again Table 29) ?
+===> added
+-Is the process for combining the results to create Table 29 described in the note?
+===> added
+-L921 states limits of 0.046 and 0.034 which are double those values referenced in Table 29 - are these values out of date?
+===> The numbers in the texts are limits for decay branching ratio to compare with other searches such as bb. The numbers in the table are in unit of 0.2% branching ratio as mentioned in the captions.
+
+-Even though you are heavily dominated by statistical uncertainties, you appear to constraint the ttbar modelling systematics quite heavily?
+PS may be due to the comparison between AFII and FS - so this should be looked at again.  The constraint is present for both the hadronic and leptonic channels, but is more severe for the leptonic.
+Do you understand why? 
+Can you create some red/blue plots of this systematic shift?
+Are you able to estimate the effect that this level of constraint will have on your final result? [It may be completely negligible still as you are stat dominated]
+ME is constrained in both hadronic and leptonic channels, but is very severe in the leptonic case
+Do you understand why? 
+Can you create some red/blue plots of this systematic shift?  
+Are you able to estimate the effect that this level of constraint will have on your final result? [It may be completely negligible still as you are stat dominated]
+FSR is constrained in the leptonic channel only
+Do you understand why? 
+Can you create some red/blue plots of this systematic shift?  
+Are you able to estimate the effect that this level of constraint will have on your final result? [It may be completely negligible still as you are stat dominated]
+-It would be useful to see red/blue plots of all of the systematics which you constrain with some note on whether this is expected and whether you not it will have any effect on the stat dominated limits:
+
+Hadronic:
+PS
+ME
+Leptonic:
+Scale
+TES_DETECTOR
+PS
+ME
+FSR
+ABCD electron
+
+===> In the leptonic channels, all background is modelled by MC, especially ttbar. The PS ME and FSR variation affects a lot since it is applied to ttbar MC.  While in hadronic channels, only ttbar with real taus are modelled by MC and this contribution is small as shown in the plots. The systematics only applies to a small fraction of events, so even if it may have large difference on the sample, the constrain is still small. In addition the statistics in leptonic channels are much higher leaving less space to compensate with stats uncertainty.
+The red/blue plots are added in the appendix.
+
+-Fig 41 shows the PDF uncertainty as a single NP. Is this the signal PDF uncertainty or the ttbar background PDF uncertainty? On L838 you mention that you take an envelope of 100 variations. However this is not inline with what FCNC H(bb) is doing. It might be a good idea to harmonize this between both analyses. Please have a look at section 8.10 in the H(bb) note https://cds.cern.ch/record/2645330/files/ATL-COM-PHYS-2018-1500.pdf 
+
+
+
+Comments that came up during your presentation:  
+
+Some of these comments overlap with the above comments but they are listed here for completeness: 
+
+Please make the plots clearer from slide 10 to specify that the definition of ttbar here is slightly different than the definition of ttbar from slide 9.
+Please improve the captions on Figures 25-27 to ensure that readers are aware that the process labelled “tt” here is not the same entire tt process as present in Figure 24.  Perhaps adjust the legend / colour scheme for ttbar if this helps.
+Is the weighted average of the QCD estimates documented in the INT note?
+L667 Please explain explicitly in the note how the combination of the QCD transfer factors is performed
+Is it safe to assume that there are no fake taus above 60 GeV on slide 22?
+Is there any way in the fake factor derivations for the negative fake factors from slide 22 to affect the other bins?
+Answer: No
+Table 21/22:  How did you decide on the threshold of importance for each input parameter? How do you define numerically if the two-fold importance outputs agree robustly? Some of the numbers presented appear quite different.
+PS and ME are heavily constrained.  Have you investigated this? Have you tried decorrelation between regions? Is it safe with bin-by-bin SFs?  Will having mu=1 on your signal and the PS correlated between signal and background cause these sorts of constraints?
+Are you comparing AFII vs FS in ttbar by accident for your systematics?
+Answer: Yes for PS
+Follow up: This is ranked as the largest systematic for the leptonic channels, and the 5th largest for the tau_had tau_had channels.  I think it is reasonable for us to ask that they fix this and update the plots before we grant the EB.
+Does Herwig 7.0.4 need to be updated? Maybe Herwig 7.2.1?
+Wolfgang's Wilson coefficient question:  Please document in your INT note the exact process for the equations when you set 'C = 1', are you double-counting w.r.t FCNC H(bb) ? Is it really safe to say that the LH and RH production (or decay) modes are in complete agreement? Can you consider them together?
