@@ -48,7 +48,7 @@ Essential comments to grant EB request
 
 - Tables 27-29: Are all of the individual processes in these tables the result of separate fits? I.e. Do you perform one fit per row of each Table?  If so, it would be useful to have an appendix to show the pull+constraint, systematic ranking and correlation plots (Figs 41-43) for each separate fit that is performed - as this will be useful for debugging any issues that arise.
 
-===> The background is the same for each different rows. For each channel, we perform individual fit. There are four channels, and two merged channels, all individual fit,pull+constraint are added in the appendixE.
+===> The background is the same for each different rows. For each channel, we perform individual fit. There are four channels, and two merged channels, all individual fit,pull+constraint are added in the appendixE.Making a ranking plot is a time-consuming task and we will add these ranking plots once we have all the correct ttbar systematic samples
      Let us know if additional information needed. 
 
 -L895: You mentioned that TRExFitter smoothing is used - we understand that you also prune NPs before the fit.  Can you please provide the usual figures which show the pruned NPs? (“Not Present, Kept, Norm Dropped, Shape Dropped, Dropped”)
