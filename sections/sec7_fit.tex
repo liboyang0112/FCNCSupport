@@ -14,6 +14,8 @@ Figure~\ref{fig:fcnc_rank_data} shows the ranking of the 30 top NPs along with t
 Figure~\ref{fig:fcnc_pull_data} shows the pull distributions of all NPs in asimov fit. %The NPs which are constrained less than $80\%$ of their original error are smoothed with the default smoothing method in {\texttt TRExFitter}. The pre and post-smoothing distributions of the relevant NPs are given in App. \ref{app:smoothpruneNP}. Similar pull distributions before the NP smoothing are given in Figure \ref{fig:fcnc_pull_nosmooth} of App. \ref{app:smoothpruneNP}.
 Normalization and shape systematics whose impact is less than $1\%$ are removed from the fit. %The list of removed NPs are given in App. \ref{app:smoothpruneNP}.
 
+It is observed that the NP ``$\bar{t}t$ PS'' is highly constrained. The reason for this is further understood. As shown in App. \ref{sec:decor}, the constraint is originated from signal regions with high statistics especially$t_h\tlhad 3j$. The NP impact on the background is shown in Figure \ref{fig:tthML_ttbarPS}. It is clear that the NP variation is around 2.5\% which is quite significant compared to the statistical uncertainty in the low BDT region. By inspecting the correlation matrix, the NP ``$\bar{t}t$ PS'' doesn't have large correlation with other NP, causing the constraints hardly released.
+
 %The NP ranking and constraints can be qualitatively understood from the variations of the BDT distributions due to the relevant NPs. Figures \ref{fig:NPvar_rank_data_a}-\ref{fig:NPvar_rank_data_d} show the systematic variations due to the top ranked NPs. %All of them cause large variations in the high-BDT signal region, hence are ranked high. The \texttt{THEORY\_RADIATION} is also constrained to $<80\%$ due to bins where the systematic variation is much bigger than the statistical one. However, after smoothing, this NP is not constrained any more. 
 
 %The latter two cause large variation in the signal region, but small variation in the low BDT background region. Thus, they have large impact on the fitted signal strength but are not much constrained by the fit. The first one causes large variations in the background region, but it is an overall shift effect which can be adjusted by the fit through the floating normalization factors of the fake. Therefore, this NP is not constrained either. The \texttt{NOS\_TOPFRAC\_LH} only affects the $\tlhad$ channel, so the variation in hadronic is null. It causes up to $10\%$ bin-by-bin variations in both the signal and the background regions, which explains why it has a high ranking and is constrained at the same time.
@@ -22,26 +24,9 @@ Normalization and shape systematics whose impact is less than $1\%$ are removed 
 Figure~\ref{fig:fcnc_correl_data} shows the correlation matrix for diffrent NPs. Except for self-correlations, and the correlations between FSR and Btag\_B\_0 with 46\%,
 FSR with scale at 30\%, and Fakes from ABCD for electron and muon at -60\%, all other NPs have relatively small correlations with each other, which justifies the fit models for independent systematics. These high correlations are due to the fact that the FSR has significant impact on the low b-jet pT as well as the yields of selected
 $t\bar t$ events; Similarly, the number of electron and muon fakes are constrains by the sum in the fit.   
-%Figure \ref{fig:sig_strength} shows the negative logrithm profile likelihood as a function of the signal strength (BR($t\to Hq$)=$1\%$ is assumed), with the $1\sigma$ confidence interval indicated. The best fit signal strength is $1.00_{-0.21}^{+0.25}$.
 
-
-%\begin{figure}[htb]
-%\centering
-%\includegraphics[width=0.6\textwidth]{\FCNCFigures/fit/4_mu.pdf}
-%\caption{ The best fit values of BR($t\to Hq$) in different channels from the S+B data fit. }
-%\label{fig:4_mu}
-%\end{figure}
-%
-%\begin{figure}[htb]
-%\centering
-%\includegraphics[width=0.6\textwidth]{\FCNCFigures/fit/sig_inj.pdf}
-%\caption{ The best fit values of BR($t\to Hq$) from the S+B data fit, with different amount of FCNC signal injected into the real data. The blue %dashed line indicates the expected linear relation between the fitted and injected signal. }
-%\label{fig:sig_inj}
-%\end{figure}
 \input{\FCNCFigures/tex/tthML_trexPrefit}
 \input{\FCNCFigures/tex/xTFW_trexPrefit}
-%\input{\FCNCFigures/tex/xTFW_trexPrefit}
-
 
 \begin{figure}[htb]
 \centering
@@ -89,19 +74,10 @@ $t\bar t$ events; Similarly, the number of electron and muon fakes are constrain
 \label{fig:tthML_pruning_2}
 \end{figure}
 
-%\begin{figure}[htb]
-%\centering
-%\includegraphics[width=0.45\textwidth,trim=0 250 0 300,clip]{\FCNCFigures/tthML/Limit/tuH_NuisPar.pdf}
-%\includegraphics[width=0.45\textwidth,trim=0 0 0 550,clip]{\FCNCFigures/tthML/Limit/tuH_NuisPar.pdf}
-%\caption{ The pull distributions of asimov fit in leptonic channels combined for the rest of NPs in terms of tuH merged signal. }
-%\label{fig:fcnc_pull_data}
-%\end{figure}     
-
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.45\textwidth]{\FCNCFigures/xTFW/Limit/tuH_Ranking.pdf}
 \includegraphics[width=0.45\textwidth]{\FCNCFigures/tthML/Limit/tuH_Ranking.pdf}
-%\put(-50, 150){\textbf{(a)}}
 \caption{ The asimov fit ranking of the top 30 NPs for hadronic channels (left) and leptonic channels (right) in terms of tuH merged signal. The scale of the relative impact on $\mu$ (the pull) of the NPs is shown on the top (bottom) axis.}
 \label{fig:fcnc_rank_data}
 \end{figure}
@@ -110,7 +86,6 @@ $t\bar t$ events; Similarly, the number of electron and muon fakes are constrain
 \centering
 \includegraphics[width=0.45\textwidth]{\FCNCFigures/xTFW/Limit/tuH_CorrMatrix.pdf}
 \includegraphics[width=0.45\textwidth]{\FCNCFigures/tthML/Limit/tuH_CorrMatrix.pdf}
-%\put(-50, 150){\textbf{(a)}}
 \caption{ The asimov fit correlation matrix ($\%$) of different NPs, with a threshold of $20\%$ for hadronic channels (left) combined and lepton channels combined (right). }
 \label{fig:fcnc_correl_data}
 \end{figure}
