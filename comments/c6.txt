@@ -1,0 +1,193 @@
+Dear convenors, 
+
+    Thank you so much for your comments. We have addressed some of your main concerns and uploaded the inter-note V5.2 in CDS
+       1. Use AFII 410470 vs AFII PowhegHerwig7.0 (410557/410558) for PS uncertainty.
+       2. Decorrelated	   the PS uncertainty between signal and ttbar background. 
+       3. Added appendice F. the decorrelation studies between different signal regions to understand the source of over-constraining.
+       4. Fixed reference format.
+    We also included the replies below by starting "===+++>".
+
+    Cheers 
+   FCNC Htautau Analysis team
+
+Dear all,
+
+Thank you for the fast response.  We have reduced our list of major issues as a result but believe there is still a follow-up which should be completed.  
+All of the major comments however resolve around the same single issue, the estimation of the PS uncertainty.  
+Once this is resolved we will be happy to move forward.
+
+Best regards,
+Nedaa-Alexandra and Jacob
+
+===+++> That would be great, thanks. 
+
+Major Comments:
+
+2- PS and ME uncertainty: 
+
+- Are you correlating this uncertainty on your signal and background? If so, please decorrelate them and make it clear in the note as well as in the figure. 
+A proposal name for the NP: ttbar PS, ttbar ME, and signal PS
+
+===> Since the signal PS is not ready yet, we will update the results once the new PW+HW7 signal sample is available.
+
+    We still would like to see if the constraint is decreased when the uncertainty between signal and ttbar is decorrelated, even with the wrong signal PS uncertainty 
+presently applied.  This is because the constraint is so extreme, we need to make some steps towards understanding it.  We understand that you will still then modify 
+the signal PS uncertainty itself later on.
+
+===+++> We have decorrelated the PS uncertainty between the signal and background in the fit, see L889-895 in V5.2 
+        as well as the ranking plot in Figure 47.
+
+ 
+
+-Line 856: You are still comparing AFII and FS for the PS and ME uncertainty. Please fix this and compare AFII with AFII. This might be one of the causes for 
+the very high constraints that you see in Figure 41(right) for example (PS and ME NPs). 
+
+===> Using AFII 411288 (PowhegPythia*) compared with PowhegHerwig (410557/8) for PS variation.
+ 
+
+    Unfortunately we believe that the treatment is still inconsistent for some ttbar modelling systematics, specifically:
+        For the parton shower you need to compare Powheg+PYthia8 (410470) AFII with Powheg+H.7.0.4 (410557, 410558)  [or H7.1.3 with DSIDs 411233, 411234] AFII.
+        For the generator uncertainty there are multiple ways to evaluate this uncertainty which avoid issues with whether or not 
+        the Matrix Element correction (MEC) is set in particular samples:
+            In the nominal Powheg+Pythia8 sample (410470) MEC is set to ON, but this is not the case for the amc@NLO+Pythia8 sample with DSIDs 410464-410465 (MEC is OFF).
+            In order to better understand this uncertainty an additional Powheg+Pythia8 sample was produced with MEC set to OFF to match the setting in 
+            the amc@NLO+Pythia8 samples which we recommended to you to try.  For this test you need to compare instead Powheg+Pythia8 AFII samples with DSIDs 
+            411288-411289 and amc@NLO+Pythia8 samples with DSIDs 410464-410465. 
+            (In later comments we suggest a test with dropping the generator uncertainty and adding an uncertainty on hdamp, but this is not urgent.  
+            As a note: the H(bb) does not consider the difference between Powheg and amc@NLO as an uncertainty on their ttbar background.) 
+
+ 
+====+++> ttbar PS is updated by comparing Powheg+PYthia8 (410470) AFII with Powheg+H.7.0.4 (410557, 410558) in L870-874 in V5.2. 
+         The MEC uncertainty is also included in the fit by comparing Powheg+Pythia8 AFII 411288-411289 and amc@NLO+Pythia8 410464-410465. in V875-878. 
+         But MEC is not ranked high and  would not make a difference if we include it or not in the final fit.   
+ 
+ 
+
+-Line 852: You need to add details about the Herwig 7 sample. Please add the DSIDs you mentioned in your comment on CDS. From your comment it seems you are using Herwig 7.0.X but you can also look into Herwig 7.1.X . The MC-to-MC SFs for the newer PW+H7.1 samples are available for PFlow which you are using in this analysis. Can you please look at these samples given that the PS uncertainty is highest ranked in Figure 42 (right) and very constrained?  
+
+===> We will add checks with DSIDs=411233/4 for PW+H7.1 for PS uncertainties once the samples is available.
+
+    When these are ready, be sure to compare these Herwig samples against the Powheg+Pythia8 nominal sample with DSID 410470 (see above comment). 
+    This is not an EB request blocker as waiting on samples.
+
+
+===+++>We have DSIDs=411233/4 in hand and will update in next version along with the new signal samples in PW+H7.1.   
+
+
+There is no mention of hdamp uncertainty. Did you have a look at it? In other analysis the generator uncertainty (PW vs amc@NLO) was not used and instead an uncertainty 
+on hdamp is used (example FCNC H(bb)). This will be good check - some studies:
+
+compare the Nuisance parameters with the current fit setup (where you include ME uncertainty) and a fit where you add hdamp in addition
+
+compare the Nuisance parameters with the current fit setup (where you include ME uncertainty) and a fit where you t consider ME uncertainty but an uncertainty on hdamp
+
+compare the Nuisance parameters with the current fit setup (where you include ME uncertainty) and a fit where you t consider ME uncertainty 
+
+====> We are waiting for the derivation of 410480/410482 with different hdamp and we will do these studies once the sample is available
+
+    Retaining this comment for when the sample is available.  No immediate action required. 
+    This is not an EB request blocker.
+
+ 
+===+++> We included hdamp uncertainty in hadronic channels, but we are still waiting for 410482 for the leptonic channels and will update in next version,
+        see L879-883 in V5.2  
+ 
+
+
+-898-903: You need to comment on some of the Nuisance parameters in Figure 41 and 42.  
+
+-Figure 41: PS and ME are constrained in both right and left figure. Much more constrained in the right figure. Also, FSR is constrained in the right figure. 
+These require additional studies and understanding. Have you checked the red/blue plots? You might want to look at various decorrelation scheme to understand 
+the source of these high constraints 
+
+-Figure 42: PS is very constrained and the first ranked! This needs to be understood
+
+===> We have added most constrained systematics red/blue plots in Appendix D. The over-constrain of ttbar PS, FSR, and ISR is mainly driven by t_h tau_l tau_h+2/3j 
+     where the ttbar contribution is dominated in the leptonic channels while the ttbar contributions is less important in t_h 2tau_h channels.
+
+    Before we look more into these Nuisance parameters you need to be sure that you are using the correct samples as described before. 
+
+    However, s not clear that the constraints are understood based on the given explanations. The red/blue plots t look very bad at a quick look, and we cannot relate 
+    your explanation with regards to the t_h tau_l tau_h+2/3j regions causing the issues to any evidence we can find in the INT note.  How did you diagnose that these 
+    regions are to blame? And do you understand why they are to blame?  We may need to debug the constraints by decorrelating some of the NPs between the different analysis 
+    regions and visually confirm which ones remain constrained after that
+    But this should only be done once the systematic samples have been updated and once the signal/background systematic correlation schemes are updated, in order to not 
+    duplicate work.  It should be done before the EB is formed, but only after you have resolved the PS related comments above.
+
+ 
+===+++> We decorrelated PS in different signal regions as shown in Figure 69 in Appendix F, which indicated the PS is mostly over-constrained by the channels with 
+       large statistics, such as t_h tau_l tau_h +2/3j. The NP will be constrained by asimov data in the low BDT region when the NP variation is relative large at 2.5%. 
+       See the L931 to L940 for the discussion. 
+ 
+
+Minor Comments:
+
+-Line 894: Please mention the smoothing algorithm and this needs to be checked carefully for the theory uncertainty (again check carefully the red/blue plots) 
+
+====> We will add additional red/blue plots in Appendix D if needed.
+
+    This needs to be addressed (please find out which algorithm you use from TRexFitter)
+
+ 
+===+++> ?
+ 
+
+ 
+
+Table 21/22:  How did you decide on the threshold of importance for each input parameter? How do you define numerically if the two-fold importance outputs agree robustly? Some of the numbers presented appear quite different.
+
+    This still needs to be addressed
+
+ 
+===+++> ?
+ 
+
+ 
+
+Wolfgang's Wilson coefficient question:  Please document in your INT note the exact process for the equations when you set 'C = 1', are you double-counting w.r.t FCNC H(bb) ? Is it really safe to say that the LH and RH production (or decay) modes are in complete agreement? Can you consider them together?
+
+    This still needs to be addressed.  Maybe it is ongoing?
+
+ 
+===+++> ?
+ 
+
+ 
+
+-L921 states limits of 0.046 and 0.034 which are double those values referenced in Table 29 - are these values out of date?
+
+===> The limits in the table 29(V5.0) or table 31(V5.1) are the mu value respect to the assumed signal BR of 0.2%
+
+    Ah yes these are consistent! Please alter the caption on the relevant tables to state clearly that this numerical limit represents the mu value (signal strength).  We understood these values initially to be the limits in terms of the BR in %.
+
+ 
+===+++> ?
+ 
+
+ 
+
+-Fig 41 shows the PDF uncertainty as a single NP. Is this the signal PDF uncertainty or the ttbar background PDF uncertainty? On L838 you mention that you take an envelope of 100 variations. However this is not inline with what FCNC H(bb) is doing. It might be a good idea to harmonize this between both analyses. Please have a look at section 8.10 in the H(bb) note https://cds.cern.ch/record/2645330/files/ATL-COM-PHYS-2018-1500.pdf
+
+===> Both signal and background are primarily from ttbar production, and the PDF uncertainties are treated correlated, which seems reasonable. 
+
+    We agree that they are primarily from ttbar, but in the production signal scenario this is not the case - however as the NP does not appear to be constrained we do not suggest changing it at this time. We would still like you to consider how difficult it would be to harmonise the PDF uncertainty technique with H(bb) however, but this is not urgent, it can come later.
+
+ 
+===+++>?
+ 
+
+ 
+
+    Please improve the captions on Figures 25-27 to ensure that readers are aware that the process  here is not the same entire tt process as present in Figure 24.  Perhaps adjust the legend / colour scheme for ttbar if this helps.
+
+    This still needs to be addressed
+
+ 
+===+++>?
+
+
+    References - do you know why the formatting is strange in the references with the text going off of the edge of the page and the paper titles underlined? Can this be fixed please?
+
+ttlabelled donitdondon
+
+===+++> Fixed 
