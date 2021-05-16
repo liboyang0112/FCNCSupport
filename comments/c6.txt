@@ -34,8 +34,8 @@ A proposal name for the NP: ttbar PS, ttbar ME, and signal PS
 presently applied.  This is because the constraint is so extreme, we need to make some steps towards understanding it.  We understand that you will still then modify 
 the signal PS uncertainty itself later on.
 
-===+++> We have decorrelated the PS uncertainty between the signal and background in the fit, see L889-895 in V5.2 
-        as well as the ranking plot in Figure 47.
+===+++> We have decorrelated the PS uncertainty between the signal and background in the fit, see L895-901 in V5.2 
+        as well as the ranking plot in Figure 48.
 
  
 
@@ -57,8 +57,8 @@ the very high constraints that you see in Figure 41(right) for example (PS and M
             As a note: the H(bb) does not consider the difference between Powheg and amc@NLO as an uncertainty on their ttbar background.) 
 
  
-====+++> ttbar PS is updated by comparing Powheg+PYthia8 (410470) AFII with Powheg+H.7.0.4 (410557, 410558) in L870-874 in V5.2. 
-         The MEC uncertainty is also included in the fit by comparing Powheg+Pythia8 AFII 411288-411289 and amc@NLO+Pythia8 410464-410465. in V875-878. 
+====+++> ttbar PS is updated by comparing Powheg+PYthia8 (410470) AFII with Powheg+H.7.0.4 (410557, 410558) in L876-880 in V5.2. 
+         The MEC uncertainty is also included in the fit by comparing Powheg+Pythia8 AFII 411288-411289 and amc@NLO+Pythia8 410464-410465. in L881-886. 
          But MEC is not ranked high and  would not make a difference if we include it or not in the final fit.   
  
  
@@ -90,7 +90,7 @@ compare the Nuisance parameters with the current fit setup (where you include ME
 
  
 ===+++> We included hdamp uncertainty in hadronic channels, but we are still waiting for 410482 for the leptonic channels and will update in next version,
-        see L879-883 in V5.2  
+        see L885-889 in V5.2  
  
 
 
@@ -117,7 +117,7 @@ the source of these high constraints
  
 ===+++> We decorrelated PS in different signal regions as shown in Figure 69 in Appendix F, which indicated the PS is mostly over-constrained by the channels with 
        large statistics, such as t_h tau_l tau_h +2/3j. The NP will be constrained by asimov data in the low BDT region when the NP variation is relative large at 2.5%. 
-       See the L931 to L940 for the discussion. 
+       See the L936 to L946 for the discussion. 
  
 
 Minor Comments:
@@ -129,7 +129,7 @@ Minor Comments:
     This needs to be addressed (please find out which algorithm you use from TRexFitter)
 
  
-===+++> ?
+===+++> Smoothing is set to be 40 for all systematics. Added in the note L927.
  
 
  
@@ -139,17 +139,14 @@ Table 21/22:  How did you decide on the threshold of importance for each input p
     This still needs to be addressed
 
  
-===+++> ?
+===+++> For the BDT training, a fluctuation of the parameter importance is expected for the two folds, especially in the regions with low statistics. From the statistical perspective, the relative large fluctuation of a few numbers is not wierd. If you do a lot of trainings you may find out that each importance follows gaussian distribution, 1-2 sigma fluctuation is normal and 3 sigma difference is still possible. Since we are not motivated enough to go throught this, we only have done two folds and we can only guess the sigma for the importance, by inspecting all numbers. We see that most numbers are close two each other, mostly less than 1. So it is reasonable to assume that the variables with importance large than 1 makes contribution and should be kept.
  
-
- 
-
 Wolfgang's Wilson coefficient question:  Please document in your INT note the exact process for the equations when you set 'C = 1', are you double-counting w.r.t FCNC H(bb) ? Is it really safe to say that the LH and RH production (or decay) modes are in complete agreement? Can you consider them together?
 
     This still needs to be addressed.  Maybe it is ongoing?
 
  
-===+++> ?
+===+++> During the cross section calculation, we added LH and RH samples and devided by 2 so the double counting should be resolved. The RH and LH are compared on the truth level quite a while ago. Plots are added Figure 2.
  
 
  
@@ -161,7 +158,7 @@ Wolfgang's Wilson coefficient question:  Please document in your INT note the ex
     Ah yes these are consistent! Please alter the caption on the relevant tables to state clearly that this numerical limit represents the mu value (signal strength).  We understood these values initially to be the limits in terms of the BR in %.
 
  
-===+++> ?
+===+++> Changed captions.
  
 
  
@@ -173,7 +170,7 @@ Wolfgang's Wilson coefficient question:  Please document in your INT note the ex
     We agree that they are primarily from ttbar, but in the production signal scenario this is not the case - however as the NP does not appear to be constrained we do not suggest changing it at this time. We would still like you to consider how difficult it would be to harmonise the PDF uncertainty technique with H(bb) however, but this is not urgent, it can come later.
 
  
-===+++>?
+===+++> We will fix this with next version when signal Herwig samples are ready.
  
 
  
@@ -183,7 +180,7 @@ Wolfgang's Wilson coefficient question:  Please document in your INT note the ex
     This still needs to be addressed
 
  
-===+++>?
+===+++> Made clear in the Figure 25. These are the only plots that's fake tau inclusive.
 
 
     References - do you know why the formatting is strange in the references with the text going off of the edge of the page and the paper titles underlined? Can this be fixed please?
