@@ -134,19 +134,26 @@ Minor Comments:
 
  
 
-Table 21/22:  How did you decide on the threshold of importance for each input parameter? How do you define numerically if the two-fold importance outputs agree robustly? Some of the numbers presented appear quite different.
+Table 21/22:  How did you decide on the threshold of importance for each input parameter? How do you define numerically if the two-fold importance outputs agree robustly?
+Some of the numbers presented appear quite different.
 
     This still needs to be addressed
 
  
-===+++> For the BDT training, a fluctuation of the parameter importance is expected for the two folds, especially in the regions with low statistics. From the statistical perspective, the relative large fluctuation of a few numbers is not wierd. If you do a lot of trainings you may find out that each importance follows gaussian distribution, 1-2 sigma fluctuation is normal and 3 sigma difference is still possible. Since we are not motivated enough to go throught this, we only have done two folds and we can only guess the sigma for the importance, by inspecting all numbers. We see that most numbers are close two each other, mostly less than 1. So it is reasonable to assume that the variables with importance large than 1 makes contribution and should be kept.
+===+++> For the BDT training, a fluctuation of the parameter importance is expected for the two folds, especially in the regions with low statistics.
+        From the statistical perspective, the relative large fluctuation of a few numbers is not wierd. If you do a lot of trainings you may find out that each
+	importance follows gaussian distribution, 1-2 sigma fluctuation is normal and 3 sigma difference is still possible. Since we are not motivated enough
+	to go throught this, we only have done two folds and we can only guess the sigma for the importance, by inspecting all numbers. We see that most numbers
+	are close two each other, mostly less than 1. So it is reasonable to assume that the variables with importance large than 1 makes contribution and should be kept.
  
-Wolfgang's Wilson coefficient question:  Please document in your INT note the exact process for the equations when you set 'C = 1', are you double-counting w.r.t FCNC H(bb) ? Is it really safe to say that the LH and RH production (or decay) modes are in complete agreement? Can you consider them together?
+Wolfgang's Wilson coefficient question:  Please document in your INT note the exact process for the equations when you set 'C = 1', are you double-counting w.r.t
+FCNC H(bb) ? Is it really safe to say that the LH and RH production (or decay) modes are in complete agreement? Can you consider them together?
 
     This still needs to be addressed.  Maybe it is ongoing?
 
  
-===+++> During the cross section calculation, we added LH and RH samples and devided by 2 so the double counting should be resolved. The RH and LH are compared on the truth level quite a while ago. Plots are added Figure 2.
+===+++> During the cross section calculation, we added LH and RH samples and devided by 2 so the double counting should be resolved. The RH and LH are compared on
+        the truth level quite a while ago. Plots are added Figure 2.
  
 
  
@@ -155,7 +162,8 @@ Wolfgang's Wilson coefficient question:  Please document in your INT note the ex
 
 ===> The limits in the table 29(V5.0) or table 31(V5.1) are the mu value respect to the assumed signal BR of 0.2%
 
-    Ah yes these are consistent! Please alter the caption on the relevant tables to state clearly that this numerical limit represents the mu value (signal strength).  We understood these values initially to be the limits in terms of the BR in %.
+    Ah yes these are consistent! Please alter the caption on the relevant tables to state clearly that this numerical limit represents the mu value (signal strength).
+    We understood these values initially to be the limits in terms of the BR in %.
 
  
 ===+++> Changed captions.
@@ -163,11 +171,15 @@ Wolfgang's Wilson coefficient question:  Please document in your INT note the ex
 
  
 
--Fig 41 shows the PDF uncertainty as a single NP. Is this the signal PDF uncertainty or the ttbar background PDF uncertainty? On L838 you mention that you take an envelope of 100 variations. However this is not inline with what FCNC H(bb) is doing. It might be a good idea to harmonize this between both analyses. Please have a look at section 8.10 in the H(bb) note https://cds.cern.ch/record/2645330/files/ATL-COM-PHYS-2018-1500.pdf
+-Fig 41 shows the PDF uncertainty as a single NP. Is this the signal PDF uncertainty or the ttbar background PDF uncertainty? On L838 you mention that you
+take an envelope of 100 variations. However this is not inline with what FCNC H(bb) is doing. It might be a good idea to harmonize this between both analyses.
+Please have a look at section 8.10 in the H(bb) note https://cds.cern.ch/record/2645330/files/ATL-COM-PHYS-2018-1500.pdf
 
 ===> Both signal and background are primarily from ttbar production, and the PDF uncertainties are treated correlated, which seems reasonable. 
 
-    We agree that they are primarily from ttbar, but in the production signal scenario this is not the case - however as the NP does not appear to be constrained we do not suggest changing it at this time. We would still like you to consider how difficult it would be to harmonise the PDF uncertainty technique with H(bb) however, but this is not urgent, it can come later.
+    We agree that they are primarily from ttbar, but in the production signal scenario this is not the case - however as the NP does not appear to be
+    constrained we do not suggest changing it at this time. We would still like you to consider how difficult it would be to harmonise the PDF uncertainty
+    technique with H(bb) however, but this is not urgent, it can come later.
 
  
 ===+++> We will fix this with next version when signal Herwig samples are ready.
@@ -175,7 +187,8 @@ Wolfgang's Wilson coefficient question:  Please document in your INT note the ex
 
  
 
-    Please improve the captions on Figures 25-27 to ensure that readers are aware that the process  here is not the same entire tt process as present in Figure 24.  Perhaps adjust the legend / colour scheme for ttbar if this helps.
+    Please improve the captions on Figures 25-27 to ensure that readers are aware that the process  here is not the same entire tt process as present in Figure 24.
+    Perhaps adjust the legend / colour scheme for ttbar if this helps.
 
     This still needs to be addressed
 
@@ -183,7 +196,8 @@ Wolfgang's Wilson coefficient question:  Please document in your INT note the ex
 ===+++> Made clear in the Figure 25. These are the only plots that's fake tau inclusive.
 
 
-    References - do you know why the formatting is strange in the references with the text going off of the edge of the page and the paper titles underlined? Can this be fixed please?
+    References - do you know why the formatting is strange in the references with the text going off of the edge of the page and the paper titles underlined?
+    Can this be fixed please?
 
 ttlabelled donitdondon
 
