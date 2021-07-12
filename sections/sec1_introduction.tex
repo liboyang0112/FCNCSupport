@@ -51,10 +51,10 @@ the SR BDT is used in a profile-likelihood fit in order to extract limits on the
 \label{sec:SRs}
 As shown in the Figure \ref{fig:diagrams} in the final states containing $tt(qH)$ and $tH$, depending on the production modes and
 the decay of $W$ boson hadronically and leptonically from the $t\to Wb$ decay referred as $t_h$ and $t_l$,
-the signal is split into 4 kinds of final states as shown in Table \ref{tab:signalevents}. The $\Htautau$ decay are detected to be in either $\tlhad$ or $\thadhad$ final states when the top decays hadronically ($t_h$) and only in $\thadhad$ when the top decay leptonically ($t_l$). The decay of $H\to\tll$ is dropped because this final state will be considered in the multi-lepton analysis. The decay of $H\to\tlhad$ is also dropped when top decay leptonically because in this case, the lepton fake could be important when both leptons have same-sign charge
+the signal is split into 4 kinds of final states as shown in Table \ref{tab:signalevents}. The $\Htautau$ decay are required to be in either $\tlhad$ or $\thadhad$ final states when the top decays hadronically ($t_h$) and only in $\thadhad$ when the top decay leptonically ($t_l$). The decay of $H\to\tll$ is dropped because this final state will be considered in the multi-lepton analysis. The decay of $H\to\tlhad$ is also dropped when top decay leptonically because in this case, the lepton fake could be important when both leptons have same-sign charge
 and the overlap of the fake lepton and fake taus can be difficult to estimate.
 
-Due to the low statistics in $t_lH$ and $t_lt(qH)$ processes, they are merged into a single region $t_l\thadhad$ where there is no light jet multiplicity requirement and the two $\tauhad$ are required to have opposite-sign charge. However there is a sizeable fraction of these events that one of the taus fails the reconstruction and remains as a jet or goes missing due to
+Due to the low statistics in $t_lH$ and $t_lt(qH)$ processes, they are merged into a single region $t_l\thadhad$ where there is no light jet multiplicity requirement and the two $\tauhad$ are required to have opposite-sign charge. However there is a sizeable fraction of these events in which one of the taus fails the reconstruction and remains as a jet or goes missing due to
 the low tau reconstruction efficiency. So the $t_l\thad$-1j and $t_l\thad$-2j are also included as signal regions where the lepton from $t_l$ and $\thad$ are required to have same-sign
 charge in order to reduce $t\bar t$ background. For the $t_hH$ and $t_ht(qH)$ channels, the two tau candidates from the $\Htautau$ decay (including both $\tlhad$ and $\thadhad$) are required to have opposite-sign charge.  
 
@@ -104,7 +104,7 @@ $t_h\tlhad$-3j   & 1     & $\ge3$ 			& 1      & 1             & $\tlhad$ OS\\ \h
 
 \subsection{Analysis strategy for leptonic channels}
 
-The main background contributing to the leptonic channels, defined in the last section, is top pair production as shown in Figure \ref{fig:intro_pt_raw}. It can either contribute as reducible and irreducible background.
+The main background contributing to the leptonic channels, defined in the last section, is top pair production as shown in Figure \ref{fig:intro_pt_raw}. It can either contribute as reducible or irreducible background.
 
 \input{\FCNCFigures/tex/intro_pt_raw}
 
@@ -139,7 +139,7 @@ in Table \ref{tab:sfcr} and explained in Sec. \ref{sec:sf_method}.
 
 The QCD multi-jets also contribute a small fraction of the reducible background by faking both lepton and taus, especially in the low jet multiplicity region $t_l\tauhad$-1j. This is modelled by the ABCD method by cutting on $\met$ and the lepton isolation variable PLIV defined in Sec. \ref{sec:Pliv} as explained in Sec. \ref{sec:ABCD}.
 
-\subsection{Analysis strategy for in Hadronic channels}
+\subsection{Analysis strategy for the Hadronic channels}
 
 Similar to the leptonic channels, the $t\bar{t}$ also contributes to the hadronic channels as reducible and irreducible background. But in the hadronic channels, much larger contribution is observed both from $Z\to \tau\tau$ plus $b$-jet and from QCD multi-jets  with double fake taus as the excess of data events shown in Figure \ref{fig:intro_os_pre_hadhad}. 
 
@@ -298,7 +298,7 @@ The {\texttt\scriptsize DL1r} \cite{btag1} algorithm is used to identify the jet
 
 % wmyao merging ele and muon as light leptons: introducing tight isolation using PromptLeptonVeto: 
 \subsection{Light leptons}
-Electron candidates are identified by tracks reconstructed in the inner detector and the matched cluster of energy deposited in the electromagnetic calorimeter. Electrons candidates are required to have $E_{\text{T}} > 15$ GeV and $|\eta|<2.47$. The transition region, $1.37<|\eta|<1.52$, between the barrel and end-cap calorimeters is excluded. They are further required to pass a \texttt{loose + b-layer} likelihood-based identification point \cite{ElectronID} and a \texttt{FCLoose} isolation working point \cite{IsolationWP}. The electrions are further removed  if its cluster is affected by the presence of a dead frontend board in the first or second sampling or by the presence of a dead high voltage region affecting the three samplings or by the presence of a masked cell in the core. The electron is required to be consistent with the primary vertex by imposing on the trasverse impact parameter significance ($|d_0|/\sigma_{d0}<5$) and 
+Electron candidates are identified by tracks reconstructed in the inner detector and the matched cluster of energy deposited in the electromagnetic calorimeter. Electrons candidates are required to have $E_{\text{T}} > 15$ GeV and $|\eta|<2.47$. The transition region, $1.37<|\eta|<1.52$, between the barrel and end-cap calorimeters is excluded. They are further required to pass a \texttt{loose + b-layer} likelihood-based identification point \cite{ElectronID} and a \texttt{FCLoose} isolation working point \cite{IsolationWP}. The electrons are further removed  if its cluster is affected by the presence of a dead frontend board in the first or second sampling or by the presence of a dead high voltage region affecting the three samplings or by the presence of a masked cell in the core. The electron is required to be consistent with the primary vertex by imposing on the trasverse impact parameter significance ($|d_0|/\sigma_{d0}<5$) and 
 the longituinal impact parameter ($|\Delta z_0 sin\theta_l|<0.5$ mm) cuts. 
 
 Muon reconstruction begins with tracks reconstructed in the MS and is matched to tracks reconstructed in the inner detector. Muon candidates are required to have $\pt>10$~GeV and $|\eta|<2.5$. A \texttt{Loose} identification selection \cite{MuonSelectionTool} based on the requirements on the number of hits in the ID and the MS is satisfied. A \texttt{FCLoose} isolation \cite{IsolationWP} criterion is also required. The transverse impact parameter requirement for muon is slightly tighter than for electron ($|d_0|/\sigma_{d0}<3$), while the longitudinal impact
@@ -313,7 +313,7 @@ The hadronic tau candidates \cite{tau_sys1} are seeded by jets reconstructed by 
 
 In the hadronic channels, these tau candidates are considered in the overlap removal procedure and missing transverse energy calculation, following the Htautau group \cite{Htautau-note}. In the analysis event selection, the hadronic tau candidates are required to have one or three charged tracks and an absolute charge of one. An identification algorithm based on Recursive Neural Network (RNN) \cite{tau_sys2} is applied to discriminate the visible decay products of hadronically decaying tau lepton $\tauhad$ from jets initiated by quarks or gluons. Different RNN working points are used at different levels depending on the analysis channel. Only events with RNN Medium taus are considered to be signal in the hadronic channels while taus not passing the RNN Medium are only used in the control regions for fake tau estimation.
 
-In the leptonic channels, the taus passing the RNN Loose working point are considered in the overlap removal procedure and missing transverse energy calculation, following the ttW multi-lepton group \cite{ttHMLgroup}, which is more focused on leptons.
+In the leptonic channels, the taus passing the RNN Loose working point are considered in the overlap removal procedure and missing transverse energy calculation, following the ttW multi-lepton analysis \cite{ttHMLgroup}, which is more focused on leptons.
 
 The OLR and MET calculation procedures in hadronic channels are more forgiving in terms of taus since there are constantly two hadronic taus, and in the fake estimation, the taus not passing the RNN Medium are also used. This way we can benefit from better statistics and also be consistent with the W+jet regions used in the SM $\Htautau$ group where the Fake Factors are derived.
 
@@ -329,7 +329,7 @@ The missing transverse energy $\met$ is computed using the fully calibrated and 
 %wmyao add Improved PromptLeptonVeto 
 \subsection{Tight lepton isolation: \texttt{PromptLeptonImprovedVeto}(PLIV)}
 \label{sec:Pliv}
-A dedicated isolation boosted decision tree has been trained to better reject non-prompt leptons and fakes produced in hadron decays~\cite{ATL-COM-PHYS-2018-410}. The main idea is to identify non-prompt light leptons using lifetime information associated with a track jet that matches the selected light lepton. These additional reconstructed charged particle tracks inside the jet can be used to increase the precision of identifying the displaced decay vertex of heavy flavor (b, c) hadrons that produced a non-prompt leptons.
+A dedicated isolation boosted decision tree has been trained to better reject non-prompt leptons and fakes produced in hadron decays~\cite{ATL-COM-PHYS-2018-410}. The main idea is to identify non-prompt light leptons using lifetime information associated with a track jet that matches the selected light lepton. These additional reconstructed charged particle tracks inside the jet can be used to increase the precision of identifying the displaced decay vertex of heavy flavor (b, c) hadrons that produced non-prompt leptons.
 
 The \texttt{PLIV} is trained on leptons selected from the Powheg+Pythia8 non-allhad $t\bar t$ sample using eight input variables:
 \begin{itemize}
@@ -340,7 +340,7 @@ The \texttt{PLIV} is trained on leptons selected from the Powheg+Pythia8 non-all
 
 The \texttt{PLIV} shows a significant improvement for non-prompt-lepton rejection compared to the cut-based isolation variables.
 
-The tight working points are: \texttt{PLIV}$<-0.6734$ for high $\pt$ muonss and \texttt{PLIV}$<-0.704$ for hight $\pt$ barrel electrons. The scale factors for the efficiencies of the tight \texttt{PLIV} working points are measured using the tag and probe method with $Z\rightarrow l^+l^-$ events.
+The tight working points are: \texttt{PLIV}$<-0.6734$ for high $\pt$ muons and \texttt{PLIV}$<-0.704$ for hight $\pt$ barrel electrons. The scale factors for the efficiencies of the tight \texttt{PLIV} working points are measured using the tag and probe method with $Z\rightarrow l^+l^-$ events.
 %The scale factors are approximately 0.92 for $10<\pt<15$ GeV muons and 0.97 for electrons, and averaging at 0.98 to 0.99 for higher $\pt$ leptons.
 
 \subsection{Overlap removal}
@@ -349,7 +349,7 @@ For the objects passing the selection above, a geometric overlap removal is appl
 In the hadronic channels, the overlap removal is done by the official overlap removal tool provided by ASG group. The "Standard" working point is used. The rules are discribed as follows in sequence:
 
 \begin{itemize}
-\item If two electrons have overlapped second-layer cluser, or shared tracks, the electron with lower $\pt$ is removed.
+\item If two electrons have a overlapped second-layer cluster, or shared tracks, the electron with lower $\pt$ is removed.
 \item $\tauhad$ within a $\Delta R=0.2$ cone of an electron or muon are removed.
 \item If a muon sharing an ID track with an electron and the muon is calo-tagged, the muon is removed. Otherwise the electron is removed.
 \item Jets within a $\Delta R=0.2$ cone of an electron are removed.
