@@ -1,7 +1,8 @@
 \section{Signal regions}
 \label{sec:selection}
 
-In the leptonic channels, the $\pt$ of the lepton is required to be 1 GeV above the trigger threshold. The leptons are required to have \texttt{Tight} ID as defined in Sec.~\ref{sec:obj_reco}. The trigger matching between the offline and trigger level lepton objects is also required for the corresponding leptons selected for the analysis.
+In the leptonic channels, the $\pt$ of the lepton is required to be 1 GeV above the trigger threshold. The leptons are required to 
+pass the standard selections defined in Sec.~\ref{sec:obj_reco}. The trigger matching between the offline and trigger level lepton objects is also required for the corresponding leptons selected for the analysis.
 
 In the hadronic channels, the two tau candidates with the highest $\pt$ are chosen. They should also pass the \texttt{Medium} tau ID and overlap removal. To account for the trigger thresholds, the two hadronic taus are requried to pass the $\pt>40$ GeV and $\pt>30$ GeV cuts.
 
@@ -62,7 +63,7 @@ The trigger used for hadronic channels in each year are listed as follow:
 
  \end{itemize}
 
-The two $\tauhad$ candidates are matched to the respective legs of the di-tau trigger using the individual single tau trigger objects. The $\pt$ thresholds are chosen such that the selected $\tauhad$ candidate $\pt$ already lies in the plateau of the respective trigger efficiency curve. Due to the rising instantaneous luminosity, the trigger used in the 2016-2018 data taking includes a requirement for an additional level-1 calorimeter trigger jet 
+The two reconstructed $\tauhad$ candidates are matched to the respective legs of the di-tau trigger using the individual single tau trigger objects. The $\pt$ thresholds are chosen such that the selected $\tauhad$ candidate $\pt$ already lies in the plateau of the respective trigger efficiency curve. Due to the rising instantaneous luminosity, the trigger used in the 2016-2018 data taking includes a requirement for an additional level-1 calorimeter trigger jet 
 %with $\pt > \SI{25}{\GeV}$ and $|\eta|<3.2$
 . The leading jet in those events is required to be matched within $\Delta R < 0.4$ with the jet ROI that fulfilled the jet part of the trigger criteria (trigger jet). The $\pt > \SI{60}{\GeV}$ cut is applied to make sure that the jet is in the trigger $\pt$ plateau.
 %Figure \ref{fig:hadhad_trigger} shows the turn-on curves of the additional jet as in \cite{Htautau}, and the leading jet $\pt$ in the $\thadhad$ channel. A cut of $\pt^{\text{L1jet}} > \SI{50}{\GeV}$ is required on the trigger jet, and a leading-jet $\pt > \SI{60}{\GeV}$ cut is applied to remove the effect of turn on curve.
@@ -81,8 +82,9 @@ Kinematics cuts are carefully selected to reduce background and provide control 
   \item 100GeV<$m_{\tau\tau}<150$GeV
   \item $m_{t,FCNC}>$140GeV
 \end{itemize}
+where $m_{\tau\tau}$ and $m_{t,FCNC}>$ are kinematically reconstructed di-tau and the FCNC-decaying top quark masses in the $t_h$ channels, defined in Sec.~\label{sec:reconstruction}.
 
-The S/B is significantly improved after applying these cuts as shown in Table \ref{tab:cutflow_STHhadhad} and \ref{tab:cutflow_TTHhadhad}. The yield of the CR generated are shown in Table \ref{tab:hadronic_CR_yield} indicated by ``OS CR''.
+The S/B is significantly improved after applying these cuts as shown in Table \ref{tab:cutflow_STHhadhad} and \ref{tab:cutflow_TTHhadhad}. The yield of the CR generated are shown in Table \ref{tab:hadronic_CR_yield} indicated by ``OS CR'' in which the events failed any of kinematic cuts listed above in the signal region.
 
 In the leptonic channels, except $t_l\thadhad$, a $\met>20$GeV cut and PLIV tight is used to reduce QCD background and also provide QCD enriched control regions. The yield are shown in Table \ref{tab:ABCDYield} - \ref{tab:ABCDYield_1}.
 

@@ -17,7 +17,8 @@ The FCNC coupling is parametrised using dim-6 operators \cite{fcnc_production_th
 \label{eq:eq01}
 \end{equation}
 %
-Where the operator notation is consistent with \cite{fcnc_production_theory}. The coefficient $C_{u\phi}$'s can be extracted as follows according to the Madgraph calculation using TopFCNC UFO:
+Where the operator notation is consistent with \cite{fcnc_production_theory} and the subscript i= 1,2 represents the generation of the light quark fields. 
+The coefficient $C_{u\phi}$'s can be extracted as follows according to the Madgraph calculation using TopFCNC UFO:
 \begin{equation}
 \begin{array}{l}
 (C^{i3}_{u\phi})^2 + (C^{3i}_{u\phi})^2 = 1946.6~\text{BR}(t\to qH)\\
@@ -27,7 +28,7 @@ Where the operator notation is consistent with \cite{fcnc_production_theory}. Th
 \label{eq:eq02}
 \end{equation}
 
-To give a better impression on the numbers, we use $\text{BR}(t\to qH)=0.2\%$ as benchmark, which is corresponding to ($C^{13}_{u\phi})^2 + (C^{31}_{u\phi})^2=3.89$, $\sigma(ug\to tH)=1421.8$ pb, $\sigma(cg\to tH)=206.0$ pb. The same TopFCNC UFO model has also been adapted by other FCNC tqH searches in different Higgs decay $H\rightarrow\gamma\gamma$ and $H\rightarrow b\bar b$
+To give a better impression on the numbers, we use $\text{BR}(t\to qH)=0.2\%$ as benchmark, which is corresponding to ($C^{13}_{u\phi})^2 + (C^{31}_{u\phi})^2=3.89$, $\sigma(ug\to tH)=1421.8$ fb, $\sigma(cg\to tH)=206.0$ fb. The same TopFCNC UFO model has also been adapted by other FCNC tqH searches in different Higgs decay $H\rightarrow\gamma\gamma$ and $H\rightarrow b\bar b$
 channels~\cite{tqHgammagamma,tqHbb}. So ATLAS can combine these results together to get a better constrain on the FCNC coupling.  
 
 In this article, a search for the decay $t\to qH$ from one of top quarks in the $t\bar{t}$ production (\textit{TT}) and single-top, Higgs associated production (\textit{ST}) with $H\to\tau\tau$ and the remaining top decays into a $W$ boson and a $b$ quark as shown in Fig \ref{fig:diagrams} using 140~fb$^{-1}$ of proton-proton collision data at 13~TeV, taken with the ATLAS detector at the Large Hadron Collider (LHC), is presented. The final state is characterized by one top and one Higgs. In \textit{TT}, there is an additional $u$ or $c$ as $q$ quark forming a top resonance with Higgs.
@@ -51,7 +52,9 @@ the SR BDT is used in a profile-likelihood fit in order to extract limits on the
 \label{sec:SRs}
 As shown in the Figure \ref{fig:diagrams} in the final states containing $tt(qH)$ and $tH$, depending on the production modes and
 the decay of $W$ boson hadronically and leptonically from the $t\to Wb$ decay referred as $t_h$ and $t_l$,
-the signal is split into 4 kinds of final states as shown in Table \ref{tab:signalevents}. The $\Htautau$ decay are required to be in either $\tlhad$ or $\thadhad$ final states when the top decays hadronically ($t_h$) and only in $\thadhad$ when the top decay leptonically ($t_l$). The decay of $H\to\tll$ is dropped because this final state will be considered in the multi-lepton analysis. The decay of $H\to\tlhad$ is also dropped when top decay leptonically because in this case, the lepton fake could be important when both leptons have same-sign charge
+the signal is split into 4 kinds of final states as shown in Table \ref{tab:signalevents}. The contribution of $W\rightarrow\tau\nu$ is included either in 
+$t_l$ when the $\tau$ decays into a light lepton(electron or muon) as $\tau_{lep}$ or in $t_h$ when the $\tau$ decays hadronically as $\thad$. 
+ The $\Htautau$ decay are required to be in either $\tlhad$ or $\thadhad$ final states when the top decays hadronically ($t_h$) and only in $\thadhad$ when the top decay leptonically ($t_l$). The decay of $H\to\tll$ is dropped because this final state will be considered in the multi-lepton analysis. The decay of $H\to\tlhad$ is also dropped when top decay leptonically because in this case, the lepton fake could be important when both leptons have same-sign charge
 and the overlap of the fake lepton and fake taus can be difficult to estimate.
 
 Due to the low statistics in $t_lH$ and $t_lt(qH)$ processes, they are merged into a single region $t_l\thadhad$ where there is no light jet multiplicity requirement and the two $\tauhad$ are required to have opposite-sign charge. However there is a sizeable fraction of these events in which one of the taus fails the reconstruction and remains as a jet or goes missing due to
@@ -147,7 +150,7 @@ Similar to the leptonic channels, the $t\bar{t}$ also contributes to the hadroni
 
 The irreducible background is modelled directly by Monte Carlo. The reducible background with sub-leading tau fake is modelled by Fake Factor (FF) method using the
 fake-tau enriched control regions. The FFs are calculated from three different control regions where one of taus failed the medium RNN tau cut, but passed
-a minimum RNN cut:
+a minimum RNN$>0.01$ cut:
 
 \begin{itemize}
 	\item W+jet control region in the SM $\Htautau$ (Calculated by the $\Htautau$ group).
@@ -201,7 +204,7 @@ The GRL used for the 2016 dataset:
 {\texttt data16\_13TeV.periodAllYear\_DetStatus-v89-pro21-01\\\_DQDefects-00-02-04\_PHYS\_StandardGRL\_All\_Good\_25ns.xml}
 
 \end{centering}
-corresponds to an integrated luminosity of 32.88 fb$^{-1}$.
+corresponds to an integrated luminosity of 32.9881 fb$^{-1}$.
 
 These GRLs exclude data where the IBL was not fully operational. The uncertainty in the combined 2015+2016 integrated luminosity, 36.1~fb$^{-1}$, is $2.1\%$. It is derived, following a methodology similar to that detailed in Ref.~\cite{DAPR-2013-01}, from a calibration of the luminosity scale using x-y beam-separation scans performed in August 2015 and May 2016.
 
@@ -219,7 +222,7 @@ The GRL used for the 2018 dataset:
 {\texttt  data18\_13TeV.periodAllYear\_DetStatus-v102-pro22-04\\\_Unknown\_PHYS\_StandardGRL\_All\_Good\_25ns\_Triggerno17e33prim.xml}
 
 \end{centering}
-corresponds to an integrated luminosity of 59.937 fb$^{-1}$. The final luminosity used for the analysis is 140.45 fb$^{-1}$.
+corresponds to an integrated luminosity of 58.450 fb$^{-1}$. The final luminosity used for the analysis is 139.0 fb$^{-1}$.
 
 \subsection{Signal and background simulation}
 \label{sec:generator}

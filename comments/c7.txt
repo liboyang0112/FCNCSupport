@@ -1,90 +1,171 @@
+Dear Luca and Edson:
+
+   Thank you so much for your comments. We have addressed your main concerns and uploaded the inter-note V5.3 in CDS
+       1. Included the signal PS systematic in the fits.
+       2. Addressed the EB comments.
+    We also included the replies below by starting "===>".
+
+    Cheers
+   FCNC Htautau Analysis team
+
+
+****** COMMENTS from Luca ******
+
 Dear Analysis team,
  
 thanks for providing the draft of the INT note of this particularly interesting analysis.
 I would have liked to post my comments before, but it took a bit of time to group them together.
 You can find them below:
+
+===> Thank you so much for the valuable comments.
  
 FCNC DRAFT 5.2 09/07/21
  
 * Eq1,2: is the “i” index the family generation? Please specify.
- 
+
+===> Added "where the subscript i= 1,2 represents the generation of the light quark fields."
+
 * l145: I think it would be more coherent and logical if you use 0.1% as BR benchmark. I understand where 0.2% is coming from, but 0.1% is used for the blinding and it also makes easier to convert the results on mu into the results on BR.
- 
+
+===> The BR is just a reference that has no impact on the final results. Unfortunately, it requires to change the code in multiple places and we prefer to keep it as is for now.
+
 * l146: Have you considered the effect that a FCNC tHq contribution would have on the Higgs boson branching ratios? Likely negligible, but please think a little about it.
+
+===> Sorry the units of cross section should be fb and the impact on the ttH cross section is small due to fewer b-jets and light-jets in the multilepton channel.
  
 * Table 1: When a W decays into a tau, where do you account it in this table?
- 
+
+===>The contribution of $W\rightarrow\tau\nu$ is included either in $t_l$ when the $\tau$ decays into a light lepton(electron or muon) or in $t_h$ when the $\tau$ decays hadronically.
+
 * Table 3: I mention it here, but it is also valid for other summary tables in the note (Tab 6,7,10,11,13,15,...). I find that the tables can be improved in several aspects:
 - Make clear the rows that are the sum of other processes. For example, you can indent the background, data and merged signals to the left and the others to the right or central, you could also use multiple \hline to separate bkg from data from signal.
 - the labels used for the process not very clear. What goes into “Other MC” or “Other fake tau”? What is “Rare”? What is “only t_sub real”? What is “Fake” wrt other types of Fake?
 - Can you specify what tye of error is quoted (stat only, stat+syst, etc)?
 - You can keep the current rounding for the INT note, but you will need a better rounding for the paper.
- 
+
+===>WILL fix as suggested(?) 
+
 * l211: quote the minimum RNN cut, which is 0.01 AFAIK.
- 
+
+===> Added
+
 * l265: I think there is something wrong in the luminosity. Can be in the values you quote, the values you use or the GRL you used or any combination in between. If you are using some general Top group ntuples/prescription, please check with the responsible person.
 - For 2016 you quote 32.88 ifb, but this is the one from tag Ofl-lumi-13TeV-008, which is for R20.7! The latest value for R21 is from tag Ofl-lumi-13TeV-009 and it is 32.9881 ifb
 - For 2018 you quote 59.937 ifb. This value was obtained 19/02/2019 and corresponds to Ofl-lumi-13TeV-010. But there is a more recent value of 58.450 ifb obtained on 18/03/2019 also corresponding to Ofl-lumi-13TeV-010. I’m not sure what is the difference between the two, but I think that analyses are using the latter one. Can you please check?
 The above values have been obtained from here: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/GoodRunsLists/
- 
+
+===> The luminosities are fixed.
+
 * l297: How large is the contribution of FCNC HWW and HZZ? You could quote the”Other Higgs decay modes” FCNC signal separately in the tables.
- 
+
+===> The additional contribution will be checked once the other Higgs decay signal samples are available.
+
 * l470: Are you doing or considered OR-ing of the triggers? Possibly you can gain a quite a bit in acceptance, if SFs are available.
-===> doing OR-ing of the triggers
+
+===> We are using single lepton trigger for the leptonic channles while OR-ing di-tau triggers are used for the hadronic channels.
  
 * l501: how much do you loose in acceptance by cutting on the jet pT > 60 GeV?
- 
+
+===> The jet requirement is part of trigger to ensure the trigger efficiency is understood.
+
 * l502: It is not clear to which signal region these cuts are applied to. top_lep or top_had or ….?
- 
+
+===>The cuts are applied for the signal and control regions in the hadronic channel, but WILL list the SR regions for these cuts(?)
+
 * l508: Before mentioning mtautau, you should discuss the tautau mass reconstruction (collinear mass) and how much the presence of neutrinos from leptonic decays of B-hadrons in b-jets affects the resolution. I also think that you don’t use mtautau for top_lep channel (hence my previous comment on specifying the regions), because the presence of neutrino from W decay completely spoils the collinear assumption.
-===> We didn't use the collinear assumption when W decays leptonically.
+
+===>where $m_{\tau\tau}$ and $m_{t,FCNC}>$ are kinematically reconstructed di-tau and the FCNC-decaying top quark masses in the $t_h$ channels, defined in Sec. 9.
  
 * l509: Is the mtop mass already defined at this point?
- 
+
+===>See above.
+
 * l520: Can you comment if 70%WP is optimal. You require exactly 1 b-jet.
- 
+
+===>We compared the Btag wps between 70% and 77%, which gives similar sensitivity for the most sensitive channel of t_l hadhad. The 77\% is more efficient to
+    reduce the ttbar background while it also rejects more tau candidates that are b-tagged. So at the end, the signal and background are comparable between two btag WPs.
+
 * Eq3: I think you need to better describe the resolution terms and also mfitH, which is apparently the collinear mass you called in a different way in l508. I’m also a bit skeptical of using this chi2, because it shapes the background to peak at 125 GeV. So I think you should comment a bit more on the improvement that it brings in sensitivity and if it bias the background to be more signal-like for the BDT or if you took special care to avoid it.
+
+===>The same di-tau mass construction is used in the previous 36 fb-1 publication. It provides a better ditau mass resolution than the simple collinear mass or
+    MMC mass even the background shape is biased toward at 125 GeV. We compared the signal and background with a simple mass window of +- 1 sigma cut for these
+    masses and the Higgs mass constrained mass has a better background rejection while keeping the same signal efficiency.
+    We also checked the background shape from the same-sign ditau events, which gives a good agreement between data and Monte Carlo prediction.
+
  
 * Figs in general: Please add to the caption the type of the error. As a rule of thumb, you should show all the variables used in the BDT. Also captions are often very brief. You should say when blinding is applied and perhaps indicate it better in the plot. Otherwise the reader doesn’t know if a bin is empty or blinded.
- 
+
+===>WILL fix accordingly(?)
+
 * Fig8: There are some data/MC fluctuations. I wonder if you have investigated them.
- 
+
+===> The predicted errors are only statis here and the fluctuations are not significant when the systematic errors are included.
+     WILL make it clear in caption(?)
  
 * Fig18: Here it is a bit disappointing/worrying that most of the bins in the distributions are blinded. I wonder if you have a CR that could be useful to check toplep_tauhad_tauhad agreement. It is the most sensitive region, I believe, and we have no idea of the data/bkg modelling.
- 
+
+===>WILL show the same distributions using the same-sign di-tau in the t_lhadhad events (?).
+
 * Fig24: I don’t understand the bottom figures. Are all the bins blinded or are they empty?
+
+===>The data/mc ratio is out of bounds due to the excess of data where the fake is missing in the Monte carlo prediction.
+    WILL make it clear in caption(?)
  
 * l624: what makes the remaining 30% contribution? Please discuss this further.
- 
+
+===>As shown in Figure 25 for the background composition, there are less ttbar constributions in the t_l tau SS channel where the W+jets contribution is
+       significant while the t_hlephadOS are dominated by ttbar contributions.
+
 * l677: Would be possible to have an appendix explaining in more details how you obtain the 24 factors?
- 
+
+===>This is done with a  minuit fit by comparing the data and predicted tau pt distributions in ttCR to obtain the 24 factors. The Pre- and Post-fits are shown in Fig 27 and 28.
+
 * l685: Can you explain better what is the benefit of separating the tau correction factors from the transfer factors? Could you obtain both at once?
- 
+
+===>The lepton fake is small in the ttbar CR by requiring either additional b-tag or extra lepton in the event. We fit tau correction factors first and
+    obtain the lepton transfer factors where we do correcting for fake taus. It would not matter if we do in two steps or at once. 
+
 * l732: Why not using a FF estimation also for the lep channels and use a different method instead (ABCD)?
-===> due to the large statistics, in the derivation phase, we only keep the medium tau.
+
+===>The ABCD method is the same as a FF estimation where we estimate the fake factor in the low met region and apply it to the high met signal region.
  
 * l736: I would recommend to better structure this part. Mention the first systematic and show the systematic values, then the second systematic and the values, etc..
- 
+
+===>WILL fix accordingly (?)
+
 * l754: In principle you should not be optimizing on the same events used in the “test” sample, i.e. the events used in the statistical analysis. You should demonstrate that there is no bias or split like 40%/40% and 20% as “validation” sample for optimization studies. See action item from 1st EB meeting.
- 
+
+===>WILL re-optimize using Herwig signal and ttbar background to cross check the procedure. TMVA recommends nCUTS=30 and nTrees>100, which is not very
+       different than we have. Since we are using different signal and background samples for PS systematic, the effect of the statis fluctation has been treated as part of
+       systematic uncertainties.
+
 * l857: have you checked of different are 1p and 3p taus?
-===> Checked in the note.
+
+===> Yes, 1p and 3p are checked and the differences seem understood.
  
 * Fig39-41: Are the bin contents divided by the bin width? You should specify in the caption. As mentioned, the captions are often very brief.
- 
+
+===>The bin contents are absolute, not divided by the bin width for all the plots.
+
 * Fig43-47: too much information given to the reader to digest. If there is some important important feature, please mention in the text/caption.
+
+===>WILL add some comments in caption(?)
  
 * Fig48: I see that ttbar theory uncert are often constrained (ME, PS, hdamp). I see why they are (figs 57-59), but is it expected?
+
+===>Yes, they seem make senses.
+    hdamp for the leptonic channel is missing in Appendix D, WILL add(?).  
  
 * Fig48: Why Pileup_Rho_Topology is 1-sided? As a related remark,  could you add more details on the configuration used for TRexFitter in terms of pruning, symmetrization, etc?
  
- 
+===>WILL check why Pileup_Rho_Topology is 1-sided in the leptonic channel(?)
+
 Best Regards,
 Luca.
 
 
 
-
+****** COMMENTS from Edson ****** 
 
 
 Dear Analysis team,
@@ -94,6 +175,10 @@ General comment:
 I recommend to change a bit the structure of the note regarding how the information is presented to the reader, I would move section 5 after section 10 (or rewrite it as a summary instead), in such a way that you start describing the pieces of the analysis first; starting from the physics objects and the analysis regions definitions, describing later how the background estimation and fits are performed in detail and finalizing with the limits results. Also I would recommend to condense and simplify the definition and naming of the many signal and control regions you use in the analysis, since sometimes they are difficult to follow, and try not to go into very detailed descriptions of some analysis features that are difficult to understand, instead of that try to always kept the descriptions as simple as possible and try to use diagrams or tables to explain more complex concepts in a compact way.
 I would also move some of the yields tables to the appendix.
 
+===>Thanks. We have extensive discussion with the convenors about the structure and the notations used in the INT note. We agreed that it would be good to give reader a big picture early on before getting into
+    the details. We have tried to simplify the notations used for SR and CR to make them more readable, but if you have specific suggestions, we can consider them.
+     
+    
 L168.- detected-> required
 ===> done
 
@@ -105,138 +190,200 @@ L188.- reducible or irreducible
 
 Table 3.- You cannot look at data into signal region before unblinding, are these numbers considering the blinding? Also the table is not self explanatory so you might consider expanding the caption
 
+===>These are data in pre-selection with S/B<0.1 except in the t_l hadhad channel. WILL fix the table(?)  
 
 Figure3.- Full Run 2 luminosity is 139 fb-1, not 140 fb-1, in these plots what do you mean by Rare?
-===> Rare:single top, three top 
+
+===>WILL add the comments in the caption where Rare:single top, three top (?) 
 
 L204 the hadronic channels
 ===> done
 
 L212.- 216.- This part seems disconnected from the previous paragraph, please consider improving this description of the control regions
 
+===>WILL fix(?) 
+
 L298.- Why there is no Run number here?
+
 ===> missing these numbers, done
 
 L359.- elections->electrons
+
 ===> done
 
 L387.- ttW multi-lepton analysis
+
 ===> done
 
 L392.- group->analysis
+
 ===> done
 
 L408.- that produced non-prompt leptons
+
 ===> done
 
 L418.- muonss->muons
+
 ===> done
 
 L427.- a overlapped second-layer cluster?
+
 ===> done
 
 L438.- What do you mean by two leading here? or do you mean with any of the two leading?
 
+===> Leading and sub-leading taus here.
+
 L461.- Tight ID does not seems to be defined there
+
+===>Changed "Tight ID" to "pass the standard selection"
 
 L495.- Do you mean the offline hadronic tau candidate right?
 
+===>Yes, the reconstructed tau candidate
+
 L503-509.- It is not clear what is the purpose of this region, it is a signal or a control region?
+
+===>The cuts are applied to both signal and control regions in the hadronic channels.
 
 L511.- It is not clear how this CR is generated, could you please improve clarity here?
 
+===> the OS CR is for the events in the signal region that failed any of the kinematics cut.
+
 L527.- close
+
 ===> done
 
 L537.- according to [61]
+
 ===> done
 
 Figure 7.- It seems that what is plotted is not Enu but Evis-tau, at least this is what is shown in the labels, could you check please and make it consistent.
+
 ===> Here, not Enu,we mean Ev,which stands for Evisible.
 
 L546.- what do you mean by a “huge degree of freedom”?
+
 ===> in the leptonic channel, the neutrino associated with lepton and with tau will spoil the collinear assumption,we cannot use the fit.
 
 L549-551.- In addition to the explanation of each of the variables used for the BDTs you use in the different regions, it would be really nice to have a table showing exactly 
 which set of variables is used to train the BDT in each region 
+
 ====> Please look at the importance tables(table21,table22), which shows various variables uesd in the BDT training. 
 
 L576.- Visible or invisible?
+
 ===> Visible,here we mean tauhad or taulep
 
 L578.- in this section->mentioned earlier in this section
+
 ===> done
 
 Figure8.- There seems to be slopes in DRtautau and sigma ETmiss variables, I’m wondering if it worth to investigate that modeling?
 
+===>Here the error bar contains only static and WILL add a comment in capton (?)
+
 Figure 13 (and others).- Why there is no peak at mt=175 GeV (or at 2 mt) in mt_SM for the ttbar background? Why some of the invariant mass plots have such large overflow bins? Also it doesn’t seems that you are applying the cuts of section 8.3. Also the backgrounds in the mtautau invariant mass as we discussed at the EB meeting seems to be sculpted by the Chi2 fit to have a peak around mtautau=125 GeV.
 
+===>The ttbar background is dominated by dilepton ltau events and the hadronic top does not exist, which is why there is no clear mtop mass peak. However, the hadronic top does exist in the signal region and
+    the mt_SM is indeed visible.
+    
 Figure 18.- There is quite some mismodeling in this region
+
+===>Most bins are blined here and we will add the modeling check using the same-sign t_l hadhad events.
 
 Figure 20.- Which variables are leading and subleading bins, these does not seem to be described in the text?
 
+===>WILL fix(?)
+
 L602.- represented by->estimated with
+
 ===> done
 
 Figure 24.- Are you blinding also the SS CR data points? is your signal in these regions significant?
 
+===>WILL check(?)
+
 L674.- Which tool did you use to make the fit?
+
 ===> nou use a tool,just use chi2 fit via TMuinit.
 
 L676.- depencence->dependence
+
 ===> done
 
 L677.- …there are in total…
+
 ===> done
 
 L679.- The scale factors are applied directly to the signal regions or a transfer factor is derived somehow?
+
 ===> applied directly to the signal regions
 
 Figure 29.- Maybe add a label to the figures showing the low BDT cut, and write in the caption that this is a closure test
 
+===>WILL add(?)
+
 Table 13.- thtlepthad-2j  (3j) regions overall agreement is not so good
 
+===>The fake lepton contributions are small in these two channels and the discrepancy is due to other systematics, which are not included here.
+
 L734.- requirment->requirement
+
 ===> done
 
 L766.- Corrected normalized->Correctly normalized?
+
 ===> done
 
 L768.- since the fakes are modelled…
+
 ===> done
 
 L793.- On the total number of signal events
+
 ===> done
 
 L794.- the the-> the
+
 ===> done
 
 L802.- related to detector effects
+
 ===> done
 
 L805.- and taus?
+
 ===> done
 
 L882.- Matric->Matrix
+
 ===> done
 
 L885.- The the->The
+
 ===> done
 
 L921->propogated->propagated
+
 ===> done
 
 L931.-evalated->evaluated
+
 ===> done
 
 L943.- themself->themselves
+
 ===> done
 
 Unrelated: I’m wondering also why ttbar decaying to real taus normalization is not letting float in the background only fit as well
 
+===>That's included as tau ID efficiency in the fits.
 
 Maybe I'm mistaking here but I see all plots are made for the uH final state, but in the tables and the results you quote also que channel cH, did you derived those limits only by dividing the total branching ratios and then taking 1-BR(uH), or did you measure the cH final state directly?
-===> measure the tcH directly,we didn't add the plots in the note.
+
+===> The tcH is measured directly assuming tuH is zero. We also did 2-D scan tcH and tuH together and the 2-D limit WILL BE added(?).
 
 Best regards,
 Edson
