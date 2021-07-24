@@ -172,31 +172,48 @@ The uncertainties of this method consists of three parts:
 
 \item The statistical uncertainties during the FF derivation, one for each bin, 12 in total.
 
+\begin{table}
+\caption{FF derived by the $\Htautau$ group. The errors in the tables are treated as systematics.}
+\label{tab:FF_htautau}
+\input{\FCNCTables/xTFW/FF/FF_nominal_1p3p}
+\end{table}
+
 \item The FF is rederived in the SS CR (2 taus with the same-sign charge, at least 3 jets with exactly 1 b-tagged) to account for any possible difference in 
   the parameterized fake-factors as shown in Figure \ref{fig:ffsys}. The fake factors are also presented in Table \ref{tab:FF_ss}. The difference between the FF
-  derived in the SS CR and W+jet control region is treated as one of the systematics.
-
-\item The FF is rederived in the OS CR (2 taus with the opposite-sign charge, at least 3 jets with exactly 1 b-tagged) with the events failing the signal cuts
-  defined in Table \ref{tab:cutflow_STHhadhad} and \ref{tab:cutflow_TTHhadhad} to account for the different contribution from each origin of the fake taus as shown in Figure \ref{fig:ffsys}. The fake factors are summarized in Table \ref{tab:FF_sb}. The difference between the FF derived in the OS CR and W+jet control region is treated as another
-  systematics.
-
-The yields in SS CR and OS CR regions for passing and failing the medium tau selection are shown in Table \ref{tab:hadronic_CR_yield} and \ref{tab:hadronic_nmCR_yield}.
+  derived in the SS CR and W+jet control region is treated as one of the systematics.The yields in SS CR and OS CR regions for passing and failing the medium tau selection are shown in Table \ref{tab:hadronic_CR_yield} and \ref{tab:hadronic_nmCR_yield}.
 
 \begin{table}
-\caption{The yield in SS CR and OS CR.}
+\caption{FF derived in SS CR. The difference between median value and those in \ref{tab:FF_htautau} is treated as one of the systematics.}
+\label{tab:FF_ss}
+\input{\FCNCTables/xTFW/FF/FF_sys_ss_1p3p}
+\end{table}
+
+ \begin{table}
+\caption{The yield in SS CR and OS CR with two medium ID had taus.}
 \label{tab:hadronic_CR_yield}
 \input{\FCNCTables/xTFW/showFake/NOMINAL/yield_chart_SSCR}
 \input{\FCNCTables/xTFW/showFake/NOMINAL/yield_chart_OSCR}
 \end{table}
 
+\item The FF is rederived in the OS CR (2 taus with the opposite-sign charge, at least 3 jets with exactly 1 b-tagged) with the events failing the signal cuts
+  defined in Table \ref{tab:cutflow_STHhadhad} and \ref{tab:cutflow_TTHhadhad} to account for the different contribution from each origin of the fake taus as shown in Figure \ref{fig:ffsys}. The fake factors are summarized in Table \ref{tab:FF_sb}. The difference between the FF derived in the OS CR and W+jet control region is treated as another
+  systematics.
+
 \begin{table}
-\caption{The yield in the not-medium SS CR and OS CR.}
+\caption{FF derived in OS CR. The difference between median value and those in \ref{tab:FF_htautau} is treated as one of the systematics.}
+\label{tab:FF_sb}
+\input{\FCNCTables/xTFW/FF/FF_sys_sb_1p3p}
+\end{table}
+
+\begin{table}
+\caption{The yield in the SS CR and OS CR with one had tau failing medium ID.}
 \label{tab:hadronic_nmCR_yield}
 \input{\FCNCTables/xTFW/showFake/NOMINAL/yield_chart_nmSSCR}
 \input{\FCNCTables/xTFW/showFake/NOMINAL/yield_chart_nmOSCR}
 \end{table}
 
 \end{enumerate}
+
 
 \input{\FCNCFigures/tex/ffsys}
 
@@ -207,22 +224,7 @@ samples (SS CR and OS CR). The small difference indicates that the three sets of
 
 \input{\FCNCFigures/tex/fakeEstimation_had}
 
-\begin{table}
-\caption{FF derived by the $\Htautau$ group. The errors in the tables are treated as systematics.}
-\label{tab:FF_htautau}
-\input{\FCNCTables/xTFW/FF/FF_nominal_1p3p}
-\end{table}
 
-\begin{table}
-\caption{FF derived in SS CR. The difference between median value and those in \ref{tab:FF_htautau} is treated as one of the systematics.}
-\label{tab:FF_ss}
-\input{\FCNCTables/xTFW/FF/FF_sys_ss_1p3p}
-\end{table}
 
-\begin{table}
-\caption{FF derived in OS CR. The difference between median value and those in \ref{tab:FF_htautau} is treated as one of the systematics.}
-\label{tab:FF_sb}
-\input{\FCNCTables/xTFW/FF/FF_sys_sb_1p3p}
-\end{table}
 
 \clearpage

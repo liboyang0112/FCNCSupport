@@ -75,6 +75,7 @@ The above values have been obtained from here: /cvmfs/atlas.cern.ch/repo/sw/data
 * l508: Before mentioning mtautau, you should discuss the tautau mass reconstruction (collinear mass) and how much the presence of neutrinos from leptonic decays of B-hadrons in b-jets affects the resolution. I also think that you don’t use mtautau for top_lep channel (hence my previous comment on specifying the regions), because the presence of neutrino from W decay completely spoils the collinear assumption.
 
 ===>where $m_{\tau\tau}$ and $m_{t,FCNC}>$ are kinematically reconstructed di-tau and the FCNC-decaying top quark masses in the $t_h$ channels, defined in Sec. 9.
+When W decays leptonically, We didn't use the collinear mass approximation.
  
 * l509: Is the mtop mass already defined at this point?
 
@@ -245,7 +246,7 @@ L495.- Do you mean the offline hadronic tau candidate right?
 
 L503-509.- It is not clear what is the purpose of this region, it is a signal or a control region?
 
-===>The cuts are applied to both signal and control regions in the hadronic channels.
+===>The cuts are applied to both signal and SS control regions in the hadronic channels.
 
 L511.- It is not clear how this CR is generated, could you please improve clarity here?
 
@@ -274,7 +275,7 @@ which set of variables is used to train the BDT in each region
 
 L576.- Visible or invisible?
 
-===> Visible,here we mean tauhad or taulep
+===> Visible,here we mean visible part of tau decay product,namely,tauhad or taulep
 
 L578.- in this section->mentioned earlier in this section
 
@@ -282,7 +283,7 @@ L578.- in this section->mentioned earlier in this section
 
 Figure8.- There seems to be slopes in DRtautau and sigma ETmiss variables, I’m wondering if it worth to investigate that modeling?
 
-===>Here the error bar contains only static and WILL add a comment in capton (?)
+===>the discrepancy is not big considering the statistic-only error bar and the  and WILL add a comment in capton (?)
 
 Figure 13 (and others).- Why there is no peak at mt=175 GeV (or at 2 mt) in mt_SM for the ttbar background? Why some of the invariant mass plots have such large overflow bins? Also it doesn’t seems that you are applying the cuts of section 8.3. Also the backgrounds in the mtautau invariant mass as we discussed at the EB meeting seems to be sculpted by the Chi2 fit to have a peak around mtautau=125 GeV.
 
@@ -295,7 +296,9 @@ Figure 18.- There is quite some mismodeling in this region
 
 Figure 20.- Which variables are leading and subleading bins, these does not seem to be described in the text?
 
-===>WILL fix(?)
+===>leading bin is an old auxiliary varible for calculating fake factor, remove it.  subleading-bin is a varible which counts
+the events yields in different regions. It contains 12 bins, the first bin counts the yields in which sub leading tau possess 1 cahrged track with |eta|<1.37, 30<pt<40.
+We explain its meaning in the caption of Fig31.    
 
 L602.- represented by->estimated with
 
@@ -303,11 +306,11 @@ L602.- represented by->estimated with
 
 Figure 24.- Are you blinding also the SS CR data points? is your signal in these regions significant?
 
-===>WILL check(?)
+===> unlinded SS CR
 
 L674.- Which tool did you use to make the fit?
 
-===> nou use a tool,just use chi2 fit via TMuinit.
+===> not use a tool,just use chi2 fit via TMuinit.
 
 L676.- depencence->dependence
 
