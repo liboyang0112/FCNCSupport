@@ -31,7 +31,7 @@ FCNC DRAFT 5.2 09/07/21
 
 * l146: Have you considered the effect that a FCNC tHq contribution would have on the Higgs boson branching ratios? Likely negligible, but please think a little about it.
 
-===> Sorry the units of cross section should be fb and the impact on the ttH cross section is small due to fewer b-jets and light-jets in the multilepton channel.
+===> Sorry the units of cross section should be fb and the impact on H->tq would be suppressed due to the mass difference even with a FCNC tHq interaction.
  
 * Table 1: When a W decays into a tau, where do you account it in this table?
 
@@ -62,7 +62,7 @@ The above values have been obtained from here: /cvmfs/atlas.cern.ch/repo/sw/data
 
 * l470: Are you doing or considered OR-ing of the triggers? Possibly you can gain a quite a bit in acceptance, if SFs are available.
 
-===> We are using single lepton trigger for the leptonic channles while OR-ing di-tau triggers are used for the hadronic channels.
+===> We are using single lepton triggers for the leptonic channles while OR-ing di-tau triggers are used for the hadronic channels.
  
 * l501: how much do you loose in acceptance by cutting on the jet pT > 60 GeV?
 
@@ -70,7 +70,7 @@ The above values have been obtained from here: /cvmfs/atlas.cern.ch/repo/sw/data
 
 * l502: It is not clear to which signal region these cuts are applied to. top_lep or top_had or ….?
 
-===>The cuts are applied for the signal and control regions in the hadronic channel, but WILL list the SR regions for these cuts(?)
+===>The cuts are applied for the signal and SS control region in the hadronic channels.
 
 * l508: Before mentioning mtautau, you should discuss the tautau mass reconstruction (collinear mass) and how much the presence of neutrinos from leptonic decays of B-hadrons in b-jets affects the resolution. I also think that you don’t use mtautau for top_lep channel (hence my previous comment on specifying the regions), because the presence of neutrino from W decay completely spoils the collinear assumption.
 
@@ -90,19 +90,17 @@ When W decays leptonically, We didn't use the collinear mass approximation.
 
 ===>The same di-tau mass construction is used in the previous 36 fb-1 publication. It provides a better ditau mass resolution than the simple collinear mass or
     MMC mass even the background shape is biased toward at 125 GeV. We compared the signal and background with a simple mass window of +- 1 sigma cut for these
-    masses and the Higgs mass constrained mass has a better background rejection while keeping the same signal efficiency.
+    ditau masses and the ditau mass with Higgs mass constraining has a better background rejection while keeping the same signal efficiency.
     We also checked the background shape from the same-sign ditau events, which gives a good agreement between data and Monte Carlo prediction.
 
- 
 * Figs in general: Please add to the caption the type of the error. As a rule of thumb, you should show all the variables used in the BDT. Also captions are often very brief. You should say when blinding is applied and perhaps indicate it better in the plot. Otherwise the reader doesn’t know if a bin is empty or blinded.
 
 ===>WILL fix accordingly(?)
 
 * Fig8: There are some data/MC fluctuations. I wonder if you have investigated them.
 
-===> The predicted errors are only statis here and the fluctuations are not significant when the systematic errors are included.
-     WILL make it clear in caption(?)
- 
+===> The predicted errors are only statis here and the fluctuations are not significant when the systematic errors are included. The fluctuation happens in the high MET region where the ttbar and w+jets with fake taus dominates. Since there is no real tau background in this phase space, it is significantly depends on the value of fake-tau scale factors. The fake tau scale factors depend highly on the modelling of the control regions which has large uncertainties considering full systematics.
+
 * Fig18: Here it is a bit disappointing/worrying that most of the bins in the distributions are blinded. I wonder if you have a CR that could be useful to check toplep_tauhad_tauhad agreement. It is the most sensitive region, I believe, and we have no idea of the data/bkg modelling.
 
 ===>WILL show the same distributions using the same-sign di-tau in the t_lhadhad events (?).
@@ -114,7 +112,7 @@ When W decays leptonically, We didn't use the collinear mass approximation.
  
 * l624: what makes the remaining 30% contribution? Please discuss this further.
 
-===>As shown in Figure 25 for the background composition, there are less ttbar constributions in the t_l tau SS channel where the W+jets contribution is
+===>As shown in Figure 25 for the background composition, there are less ttbar constributions in the t_l tau SS channel where the QCD and W+jets contribution is
        significant while the t_hlephadOS are dominated by ttbar contributions.
 
 * l677: Would be possible to have an appendix explaining in more details how you obtain the 24 factors?
@@ -124,11 +122,17 @@ When W decays leptonically, We didn't use the collinear mass approximation.
 * l685: Can you explain better what is the benefit of separating the tau correction factors from the transfer factors? Could you obtain both at once?
 
 ===>The lepton fake is small in the ttbar CR by requiring either additional b-tag or extra lepton in the event. We fit tau correction factors first and
-    obtain the lepton transfer factors where we do correcting for fake taus. It would not matter if we do in two steps or at once. 
+    obtain the lepton transfer factors where we do correcting for fake taus.
+    It is easier to deal with fake leptons and fake taus separately. The tau SFs aims at fake taus but transfer factors aims at fake leptons.
+    So when calculate tau SFs, the events are separated into 3-prong and 1-prong. While calculating transfer factors, the events are separated into electrons and muons.
+    They also have different meanings. Tau SFs are applied to MC but transfer factors are applied to data-MC. Mixing them together can make things complicated and is hard to achieve technically.
 
 * l732: Why not using a FF estimation also for the lep channels and use a different method instead (ABCD)?
 
-===>The ABCD method is the same as a FF estimation where we estimate the fake factor in the low met region and apply it to the high met signal region.
+===>The ABCD method is used for the lepton fake estimation, which in fact is similar to a FF estimation where we estimate the fake factor in the low met region and apply it to the high met signal region.
+    In terms of for tau fake estimation in the leptonic channel, we use the tau fake scale factor derived from the data as the ratio of data and MC fake after subtracting the truth tau contributions.
+    Unfortunately, the ntuples we used for the leptonic channel contain only the selected loose tau or above and we can not use the very loose tau candidates to estimate the fake tau background as used in the
+    hadronic channels. 
  
 * l736: I would recommend to better structure this part. Mention the first systematic and show the systematic values, then the second systematic and the values, etc..
 
@@ -159,7 +163,7 @@ When W decays leptonically, We didn't use the collinear mass approximation.
  
 * Fig48: Why Pileup_Rho_Topology is 1-sided? As a related remark,  could you add more details on the configuration used for TRexFitter in terms of pruning, symmetrization, etc?
  
-===>WILL check why Pileup_Rho_Topology is 1-sided in the leptonic channel(?)
+===>All two sided NPs ( with up and down) are symmetrized by "TWOSIDED" and one sided NPs (PS, hdamp, MET, fake estimation etc.) are symmetrized by "ONESIDED". Pruning is set as 1%. Smoothing is set as 40. WILL check why Pileup_Rho_Topology is 1-sided in the leptonic channel(?)
 
 Best Regards,
 Luca.
@@ -296,9 +300,11 @@ Figure 18.- There is quite some mismodeling in this region
 
 Figure 20.- Which variables are leading and subleading bins, these does not seem to be described in the text?
 
+<<<<<<< HEAD
 ===>leading bin is an old auxiliary varible for calculating fake factor, remove it.  subleading-bin is a varible which counts
 the events yields in different regions. It contains 12 bins, the first bin counts the yields in which sub leading tau possess 1 cahrged track with |eta|<1.37, 30<pt<40.
-We explain its meaning in the caption of Fig31.    
+We explaind its meaning in the caption of Fig31.    
+
 
 L602.- represented by->estimated with
 
