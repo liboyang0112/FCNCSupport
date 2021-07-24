@@ -1,0 +1,62 @@
+\section{Study on kinematics fit}
+\label{sec:kine}
+
+The kinematics fit method is based on previous partial run2 analysis, where Higgs mass term is introduced in the $\chi^2$ function. 
+The advantage of the type of fit is been declared in the body, in this appendix, $\chi^2$ function without Higgs constrain is also explored given that original fit function
+will shape the background to peak at 125 GeV. Besides, the di-$\tau$ MMC is also checked against the kinematics fit in term of the sensitivity.
+
+Figure \ref{fig:ap7_ttmass_removedchi2} -\ref{fig:ap7_ttmass_removedchi2} - \ref{fig:ap7_ttmass_mmc} shows the distributions of $m_{\tau,\tau}$ and $p_{T,\tau}$ using different method in hadronic channel. Good agreement between data and background predictions are achieved.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.49\textwidth]{\FCNCFigures/xTFW/showFake/NOMINAL/reg2mtau1b2jos_vetobtagwp70_highmet/tautaumass.pdf}
+\includegraphics[width=0.49\textwidth]{\FCNCFigures/xTFW/showFake/NOMINAL/reg2mtau1b2jos_vetobtagwp70_highmet/tau_pt_0.pdf}
+\includegraphics[width=0.49\textwidth]{\FCNCFigures/xTFW/showFake/NOMINAL/reg2mtau1b3jos_vetobtagwp70_highmet/tautaumass.pdf}
+\includegraphics[width=0.49\textwidth]{\FCNCFigures/xTFW/showFake/NOMINAL/reg2mtau1b3jos_vetobtagwp70_highmet/tau_pt_0.pdf}
+\caption{ The $m_{\tau,\tau}$ and $p_{T,\tau}$ distributions in the hadronic channels based on original kinematics fit with Higgs contrain.}
+\label{fig:ap7_ttmass_originalchi2}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.49\textwidth]{\FCNCFigures/xTFW/checkMassWindowYield/NOMINAL_removedchi_20210724/reg2mtau1b2jos_vetobtagwp70_highmet/tautaumass.pdf}
+\includegraphics[width=0.49\textwidth]{\FCNCFigures/xTFW/checkMassWindowYield/NOMINAL_removedchi_20210724/reg2mtau1b2jos_vetobtagwp70_highmet/tau_pt_0.pdf}
+\includegraphics[width=0.49\textwidth]{\FCNCFigures/xTFW/checkMassWindowYield/NOMINAL_removedchi_20210724/reg2mtau1b3jos_vetobtagwp70_highmet/tautaumass.pdf}
+\includegraphics[width=0.49\textwidth]{\FCNCFigures/xTFW/checkMassWindowYield/NOMINAL_removedchi_20210724/reg2mtau1b3jos_vetobtagwp70_highmet/tau_pt_0.pdf}
+\caption{ The $m_{\tau,\tau}$ and $p_{T,\tau}$ distributions in the hadronic channels based on kinematics fit without Higgs contrain.}
+\label{fig:ap7_ttmass_removedchi2}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.49\textwidth]{\FCNCFigures/xTFW/checkMassWindowYield/NOMINAL_mmc_20210724/reg2mtau1b2jos_vetobtagwp70_highmet/local_mmc.pdf}
+\includegraphics[width=0.49\textwidth]{\FCNCFigures/xTFW/checkMassWindowYield/NOMINAL_mmc_20210724/reg2mtau1b2jos_vetobtagwp70_highmet/tau_pt_0.pdf}
+\includegraphics[width=0.49\textwidth]{\FCNCFigures/xTFW/checkMassWindowYield/NOMINAL_mmc_20210724/reg2mtau1b3jos_vetobtagwp70_highmet/local_mmc.pdf}
+\includegraphics[width=0.49\textwidth]{\FCNCFigures/xTFW/checkMassWindowYield/NOMINAL_mmc_20210724/reg2mtau1b3jos_vetobtagwp70_highmet/tau_pt_0.pdf}
+\caption{The $m_{\tau,\tau}$ and $p_{T,\tau}$ distributions in the hadronic channels based on di-$\tau$ MMC.}
+\label{fig:ap7_ttmass_mmc}
+\end{figure}
+
+
+The statistical only significance based on BDT discriminant is shown in Table \ref{tab:ap7_original_significance}, \ref{tab:ap7_removedchi_significance},\ref{tab:ap7_mmc_significance}.
+
+\begin{table}
+\caption{The statistical only significance in hadronic channels based on original kinematics fit with Higgs contrain.}
+\label{tab:ap7_original_significance}
+\input{\FCNCTables/xTFW/checkMassWindowYield/originalchi2_significance}
+\end{table}
+
+\begin{table}
+\caption{The statistical only significance in hadronic channels based on kinematics fit without Higgs contrain.}
+\label{tab:ap7_removedchi_significance}
+\input{\FCNCTables/xTFW/checkMassWindowYield/removedchi2_significance}
+\end{table}
+
+\begin{table}
+\caption{The statistical only significance in hadronic channels based on di-$\tau$ MMC.}
+\label{tab:ap7_mmc_significance}
+\input{\FCNCTables/xTFW/checkMassWindowYield/mmc_significance}
+\end{table}
+

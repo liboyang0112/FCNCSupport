@@ -43,7 +43,7 @@ FCNC DRAFT 5.2 09/07/21
 - Can you specify what tye of error is quoted (stat only, stat+syst, etc)?
 - You can keep the current rounding for the INT note, but you will need a better rounding for the paper.
 
-===>WILL fix as suggested(?) 
+===>done. Only statistical uncertainties are being shown in these distributions presented until chapter 12. Underflow and overflow bins are included respectively in the first and last bins.
 
 * l211: quote the minimum RNN cut, which is 0.01 AFAIK.
 
@@ -95,7 +95,8 @@ When W decays leptonically, We didn't use the collinear mass approximation.
 
 * Figs in general: Please add to the caption the type of the error. As a rule of thumb, you should show all the variables used in the BDT. Also captions are often very brief. You should say when blinding is applied and perhaps indicate it better in the plot. Otherwise the reader doesn’t know if a bin is empty or blinded.
 
-===>WILL fix accordingly(?)
+===>done. Only statistical uncertainties are being shown in these distributions presented until chapter 12, and we updated the plots, only SR are blinded, so the empty bins in
+SR are always blinded.
 
 * Fig8: There are some data/MC fluctuations. I wonder if you have investigated them.
 
@@ -103,12 +104,12 @@ When W decays leptonically, We didn't use the collinear mass approximation.
 
 * Fig18: Here it is a bit disappointing/worrying that most of the bins in the distributions are blinded. I wonder if you have a CR that could be useful to check toplep_tauhad_tauhad agreement. It is the most sensitive region, I believe, and we have no idea of the data/bkg modelling.
 
-===>WILL show the same distributions using the same-sign di-tau in the t_lhadhad events (?).
+===>done. WILL show the same distributions using the same-sign di-tau in the t_lhadhad events.
 
 * Fig24: I don’t understand the bottom figures. Are all the bins blinded or are they empty?
 
-===>The data/mc ratio is out of bounds due to the excess of data where the fake is missing in the Monte carlo prediction.
-    WILL make it clear in caption(?)
+===>done. The data/mc ratio is out of bounds due to the excess of data where the fake is missing in the Monte carlo prediction.
+    The same sign regions are not SRs, we have unblinded the data now.
  
 * l624: what makes the remaining 30% contribution? Please discuss this further.
 
@@ -117,7 +118,7 @@ When W decays leptonically, We didn't use the collinear mass approximation.
 
 * l677: Would be possible to have an appendix explaining in more details how you obtain the 24 factors?
 
-===>This is done with a  minuit fit by comparing the data and predicted tau pt distributions in ttCR to obtain the 24 factors. The Pre- and Post-fits are shown in Fig 27 and 28.
+===>This is done with a  minuit fit by comparing the data and predicted tau pt distributions in ttCR to obtain the 24 factors. The Pre- and Post-fits are shown in Fig 29 and 30.
 
 * l685: Can you explain better what is the benefit of separating the tau correction factors from the transfer factors? Could you obtain both at once?
 
@@ -136,11 +137,11 @@ When W decays leptonically, We didn't use the collinear mass approximation.
  
 * l736: I would recommend to better structure this part. Mention the first systematic and show the systematic values, then the second systematic and the values, etc..
 
-===>WILL fix accordingly (?)
+===>done
 
 * l754: In principle you should not be optimizing on the same events used in the “test” sample, i.e. the events used in the statistical analysis. You should demonstrate that there is no bias or split like 40%/40% and 20% as “validation” sample for optimization studies. See action item from 1st EB meeting.
 
-===>WILL re-optimize using Herwig signal and ttbar background to cross check the procedure. TMVA recommends nCUTS=30 and nTrees>100, which is not very
+===>done WILL re-optimize using Herwig signal and ttbar background to cross check the procedure. TMVA recommends nCUTS=30 and nTrees>100, which is not very
        different than we have. Since we are using different signal and background samples for PS systematic, the effect of the statis fluctation has been treated as part of
        systematic uncertainties.
 
@@ -150,20 +151,20 @@ When W decays leptonically, We didn't use the collinear mass approximation.
  
 * Fig39-41: Are the bin contents divided by the bin width? You should specify in the caption. As mentioned, the captions are often very brief.
 
-===>The bin contents are absolute, not divided by the bin width for all the plots.
+===>The bin contents are absolute, not divided by the bin width for all the plots. add captions.
 
 * Fig43-47: too much information given to the reader to digest. If there is some important important feature, please mention in the text/caption.
 
-===>WILL add some comments in caption(?)
+===>done. have added some comments in caption.
  
 * Fig48: I see that ttbar theory uncert are often constrained (ME, PS, hdamp). I see why they are (figs 57-59), but is it expected?
 
 ===>Yes, they seem make senses.
-    hdamp for the leptonic channel is missing in Appendix D, WILL add(?).  
+    hdamp for the leptonic channel is added in Appendix D.  
  
 * Fig48: Why Pileup_Rho_Topology is 1-sided? As a related remark,  could you add more details on the configuration used for TRexFitter in terms of pruning, symmetrization, etc?
  
-===>All two sided NPs ( with up and down) are symmetrized by "TWOSIDED" and one sided NPs (PS, hdamp, MET, fake estimation etc.) are symmetrized by "ONESIDED". Pruning is set as 1%. Smoothing is set as 40. WILL check why Pileup_Rho_Topology is 1-sided in the leptonic channel(?)
+===>done. All two sided NPs ( with up and down) are symmetrized by "TWOSIDED" and one sided NPs (PS, hdamp, MET, fake estimation etc.) are symmetrized by "ONESIDED". Pruning is set as 1%. Smoothing is set as 40. Pileup_Rho_Topology is checked in Appendix D (?)
 
 Best Regards,
 Luca.
@@ -195,11 +196,11 @@ L188.- reducible or irreducible
 
 Table 3.- You cannot look at data into signal region before unblinding, are these numbers considering the blinding? Also the table is not self explanatory so you might consider expanding the caption
 
-===>These are data in pre-selection with S/B<0.1 except in the t_l hadhad channel. WILL fix the table(?)  
+===>These are data in pre-selection with S/B<0.1 except in the t_l hadhad channel. 
 
 Figure3.- Full Run 2 luminosity is 139 fb-1, not 140 fb-1, in these plots what do you mean by Rare?
 
-===>WILL add the comments in the caption where Rare:single top, three top (?) 
+===>WILL add the comments in the caption where Rare:single top, three top
 
 L204 the hadronic channels
 ===> done
@@ -287,7 +288,7 @@ L578.- in this section->mentioned earlier in this section
 
 Figure8.- There seems to be slopes in DRtautau and sigma ETmiss variables, I’m wondering if it worth to investigate that modeling?
 
-===>the discrepancy is not big considering the statistic-only error bar and the  and WILL add a comment in capton (?)
+===>the discrepancy is not big considering the statistic-only error bar.
 
 Figure 13 (and others).- Why there is no peak at mt=175 GeV (or at 2 mt) in mt_SM for the ttbar background? Why some of the invariant mass plots have such large overflow bins? Also it doesn’t seems that you are applying the cuts of section 8.3. Also the backgrounds in the mtautau invariant mass as we discussed at the EB meeting seems to be sculpted by the Chi2 fit to have a peak around mtautau=125 GeV.
 
@@ -300,7 +301,6 @@ Figure 18.- There is quite some mismodeling in this region
 
 Figure 20.- Which variables are leading and subleading bins, these does not seem to be described in the text?
 
-<<<<<<< HEAD
 ===>leading bin is an old auxiliary varible for calculating fake factor, remove it.  subleading-bin is a varible which counts
 the events yields in different regions. It contains 12 bins, the first bin counts the yields in which sub leading tau possess 1 cahrged track with |eta|<1.37, 30<pt<40.
 We explaind its meaning in the caption of Fig31.    
@@ -312,7 +312,7 @@ L602.- represented by->estimated with
 
 Figure 24.- Are you blinding also the SS CR data points? is your signal in these regions significant?
 
-===> unlinded SS CR
+===> not significant,just the yields of background is very small.S/sqrt(B) is a liittle large. we have unblinded SS CR
 
 L674.- Which tool did you use to make the fit?
 
@@ -332,7 +332,7 @@ L679.- The scale factors are applied directly to the signal regions or a transfe
 
 Figure 29.- Maybe add a label to the figures showing the low BDT cut, and write in the caption that this is a closure test
 
-===>WILL add(?)
+===>done
 
 Table 13.- thtlepthad-2j  (3j) regions overall agreement is not so good
 
@@ -392,7 +392,7 @@ Unrelated: I’m wondering also why ttbar decaying to real taus normalization is
 
 Maybe I'm mistaking here but I see all plots are made for the uH final state, but in the tables and the results you quote also que channel cH, did you derived those limits only by dividing the total branching ratios and then taking 1-BR(uH), or did you measure the cH final state directly?
 
-===> The tcH is measured directly assuming tuH is zero. We also did 2-D scan tcH and tuH together and the 2-D limit WILL BE added(?).
+===> The tcH is measured directly assuming tuH is zero.We didnt add the tcH plots in the note since the distributions are similar and there are many plots.we can add them if you feel better.
 
 Best regards,
 Edson
