@@ -55,16 +55,16 @@ These control regions are similar to the signal regions but with an additional b
 \end{itemize}
 
 
-\begin{table}
-\caption{The yield in the control regions used to derive fake tau SFs.}
-\label{tab:SFCR_yield}
-\input{\FCNCTables/tthML/showFake/faketau/prefit/NOMINAL/yield_chart}
-\end{table}
-\begin{table}
-\caption{The yield in the control regions used to derive fake tau SFs.}
-\label{tab:SFCR_yield_1}
-\input{\FCNCTables/tthML/showFake/faketau/prefit/NOMINAL/yield_chart_1}
-\end{table}
+%\begin{table}
+%\caption{The yield in the control regions used to derive fake tau SFs.}
+%\label{tab:SFCR_yield}
+%\input{\FCNCTables/tthML/showFake/faketau/prefit/NOMINAL/yield_chart}
+%\end{table}
+%\begin{table}
+%\caption{The yield in the control regions used to derive fake tau SFs.}
+%\label{tab:SFCR_yield_1}
+%\input{\FCNCTables/tthML/showFake/faketau/prefit/NOMINAL/yield_chart_1}
+%\end{table}
 
 Where di-lepton regions ($t_lt_l1b\thad$ and $t_lt_l2b\thad$) are used to calibrate the Type3 and Type4 fake taus. These regions are dominated by the bjet and the radiation jet faking taus. The regions of
 $t_lt_h2b\thad$-2jOS and $t_lt_h2b\thad$-3jOS are used to calibrate Type1 fake taus. Compared to the signal region, this region has an additional b-jet. So the $\bar{t}t$ background is enhanced in this region and signal is depleted. Similarly for the Type2, the regions of $t_lt_h2b\thad$-2jSS and $t_lt_h2b\thad$-3jSS are chosen. The components of these regions are shown in Figure \ref{fig:wjet_pt_CR}. A simultaneous fit to data is made to derive the scale factors for the fake taus. There are four parameters needed to be decided (the scale factors for the 4 types). But considering the $p_{T}$ and number of tracks dependence of the tau reconstruction, the scale factors are derived in 3 $\pt$ slices (25-35, 35-45, 45-)GeV for 1 and 3 prong taus separately. So there are in total 24 parameters to be determined. The results are shown in Table \ref{tab:scale_factor_1prong_statonly} and \ref{tab:scale_factor_3prong_statonly}. Where the errors are statistical only. The post-fit plots are shown in Figure \ref{fig:wjet_pt_postfit_CR}. Then the scale factors are applied to the corresponding signal regions with single b-tagged jet. In $t_l\thadhad$ channel, both taus can be fake, so the calibration is applied to each tau separately, following the same procedure as $\tlhad$ channels using the lepton and fake tau charges, then the scale factors are multiplied together. The nominal value of the scale factors will vary along with other uncertainties from combined preformace (CP) recommendations and theory uncertainties in the final fit.
@@ -97,18 +97,18 @@ After the fake tau calibration, the fake contribution from QCD with both lepton 
 
 The yields in each A, B, C, D regions are shown in Table \ref{tab:ABCDYield} - \ref{tab:ABCDYield_1}.
 
-\begin{table}
-\caption{The yields in each A, B, C, D regions.}
-\label{tab:ABCDYield}
-\input{\FCNCTables/tthML/showFake/faketau/postfit/NOMINAL/yield_chart}
-\end{table}
-
-\begin{table}
-\caption{The yields in each A, B, C, D regions.}
-\label{tab:ABCDYield_1}
-\input{\FCNCTables/tthML/showFake/faketau/postfit/NOMINAL/yield_chart_1}
-\end{table}
-
+%\begin{table}
+%\caption{The yields in each A, B, C, D regions.}
+%\label{tab:ABCDYield}
+%\input{\FCNCTables/tthML/showFake/faketau/postfit/NOMINAL/yield_chart}
+%\end{table}
+%
+%\begin{table}
+%\caption{The yields in each A, B, C, D regions.}
+%\label{tab:ABCDYield_1}
+%\input{\FCNCTables/tthML/showFake/faketau/postfit/NOMINAL/yield_chart_1}
+%\end{table}
+%
 \begin{table}
 \caption{The QCD transfer factor derived from different low $E_T^{miss}$ control regions}
 \label{tab:FF}
@@ -128,13 +128,13 @@ $t_l\thad$ channels where the QCD fake lepton is more important, while the QCD f
 \input{\FCNCFigures/tex/closureTest}
 \input{\FCNCFigures/tex/wjet_pt_postfit}
 
-\begin{table}
-\caption{The yield in the low BDT region where the QCD faking estimation in the leptonic channels are tested.}
-\label{tab:closureYield}
-\input{\FCNCTables/tthML/showFake/faketau/postfit/NOMINAL_closureTest/yield_chart}
-\end{table}
-
-
+%%\begin{table}
+%%\caption{The yield in the low BDT region where the QCD faking estimation in the leptonic channels are tested.}
+%%\label{tab:closureYield}
+%%\input{\FCNCTables/tthML/showFake/faketau/postfit/NOMINAL_closureTest/yield_chart}
+%%\end{table}
+%%
+%%
 \begin{table}
 \caption{The QCD transfer factor derived from low BDT regions as closure test.}
 \label{tab:fakeFactor_closure}
@@ -151,15 +151,11 @@ In the hadronic channels, the QCD also contributes to the fake tau background wh
 \item{Fake-CR: 2 opposite charged $\tauhad$ with leading one passing RNN medium, subleading one failing RNN medium, other requirements are the same as SR (one for each  $t_h\thadhad$-2j and $t_h\thadhad$-3j SR).}
 \end{itemize}
 
-\begin{table}
-\caption{The yield in the not-medium region.}
-\label{tab:hadronic_nm_yield}
-\input{\FCNCTables/xTFW/showFake/NOMINAL/yield_chart_nm}
-\end{table}
+
 
 Since the sub-leading tau ID is reversed, the Fake-CR contains most of events with fake sub-leading tau.
 However there are also events with two medium taus in the SR that the leading tau is fake and the sub-leading tau is real.
-These events can not be modelled by the events in Fake-CR. Fortunately the contribution of these events is minor compared to the other fake background as shown in the Table \ref{tab:yield_SR} and Figure \ref{fig:fakeEstimation_had} defined as ``Only $\tau_{sub}$ real''. So they can be modelled by MC with the fake tau SFs measured from the
+These events can not be modelled by the events in Fake-CR. Fortunately the contribution of these events is minor compared to the other fake background as shown in the Table \ref{tab:yield_SR} and Figure \ref{fig:fakeEstimation_had_nominal} - \ref{fig:fakeEstimation_had_oscr} defined as ``Only $\tau_{sub}$ real''. So they can be modelled by MC with the fake tau SFs measured from the
 CRtt in the leptonic channels.
 %with the shape uncertainty neglected and the normalisation uncertainty can be applied according to fake studies in the leptonic channels (50\% to be conservative).
 
@@ -177,6 +173,7 @@ The uncertainties of this method consists of three parts:
 \label{tab:FF_htautau}
 \input{\FCNCTables/xTFW/FF/FF_nominal_1p3p}
 \end{table}
+\input{\FCNCFigures/tex/fakeEstimation_had_nominal}
 
 \item The FF is rederived in the SS CR (2 taus with the same-sign charge, at least 3 jets with exactly 1 b-tagged) to account for any possible difference in 
   the parameterized fake-factors as shown in Figure \ref{fig:ffsys}. The fake factors are also presented in Table \ref{tab:FF_ss}. The difference between the FF
@@ -187,13 +184,8 @@ The uncertainties of this method consists of three parts:
 \label{tab:FF_ss}
 \input{\FCNCTables/xTFW/FF/FF_sys_ss_1p3p}
 \end{table}
+\input{\FCNCFigures/tex/fakeEstimation_had_sscr}
 
- \begin{table}[H]
-\caption{The yield in SS CR and OS CR with two medium ID had taus.}
-\label{tab:hadronic_CR_yield}
-\input{\FCNCTables/xTFW/showFake/NOMINAL/yield_chart_SSCR}
-\input{\FCNCTables/xTFW/showFake/NOMINAL/yield_chart_OSCR}
-\end{table}
 
 \item The FF is rederived in the OS CR (2 taus with the opposite-sign charge, at least 3 jets with exactly 1 b-tagged) with the events failing the signal cuts
   defined in Table \ref{tab:cutflow_STHhadhad} and \ref{tab:cutflow_TTHhadhad} to account for the different contribution from each origin of the fake taus as shown in Figure \ref{fig:ffsys}. The fake factors are summarized in Table \ref{tab:FF_sb}. The difference between the FF derived in the OS CR and W+jet control region is treated as another
@@ -204,13 +196,8 @@ The uncertainties of this method consists of three parts:
 \label{tab:FF_sb}
 \input{\FCNCTables/xTFW/FF/FF_sys_sb_1p3p}
 \end{table}
+\input{\FCNCFigures/tex/fakeEstimation_had_oscr}
 
-\begin{table}[H]
-\caption{The yield in the SS CR and OS CR with one had tau failing medium ID.}
-\label{tab:hadronic_nmCR_yield}
-\input{\FCNCTables/xTFW/showFake/NOMINAL/yield_chart_nmSSCR}
-\input{\FCNCTables/xTFW/showFake/NOMINAL/yield_chart_nmOSCR}
-\end{table}
 
 \end{enumerate}
 
@@ -219,12 +206,7 @@ The uncertainties of this method consists of three parts:
 
 Due to the low statistics in the high $\pt$ region, some fake factors are negative in SS CR or OS CR. Those FFs are reset to zero.
 
-The tau $\pt$ distributions after fake estimation are shown in Figure \ref{fig:fakeEstimation_had} using three FFs derived for nominal and two systematics
-samples (SS CR and OS CR). The small difference indicates that the three sets of FFs are consistent with each other.
-
-\input{\FCNCFigures/tex/fakeEstimation_had}
-
-
+The tau $\pt$ distributions after fake estimation are shown in Figure \ref{fig:fakeEstimation_had_nominal} - \ref{fig:fakeEstimation_had_oscr} using three FFs derived for nominal and two systematics samples (SS CR and OS CR). The small difference indicates that the three sets of FFs are consistent with each other.
 
 
 \clearpage
