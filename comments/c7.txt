@@ -164,7 +164,7 @@ SR are always blinded.
  
 * Fig48: Why Pileup_Rho_Topology is 1-sided? As a related remark,  could you add more details on the configuration used for TRexFitter in terms of pruning, symmetrization, etc?
  
-===>done. All two sided NPs ( with up and down) are symmetrized by "TWOSIDED" and one sided NPs (PS, hdamp, MET, fake estimation etc.) are symmetrized by "ONESIDED". Pruning is set as 1%. Smoothing is set as 40. Pileup_Rho_Topology is checked in Appendix D (?)
+===>done. All two sided NPs ( with up and down) are symmetrized by "TWOSIDED" and one sided NPs (PS, hdamp, MET, fake estimation etc.) are symmetrized by "ONESIDED". Pruning is set as 1%. Smoothing is set as 40. Pileup_Rho_Topology is checked in Appendix D.
 
 Best Regards,
 Luca.
