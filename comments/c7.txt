@@ -392,7 +392,7 @@ Unrelated: I’m wondering also why ttbar decaying to real taus normalization is
 
 Maybe I'm mistaking here but I see all plots are made for the uH final state, but in the tables and the results you quote also que channel cH, did you derived those limits only by dividing the total branching ratios and then taking 1-BR(uH), or did you measure the cH final state directly?
 
-===> The tcH is measured directly assuming tuH is zero.We didnt add the tcH plots in the note since the distributions are similar and there are many plots.we can add them if you feel better.
+===> The tcH is measured directly assuming tuH is zero. We didnt add the tcH plots in the note. have added tcH.
 
 Best regards,
 Edson
