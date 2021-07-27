@@ -1,0 +1,19 @@
+\section{PLIV cut efficiency study for electron and muon from $\tau$ decays}
+\label{sec:CheckPLIV}
+
+The PLIV has been trained to better reject non-prompt leptons and fakes produced in hadron decays. Since tau has a finite lifetime, we have to check the
+recommended PLIV scale factors can be applied to the electron and muon from tau decays using $Z\rightarrow \tau\tau\rightarrow e\mu$ enriched control sample
+where the electron and muon is required to back-to-back ($d\phi_{e\mu}>2.9$). The data are in good agreement well with the MC prediction with and without
+PLIV cuts with the recommended PLIV SF for the invariant mass of electron and muon between 50 and 85 GeV as shon in Figure~\ref{fig:ap9_checkpliv}. 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/checkPLIV/Plots_hmemuos_ele_inclusive.pdf}
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/checkPLIV/Plots_hmemuos_eleplv_inclusive.pdf}
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/checkPLIV/Plots_hmemuos_muoplv_inclusive.pdf}
+\caption{ The $m_{e,\mu}$ distribution from $Z\rightarrow\tau\tau\rightarrowe\mu$ decay without PLIV cut (left); with PLIV cut on electron only (middle); and
+  with PLIV cut on muon only (right). The data points are in good agreement with the MC prediction where the PLIV SF applied correctly.}
+\label{fig:ap9_checkpliv}
+\end{figure}
+
