@@ -1,8 +1,12 @@
-Dear Luca and Edson:
+Dear Luca, Edson, and EB:
 
-   Thank you so much for your comments. We have addressed your main concerns and uploaded the inter-note V5.3 in CDS
-       1. Included the signal PS systematic in the fits.
-       2. Addressed the EB comments.
+   Thank you so much for your comments. We have addressed your main concerns and uploaded the inter-note V5.3 in CDS.
+1. Changed the default value of B(t$\rightarrow$Hq) from 0.2\% to 0.1\% to be consistent with the blind strategies.
+2. Re-trained the BDT using the Ncuts and Ntree obtained from the optimization studies made based on independent Herwig7 samples.
+3. Added appendice G for the comparison of the sensitivity using different di-tau kinematic fits with MMC and a colinear fit without Higgs mass constraint.
+4. Added appendice H for checks on the PLIV cut efficiencies for the e/mu from the tau decay using $Z\rightarrow\tau\tau\rightarrow e\mu$ events.
+5. Moved some yields tables into appendice I.
+6.Improved the table and figure captions to be more readable.
     We also included the replies below by starting "===>".
 
     Cheers
@@ -27,11 +31,11 @@ FCNC DRAFT 5.2 09/07/21
 
 * l145: I think it would be more coherent and logical if you use 0.1% as BR benchmark. I understand where 0.2% is coming from, but 0.1% is used for the blinding and it also makes easier to convert the results on mu into the results on BR.
 
-===> The BR is just a reference that has no impact on the final results. Unfortunately, it requires to change the code in multiple places and we prefer to keep it as is for now.
+===> The BR is just a reference that has no impact on the final results, but we agree 0.1% would make more sense to be consistent with the blind strategies and have updated the note with 0.1% as BR benchmark. 
 
 * l146: Have you considered the effect that a FCNC tHq contribution would have on the Higgs boson branching ratios? Likely negligible, but please think a little about it.
 
-===> Sorry the units of cross section should be fb and the impact on H->tq would be suppressed due to the mass difference even with a FCNC tHq interaction.
+===> the impact on H->tq would be suppressed due to the mass difference even with a FCNC tHq interaction, which could have some interesting decays, such as H->wbq.
  
 * Table 1: When a W decays into a tau, where do you account it in this table?
 
@@ -43,7 +47,7 @@ FCNC DRAFT 5.2 09/07/21
 - Can you specify what tye of error is quoted (stat only, stat+syst, etc)?
 - You can keep the current rounding for the INT note, but you will need a better rounding for the paper.
 
-===>done. Only statistical uncertainties are being shown in these distributions presented until chapter 12. Underflow and overflow bins are included respectively in the first and last bins.
+===>The captions for tables are improved and more clear now.
 
 * l211: quote the minimum RNN cut, which is 0.01 AFAIK.
 
@@ -89,14 +93,14 @@ When W decays leptonically, We didn't use the collinear mass approximation.
 * Eq3: I think you need to better describe the resolution terms and also mfitH, which is apparently the collinear mass you called in a different way in l508. I’m also a bit skeptical of using this chi2, because it shapes the background to peak at 125 GeV. So I think you should comment a bit more on the improvement that it brings in sensitivity and if it bias the background to be more signal-like for the BDT or if you took special care to avoid it.
 
 ===>The same di-tau mass construction is used in the previous 36 fb-1 publication. It provides a better ditau mass resolution than the simple collinear mass or
-    MMC mass even the background shape is biased toward at 125 GeV. We compared the signal and background with a simple mass window of +- 1 sigma cut for these
-    ditau masses and the ditau mass with Higgs mass constraining has a better background rejection while keeping the same signal efficiency.
+    MMC mass even the background shape is biased toward at 125 GeV. We have repeated the analysis for the hadronic channels with different di-tau kinematic fits and compared their search sensitivities.
+    The results are summarized in Appendix G that the di-tau mass fitter we used gives a better sensitivity. 
     We also checked the background shape from the same-sign ditau events, which gives a good agreement between data and Monte Carlo prediction.
 
 * Figs in general: Please add to the caption the type of the error. As a rule of thumb, you should show all the variables used in the BDT. Also captions are often very brief. You should say when blinding is applied and perhaps indicate it better in the plot. Otherwise the reader doesn’t know if a bin is empty or blinded.
 
-===>done. Only statistical uncertainties are being shown in these distributions presented until chapter 12, and we updated the plots, only SR are blinded, so the empty bins in
-SR are always blinded.
+===>The captions for figures are improved and more clear now.
+
 
 * Fig8: There are some data/MC fluctuations. I wonder if you have investigated them.
 
@@ -104,16 +108,16 @@ SR are always blinded.
 
 * Fig18: Here it is a bit disappointing/worrying that most of the bins in the distributions are blinded. I wonder if you have a CR that could be useful to check toplep_tauhad_tauhad agreement. It is the most sensitive region, I believe, and we have no idea of the data/bkg modelling.
 
-===>done. WILL show the same distributions using the same-sign di-tau in the t_lhadhad events.
+===>We added the same distributions using the same-sign di-tau in the t_lhadhad events. Overall the data are well modeled here. 
 
 * Fig24: I don’t understand the bottom figures. Are all the bins blinded or are they empty?
 
-===>done. The data/mc ratio is out of bounds due to the excess of data where the fake is missing in the Monte carlo prediction.
+===>The data/mc ratio is out of bounds due to the excess of data where the fake is missing in the Monte carlo prediction.
     The same sign regions are not SRs, we have unblinded the data now.
  
 * l624: what makes the remaining 30% contribution? Please discuss this further.
 
-===>As shown in Figure 25 for the background composition, there are less ttbar constributions in the t_l tau SS channel where the QCD and W+jets contribution is
+===>As shown in Figure 27 for the background composition, there are less ttbar constributions in the t_l tau SS channel where the QCD and W+jets contribution is
        significant while the t_hlephadOS are dominated by ttbar contributions.
 
 * l677: Would be possible to have an appendix explaining in more details how you obtain the 24 factors?
@@ -137,13 +141,12 @@ SR are always blinded.
  
 * l736: I would recommend to better structure this part. Mention the first systematic and show the systematic values, then the second systematic and the values, etc..
 
-===>done
+===>Fixed 
 
 * l754: In principle you should not be optimizing on the same events used in the “test” sample, i.e. the events used in the statistical analysis. You should demonstrate that there is no bias or split like 40%/40% and 20% as “validation” sample for optimization studies. See action item from 1st EB meeting.
 
-===>done WILL re-optimize using Herwig signal and ttbar background to cross check the procedure. TMVA recommends nCUTS=30 and nTrees>100, which is not very
-       different than we have. Since we are using different signal and background samples for PS systematic, the effect of the statis fluctation has been treated as part of
-       systematic uncertainties.
+===>We re-optimize using Herwig signal and ttbar background independent samples to obtain Ncuts and Ntree for each channel and re-trained BDT with Powheg signal sample.
+    The results are updated and are similar to what we had before.
 
 * l857: have you checked of different are 1p and 3p taus?
 
@@ -155,7 +158,7 @@ SR are always blinded.
 
 * Fig43-47: too much information given to the reader to digest. If there is some important important feature, please mention in the text/caption.
 
-===>done. have added some comments in caption.
+===>Fixed caption
  
 * Fig48: I see that ttbar theory uncert are often constrained (ME, PS, hdamp). I see why they are (figs 57-59), but is it expected?
 
@@ -164,11 +167,11 @@ SR are always blinded.
  
 * Fig48: Why Pileup_Rho_Topology is 1-sided? As a related remark,  could you add more details on the configuration used for TRexFitter in terms of pruning, symmetrization, etc?
  
-===>done. All two sided NPs ( with up and down) are symmetrized by "TWOSIDED" and one sided NPs (PS, hdamp, MET, fake estimation etc.) are symmetrized by "ONESIDED". Pruning is set as 1%. Smoothing is set as 40. Pileup_Rho_Topology is checked in Appendix D.
+===>All two sided NPs ( with up and down) are symmetrized by "TWOSIDED" and one sided NPs (PS, hdamp, MET, fake estimation etc.) are symmetrized by "ONESIDED". Pruning is set as 1%. Smoothing is set as 40.
+    Pileup_Rho_Topology systematics checked OK and are shown in Fogure 66 in Appendix D.
 
 Best Regards,
 Luca.
-
 
 
 ****** COMMENTS from Edson ****** 
@@ -207,7 +210,7 @@ L204 the hadronic channels
 
 L212.- 216.- This part seems disconnected from the previous paragraph, please consider improving this description of the control regions
 
-===>WILL fix(?) 
+===>Modified to make it more readable.
 
 L298.- Why there is no Run number here?
 
