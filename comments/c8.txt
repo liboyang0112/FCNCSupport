@@ -1,0 +1,189 @@
+
+
+
+Answer begis with *********>
+
+
+
+
+
+
+Hello:
+
+The following comment was sent to CERN Document Server by Luca Fiorini:
+(<http://cds.cern.ch/record/2687866>)
+
+
+Dear authors,
+thanks for improving the support note in several aspects. I see you have addressed many of the comments and improved the text, the captions of the figures and the tables. I also noticed some more changes in the yields and figures.
+I don't know if it is on purpose, but the main pdf still points to v5.2 draft:
+https://cds.cern.ch/record/2687866/files/ATL-COM-PHYS-2019-1103.pdf
+Draft 5.3 has been uploaded as an auxiliary source file:
+https://cds.cern.ch/record/2687866/files/FCNCsupport.pdf
+
+*********> sorry, upload in wrong way
+ 
+One thing that I would like to clarify is that when when asking some explanations, I mean explanations in the text of the support note for the reader, not an answer to me, personally.
+
+*********> will add in the note
+ 
+I have few follow-up on the answers you provided and some new comments at the bottom for v5.3 draft.
+ 
+Best Regards,
+Luca
+ 
+ 
+* l146: Have you considered the effect that a FCNC tHq contribution would have on the Higgs boson branching ratios? Likely negligible, but please think a little about it.
+ 
+===> the impact on H->tq would be suppressed due to the mass difference even with a FCNC tHq interaction, which could have some interesting decays, such as H->wbq.
+ 
+LF: Thanks, can you add a sentence in the int note, here? Stating that you have considered the possible implications is equally important as the conclusion.
+ 
+ *********> OK(will do, just add a sentence " the impact on H->tq would be suppressed due to the mass difference even with a FCNC tHq interaction, which could have some interesting decays, such as H->wbq" ?)
+ 
+* Table 3: I mention it here, but it is also valid for other summary tables in the note (Tab 6,7,10,11,13,15,...). I find that the tables can be improved in several aspects:
+- Make clear the rows that are the sum of other processes. For example, you can indent the background, data and merged signals to the left and the others to the right or central, you could also use multiple \hline to separate bkg from data from signal.
+- the labels used for the process not very clear. What goes into “Other MC” or “Other fake tau”? What is “Rare”? What is “only t_sub real”? What is “Fake” wrt other types of Fake?
+- Can you specify what tye of error is quoted (stat only, stat+syst, etc)?
+- You can keep the current rounding for the INT note, but you will need a better rounding for the paper.
+ 
+===>The captions for tables are improved and more clear now.
+ 
+LF: Thanks. I like the new style. I have still some suggestions for you to consider: "background" -> "Total Background".
+Double line after "background", and after "tuH merged".
+Single line after "double fake \tau", "Fake" and "after tcH merged".
+
+ *********> OK,will do
+ 
+I also see that some values have changed considerably for the following columns: tl-tau_had-1j; th-tau_lep-tau_had-2j th-tau_lep-tau_had-3j, what happened?
+
+ *********> add a tautau mass cut in lep ?(nned to check with boyang)
+ 
+* l265: I think there is something wrong in the luminosity. Can be in the values you quote, the values you use or the GRL you used or any combination in between. If you are using some general Top group ntuples/prescription, please check with the responsible person.
+- For 2016 you quote 32.88 ifb, but this is the one from tag Ofl-lumi-13TeV-008, which is for R20.7! The latest value for R21 is from tag Ofl-lumi-13TeV-009 and it is 32.9881 ifb
+- For 2018 you quote 59.937 ifb. This value was obtained 19/02/2019 and corresponds to Ofl-lumi-13TeV-010. But there is a more recent value of 58.450 ifb obtained on 18/03/2019 also corresponding to Ofl-lumi-13TeV-010. I’m not sure what is the difference between the two, but I think that analyses are using the latter one. Can you please check?
+The above values have been obtained from here: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/GoodRunsLists/
+ 
+===> The luminosities are fixed.
+ 
+LF: Sorry, how is it fixed? Changing the values in the INT note is not the same as fixing them.
+a) Have you checked the Lumi tags used in the analysis?
+b) Have you checked the luminosity values used in the analysis? Several yields in tables have not changed. If you have "fixed" the luminosity values, why the yields have not changed?
+c) Have you checked the difference in value between the lumi tag obtained 19/02/2019 and 18/03/2019 for 2018 data?
+
+ *********> I check the code,  the 2015+2016 lumi is right, but the 2018 lumi is not right( boyang have change, i didnt update the code, wll fix had channel) 
+if(inputconfig.Contains("data")) isData = 1;
+else if(inputconfig.Contains("mc16a")) luminosity = 3.219555072 + 32.988125184;
+else if(inputconfig.Contains("mc16d")) luminosity = 44.30739456; //No event passed GRL in run 338377 in v3, reason unknown.
+else if(inputconfig.Contains("mc16e")) luminosity = 59.93723904;
+ 
+Also column “3” of the following figures still uses the 140 fb-1 label. Is it correct?
+
+ *********> where is the figure?
+ 
+* l297: How large is the contribution of FCNC HWW and HZZ? You could quote the”Other Higgs decay modes” FCNC signal separately in the tables.
+ 
+===> The additional contribution will be checked once the other Higgs decay signal samples are available.
+ 
+LF: Thanks, let us know when you have checked them.
+ 
+ *********> add cutflow table just like I shown in the attachment of last night email?
+
+
+ 
+* l501: how much do you loose in acceptance by cutting on the jet pT > 60 GeV?
+ 
+===> The jet requirement is part of trigger to ensure the trigger efficiency is understood.
+ 
+LF: Yes, this was already stated in the support note and that’s fine. The question is aimed at understanding the efficiency loss of the jet requirement and if this can improve in Run 3.
+ 
+ *********> dont understand 
+
+ 
+* Eq3: I think you need to better describe the resolution terms and also mfitH, which is apparently the collinear mass you called in a different way in l508. I’m also a bit skeptical of using this chi2, because it shapes the background to peak at 125 GeV. So I think you should comment a bit more on the improvement that it brings in sensitivity and if it bias the background to be more signal-like for the BDT or if you took special care to avoid it.
+ 
+===>The same di-tau mass construction is used in the previous 36 fb-1 publication. It provides a better ditau mass resolution than the simple collinear mass or
+MMC mass even the background shape is biased toward at 125 GeV. We have repeated the analysis for the hadronic channels with different di-tau kinematic fits and compared their search sensitivities.
+The results are summarized in Appendix G that the di-tau mass fitter we used gives a better sensitivity.
+We also checked the background shape from the same-sign ditau events, which gives a good agreement between data and Monte Carlo prediction.
+ 
+LF: Thanks for the appendix. I think I still need to better understand the resolution term.
+Why do you divide each component by the total uncertainty \sigma_miss?
+I think it should be \sigma_miss,x and \sigma_miss,y. Which are different event by event depending on the MET direction - cos(phi_met) and sin(phi_met) components - and on average lower by a sqrt(2) factor.
+And I would insist with the question on mfitH: why not calling it m^fit_tautau which is more consistent with l531 (was l508 in previous draft)?
+ 
+ *********> checked, our fit is right : f = pow((mass-125*GeV)/20/GeV,2) + pow((pxMiss-met->at(0)->Px())/met_resol,2) + pow((pyMiss-met->at(0)->Py())/met_resol,2); 
+what does "And I would insist with the question on mfitH: why not calling it m^fit_tautau which is more consistent with l531 (was l508 in previous draft)?" means?
+just change the name of the tautau mass?
+
+
+
+
+ 
+* l677: Would be possible to have an appendix explaining in more details how you obtain the 24 factors?
+ 
+===>This is done with a minuit fit by comparing the data and predicted tau pt distributions in ttCR to obtain the 24 factors. The Pre- and Post-fits are shown in Fig 29 and 30.
+ 
+LF: Thanks, but can you add in the text a couple of sentence about how the fit on fig 29 components is done to obtain the SF?
+ 
+ *********>   OK, will do
+ 
+* Fig39-41: Are the bin contents divided by the bin width? You should specify in the caption. As mentioned, the captions are often very brief.
+ 
+===>The bin contents are absolute, not divided by the bin width for all the plots. add captions.
+ 
+LF: Sorry, I don't see this stated in the caption, is it somewhere else?
+ 
+ 
+  *********> will add,add "The bin contents are absolute, not divided by the bin width"?
+ 
+ 
+* Fig48: Why Pileup_Rho_Topology is 1-sided? As a related remark, could you add more details on the configuration used for TRexFitter in terms of pruning, symmetrization, etc?
+ 
+===>All two sided NPs ( with up and down) are symmetrized by "TWOSIDED" and one sided NPs (PS, hdamp, MET, fake estimation etc.) are symmetrized by "ONESIDED". Pruning is set as 1%. Smoothing is set as 40.
+Pileup_Rho_Topology systematics checked OK and are shown in Fogure 66 in Appendix D.
+ 
+LF: I don't see any text/appendix where you added the TRexFitter options you used. Can you please document them in the note?
+  *********>OK,will do
+I understand that the 1% pruning threshold is for the normalization: how do you decide to prune the shape, instead?
+  *********> prune the shape is also a trexfitter option in the config ,right?
+I'm also not 100% convinced by the behavior of Pileup_Rho_Topology. The input is symmetrized, but the impact is one-sided. Why?
+And in v5.3 draft also for JET_Flavor_Composition the +1 sigma impact is missing or one-sided (was OK in v5.2).
+ 
+  *********>   I dont know, need to talk about with boyang
+ 
+ADDITIONAL COMMENTS:
+ 
+* The todo list and the list of on going studies seems to be obsolete to me. Can you update them with the actual status?
+  *********> have updated?
+ 
+* What is the effect on the limit of having set the pruning at 1% level? Can you state how much the limit changes when pruning is applied?
+Usually a fit is performed once without any pruning and the result is compared with the limit obtained with pruning applied. The choice of 1% or the pruning is a bit on the aggressive side, as one can see from the large number of pruned NPs, so this is worthwhile to check. Now several CP recommendations are at precision-level, below or around 1%.
+
+
+  *********> I dont understand, just turn off the option and compare the result? 
+ 
+* Related to the above question, I’m surprised that in figures 55-56, the btag NPs entering in the table are not the largest ones. I would expect that the impact of b/c-tag0,1 to be more important than 5 or 8. Can you explain this behavior?
+   *********> I dont know
+ 
+* Fig 55 and 56 show tHu and tHc impact, but they are identical. Is it expected? If so, there is no reason to duplicate them and you can instead add in the caption that the impact is identical.
+   *********>  insert same plot file, have fixed 
+ 
+* On the same figures, what is “scale”? Can you use a more precise name for this important NP?
+   *********> will add, scale is just "FSR,ISR,scale..."
+ 
+* Tables 18-23: The caption could be misleading: are the limits obtained with a Background-only Asimov Workspace or with a S+B Asimov Workspace? Usually expected limits are given using B-only Asimov workspace. If it is the case, can you clarify it in the caption? If not, why did you use S+B Asimov Workspace?
+    *********>?? we have emphasised the result is B-only
+ 
+* Why in Table 19 the cq→tH limit for tl-tau_had-2j is missing? If this is due to the very low sensitivity, can you add it to the caption?
+    *********>don't converge, low  sensitivity, (to be confirmed with boyang)
+ 
+* Table 20: Can you define in the caption STH and TTH?
+    *********>old naming,have fixed 
+ 
+* Thanks for having the cutflow in appendix B. But I think that ATLAS requires to have also the cutflow for raw events (not only yields).
+    *********>will add, 
+ 
+* I appreciate the PLIV appendix. The ratio plot of Fig 88 doesn’t allow to see the effect of the change. Can you zoom in to better see difference? We are trying to see a difference of the order of few 0.01 and the scale goes from 0.5-2.0.
+ 
+ 
