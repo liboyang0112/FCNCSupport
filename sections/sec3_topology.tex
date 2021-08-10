@@ -24,7 +24,7 @@ is used to recontruct the ditau mass and momentum by taking the $\tau$ decay kin
 \begin{array}{ll}
 \chi^2 = 
 %-2\ln \mathcal{P}_1 -2\ln \mathcal{P}_2 + \left( \frac{m_{\tau_1}^{\text{fit}} - 1.78}{\sigma_{\tau}} \right)^2 +  \left( \frac{m_{\tau_2}^{\text{fit}} - 1.78}{\sigma_{\tau}} \right)^2 +  
-\left( \frac{m_{H}^{\text{fit}} - 125}{\sigma_{\text{Higgs}}} \right)^2 + \left( \frac{E_{x,\text{miss}}^{\text{fit}} - E_{x,\text{miss}}}{\sigma_{\text{miss}}} \right)^2 + \left( \frac{E_{y,\text{miss}}^{\text{fit}} - E_{y,\text{miss}}}{\sigma_{\text{miss}}} \right)^2 ,
+\left( \frac{m_{\tau\tau}^{\text{fit}} - 125}{\sigma_{\tau\tau}} \right)^2 + \left( \frac{E_{x,\text{miss}}^{\text{fit}} - E_{x,\text{miss}}}{\sigma_{\text{miss,x}}} \right)^2 + \left( \frac{E_{y,\text{miss}}^{\text{fit}} - E_{y,\text{miss}}}{\sigma_{\text{miss,y}}} \right)^2 ,
 \end{array}
 \label{eq:eq2}
 \end{eqnarray}
@@ -33,9 +33,9 @@ is used to recontruct the ditau mass and momentum by taking the $\tau$ decay kin
 %\input{\FCNCFigures/tex/tau_probs}
 
 In Eq. \ref{eq:eq2}, the free parameters are the energy ratio of invisible decay products for each tau decay.
-The Higgs mass resolution is set to 20~GeV according to \cite{Htautau}. The $\met$ resolution is parametrized as
+The Higgs mass resolution is set to 20~GeV according to \cite{Htautau}. The $\met$ resolution is parametrized as~\cite{met_sys}
 \begin{equation}
-\sigma_{\text{miss}}=13.1 + 0.50\sqrt{\Sigma E_\text{T}},
+\sigma_{\text{miss,x(y)}}=13.1 + 0.50\sqrt{\Sigma E_\text{T}},
 \label{eq:eq7}
 \end{equation}
 where $\Sigma E_\text{T}$ (in GeV) is the scalar sum of transverse energy depositions of all objects and clusters. The invisible 4-momenta are obtained by minimizing the combined $\chi^2$ for each event. By adding the Higgs mass constraint term in the kinematic fit, not only is the Higgs mass resolution improved, but also the resolutions of the Higgs boson's four-momentum, and the mass of the top from which the Higgs comes. Figure \ref{fig:chi2} shows the distributions of $\chi^2$ in different regions. Good agreement between data and background predictions are achieved.
