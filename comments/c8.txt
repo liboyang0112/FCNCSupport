@@ -55,8 +55,8 @@ LF: Thanks. I like the new style. I have still some suggestions for you to consi
 Double line after "background", and after "tuH merged".
 Single line after "double fake \tau", "Fake" and "after tcH merged".
 
-*********> OK,will do (?)
- 
+*********> OK,done.
+
 I also see that some values have changed considerably for the following columns: tl-tau_had-1j; th-tau_lep-tau_had-2j th-tau_lep-tau_had-3j, what happened?
 
 *********> The difference is about a factor of 2 in th-tau_lep-tau_had-2j and th-tau_lep-tau_had-3j channels due to a tautau mass cut, which was not 
@@ -83,7 +83,7 @@ c) Have you checked the difference in value between the lumi tag obtained 19/02/
  
 Also column “3” of the following figures still uses the 140 fb-1 label. Is it correct?
 
-*********> Figure 58, 88 are still using 140 fb-1, now fixed. (?)
+*********> Figure 58, 88 are still using 140 fb-1, now fixed.
  
 * l297: How large is the contribution of FCNC HWW and HZZ? You could quote the”Other Higgs decay modes” FCNC signal separately in the tables.
  
@@ -91,7 +91,7 @@ Also column “3” of the following figures still uses the 140 fb-1 label. Is i
  
 LF: Thanks, let us know when you have checked them.
  
-*********> add cutflow table just like I shown in the attachment of last night email?
+*********> add cutflow table just like I shown in the attachment of last night email ?
 
  
 * l501: how much do you loose in acceptance by cutting on the jet pT > 60 GeV?
@@ -146,7 +146,7 @@ Pileup_Rho_Topology systematics checked OK and are shown in Fogure 66 in Appendi
  
 LF: I don't see any text/appendix where you added the TRexFitter options you used. Can you please document them in the note?
 
-*********>OK,will do (?)
+*********>OK,will do, the symmetrization is described in captions of rangking plots, pruning is in the appendixE, and Smoothing can be found in appendixD.
   
 I understand that the 1% pruning threshold is for the normalization: how do you decide to prune the shape, instead?
 
@@ -181,7 +181,7 @@ Usually a fit is performed once without any pruning and the result is compared w
  
 * On the same figures, what is “scale”? Can you use a more precise name for this important NP?
 
-*********> will add, scale is just "FSR,ISR,scale..." (?)
+*********> will add, scale is just "envelope of 8 factorization scales muR=10,muF=20;muR=10,muF=05;muR=20,muF=10;muR=05,muF=10;muR=05,muF=05;muR=20,muF=20;muR=20,muF=05;muR=05,muF=20"
  
 * Tables 18-23: The caption could be misleading: are the limits obtained with a Background-only Asimov Workspace or with a S+B Asimov Workspace? Usually expected limits are given using B-only Asimov workspace. If it is the case, can you clarify it in the caption? If not, why did you use S+B Asimov Workspace?
 
@@ -193,7 +193,7 @@ Usually a fit is performed once without any pruning and the result is compared w
  
 * Table 20: Can you define in the caption STH and TTH?
 
-*********>Have fixed (?)
+*********>Have fixed.
  
 * Thanks for having the cutflow in appendix B. But I think that ATLAS requires to have also the cutflow for raw events (not only yields).
 
