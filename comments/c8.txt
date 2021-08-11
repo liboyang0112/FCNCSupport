@@ -40,7 +40,7 @@ LF: Thanks, can you add a sentence in the int note, here? Stating that you have 
  
 *********> The following sentence is added at L145.
            "The tHq interaction could also potentially open up more Higgs decay channels, such as $H\rightarrow t^*q\rightarrow Wbq$, but they are
-	   likely suppressed due to the t-H mass difference, which could be intersting for future studies."
+	   likely suppressed due to the t-H mass difference, which could be interesting for future studies."
 
  
 * Table 3: I mention it here, but it is also valid for other summary tables in the note (Tab 6,7,10,11,13,15,...). I find that the tables can be improved in several aspects:
@@ -89,7 +89,7 @@ Also column “3” of the following figures still uses the 140 fb-1 label. Is i
 LF: Thanks, let us know when you have checked them.
  
 *********> Unfortunately, the FCNC HWW and HZZ samples are filtered by requiring a lepton in the final states, and
-           we will check and document the overlap contributions in the leptonic channels in next version. 
+           we will check and document the overlap contributions in the leptonic channels in next version. (?)
 
  
 * l501: how much do you loose in acceptance by cutting on the jet pT > 60 GeV?
@@ -155,7 +155,7 @@ I'm also not 100% convinced by the behavior of Pileup_Rho_Topology. The input is
 And in v5.3 draft also for JET_Flavor_Composition the +1 sigma impact is missing or one-sided (was OK in v5.2).
  
 *********>As shown in Figure 67, the impact of Pileup_Rho_Topology systematic seems quite different for different leptonic channels, and the overall
-          effect seems happen to be one-sided. The impact on JET_Flavor_Composition are also included in Figure XX, which the net effect happens to be one-sided (?)
+          effect seems to happen to be one-sided. The impact on JET_Flavor_Composition will be included in Figure XX, in which the net effect happens to be one-sided (?)
  
 ADDITIONAL COMMENTS:
  
@@ -197,11 +197,11 @@ Usually a fit is performed once without any pruning and the result is compared w
  
 * Thanks for having the cutflow in appendix B. But I think that ATLAS requires to have also the cutflow for raw events (not only yields).
 
-*********>The raw and yields are differ only the weight normalization. It's not clear how useful to repeat the cutflow with raw events,
+*********>The raw and yields differ only in the weight normalization. It's not clear how useful to repeat the cutflow with raw events,
           but we can add if you think otherwise.  
  
 * I appreciate the PLIV appendix. The ratio plot of Fig 88 doesn’t allow to see the effect of the change. Can you zoom in to better see difference? We are trying to see a difference of the order of few 0.01 and the scale goes from 0.5-2.0.
  
 *********>Good points, the plots are updated with zoom from 0.9 to 1.1. The ratio of PLIV tight cut eff for tau-lepton between data and MC (scale factor) is
-          0.98+-0.02(total), which is consistent of 1 at a sigma level for both electron and muon. 
+          0.98+-0.02(total), which is consistent with 1 at a sigma level for both electron and muon. 
 
