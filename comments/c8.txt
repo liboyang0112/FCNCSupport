@@ -19,11 +19,11 @@ https://cds.cern.ch/record/2687866/files/ATL-COM-PHYS-2019-1103.pdf
 Draft 5.3 has been uploaded as an auxiliary source file:
 https://cds.cern.ch/record/2687866/files/FCNCsupport.pdf
 
-*********> Sorry, it's a mistake and will fix for next version. . 
+*********> Sorry, it's a mistake and will fix. 
  
 One thing that I would like to clarify is that when when asking some explanations, I mean explanations in the text of the support note for the reader, not an answer to me, personally.
 
-*********> Agreed, will add in the note if needed.
+*********> Agreed, will add in the text if needed.
  
 I have few follow-up on the answers you provided and some new comments at the bottom for v5.3 draft.
  
@@ -38,7 +38,7 @@ Luca
  
 LF: Thanks, can you add a sentence in the int note, here? Stating that you have considered the possible implications is equally important as the conclusion.
  
-*********> The following sentence is added at L146.
+*********> The following sentence is added at L145.
            "The tHq interaction could also potentially open up more Higgs decay channels, such as $H\rightarrow t^*q\rightarrow Wbq$, but they are
 	   likely suppressed due to the t-H mass difference, which could be intersting for future studies."
 
@@ -74,12 +74,9 @@ a) Have you checked the Lumi tags used in the analysis?
 b) Have you checked the luminosity values used in the analysis? Several yields in tables have not changed. If you have "fixed" the luminosity values, why the yields have not changed?
 c) Have you checked the difference in value between the lumi tag obtained 19/02/2019 and 18/03/2019 for 2018 data?
 
-*********> I check the code,  the 2015+2016 lumi is right, but the 2018 lumi is not right.
-           ( boyang have change, i didnt update the code, wll fix had channel) 
-           if(inputconfig.Contains("data")) isData = 1;
-           else if(inputconfig.Contains("mc16a")) luminosity = 3.219555072 + 32.988125184;
-           else if(inputconfig.Contains("mc16d")) luminosity = 44.30739456; //No event passed GRL in run 338377 in v3, reason unknown.
-           else if(inputconfig.Contains("mc16e")) luminosity = 59.93723904;
+*********> Sorry, the 2015+2016 lumi is right, but the 2018 lumi was not updated properly in the hadronic channels.
+           The leptonic channels are correct. 
+           Now all tables are updated using correct luminosity for all the channels as well as the plots. (?)
  
 Also column “3” of the following figures still uses the 140 fb-1 label. Is it correct?
 
@@ -91,7 +88,8 @@ Also column “3” of the following figures still uses the 140 fb-1 label. Is i
  
 LF: Thanks, let us know when you have checked them.
  
-*********> add cutflow table just like I shown in the attachment of last night email ?
+*********> Unfortunately, the FCNC HWW and HZZ samples are filtered by requiring a lepton in the final states, and
+           we will check and document the overlap contributions in the leptonic channels in next version. 
 
  
 * l501: how much do you loose in acceptance by cutting on the jet pT > 60 GeV?
@@ -127,7 +125,8 @@ And I would insist with the question on mfitH: why not calling it m^fit_tautau w
  
 LF: Thanks, but can you add in the text a couple of sentence about how the fit on fig 29 components is done to obtain the SF?
  
-*********>   OK, will do (?)
+*********> Added at L708: "A simultaneous fit is made by minimizing the data yields with predictions
+          in tau $\pt$ bins in these CRtt to derive the scale factors for the fake taus calibration in the Monte Carlo."	
  
 * Fig39-41: Are the bin contents divided by the bin width? You should specify in the caption. As mentioned, the captions are often very brief.
  
@@ -136,7 +135,7 @@ LF: Thanks, but can you add in the text a couple of sentence about how the fit o
 LF: Sorry, I don't see this stated in the caption, is it somewhere else?
  
  
-*********> Following Figure 3 in the text: "It's worth noting that the bin contents in all the plots throughout the note are absolute, not divided by the bin size."
+*********> Added at L208: "It's worth noting that the bin contents in all the plots throughout the note are absolute, not divided by the bin size."
 
 
 * Fig48: Why Pileup_Rho_Topology is 1-sided? As a related remark, could you add more details on the configuration used for TRexFitter in terms of pruning, symmetrization, etc?
@@ -146,7 +145,7 @@ Pileup_Rho_Topology systematics checked OK and are shown in Fogure 66 in Appendi
  
 LF: I don't see any text/appendix where you added the TRexFitter options you used. Can you please document them in the note?
 
-*********>OK,will do, the symmetrization is described in captions of rangking plots, pruning is in the appendixE, and Smoothing can be found in appendixD.
+*********>The symmetrization is described in captions of rangking plots, pruning is in the appendixE, and Smoothing can be found in appendixD. (?)
   
 I understand that the 1% pruning threshold is for the normalization: how do you decide to prune the shape, instead?
 
@@ -181,7 +180,8 @@ Usually a fit is performed once without any pruning and the result is compared w
  
 * On the same figures, what is “scale”? Can you use a more precise name for this important NP?
 
-*********> will add, scale is just "envelope of 8 factorization scales muR=10,muF=20;muR=10,muF=05;muR=20,muF=10;muR=05,muF=10;muR=05,muF=05;muR=20,muF=20;muR=20,muF=05;muR=05,muF=20"
+*********> Added, "The scale NP is for a variation of normalization and factorization." (Check Figure 56, why so different than Figure 55 ?)
+
  
 * Tables 18-23: The caption could be misleading: are the limits obtained with a Background-only Asimov Workspace or with a S+B Asimov Workspace? Usually expected limits are given using B-only Asimov workspace. If it is the case, can you clarify it in the caption? If not, why did you use S+B Asimov Workspace?
 
@@ -197,9 +197,11 @@ Usually a fit is performed once without any pruning and the result is compared w
  
 * Thanks for having the cutflow in appendix B. But I think that ATLAS requires to have also the cutflow for raw events (not only yields).
 
-*********>The raw and yields are differ only the weight normalization. It's not clear how useful to repeat the cutflow with raw events, but we can add if you think otherwise.  
+*********>The raw and yields are differ only the weight normalization. It's not clear how useful to repeat the cutflow with raw events,
+          but we can add if you think otherwise.  
  
 * I appreciate the PLIV appendix. The ratio plot of Fig 88 doesn’t allow to see the effect of the change. Can you zoom in to better see difference? We are trying to see a difference of the order of few 0.01 and the scale goes from 0.5-2.0.
  
-*********>Good points, the plots are updated with zoom from 0.9 to 1.1. (?) 
+*********>Good points, the plots are updated with zoom from 0.9 to 1.1. The ratio of PLIV tight cut eff for tau-lepton between data and MC (scale factor) is
+          0.98+-0.02(total), which is consistent of 1 at a sigma level for both electron and muon. 
 
