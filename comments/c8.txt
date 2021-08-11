@@ -76,7 +76,7 @@ c) Have you checked the difference in value between the lumi tag obtained 19/02/
 
 *********> Sorry, the 2015+2016 lumi is right, but the 2018 lumi was not updated properly in the hadronic channels.
            The leptonic channels are correct. 
-           Now all tables are updated using correct luminosity for all the channels as well as the plots. (?)
+           Now all tables are updated using correct luminosity for all the channels as well as the plots.
  
 Also column “3” of the following figures still uses the 140 fb-1 label. Is it correct?
 
@@ -145,7 +145,7 @@ Pileup_Rho_Topology systematics checked OK and are shown in Fogure 66 in Appendi
  
 LF: I don't see any text/appendix where you added the TRexFitter options you used. Can you please document them in the note?
 
-*********>The symmetrization is described in captions of rangking plots, pruning is in the appendixE, and Smoothing can be found in appendixD. (?)
+*********>The symmetrization is described in captions of rangking plots, pruning is in the appendixE, and Smoothing can be found in appendixD.
   
 I understand that the 1% pruning threshold is for the normalization: how do you decide to prune the shape, instead?
 
