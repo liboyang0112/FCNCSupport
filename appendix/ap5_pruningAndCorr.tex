@@ -1,10 +1,12 @@
 \section{Pruning and Correlation matrix}
 The pruning algorithm removes systematic uncertainties that have a  $\leqq 1\%$ impact on normalisation or those that cause a negligibly small impact on the shape of the final discriminant (all bins are within $1\%$ of the nominal shape). A summary of the pruned nuisance parameters is provided in this appendix.
 The corresponding correlation matrix for the fitted nuisance parameters can also be found here. The corresponding NP pull, constrain and correlations are shown below.
+
+Pruning setting  which is chosen to be 0.1\% is also investigated, the final limit results in hadronic channel is found here \ref{tab:limit_pruned}. From the table, small influence is observed.
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.49\textwidth]{\FCNCFigures/xTFW/Limit/tcH_NuisPar.pdf}
-\includegraphics[width=0.49\textwidth]{\FCNCFigures/tthML/Limit/tcH_NuisPar.pdf}
+\includegraphics[width=0.40\textwidth]{\FCNCFigures/xTFW/Limit/tcH_NuisPar.pdf}
+\includegraphics[width=0.40\textwidth]{\FCNCFigures/tthML/Limit/tcH_NuisPar.pdf}
 \caption{ The pull distributions of asimov fit in hadronic channels (left) combined and leptonic channels combined (right) in terms of tcH merged signal.}
 \label{fig:tcH_NuisPar}
 \end{figure}
@@ -80,5 +82,16 @@ The corresponding correlation matrix for the fitted nuisance parameters can also
 \caption{ The asimov fit correlation matrix ($\%$) of different NPs, with a threshold of $20\%$ for hadronic channels (left) combined and lepton channels combined (right) in terms of $ug\to tH$ signal . }
 \label{fig:fcnc_prod_uh_CorrMatrix}
 \end{figure}
+
+
+
+
+\begin{table}
+\caption{The expected $95\%$ CL exclusion upper limits on signal ( $\mu=1\to$~BR$(t\to Hq)=0.1\%$ ) with the Asimov (B-only) in the hadronic channels with pruning option $=0.1\%$, all uncertainties included.}
+\label{tab:limit_pruned}
+\input{\FCNCTables/xTFW/limits_prune}
+\end{table}
+
+
 
 \newpage

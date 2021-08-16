@@ -171,7 +171,7 @@ Usually a fit is performed once without any pruning and the result is compared w
  
 * Related to the above question, I’m surprised that in figures 55-56, the btag NPs entering in the table are not the largest ones. I would expect that the impact of b/c-tag0,1 to be more important than 5 or 8. Can you explain this behavior?
 
-*********>We have compared btag_B_0, btag_B_1, btag_B_3, btag_B_37, btag_C_0, btag_C_1, btag_C_5, btag_C_7, btag_C_8 systematic in Appendix D. (?)
+*********>We have compared btag_B_0, btag_B_1, btag_B_3, btag_B_37, btag_C_0, btag_C_1, btag_C_5, btag_C_7, btag_C_8 systematic in Appendix D.
           It would be interesting to find out why the btag has no impact on the hadronic channels (?)
  
 * Fig 55 and 56 show tHu and tHc impact, but they are identical. Is it expected? If so, there is no reason to duplicate them and you can instead add in the caption that the impact is identical.
@@ -189,7 +189,7 @@ Usually a fit is performed once without any pruning and the result is compared w
  
 * Why in Table 19 the cq→tH limit for tl-tau_had-2j is missing? If this is due to the very low sensitivity, can you add it to the caption?
 
-*********>don't converge, low  sensitivity, (to be confirmed with boyang) (?)
+*********>don't converge, low  sensitivity
  
 * Table 20: Can you define in the caption STH and TTH?
 
@@ -204,4 +204,60 @@ Usually a fit is performed once without any pruning and the result is compared w
  
 *********>Good points, the plots are updated with zoom from 0.9 to 1.1. The ratio of PLIV tight cut eff for tau-lepton between data and MC (scale factor) is
           0.98+-0.02(total), which is consistent with 1 at a sigma level for both electron and muon. 
+
+
+
+
+
+
+
+
+
+
+Dear analysis team,
+Thanks for the new version of the internal note it shows good improvements with respect to the previous one.
+Some comments below:
+L453.- discribed->described
+*********> done
+
+L543.- a Etmiss > 20 GeV-> remove a
+*********> done
+
+L543-544.-and also provide QCD enriched control regions, could you explain how?
+*********> I am not clear?
+
+
+L544.-yield->yields
+*********> done
+
+
+
+L584-L585.-point->refers?
+*********> done
+
+
+L585.- In the case in which there is only…
+*********> done
+
+
+
+L635.- agreement with what?
+*********> my description is not clear?
+
+Figure 26.- The label of the two plots at the bottom are below the legend
+*********> not understand what he says
+
+
+Table12 and others.- Sorry I don’t get what do you mean by “between the median value and those in 10”, could you clarify please?
+*********>  we have three groups of FFs, one is as nominal FF to estimate the fake, another two are treated as systematics to estimate the fakes too, the difference between fake estimation are referred to systematics  
+
+
+Appendix G.- How are you calculating the significance for table 42, are you integrating S and B in some range?, because by eye from the plots in this section, I can see that the bin-by-bin and overall significance is larger for the MMC comparing all three distributions, since as you can see there are many more blinded data points in this case, meaning that S/B is larger than your blinding threshold there. Also you can see that in the case of the constrained fit including the Higgs mass (Figure 85) the background tends to pileup on the central region of the plot (around the Higgs mass) looking much larger than in figures 86 and 87. In my opinion, the MMC (as expected) does a much better job in separating signal from background compared to the other methods. Referring to the SS CR plots, could the amount of signal you get on them be significant at all?
+
+*********>  the plot shown is tau Pt, BDT is fitted to derive the limit, from the pt, the BDT significance  using constrained fit is better than MMC
+
+
+
+
+
 
