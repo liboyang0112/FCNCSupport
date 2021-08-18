@@ -1,9 +1,8 @@
-Dear Luca,
+Dear Luca and Edson,
 
-  Thanks for sending us the follow-up comments, see our replies as begis with *********>
+  Thanks for sending us the follow-up comments, see our replies below as begis with *********>
    
   -The tqHtautau team
-
 
 
 Hello:
@@ -75,7 +74,7 @@ b) Have you checked the luminosity values used in the analysis? Several yields i
 c) Have you checked the difference in value between the lumi tag obtained 19/02/2019 and 18/03/2019 for 2018 data?
 
 *********> Sorry, the 2015+2016 lumi is right, but the 2018 lumi was not updated properly in the hadronic channels.
-           The leptonic channels are correct. 
+           The cutflow for leptonic channels are correct. 
            Now all tables are updated using correct luminosity for all the channels as well as the plots.
  
 Also column “3” of the following figures still uses the 140 fb-1 label. Is it correct?
@@ -155,8 +154,8 @@ I'm also not 100% convinced by the behavior of Pileup_Rho_Topology. The input is
 And in v5.3 draft also for JET_Flavor_Composition the +1 sigma impact is missing or one-sided (was OK in v5.2).
  
 *********>As shown in Figure 67, the impact of Pileup_Rho_Topology systematic seems quite different for different leptonic channels, and the overall
-          effect seems to happen to be one-sided. The impact on JET_Flavor_Composition will be included in Figure XX, in which the net effect happens to be one-sided (?)
- 
+          effect seems to happen to be one-sided. The impact on JET_Flavor_Composition is similar and  is shown in Figure 68.
+	   
 ADDITIONAL COMMENTS:
  
 * The todo list and the list of on going studies seems to be obsolete to me. Can you update them with the actual status?
@@ -167,7 +166,7 @@ ADDITIONAL COMMENTS:
 Usually a fit is performed once without any pruning and the result is compared with the limit obtained with pruning applied. The choice of 1% or the pruning is a bit on the aggressive side, as one can see from the large number of pruned NPs, so this is worthwhile to check. Now several CP recommendations are at precision-level, below or around 1%.
 
 
-*********> We have compared the limits with pruning at 0.1% and 1%, the limit is the same.(?) 
+*********> We have compared the limits with pruning at 0.1% and 1%, the limits are the same, which indicates the pruning at 1% level is reasonable.  
  
 * Related to the above question, I’m surprised that in figures 55-56, the btag NPs entering in the table are not the largest ones. I would expect that the impact of b/c-tag0,1 to be more important than 5 or 8. Can you explain this behavior?
 
@@ -180,7 +179,7 @@ Usually a fit is performed once without any pruning and the result is compared w
  
 * On the same figures, what is “scale”? Can you use a more precise name for this important NP?
 
-*********> Added, "The scale NP is for a variation of normalization and factorization." (Check Figure 56, why so different than Figure 55 ?)
+*********> Added, "The scale NP is for a variation of normalization and factorization."
 
  
 * Tables 18-23: The caption could be misleading: are the limits obtained with a Background-only Asimov Workspace or with a S+B Asimov Workspace? Usually expected limits are given using B-only Asimov workspace. If it is the case, can you clarify it in the caption? If not, why did you use S+B Asimov Workspace?
@@ -197,9 +196,9 @@ Usually a fit is performed once without any pruning and the result is compared w
  
 * Thanks for having the cutflow in appendix B. But I think that ATLAS requires to have also the cutflow for raw events (not only yields).
 
-*********>The raw and yields differ only in the weight normalization. It's not clear how useful to repeat the cutflow with raw events,
-          but we can add if you think otherwise.  
- 
+*********>The raw data are included in the table and the raw MC and yields differ only in the weight normalization. The relative cutflow are the same for MC events and we can add if you think it's useful to
+          have raw MC cutflow as well.
+	  
 * I appreciate the PLIV appendix. The ratio plot of Fig 88 doesn’t allow to see the effect of the change. Can you zoom in to better see difference? We are trying to see a difference of the order of few 0.01 and the scale goes from 0.5-2.0.
  
 *********>Good points, the plots are updated with zoom from 0.9 to 1.1. The ratio of PLIV tight cut eff for tau-lepton between data and MC (scale factor) is
@@ -208,11 +207,8 @@ Usually a fit is performed once without any pruning and the result is compared w
 
 
 
-
-
-
-
-
+Comments from edson.carquin.lopez@cern.ch 13 Aug 2021, 19:21
+============================================================
 
 Dear analysis team,
 Thanks for the new version of the internal note it shows good improvements with respect to the previous one.
@@ -224,7 +220,7 @@ L543.- a Etmiss > 20 GeV-> remove a
 *********> done
 
 L543-544.-and also provide QCD enriched control regions, could you explain how?
-*********> I am not clear?
+*********> modified as "and also these failed events provide QCD enriched control samples."
 
 
 L544.-yield->yields
@@ -242,19 +238,21 @@ L585.- In the case in which there is only…
 
 
 L635.- agreement with what?
-*********> my description is not clear?
+*********> modified as "the agreement between data and the background prediction."
 
 Figure 26.- The label of the two plots at the bottom are below the legend
-*********> not understand what he says
+*********> Can you be more specific what need to fix here?
 
 
 Table12 and others.- Sorry I don’t get what do you mean by “between the median value and those in 10”, could you clarify please?
-*********>  we have three groups of FFs, one is as nominal FF to estimate the fake, another two are treated as systematics to estimate the fakes too, the difference between fake estimation are referred to systematics  
+*********> Sorry, modified as "The differences between these values and those in Table 10 are treated as one of the systematics."
 
 
 Appendix G.- How are you calculating the significance for table 42, are you integrating S and B in some range?, because by eye from the plots in this section, I can see that the bin-by-bin and overall significance is larger for the MMC comparing all three distributions, since as you can see there are many more blinded data points in this case, meaning that S/B is larger than your blinding threshold there. Also you can see that in the case of the constrained fit including the Higgs mass (Figure 85) the background tends to pileup on the central region of the plot (around the Higgs mass) looking much larger than in figures 86 and 87. In my opinion, the MMC (as expected) does a much better job in separating signal from background compared to the other methods. Referring to the SS CR plots, could the amount of signal you get on them be significant at all?
 
-*********>  the plot shown is tau Pt, BDT is fitted to derive the limit, from the pt, the BDT significance  using constrained fit is better than MMC
+*********>The significance in table 42 is obtained by fitting the final BDT distribution, which used di-tau mass and other kinematic variables. The BDT input variables after MMC fits are also shown in Figure X, which
+          can be compared directly to those in Figure 24 and 25 with the Higgs mass constrained fit. (?) 
+
 
 
 
