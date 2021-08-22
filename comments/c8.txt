@@ -87,9 +87,8 @@ Also column “3” of the following figures still uses the 140 fb-1 label. Is i
  
 LF: Thanks, let us know when you have checked them.
  
-*********> Unfortunately, the FCNC HWW and HZZ samples are filtered by requiring a lepton in the final states, and
-           we will check and document the overlap contributions in the leptonic channels in next version. (?)
-
+*********> The contributions from $H\rightarrow VV^*$ is small in the $t_l(t_h)+\thadhad$ channels. Unfortunately, they are not negligible in the lepton + $\thad$ channels in the pre-selected signal regions
+           and we may have to re-train BDT if we want to include them properly.
  
 * l501: how much do you loose in acceptance by cutting on the jet pT > 60 GeV?
  
