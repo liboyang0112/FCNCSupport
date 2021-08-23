@@ -87,9 +87,8 @@ Also column “3” of the following figures still uses the 140 fb-1 label. Is i
  
 LF: Thanks, let us know when you have checked them.
  
-*********> Unfortunately, the FCNC HWW and HZZ samples are filtered by requiring a lepton in the final states, and
-           we will check and document the overlap contributions in the leptonic channels in next version. (?)
-
+*********> The contributions from $H\rightarrow VV^*$ is small in the $t_l(t_h)+\thadhad$ channels. Unfortunately, they are not negligible in the lepton + $\thad$ channels in the pre-selected signal regions
+           and we may have to re-train BDT if we want to include them properly.
  
 * l501: how much do you loose in acceptance by cutting on the jet pT > 60 GeV?
  
@@ -250,12 +249,6 @@ Table12 and others.- Sorry I don’t get what do you mean by “between the medi
 
 Appendix G.- How are you calculating the significance for table 42, are you integrating S and B in some range?, because by eye from the plots in this section, I can see that the bin-by-bin and overall significance is larger for the MMC comparing all three distributions, since as you can see there are many more blinded data points in this case, meaning that S/B is larger than your blinding threshold there. Also you can see that in the case of the constrained fit including the Higgs mass (Figure 85) the background tends to pileup on the central region of the plot (around the Higgs mass) looking much larger than in figures 86 and 87. In my opinion, the MMC (as expected) does a much better job in separating signal from background compared to the other methods. Referring to the SS CR plots, could the amount of signal you get on them be significant at all?
 
-*********>The significance in table 42 is obtained by fitting the final BDT distribution, which used di-tau mass and other kinematic variables. The BDT input variables after MMC fits are also shown in Figure X, which
-          can be compared directly to those in Figure 24 and 25 with the Higgs mass constrained fit. (?) 
-
-
-
-
-
-
-
+*********>The significance in table 42 is obtained by fitting the final BDT distribution, which used di-tau mass and other kinematic variables. The BDT input variables after MMC fits are also shown in Figure 106-109,
+          which can be compared directly to those in Figure 24 and 25 with the Higgs mass constrained fit. The poor S/B ratio with the Higgs mass constrain fit is due to the fact that the cut of fitted di-tau mass
+	  (100-150 GeV) is too loose, but the S/B ratio is improved in the high BDT region as expected.  
