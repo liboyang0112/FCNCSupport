@@ -20,7 +20,10 @@ The integrated luminosity measurement has an uncertainty of $1.7\%$ for the comb
 Uncertainties related to the detector effects are included for the signal and backgrounds that are estimated using simulation. These uncertainties are also taken into account for the simulated events that enter the data-driven background estimations. All instrumental systematic uncertainties arising from the reconstruction, identification and energy scale of electrons, muons, taus,($b$-)jets and the soft term of the $\met$ measurement are considered. The effect of the energy scale uncertainties on the objects is propagated to the $\met$ calculation. These systematics include uncertainty associated with:
 
 \begin{itemize}
-\item The electron and muon trigger, reconstruction, identification and isolation efficiencies. These are estimated with the tag-and-probe method on the $Z\to ll$, $J/\psi\to ll$ and $W\to l\nu$ events \cite{lep_sys}.
+\item The electron and muon trigger, reconstruction, identification and isolation efficiencies. These are estimated with the tag-and-probe method on the $Z\to ll$, $J/\psi\to ll$ and $W\to l\nu$ events \cite{lep_sys}. We also checked the recommended PLIV scale factors can be applied to the electron and muon from
+  tau decays using $Z\rightarrow \tau\tau\rightarrow e\mu$ enriched control sample in App.~\ref{sec:CheckPLIV} and additional $\pm 2\%$ systematic uncertainty
+  is assigned for PLIV cut for the tau-lepton in the lepton + $\thad$ channels as ``Tau\_PLIV''.
+  
 \item Electron and muon momentum scales. They are estimated from the early 13 TeV $Z\to ll$ events.
 \item Jet energy scale (JES) and resolution (JER). The JES uncertainty is estimated by varying the jet energies according to the uncertainties derived from simulation and in-situ calibration measurements using a model with a reduced set of 39 orthogonal NPs \cite{jet_sys} which has up to 30\% correlation losses, which are assumed to be uncorrelated, and the induced changes can be added in quadrature. The individual scale variations on the jets are parameterised in $\pt$ and $\eta$. The total JES uncertianty is below 5\% for most jets and below 1\% for central jets with pT between 300 GeV and 2 TeV.
 The difference between the JER in data and MC is represented by one NP. It is applied on the MC by smearing the jet $\pt$ within the prescribed uncertainty.

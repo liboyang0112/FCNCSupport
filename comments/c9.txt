@@ -1,10 +1,14 @@
-Hello, thanks for the follow up answers, my comments below
+Dear Edson and EB,
+  thanks for the follow up comments and the remaining action items from the second
+  EB meeting on Aug 23 (https://indico.cern.ch/event/1067128/), see our replies below as ">>>>>>>>"
+   
+  -The tqHtautau team 
 
 Figure 26.- The label of the two plots at the bottom are below the legend
 *********> Can you be more specific what need to fix here?
 Sorry, my fault, I meant "behind the leyend" the text on the plot is not well visible because it is behind the legend
 
-=========> done. The label behind the legend  is "SSCR", have fixed and removed the "CR" words.
+>>>>>>>> done. The label behind the legend  is "SSCR", have fixed as "SS".
 
 
 
@@ -15,36 +19,42 @@ Appendix G.- How are you calculating the significance for table 42, are you inte
 Ok, I see your point now and thanks, this is now much more clear in the note too, still I'm a bit surprised by the fact that you get a much worse separation when you use the mmc (plot 105 c), did you performed a optimization of the BDT in this case too? it is very likely that if you apply the same one configuration from the mass constrained kinematic fit you will get a non-optimal result. It would be nice if you could add those details in the note since the differences in significances for this case compared with the mass constrained fit is not that large.
 Also, did you checked the correlation matrix for the BDT variables and perfomed some overtraining tests, I can't find them in the note.
 
-=========>done. Yes, for mmc and fit without higgs contrain,we peformed the BDT using the same procedure as that we did in the original fit. We use the same variables except the tautau fit mass as BDT inputs, we get the optimised Ntrees and Ncuts using PS samples, then we will get the BDT distribution using the new parameters.In fact, the significance difference is not big, if you consider the low BDT regions, mmc is OK as fit without constrain.
-
-correlation matrix for the BDT variables are added in the note.
-
-We performed the two fold taining, the ROC curve is very close, which will indicate the training is not overtraing and is stable.
+>>>>>>>> For mmc and fit without higgs contrain,we repeated the BDT training using the same procedure and the same input variables
+as we used for the Higgs mass constrained fit(default). It's true that the procedure may not optimal, but the performance is very
+similar between three fits. We also added the correlation matrix for the BDT variables and overtrain tests in the Appendix K,
+which looks normal. 
 
 
 Best,
 Edson
 
 
+AI from the second EB
+=====================
 
 In general, the analysis team studies were satisfactory. The following follow-up points were risen:
 
 - Add an additional uncertainty for PLIV for tau leptonic decay, based on the worsening of the data/MC ratio in the Ztautau CR used to check the effect of the PLIV.
 
+>>>>>>>> We have added extra +-2% for the PLIV efficiency for the light leptons from the tau decay as Tau_PLIV in the lepton +
+         one tauhad channels.        
+
 - HVV contamination to lephad channel is present, but it is not trivial to add to the analysis (missing systematic samples, etc.). EB recommendation is to add to the note (and eventually to the paper) that HVV contribution is not considered as signal. Say that by not considering this possible signal, the limit will be weaker (more conservative) if no excess is observed. But in case an excess is observed, the contribution should be accounted to properly measure the signal strength.
 
-=====> done. add a new appendix for HVVML.
+>>>>>>>> We have summarized the HVV contamination to the lephad channels in a new appendix J. and make it clear in the text
+         that HVV contribution is not considered as signal and our limits would be more conservative.
 
 - Not clear yet, why for some NPs, the impact is one-sided (the input variations are symmetric). The recommendation is to check the NLL scan of the 1-sided impact NP to identify possible fit failures or issues.
 
-=====> add NLL scan for 1-sided impact NP in the appendix.
+>>>>>>>> Will add NLL scan for 1-sided impact NP in the appendix (?)
 
 - Not clear from the envelope plots why some of the subleading btag NPs have larger impact than the leading ones (e.g. B0). The recommendation is to check the NP correlations?
-=====> add the correlation in the appendix,we can see the btag BP with higher correlation will have more impact to the mu.
+
+>>>>>>>> add the correlation in the appendix, we can see the btag BP with higher correlation will have more impact to the mu. (?)
 
 The EB will check the new draft and, possibly, post new comments in cds.
 
 The proposal is to continue with the plan of the pre-approval within the Top group early September, while working on parallel on the follow-up points and the eventual new EB comments in cds.
 
-
+>>>>>>>> Thanks 
 

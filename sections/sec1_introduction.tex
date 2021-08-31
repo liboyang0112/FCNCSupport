@@ -247,9 +247,13 @@ Considering the other decays of the Higgs can be part of the signal, these sampl
 \end{itemize}
 
 The events in 411229-411232 with $\Htautau$ decay are removed based on truth information. The contributions from $H\rightarrow VV^*$ is small in the $t_l(t_h)+\thadhad$ channels.
-Unfortunately, they are not negligible in the lepton + $\thad$ channels in the pre-selected signal regions and we may have to re-train BDT if we want to include them properly.
+Unfortunately, they are not negligible in the lepton + $\thad$ channels in the pre-selected signal regions as shown in App.~\ref{sec:HVVML}.
+However, it is not easy to take them into account for signal as the systematics samples are missing. We will not consider the HVV contribution as signal for now
+and focus on the $H\rightarrow \tau\tau$ decay only. This would make our limits more conservative if no excess is observed. But in case an excess is observed,
+the contribution should be accounted to properly measure the signal strength.
 
-It is checked that after the final selection, there are 110 overlapped signal events caused by different overlap removal and object definition in xTauFramework and ttHMultiAna (27140 in total for hadhad channel and 95253 in total for lepton channels) but there is no overlap in the signal enriched region (BDT > 0.5).
+We also checked the overlap between two analysis frameworks used after the final selection,
+there are 110 overlapped signal events caused by different overlap removal and object definition in xTauFramework and ttHMultiAna (27140 in total for hadhad channel and 95253 in total for lepton channels) but there is no overlap in the signal enriched region (BDT > 0.5).
 
 The total FCNC signal with fake taus in this analysis is not used in the MVA training, but is regarded as part of the total signal in the fit. The normalization factor of the other components is common with the signal, so that their yields are fully correlated in the fit.
 
@@ -348,7 +352,11 @@ The \texttt{PLIV} is trained on leptons selected from the Powheg+Pythia8 non-all
 The \texttt{PLIV} shows a significant improvement for non-prompt-lepton rejection compared to the cut-based isolation variables.
 
 The tight working points are: \texttt{PLIV}$<-0.6734$ for high $\pt$ muons and \texttt{PLIV}$<-0.704$ for hight $\pt$ barrel electrons. The scale factors for the efficiencies of the tight \texttt{PLIV} working points are measured using the tag and probe method with $Z\rightarrow l^+l^-$ events. These scale
-factors are also checked applicable to the electron or muon from the tau decay using $Z\rightarrow\tau\tau\rightarrow e\mu$ samples in App.~\ref{sec:CheckPLIV}. 
+factors are also checked applicable to the electron or muon from the tau decay using $Z\rightarrow\tau\tau\rightarrow e\mu$ samples in App.~\ref{sec:CheckPLIV}.
+The efficiencies of the PLIV tight cut in data(MC) are $0.741\pm 0.0074$ ($0.757\pm 0.011$) for tau-electron and $0.785\pm 0.010$($0.803\pm 0.011$) for tau-muon, where the uncertainties are dominated by the fake subtraction in the data using the excess of same-sign events and the MC statistics.
+The ratio of the efficiencies for tau-lepton between data and MC (scale factor) is 0.98+-0.02(total), which is consistent with 1 at a sigma level for
+both electron and muon. To be conservative, we assign additional $\pm 2\%$ systematic uncertainty for the PLIV efficiency for the tau-lepton in
+the lepton+$\thad$ channels.
 %The scale factors are approximately 0.92 for $10<\pt<15$ GeV muons and 0.97 for electrons, and averaging at 0.98 to 0.99 for higher $\pt$ leptons.
 
 \subsection{Overlap removal}
