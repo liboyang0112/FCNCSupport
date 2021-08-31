@@ -2,7 +2,7 @@
 \label{sec:app_bdt}
 
 A two-fold cross validation procedure is used to maximize the statistics available for training. In this appendix, The correlations distribution of BDT input variables for signal and background is
-shown in Figure \ref{fig:correlation_hadhad} and in Figure \ref{fig:correlation_lephad_1}-\ref{fig:correlation_lephad_2}.  The comparison of BDTs from the testing and from the training samples are also presented here.
+shown in Figure \ref{fig:correlation_hadhad} and in Figure \ref{fig:correlation_lephad_1}-\ref{fig:correlation_lephad_2}.  The comparison of BDT overtraining check for the testing and from the training samples are also presented here \ref{fig:comparision_hadhad}-\ref{fig:comparision_lephad}.
 
 
 \begin{figure}[H]
@@ -64,54 +64,30 @@ shown in Figure \ref{fig:correlation_hadhad} and in Figure \ref{fig:correlation_
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.33\textwidth]{\FCNCFigures/xTFW/showFake/NOMINAL/reg2mtau1b2jos_vetobtagwp70_highmet/BDTG_test.pdf}
-\put(-40, 90){\textbf{(a1)}}
-\includegraphics[width=0.33\textwidth]{\FCNCFigures/xTFW/showFake/NOMINAL/reg2mtau1b2jos_vetobtagwp70_highmet/BDTG_train.pdf}
-\put(-40, 90){\textbf{(a2)}}
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/xTFW/BDT/reg2mtau1b2jos_overtraining.pdf}
+\put(-40, 60){\textbf{(a)}}
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/xTFW/BDT/reg2mtau1b3jos_overtraining.pdf}
+\put(-40, 60){\textbf{(b)}}
 \\
-\includegraphics[width=0.33\textwidth]{\FCNCFigures/xTFW/showFake/NOMINAL/reg2mtau1b3jos_vetobtagwp70_highmet/BDTG_test.pdf}
-\put(-40, 90){\textbf{(b1)}}
-\includegraphics[width=0.33\textwidth]{\FCNCFigures/xTFW/showFake/NOMINAL/reg2mtau1b3jos_vetobtagwp70_highmet/BDTG_train.pdf}
-\put(-40, 90){\textbf{(b2)}}
-\\
-\caption{ Comparison of the BDT distributions for the testing sample(left) and training samples(right) in : (a) for 2j (b) for 3j  in hadronic channel. Only statistical uncertainties are being shown. Underflow and overflow bins are included respectively in the first and last bins. Empty data bins here are always blinded based on our strategy. }
+\caption{ Comparison of the BDT overtraining check distributions for the testing sample and training samples in : (a) for 2j (b) for 3j  in hadronic channel.}
 \label{fig:comparision_hadhad}
 \end{figure}
 
 
 \begin{figure}[htb]
 \centering
-\includegraphics[page=6,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL/reg1l1tau1b1j_ss_vetobtagwp70_highmet/BDTG_test.pdf}
-\put(-40, 90){\textbf{(a1)}}
-\includegraphics[page=6,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL/reg1l1tau1b1j_ss_vetobtagwp70_highmet/BDTG_train.pdf}
-\put(-40, 90){\textbf{(a2)}}
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/BDT/reg1l1tau1b1j_ss_overtraining.pdf}
+\put(-40, 60){\textbf{(a)}}
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/BDT/reg1l1tau1b2j_ss_overtraining.pdf}
+\put(-40, 60){\textbf{(b)}}
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/BDT/reg1l1tau1b2j_os_overtraining.pdf}
+\put(-40, 60){\textbf{(c)}}
 \\
-\includegraphics[page=6,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL/reg1l1tau1b2j_os_vetobtagwp70_highmet/BDTG_test.pdf}
-\put(-40, 90){\textbf{(b1)}}
-\includegraphics[page=6,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL/reg1l1tau1b2j_os_vetobtagwp70_highmet/BDTG_train.pdf}
-\put(-40, 90){\textbf{(b2)}}
-\\
-\includegraphics[page=6,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL/reg1l1tau1b2j_ss_vetobtagwp70_highmet/BDTG_test.pdf}
-\put(-40, 90){\textbf{(c1)}}
-\includegraphics[page=6,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL/reg1l1tau1b2j_ss_vetobtagwp70_highmet/BDTG_train.pdf}
-\put(-40, 90){\textbf{(c2)}}
-\\
-\caption{ Comparison of the BDT distributions for the testing sample(left) and training samples(right) in : (a) for $t_l\tlhad$-1j  (b) $t_l\tlhad$-2j for (c) for $t_h\tlhad$-2j in leptonic channel. Only statistical uncertainties are being shown. Underflow and overflow bins are included respectively in the first and last bins. Empty data bins here are always blinded based on our strategy. }
-\label{fig:comparision_lephad_1}
-\end{figure}
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/BDT/reg1l1tau1b3j_os_overtraining.pdf}
+\put(-40, 60){\textbf{(d)}}
+\includegraphics[width=0.33\textwidth]{\FCNCFigures/tthML/BDT/reg1l2tau1bnj_os_overtraining.pdf}
+\put(-40, 60){\textbf{(e)}}
 
-\begin{figure}[htb]
-\centering
-\includegraphics[page=6,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL/reg1l1tau1b3j_os_vetobtagwp70_highmet/BDTG_test.pdf}
-\put(-40, 90){\textbf{(d1)}}
-\includegraphics[page=6,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL/reg1l1tau1b3j_os_vetobtagwp70_highmet/BDTG_train.pdf}
-\put(-40, 90){\textbf{(d2)}}
-\\
-\includegraphics[page=6,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL/reg1l2tau1bnj_os/BDTG_test.pdf}
-\put(-40, 90){\textbf{(e1)}}
-\includegraphics[page=6,width=0.33\textwidth]{\FCNCFigures/tthML/showFake/faketau/postfit/NOMINAL/reg1l2tau1bnj_os/BDTG_train.pdf}
-\put(-40, 90){\textbf{(e2)}}
-\\
-\caption{ Comparison of the BDT distributions for the testing sample(left) and training samples(right) in (d) for $t_h\tlhad$-3j (e) for $t_l\thadhad$ in leptonic channel. Only statistical uncertainties are being shown. Underflow and overflow bins are included respectively in the first and last bins. Empty data bins here are always blinded based on our strategy. }
-\label{fig:comparision_lephad_2}
+\caption{ Comparison of the BDT overtraining check distributions for the testing sample and training samples in : (a) for $t_l\tlhad$-1j  (b) $t_l\tlhad$-2j for (c) for $t_h\tlhad$-2j (d) for $t_h\tlhad$-3j (e) for $t_l\thadhad$ in leptonic channel. }
+\label{fig:comparision_lephad}
 \end{figure}
