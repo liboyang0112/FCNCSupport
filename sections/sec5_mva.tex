@@ -3,9 +3,10 @@
 
 In this section, we investigate the sensitivity of probing signal using one of the Multi-Variate Analysis (MVA) methods, the Gradient Boosted Decision Trees (BDT) method~\cite{BDT,BDT2}, with the {\texttt TMVA} software package. The BDT output score is in the range between -1 and 1. The most signal-like events have scores near 1 while the most background-like events have scores near -1.
 
-The signal topology and kinematics are different across all the channels. To maximize the overall sensitivity, separated BDTG trainings are applied to each signal region. In order to increase the statistics in the training, all signal $tHu$ and $tHc$ events are merged and used against the total background including
+The signal topology and kinematics are different across all the channels. To maximize the overall sensitivity, separated BDTG trainings are applied to each signal region. In order to increase the statistics in the training, all signal $tuH$ and $tcH$ events are merged and used against the total background including
 both real and fake $\tau$ contributions.
-A number of variables as the BDT inputs are used to train and test events in each signal region for maximal signal acceptance and background rejection. They are listed in Table~\ref{tab:importance_tthML} and Table~\ref{tab:importance_xTFW}. 
+A number of variables as the BDT inputs are used to train and test events in each signal region for maximal signal acceptance and background rejection. They are listed in Table~\ref{tab:importance_tthML} and Table~\ref{tab:importance_xTFW}. The correlation matrices of input variables and overtraining can be found in
+App.~\ref{sec:app_bdt}.
 %The most sensitive variables distributions are shown in Figure \ref{fig:mva_input_hadhad}-\ref{fig:mva_input_lhadhad}
 
 \begin{table}
@@ -24,7 +25,7 @@ A number of variables as the BDT inputs are used to train and test events in eac
 \end{table}
 
 The signal and background samples are randomly divided into two equal parts (denoted as even and odd parity events). The BDT is trained with one part, and tested on the other part. It is always ensured that the BDT derived from the training events is not applied to the same events, but only to the independent test ones. The sum of MC all background processes, correctly normalized, are used in the training and testing. %The Gradient BDT parameters used are listed in Table \ref{tab:bdt_pars}. 
-With the \texttt{IgnoreNegWeightsInTraining} option, only MC events with positive MC weights are used in the traning. In The hadronic channels, since the fake is modelled by the not-medium tau control region, the data events in the not-medium tau control region is also used in the training with a weight of 0.3 to take the FFs into account. The comparison of BDT performances in test-odd and test-even samples is given in Figure \ref{fig:overtrain_hadhad}-\ref{fig:overtrain_lhadhad}.
+With the \texttt{IgnoreNegWeightsInTraining} option, only MC events with positive MC weights are used in the traning. In the hadronic channels, since the fake is modelled by the not-medium tau control region, the data events in the not-medium tau control region is also used in the training with a weight of 0.3 to take the FFs into account. The comparison of BDT performances in test-odd and test-even samples is given in Figure \ref{fig:overtrain_hadhad}-\ref{fig:overtrain_lhadhad}.
 
 The BDT parameters \texttt{NTrees} and \texttt{nCuts} are tuned based on the integration of the ROC's using independent Herwig samples that used for parton shower
 systematic study. The best choice for each channel depends on the number of variables used and the statistics. The optimisation factor is defined as $L=S_\mathrm{avg}-xS_\mathrm{diff}$, where $S_\mathrm{avg}$ is the average integration value of the two folds, indicating the separation power of the model, meaning the larger it is, the better. $S_\mathrm{diff}$ is the difference between the integration values of the two folds, indicating the unstability of the models, meaning the smaller it is, the better. The factor $x$ is chosen depending on how important the stability is regarded over the separation power, where there is no common standard. In this analysis $x=1$ is chosen.

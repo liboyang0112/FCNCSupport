@@ -2,10 +2,10 @@
 \label{sec:intro}
 Since the discovery of the Higgs boson in 2012, great efforts are made to study its properties. As the mass of the Higgs boson is about 125 GeV \cite{HiggsMass}, it is kinematically allowed that a top quark decays to a Higgs boson and an up-type quark via the flavour-changing neutral current (FCNC). In the Standard Model (SM), the FCNC interaction is forbidden at tree level and suppressed at higher orders due to the Glashow-Iliopoulos-Maiani (GIM) mechanism \cite{GIM}. The $t\to u/c+H$ branching fraction in the SM is calculated to be around $10^{-15}$ \cite{brtch3}. It would be enhanced in many models beyond the SM (BSM). Examples are the quark-singlet model \cite{quarkSinglet1,quarkSinglet2}, the two-Higgs doublet model with or without the flavour violation \cite{2hdm1,2hdm2}, the minimal supersymmetric standard model (MSSM) \cite{2hdm3}, supersymmetry with R-parity violation \cite{Rparity},
 the Topcolour-assisted Technicolour model \cite{Techni} or models with warped extra dimensions \cite{extraD}, the little Higgs model with T-parity conservation \cite{littleH} and the composite Higgs models \cite{compositeH}.
-Especially, the ansatz of Cheng and Sher \cite{Sher} allows a branching fraction of about $10^{-3}$ \cite{FCNC_rate}. Therefore, an observation of this decay would be a clear evidence for new physics. The tHq interaction could also potentially open up more Higgs decay channels,
-such as $H\rightarrow t^*q\rightarrow Wbq$, but they are likely suppressed due to the t-H mass difference, which could be interesting for future studies.
+Especially, the ansatz of Cheng and Sher \cite{Sher} allows a branching fraction of about $10^{-3}$ \cite{FCNC_rate}. Therefore, an observation of this decay would be a clear evidence for new physics. The $tqH$ interaction could also potentially open up more Higgs decay channels,
+such as $H\rightarrow t^*q\rightarrow Wbq$, but they are likely suppressed due to the $t-H$ mass difference, which could be interesting for future studies.
 
-On the other hand, if the $tHq$ interaction exists, the single-top, Higgs associated production through this interaction should also be enhanced. The $tH$ associated production in the SM prediction is expected to be small at LHC\cite{tHjb_production}. So the study on this process will also contribute to the FCNC interaction searches.
+On the other hand, if the $tqH$ interaction exists, the single-top, Higgs associated production through this interaction should also be enhanced. The $tH$ associated production in the SM prediction is expected to be small at LHC\cite{tHjb_production}. So the study on this process will also contribute to the FCNC interaction searches.
 
 Upper $95\%$ CL limits on BR($t\to Hq$) have been obtained by ATLAS based on the data from 2015 and 2016, in the $H\to\gamma\gamma$ \cite{fcncgmgm}, $H\to WW/\tll$ multilepton \cite{fcncml} and  $\Htautau$, $H\to b\bar{b}$ \cite{fcnctautau} channels. The combined expected (observed) limits are $0.083\%$ ($0.11\%$) and $0.083\%$ ($0.12\%$) for $t\to Hc$ and $t\to Hu$ decay branching ratio, respectively.
 
@@ -29,20 +29,20 @@ The coefficient $C_{u\phi}$'s can be extracted as follows according to the Madgr
 \label{eq:eq02}
 \end{equation}
 
-To give a better impression on the numbers, we use $\text{BR}(t\to qH)=0.1\%$ as benchmark, which is corresponding to ($C^{13}_{u\phi})^2 + (C^{31}_{u\phi})^2=1.95$, $\sigma(ug\to tH)=710.9$ fb, $\sigma(cg\to tH)=103.0$ fb. The same TopFCNC UFO model has also been adapted by other FCNC tqH searches in different Higgs decay $H\rightarrow\gamma\gamma$ and $H\rightarrow b\bar b$
+To give a better impression on the numbers, we use $\text{BR}(t\to qH)=0.1\%$ as benchmark, which is corresponding to ($C^{13}_{u\phi})^2 + (C^{31}_{u\phi})^2=1.95$, $\sigma(ug\to tH)=710.9$ fb, $\sigma(cg\to tH)=103.0$ fb. The same TopFCNC UFO model has also been adapted by other FCNC $tqH$ searches in different Higgs decay $H\rightarrow\gamma\gamma$ and $H\rightarrow b\bar b$
 channels~\cite{tqHgammagamma,tqHbb}. So ATLAS can combine these results together to get a better constrain on the FCNC coupling.  
 
-In this article, a search for the decay $t\to qH$ from one of top quarks in the $t\bar{t}$ production (\textit{TT}) and single-top, Higgs associated production (\textit{ST}) with $H\to\tau\tau$ and the remaining top decays into a $W$ boson and a $b$ quark as shown in Fig \ref{fig:diagrams} using 139~fb$^{-1}$ of proton-proton collision data at 13~TeV, taken with the ATLAS detector at the Large Hadron Collider (LHC), is presented. The final state is characterized by one top and one Higgs. In \textit{TT}, there is an additional $u$ or $c$ as $q$ quark forming a top resonance with Higgs.
+In this article, a search is presented for the decay $t\to qH$ from one of top quarks in the $t\bar{t}$ production (\textit{TT}) and single-top, Higgs associated production (\textit{ST}) with $H\to\tau\tau$ where the remaining top decays into a $W$ boson and a $b$ quark as shown in Fig \ref{fig:diagrams} using 139~fb$^{-1}$ of proton-proton collision data at 13~TeV, taken with the ATLAS detector at the Large Hadron Collider (LHC). The final state is characterized by one top and one Higgs. In \textit{TT}, there is an additional $u$ or $c$ as $q$ quark forming a top resonance with Higgs.
 
 \input{../FCNCFigures/tex/diagrams}
 
-From the truth study as shown in the Figure \ref{fig:LHRHTruth}, the samples generated with left handed (LH) operator and right handed operator (RH) shows no difference. So the two sets of samples are merged together for higher statistics.
+From the truth study as shown in the Figure \ref{fig:LHRHTruth}, the samples generated with left handed (LH) operator and right handed operator (RH) shows no difference. So the two sets of samples are merged together, weighted a factor of 0.5, for higher statistics.
 
 \input{\FCNCFigures/tex/LHRHTruth}
 
 \section{Analysis outline}
 
-In order to search for the FCNC coupling, we separate events in various signal regions (SR) defined in Sec. \ref{sec:SRs}, each focuses on
+For the FCNC coupling search, we separate events in various signal regions (SR) defined in Sec. \ref{sec:SRs}, each focuses on
 different $t\to Wb$ and $H\to\tau\tau$ decay final states in order to suppress the background.
 The analysis also uses various $t\bar{t}$ control regions (CRtt) for calibration of tau fakes in Monte Carlo as well as
 data-driven fake estimations from QCD multi-jet background, and finally BDT is trained to separate the
@@ -63,7 +63,7 @@ the low tau reconstruction efficiency. So the $t_l\thad$-1j and $t_l\thad$-2j ar
 charge in order to reduce $t\bar t$ background. For the $t_hH$ and $t_ht(qH)$ channels, the two tau candidates from the $\Htautau$ decay (including both $\tlhad$ and $\thadhad$) are required to have opposite-sign charge.  
 
 The summary for the signal regions are listed in Table \ref{tab:signalregions} and their corresponding signal and background yields after fake estimation are shown
-in Table \ref{tab:yield_SR}.
+in Table \ref{tab:yield_SR} of which will be discussed in Sec.~\ref{sec:background}. 
 
 For the future convenience, $t_h\tlhad$-2j and $t_h\tlhad$-3j are indicated by $t_h\tlhad$; $t_h\thadhad$-2j and $t_h\thadhad$-3j are indicated by $t_h\thadhad$; $t_l\tauhad$-2j and $t_l\tauhad$-1j are indicated by $t_l\tauhad$. All the of regions involving leptons from $t_l$ or $\taulep$ are indicated by "leptonic channels", otherwise hadronic channels".
 
@@ -233,7 +233,7 @@ The overview of the major samples generated is summarized in Table \ref{mob}.
 
 The TopFCNC UFO model \cite{FCNC_UFO1,FCNC_UFO2} with 5-flavour scheme is used for signal simulation.
 
-The targeted signal in this analysis is $tt(qH)/tH$ with $\Htautau$ (samples 411170-411177 and 412098-412105) in App. \ref{sec:DSIDlist}).
+The targeted signal in this analysis is $tt(qH)/tH$ with $\Htautau$ (samples 411170-411177 and 412098-412105) in App. \ref{sec:DSIDlist}.
 
 The FCNC \textit{ST} signal is simulated using MadGraph5\_aMC@NLO v2.6.2 \cite{MG5} interfaced with Pythia 8 \cite{Pythia8} with the A14 tune \cite{A14} for the generation of parton showers, hadronisation and multiple interactions and the NNPDF30NLO \cite{NNPDF30NLO} parton distribution functions (PDF) is used to generate $qg$ events at next-to-leading order (NLO) in QCD. Depending on either up quark or charm quark involved in the FCNC decay and either the $W$ bosons decaying hadronically or leptonically, 4 samples are generated for each term of effective Lagrangian, so eight samples in total.
 
@@ -248,9 +248,9 @@ Considering the other decays of the Higgs can be part of the signal, these sampl
 
 The events in 411229-411232 with $\Htautau$ decay are removed based on truth information. The contributions from $H\rightarrow VV^*$ is small in the $t_l(t_h)+\thadhad$ channels.
 Unfortunately, they are not negligible in the lepton + $\thad$ channels in the pre-selected signal regions as shown in App.~\ref{sec:HVVML}.
-However, it is not easy to take them into account for signal as the systematics samples are missing. We will not consider the HVV contribution as signal for now
+However, it is not easy to take them into account for signal as the systematics samples are still missing. We decide not to consider the HVV contribution as signal for now
 and focus on the $H\rightarrow \tau\tau$ decay only. This would make our limits more conservative if no excess is observed. But in case an excess is observed,
-the contribution should be accounted to properly measure the signal strength.
+the contribution will be accounted to properly measure the signal strength.
 
 We also checked the overlap between two analysis frameworks used after the final selection,
 there are 110 overlapped signal events caused by different overlap removal and object definition in xTauFramework and ttHMultiAna (27140 in total for hadhad channel and 95253 in total for lepton channels) but there is no overlap in the signal enriched region (BDT > 0.5).
