@@ -4,7 +4,9 @@
 
 This appendix summaries the normalization+shape effects from the most constrained systematic uncertainties which shoule be thoroughly understood across different channels considered in the search. These uncertainties are only displayed for tuH signal. In the figures, "Original" refers to the raw systematic uncertainty whereas "Modified" corresponds to the actual systematic uncertainty used in the statistical analysis, resulting after the application of a smoothing algorithm. Smoothing is set as 40 in the TRexFitter job options.
 
-Both of the ONESIDE systematics Pileup\_Rho\_Topology and JET\_Flavor\_Composition are checked via the negative log-likelihood scan as shown in Figure~\ref{fig:tthML_nllscan_1} to investigate the possible cause to one-side effect on the signal strength $\mu$.
+Two NPs (JET\_Flavor\_Composition, JET\_Pileup\_RhoTopology) in the lepton channels have their impact one-sided on $\mu$ and they are anti-correlated to each other
+at 35\%. Work is in progress by doing NLL scan vs $\mu$ by fixing one of NPs to understand the correlation better.
+%Both of the ONESIDE systematics Pileup\_Rho\_Topology and JET\_Flavor\_Composition are checked via the negative log-likelihood scan as shown in Figure~\ref{fig:tthML_n%llscan_1} to investigate the possible cause to one-side effect on the signal strength $\mu$.
 
 They are:
 
@@ -252,11 +254,11 @@ In hadronic channels:
 
 
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/Limit/tuH_NLLscan_JET_Flavor_Composition.pdf}
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/Limit/tuH_NLLscan_JET_Pileup_RhoTopology.pdf}
-\\
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/Limit/tuH_NLLscan_JET_Flavor_Composition.pdf}
+%\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/Limit/tuH_NLLscan_JET_Pileup_RhoTopology.pdf}
+%\\
 %\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/Limit/tcH_NLLscan_JET_Flavor_Composition.pdf}
 %\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/Limit/tcH_NLLscan_JET_Pileup_RhoTopology.pdf}
 %\\
@@ -272,9 +274,9 @@ In hadronic channels:
 %\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/Limit/fcnc_prod_ch_NLLscan_JET_Flavor_Composition.pdf}
 %\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/Limit/fcnc_prod_ch_NLLscan_JET_Pileup_RhoTopology.pdf}
 %\\
-\caption{NLL scans of Pileup\_Rho\_Topology and JET\_Flavor\_Composition in leptonic channel.}
-\label{fig:tthML_nllscan_1}
-\end{figure}
+%\caption{NLL scans of Pileup\_Rho\_Topology and JET\_Flavor\_Composition in leptonic channel.}
+%\label{fig:tthML_nllscan_1}
+%\end{figure}
 
 
 

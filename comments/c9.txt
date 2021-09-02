@@ -46,11 +46,14 @@ In general, the analysis team studies were satisfactory. The following follow-up
 
 - Not clear yet, why for some NPs, the impact is one-sided (the input variations are symmetric). The recommendation is to check the NLL scan of the 1-sided impact NP to identify possible fit failures or issues.
 
->>>>>>>> Will add NLL scan for 1-sided impact NP in the appendix (?)
+>>>>>>>> Two NPs (JET_Flavor_Composition, JET_Pileup_RhoTopology) in the lepton channels have their impact one-sided and they are
+         anti-correlated to each other at 35\%. Work is in progress by doing NLL scan vs mu by fixing one of NPs to
+	 understand the correlation better. 
 
 - Not clear from the envelope plots why some of the subleading btag NPs have larger impact than the leading ones (e.g. B0). The recommendation is to check the NP correlations?
 
->>>>>>>> add the correlation in the appendix, we can see the btag BP with higher correlation will have more impact to the mu. (?)
+>>>>>>>> btag_B_0 is correlated with FSR at 27% and with Tau_PLIV at 22.5%. The whole NP correlation is shown in Figure 58 for the
+         leptonic channels, which seems reasonable.
 
 The EB will check the new draft and, possibly, post new comments in cds.
 
