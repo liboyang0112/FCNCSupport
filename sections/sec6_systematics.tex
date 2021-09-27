@@ -72,6 +72,18 @@ The \texttt{hdamp} parameter (which controls the amount of radiation produced by
 
 %Uncertainty affecting the normalisation of the $V$+jets and di-boson background is estimated to be about $5\%$ according to the PMG. The uncertainty on single top sross section is $+5\%$/$-4\%$ \cite{WtXsec}\cite{st_uncert_1,st_uncert_2}, on $t\bar{t}V$ $15\%$ \cite{ttV_uncert_1,ttV_uncert_2}, and on $t\bar{t}H$ $+10\%$/$-13\%$ \cite{ttH_uncert}.
 
+Another significancant background stems from the ztautau samples, the following sources of uncertainty are considered for ztautau samples based on the Htautau analysis.
+\begin{itemize}
+	\item PDF central value: evaluated considering the standarnd deviation of the 100 NNPDF replicas event weights of NNPDF3.0nnlo PDF set used in Sherpa
+	\item renormalisation and factorisation scales - $\mu_{R}/\mu_{F}$: evaluated using event-weights provided by Sherpa
+	\item ckkw: jet-to-parton matching uncertainty, evaluated using truth-level parameterisation as a function of jet multiplicity and $p_{T}(Z)$
+	\item qsf: resummation scale uncertainty, evaluated using truth-level parameterisation as a function of jet multiplicity and and $p_{T}(Z)$
+	\item $\alpha_{S}$:evaluated using event-weights provided by Sherpa
+	\item PDF alternative value: evalatued comparing predictions from NNPDF3.0nnlo PDF set (nominal) with MMHT2014nnlo68cl and CT14nnlo PDF sets
+\end{itemize}
+
+Finally, the other MC samples contribute a very small fraction of background, to be conservative, 20\% variations are assigned to account for the theoretical uncertainties.
+
 \subsection{Uncertainties on the signal modelling}
 
 An additional $1.6\%$ uncertainty on BR($H\to\tau\tau$) (Named as HttBR in the Ranking plots.) is also assigned \cite{HiggsBR} besides the theoretical uncertainties: PDF, $\alpha_s$, ISR, FSR and scale.

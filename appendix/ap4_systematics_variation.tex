@@ -378,4 +378,45 @@ In hadronic channels:
 \end{figure}
 
 
+
+For ttbar Parton Shower untertainty, Pythia + Herwig 7.0.X samples are used to derived the impact of the PS systematic. Given the high rank of PS uncertaity in leptonic channel and the availibity of the newer PW+H7.1 samples(hereafer referred to as PS71 systematic), the limit with PS71 applied are checked and shown here Tab.\ref{tab:tthML_ttbarPS_vs_ttbarPS71}.
+
+
+
+
+\begin{table}
+\caption{The expected $95\%$ CL exclusion upper limits on signal ( $\mu=1\to$~BR$(t\to Hq)=0.1\%$ ) with the Asimov (B-only) in the leptonic channels, all uncertainties with PS71 systematic included.}
+\label{tab:tthML_ttbarPS_vs_ttbarPS71}
+\input{\FCNCTables/tthML/limits_PS71sys}
+\end{table}
+
+
+
+
+
+In this analysis and FCNC H(bb) analysis, an uncertainty on hdamp(referred to as hdamp) for ttbar samples is used instead of the generator uncertainty (PW vs amc@NLO, referred to as ME). We explore the difference between these two types of ttbar theoretical uncertainties based on the following setups(Fig.\ref{fig:xTFW_ME_vs_MEhdamp}). Hereafter, the all sys means all systematics except ME and hdamp. 
+
+\begin{itemize}
+	\item compare all sys + ME  vs  all sys + ME + hdamp
+	\item compare all sys + ME  vs  all sys + hdamp 
+	\item compare all sys + ME  vs  all sys
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/xTFW/trexfitter/ME_hdamp/ME_vs_MEhdamp_NuisPar_comp.pdf}
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/xTFW/trexfitter/ME_hdamp/ME_vs_hdamp_NuisPar_comp.pdf}
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/xTFW/trexfitter/ME_hdamp/ME_vs_nohdamp_NuisPar_comp.pdf}
+\caption{The NP pulls with different settings in hadronic channels.(left:ME vs ME+hdamp, middle:ME vs hdamp, right:ME vs nohdamp)}
+\label{fig:xTFW_ME_vs_MEhdamp}
+\end{figure}
+
+		
+
+
+
+
+
+
+
 \newpage
