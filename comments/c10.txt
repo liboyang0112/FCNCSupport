@@ -1,3 +1,13 @@
+Dear conveners:
+
+   Thank you so much for sending us the closure comments from the pre-approval presentation.
+   We have addressed these comments in the INT V5.6 and replied below as "---------->"
+
+   cheers
+   The FCNC tqH team 
+
+   
+
 Dear FCNC Htautau Analysis team, 
 Thanks for your pre-approval presentation at the top+X meeting on the 9th of September: https://indico.cern.ch/event/1072795/
 Below please find our comments on your presentation and the updates in the INT note. As usual we split the comments into major and minor. 
@@ -5,124 +15,132 @@ Please let us know if you have any questions or if any of our comments/suggestio
 Cheers,
      Jacob & Nedaa-Alexandra 
 
-
+---------> Thanks for the comments 
 
 Major action items:
 L329-338 (INT version 5.5) - We agreed in the pre-approval meeting to estimate the effect on the analysis sensitivity (ignoring kinematics and BDT retraining) of including the signal for the tt decay channel with H→ZZ and H→WW processes.  Please perform a toy study by modifying the normalisation of your existing signal MC samples to account for this (and shifting+scaling the uncertainties accordingly) and report the results in Appendix J in the INT note.
-=======> done?
+--------> We have included the BDTs from these HVVML events in Appendix J, Figure 120-121, which peaked in the background regions. The impact on
+         the combined limits are small as shown in Table 53. 
 
 
 L400, 408, 411-413, Sec 7.6 (INT version 5.5) - Can you clarify further how you apply scale factors to different leptons in your events?  Your basic objection selection uses FCLoose isolation for both electrons and muons, which presumably must apply to both prompt leptons from W decays and also leptons from tau decays.  Section 7.6 then describes that you further apply the PLIV to leptons (and cross-check to make sure that the SF are valid for leptons from taus) - but in AnalysisTop the PLIV is implemented as an isolation WP, which would be used instead of FCLoose.  There appears to be a contradiction here in describing and using both?  If it is the case that you use FCLoose in some regions and PLIV in other regions, how is this done practically in terms of the ntuples? If you save all leptons passing FCLoose and then apply PLIV on top while modifying the scale factors, does this not also affect your Overlap Removal and MET calculations?  (Is there also any risk of this sort of issue with different tau ID WPs in use for the hadronic vs the leptonic channels? How is that handled practically?)
-=======> I don't know.
-
+--------> The PLIV cut is applied on top of FCLoose isolation for standard tight electron and muon selection in the lepton + tauhad channels.
+         The PLIV cut is not used in the lepton+2tauhad channel where the QCD multijet background is small. The tight lepton SF's and PLIV SF are
+	 saved separately in the ntuples and applied properly in the analysis. 
 
 
 Pre-approval meeting minutes (Some of the comments overlap with the other sections but they are listed here for completeness). Things that require further clarification are in bold  
 Slide 9: How is this classification (b-jet fake τ, c-jet fake τ) done? Is this at reco level?
 >>Yes done at reco level using the MC record 
-=======> Yes.
+--------> Yes, this is done by matching to the MC truth.
 
 Slide 10+11 : Are the SF treated fully correlated?
 >>The statistical components are considered correlated 
 Looking at the same event every time
-=======> Yes.
+--------> Yes, they are treated fully correlated in the fits. 
 
-Slide 13: define a pure Z -> ττ region where QCD is larger, apply PLIV  cut which motivated the additional 2% uncertainty 
+Slide 13: define a pure Z -> tautau region where QCD is smaller, apply PLIV  cut which motivated the additional 2% uncertainty 
 Slide 29: Which region contributes to the main constraints? (tt PS )
 >>Added in an appendix in the note  (Figure 108) 
 Please make a conclusion about these studies in the main text currently the conclusion is not clear 
-=======> will do(add some description in the note.) ???
+----------> The discussion is included in the text L1013-1023 in INT V5.6
 
 Slide 31: up/down have the same impact on the signal strength (the curve is pretty much the same). Do they have the same shift in yield at reco level ? symmetric or one sided? 
 >>Symmetric 
-=======> Yes.
+--------> It's been symmetrized as (UP-Down)/2. The cause of UP and DOWN in the same direction is usually due to the miss match between the nominal
+          tree and systematic trees, but (UP-DOWN)/2 should capture the actual difference between +- sigma shifts. 
 
 Slide 40 (comment from Tomas): What are you using for the quark to gluon fraction? Default 50+/-50% ? or do you do something better? 
 >>Using the default 
 Worth checking this further 
 This comment has also a relation with slide 30 where you mention  “Pileup_Rho_Topology and Jet_Flavor_Composition in leptonic channel have their impact on the mu one-sided” 
-=======> 
+----------> We are using default 50+-50% from Jet CP recommendations.  
 
 Slide 27: HVV contamination is present in the lephad channel and it is not trivial to add to the analysis due to missing systematic samples
 >>Test: Try to increase the signal by the missing contribution and check the effect
-=======> same as the previous main concern. ?
+--------> see the reply above. 
 
 Pruning (comment from Tomas also check the results in the INT in page 139):  Some of the systematics that are pruned should not be pruned away
 >>Check the up/down variations 
-=======> add the result using MAXVARIATION ???
+--------> Most important systematic variation plots are included in Appedix D, which look reasonable as expected.
 
 Slide 24 (BDT optimization) : L is the loss in AUC and X is the penalty term for over training.
 >>Shouldn’t X vary? Does the choice of X have a small or large impact?
-=======> X impact is small, since X is the difference of absoulte value of AUC(even) and AUC(odd), the differece is small compared to the average area. 
+--------> X = 1 indicts the average AUC and the AUC difference have the same weight, which means they are equal important in the optimization. 
 
 
 What is exactly shown on slide 25?
 >>This is the case for only one signal
-=======> Yes.
+-------> correct
 
 Slide 26: There is some mismodeling between b1 and b2 
 >>How does the post-fit look for them? 
 To be checked. Note that the uncertainty is stat only here 
 
-=======> Fig46 shows the post-fit result ????
+--------> Fig46 shows the post-fit result from Asimov data, which has total uncertainties of 10%. We will check again once the data are unblinded.
+
 
 Slide 33 : Show limits vs branching ratio 
 >>What is the plan for EFT limits?
-=======>
+-------->We will show both the BR limits as well as the EFT limits based on the formula (2) in the INT note.
+         (Ci3)^2+(C3i)^2 = 1946.6 BR(t->qH) where i=1,2 for q=u,c.
+	 
 
 Is this per channel or will it only be done in the combination 
 Comment on the difference between up and charm? Need to make this clear in the paper 
-=======>
-
-
+-------> The main difference between up and charm is due to the pdf in the production since the analysis selections are identical between two
+         results. The current strategy is to publich the individual channel first and the combination will be done when the last channel is ready. 
 
 
 Other comments 
 L162-168 Just a small note to be aware that CMS released new results in the H->bb channel recently (see Top2021 slides from Tom Stevenson) - in case you wish to update these references and values.  They also released new results in the H->gammagamma channel, in case you prefer to report those as the current tightest limits.  These are only CONF notes from CMS however, so if you currently report only papers then this is ok also.
-=======> will add.
+-------> We will quote the latest CMS results in the INT note. 
 
 
 Table 3 - Would it be possible to please add a row to these tables giving S/B or S/sqrt(B) ? This would help us to see at a glance the relative statistical sensitivity of each region without being overwhelmed by all of the available different numbers.
-=======> done
+-------> The S/B(tuH-tcH) is added in Table 3, which is a good idea.
 
 
 Figure 3 - Is this the pT of the tau_lep, the tau_had or both inclusively?
-=======> tau_had
+------> That's the leading tau_had Pt shown in Figure 3.
 
 
 Comment on the single top samples:
 Which DSIDs do you use for single-top? The DSIDs listed in Appendix A do not have t-channel but you explicitly mention t-channel on line 374. Please make sure to include all DSIDs. We are surprised to see you are using PW+PY6 samples according to the description on Line 355-358 in the INT but the DSIDS in the Appendix A for s-channel and Wt are definitely PW+PY8. Is this a typo?  (see the below comment for more details) 
-=======> added(410644 410645 410646 410647 410658 410659), fix typo.
+---------> added(410644 410645 410646 410647 410658 410659), fix typo.
 
 L355-358 (INT version 5.5) Out of curiosity, why do the single top samples decay the taus with Tauola while the ttbar and diboson samples decay the tops with Pythia8 and Sherpa respectively?  The single top samples shower with Pythia6 according to Table 5, is Pythia6 known to model tau decays poorly? Is there any inconsistency possible between the modelling of the tau decays in the ST signal and the single top background for instance?
-=======> fixed, we use the single and ttbar samples both with Pythia8, decays and spin correlations for tau can be handled by Pythia8
+--------> fixed in INT5.6 L361-365. We use the single and ttbar samples both with Pythia8, decays and spin correlations for tau that can
+          be handled by Pythia8
 
 L555-556 Is m_tautau,vis used exclusively for t_h tau_lep tau_had events where you are missing a neutrino in the reconstruction of the Higgs? This is why you set the window lower than the Higgs mass?
-=======> Yes, totally right
+------> Yes, that's right
 
 Eq 3. - The missing energy terms are also used to recalculate m_tautau for each step during this minimisation, right?
-=======> Yes.
+--------> Yes, that's correct. 
 
 L601 Isn’t there only 1 neutrino in t_l tau_had tau_had? In fact according to Table 2, since you never consider t_l tau_lep tau_had or t_l tau_lep tau_lep, shouldn’t there only ever be a single neutrino in all signal events? (Other than perhaps t_l tau_had events where you miss another tau which could have decayed leptonically)
-=======> when the W boson from top decays leptonically, the collinear approximation doesnt work, we cannot reconstruct tau fully.
+--------> No, there are neutrinos from the tauhad decays. So the kinematic fits are not used in t_l channels.
 
 L606 This sentence is a little confusing as there are two relevant regions; t_l tau_had and t_h tau_lep tau_had.  In t_l tau_had, do you ever try to consider the lepton from the top as being partnered with the tau to make the “di-tau” pair? This would be wrong but this is what this sentence currently implies?
-=======> No, In t_l tau_had, we didnt consider them as a di-tau pair, di-tau pair refer to "hadtau and hadtau" or "leptau and hadtau".
+---------> Yes, you are right that it would not make sense to combine the same sign of t_l tau_had pair as "di-tau" pair, but it actually provide
+           some discrimination between the signal and background. So we use it as "di-tau" visible mass in the MVA training.
 
-Section 12.4 reads as if it is only related to the background from ttbar. Is this the case? Please add details for all backgrounds including minor ones 
-=======> add the description of the another dominant background ztautau theoretical uncertainty and the treatment of the minor backgrounds.
-
-
+Section 12.4 reads as if it is only related to the background from ttbar. Is this the case? Please add details for all backgrounds including minor ones
+---------> We include the cross section uncertainties based on LHC yellow report ude to the QCD scales and PDFs, see L958-971 in INT note V5.6
+           for the description. The impact on the limits are small.
 
 
 Follow up from previous comments where we did not find answers to
 
 -Line 852: You need to add details about the Herwig 7 sample. Please add the DSIDs you mentioned in your comment on CDS. From your comment it seems you are using Herwig 7.0.X but you can also look into Herwig 7.1.X . The MC-to-MC SFs for the newer PW+H7.1 samples are available for PFlow which you are using in this analysis. Can you please look at these samples given that the PS uncertainty is highest ranked in Figure 42 (right) and very constrained?  
-===> We will add checks with DSIDs=411233/4 for PW+H7.1 for PS uncertainties once the samples is available.
+======> We add checks with DSIDs=411233/4 for PW+H7.1 for PS uncertainties once the samples is available.
 When these are ready, be sure to compare these Herwig samples against the Powheg+Pythia8 nominal sample with DSID 410470 (see above comment). This is not an EB request blocker as waiting on samples.
 ===+++>We have DSIDs=411233/4 in hand and will update in next version along with the new signal samples in PW+H7.1. 
 >> Did you have a chance to follow up on this? If so, what are your findings?
-=======> add in appendix4.
+
+-------> Thanks for the follow-up. We did the test as suggested in Appendix D. The impact on the limits is smalled as shown in Table 42.
+
 
 There is no mention of hdamp uncertainty. Did you have a look at it? In other analysis the generator uncertainty (PW vs amc@NLO) was not used and instead an uncertainty on hdamp is used (example FCNC H(bb)). This will be good check - some studies:
 compare the Nuisance parameters with the current fit setup (where you include ME uncertainty) and a fit where you add hdamp in addition
@@ -130,13 +148,6 @@ compare the Nuisance parameters with the current fit setup (where you include ME
 compare the Nuisance parameters with the current fit setup (where you include ME uncertainty) and a fit where you t consider ME uncertainty
 ====> We are waiting for the derivation of 410480/410482 with different hdamp and we will do these studies once the sample is available
 Retaining this comment for when the sample is available.  No immediate action required.This is not an EB request blocker.
->>We see that “tt hdamp” uncertainty is included in the ranking in slide 30 from the pre-approval slides and you added a description for it in the new version ( line 947-950, Figure 108) but we don’t see answers to the above tests that we asked for. Some studies are in  Appendix F but they are not complete. Can you please comment on these questions? 
-=======> add in appendix4.
+>>We see that “tt hdamp” uncertainty is included in the ranking in slide 30 from the pre-approval slides and you added a description for it in the new version ( line 947-950, Figure 108) but we don’t see answers to the above tests that we asked for. Some studies are in  Appendix F but they are not complete. Can you please comment on these questions?
 
-
-
-
-
-
-
-
+---------->The tests are done and included in Appendix D. The impact on the limits is small. 
