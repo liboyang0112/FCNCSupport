@@ -94,7 +94,7 @@ Comment on the difference between up and charm? Need to make this clear in the p
 
 Other comments 
 L162-168 Just a small note to be aware that CMS released new results in the H->bb channel recently (see Top2021 slides from Tom Stevenson) - in case you wish to update these references and values.  They also released new results in the H->gammagamma channel, in case you prefer to report those as the current tightest limits.  These are only CONF notes from CMS however, so if you currently report only papers then this is ok also.
--------> We will quote the latest CMS results in the INT note. 
+-------> We added the latest CMS results in the INT note in the introduction. 
 
 
 Table 3 - Would it be possible to please add a row to these tables giving S/B or S/sqrt(B) ? This would help us to see at a glance the relative statistical sensitivity of each region without being overwhelmed by all of the available different numbers.
