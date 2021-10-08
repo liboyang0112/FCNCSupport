@@ -48,13 +48,18 @@ In the hadronic channels, they are named \texttt{FFNP\_Xprong\_ptbinY\_etabinZ} 
 
 \subsection{Theoretical uncertainties on the background}
 
-Theoretical uncertainties have been applied to the MC background in this analysis. The NNPDF3.0 systematic set (which has 100 variations: PDFset=26001-26100) is used to get the variation envelope around the nominal PDF.
+Several independent variations of modeling $t\bar{t}$ events are considered: The choice of the renormalisation and factorisation scale in the matrix-element calculation, the choice of the matching scale when matching the
+matrix elements to the parton show generator, the uncertainty in the value of $\alpha_s$ when modeling intial-state radiation (ISR), the choice of the renormalisation scale when modeling final-state radiation (FSR) and
+uncertainties associated with the choice of the PS generator.
+
+%%Theoretical uncertainties have been applied to the MC background in this analysis. 
+The NNPDF3.0 systematic set (which has 100 variations: PDFset=26001-26100) is used to get the variation envelope around the nominal PDF.
 
 The $\alpha_s$ uncertainty is applied using weights PDFset=26600,26500. The impact is insignificant and pruned before the fit.
 
 The renormalization and factorization scales are varied by a factor of 0.5 and 2.0 around the nominal values. There are eight such variations. In the final BDT distributions, the largest variations of the eight per bin are taken. The name of this theoretical NP is called ``scale'' in the final fit.
 
-The ISR and FSR uncertainty are obtained by weights:
+The uncertainty in the choice of the value of the strong coupling constant $\alpha_s$ when modeling ISR is determined by varying the parameter Var3c within its uncertainties given by the A14 tune. These variations are reflected by weights associated to the nominal sample of $t\bar{t}$ events. The impact of modeling FSR is evaluated based on PS weights which vary the renormalisation scale for QCD emission in the FSR by a factor of 0.5 (FSR down variation) and 2.0 (FSR up variation), respectively. They are obtained by weights:
 \begin{itemize}
 	\item FSR up: ``isr:muRfac=10\_fsr:muRfac=05''
 	\item FSR down: ``isr:muRfac=10\_fsr:muRfac=05''
@@ -83,11 +88,33 @@ Another significancant background stems from the ztautau samples, the following 
 	\item PDF alternative value: evalatued comparing predictions from NNPDF3.0nnlo PDF set (nominal) with MMHT2014nnlo68cl and CT14nnlo PDF sets
 \end{itemize}
 
-Finally, the other MC samples contribute a very small fraction of background, to be conservative, 20\% variations are assigned to account for the theoretical uncertainties.
+Finally, the other MC samples,including single top, diboson, wjet, SM higgs and ttV, contribute a very small fraction of background. 
+
+For single top sample,to estimate the uncertainty originating from ISR modelling in the single top background, the same procedure as for $t\bar{t}$ is used. One NP reflects the symmetrised effect of the two shower variations Var3cDown and Var3cUp, and the other NP with name ``scale'' describe the symmetrised effect from the independent variations of the renormalisation and factorisation scale. The impact of the uncertainty from FSR modelling is estimated by reweighting the nominal single top sample. The two variations $\mu^{FSR}_{R} \times 0.5$ and $\mu^{FSR}_{R} \times 2$ are considered.  The standard deviation of 100 NNPDF3.0nnlo variations is calculated Uncertainties on the PDF are evaluated following the recommended prescription.
+
+For ttV samples, to obtain the uncertainties related to the renormalization and factorization scales, the values of the scale-parameters $\mu_{f}$ and $\mu_{f}$ are varied by factors of 2.0 and 0.5 with respect to their default values and compared with the nominal predictions. Uncertainties on the PDF are evaluated following the same procedure.
+
+For diboson background, it is not possible to define a dedicated control region to constrain its modeling. MC simulation is used to estimate the diboson background. The normalization uncertainty in diboson prediction is estimated using Sherpa samples, which were generated with up to one additional parton at NLO and up to three partons at LO. Following the recommendations of the PMG group, the uncertainties to be considered include: 
+\begin{itemize}
+	\item   7 Scale variations of the renormalization and factorization scale
+	\item   100 NNPDF3.0nnlo variations (PDF261000-PDF261100)
+	\item   4 NNPDF3.0nnlo $\alpha_{S}$ variations
+\end{itemize}
+
+Several sources of modeling uncertainties may affect the shape of the Wjets samples in the signal regions. Following the recommendations of the PMG group, the list of modeling uncertainties to be considered include:
+\begin{itemize}
+\item 6 Scale variations of the renormalization and factorization scale
+\item 100 NNPDF3.0nnlo variations (PDF261000-PDF261100)
+\item 2 NNPDF3.0nnlo al phas variations (PDF269000 and PDF270000)
+\item 2 nominal PDF set variations with respect to MMHT and CT14
+\end{itemize}
+
+At last, A $+5.8\%-9.2\%$ normalization uncertainty is considered for the ttH background, corresponding to the scale and $\alpha_{S}$ uncertainties in the NLO cross-section computation. A constant PDF uncertainty of
+$\pm3.6$\% is assumed, as it was done for the previous measurement.Therefore, a overall sytematics with variation 9\% is entered in the final fit model.
 
 \subsection{Uncertainties on the signal modelling}
 
-An additional $1.6\%$ uncertainty on BR($H\to\tau\tau$) (Named as HttBR in the Ranking plots.) is also assigned \cite{HiggsBR} besides the theoretical uncertainties: PDF, $\alpha_s$, ISR, FSR and scale.
+An additional $1.6\%$ uncertainty on BR($H\to\tau\tau$) (Named as HttBR in the Ranking plots.) is also assigned \cite{HiggsBR} besides the theoretical uncertainties: PDF,ISR, FSR and scale.
 
 In the leptonic channels, the fake tau calibration is also applied to the fake tau part of the signal the same way as the background and treated correlatedly.
 
