@@ -82,7 +82,7 @@ To be checked. Note that the uncertainty is stat only here
 
 Slide 33 : Show limits vs branching ratio 
 >>What is the plan for EFT limits?
--------->We will show both the BR limits as well as the EFT limits based on the formula (2) in the INT note.
+-------->We would like to show both the BR limits as well as the EFT limits based on the formula (2) in the INT note once agreeing with other analyses.
          (Ci3)^2+(C3i)^2 = 1946.6 BR(t->qH) where i=1,2 for q=u,c.
 	 
 
