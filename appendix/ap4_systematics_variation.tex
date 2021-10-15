@@ -6,6 +6,9 @@ This appendix summaries the normalization+shape effects from the most constraine
 
 Two NPs (JET\_Flavor\_Composition, JET\_Pileup\_RhoTopology) in the lepton channels have their impact one-sided on $\mu$ and they are anti-correlated to each other
 at 35\%. Work is in progress by doing NLL scan vs $\mu$ by fixing one of NPs to understand the correlation better.
+
+In the final fit, we chose to set the symmetrisation scheme of these two NPs to MAXIMUM instead of TWOSIDED to avoid the one-sided impact, the limit table shown in \ref{tab: tthML_max_vs_twosided} is derived with TWOSIDED setting, the limit in the body (Tab.\ref{tab:tab_tthML_limit}) is presented using MAXIMUM setting.
+
 %Both of the ONESIDE systematics Pileup\_Rho\_Topology and JET\_Flavor\_Composition are checked via the negative log-likelihood scan as shown in Figure~\ref{fig:tthML_n%llscan_1} to investigate the possible cause to one-side effect on the signal strength $\mu$.
 
 They are:
@@ -381,7 +384,31 @@ In hadronic channels:
 
 For ttbar Parton Shower untertainty, Pythia + Herwig 7.0.X samples are used to derived the impact of the PS systematic. Given the high rank of PS uncertaity in leptonic channel and the availibity of the newer PW+H7.1 samples(hereafer referred to as PS71 systematic), the limit with PS71 applied are checked and shown here Table.\ref{tab:tthML_ttbarPS_vs_ttbarPS71}. The impact on the limits is small in the leptonic channels. 
 
-
+\begin{table}
+\caption{The expected $95\%$ CL exclusion upper limits on signal ( $\mu=1\to$~BR$(t\to Hq)=0.1\%$ ) with the Asimov (B-only) in the leptonic channels,  with JET\_Flavor\_Composition and JET\_Pileup\_RhoTopology set to TWOSIDED.}
+\label{tab:tthML_max_vs_twosided}
+\centering
+\begin{tabular}{cccc} \toprule\toprule
+ & $t_l\tauhad$-2j & $t_l\tauhad$-1j & $t_h\tlhad$-2j\\\midrule
+$\bar{t}t\to bWcH$ & $4.29^{+1.79}_{-1.20}$ & $3.90^{+1.81}_{-1.09}$ & $6.86^{+3.25}_{-1.92}$\\
+$cg\to tH$ &  / & $86.70^{+35.90}_{-24.23}$ & $36.82^{+15.21}_{-10.29}$\\
+tcH merged & $4.12^{+1.68}_{-1.15}$ & $3.64^{+1.59}_{-1.02}$ & $5.78^{+2.66}_{-1.61}$\\
+$\bar{t}t\to bWuH$ & $3.99^{+1.69}_{-1.12}$ & $3.58^{+1.67}_{-1.00}$ & $6.68^{+3.00}_{-1.87}$\\
+$ug\to tH$ & $22.47^{+8.99}_{-6.28}$ & $16.57^{+6.85}_{-4.63}$ & $5.48^{+2.28}_{-1.53}$\\
+tuH merged & $3.35^{+1.37}_{-0.94}$ & $2.84^{+1.21}_{-0.79}$ & $3.01^{+1.26}_{-0.84}$\\
+\bottomrule\bottomrule\\
+\end{tabular}
+\begin{tabular}{cccc} \toprule\toprule
+ & $t_h\tlhad$-3j & $t_l\thadhad$ & Combined\\\midrule
+$\bar{t}t\to bWcH$ & $3.42^{+1.63}_{-0.95}$ & $0.64^{+0.29}_{-0.18}$ & $0.60^{+0.26}_{-0.17}$\\
+$cg\to tH$ & $56.60^{+26.72}_{-15.82}$ & $7.79^{+3.84}_{-2.18}$ & $7.34^{+3.52}_{-2.05}$\\
+tcH merged & $3.13^{+1.40}_{-0.87}$ & $0.59^{+0.26}_{-0.16}$ & $0.55^{+0.24}_{-0.15}$\\
+$\bar{t}t\to bWuH$ & $3.26^{+1.55}_{-0.91}$ & $0.61^{+0.29}_{-0.17}$ & $0.57^{+0.26}_{-0.16}$\\
+$ug\to tH$ & $9.83^{+5.20}_{-2.75}$ & $1.62^{+0.85}_{-0.45}$ & $1.49^{+0.74}_{-0.42}$\\
+tuH merged & $2.27^{+0.95}_{-0.64}$ & $0.42^{+0.19}_{-0.12}$ & $0.39^{+0.17}_{-0.11}$\\
+\bottomrule\bottomrule\\
+\end{tabular}
+\end{table}
 
 
 \begin{table}
