@@ -1,0 +1,47 @@
+
+Dear conveners:
+
+   Thank you so much for your kind comments and revising our notes.
+   We have addressed these comments in the INT V5.6 and replied below as "=====>"
+
+   cheers
+   The FCNC tqH team 
+
+
+
+
+
+Dear FCNC tautau team,
+Thank you for all of these follow-ups and please accept our apologies for the slow response.  We have a few points below, mostly involving adding a little text to the INT - but one which will involve running a modified fit (hopefully also a quick task however).
+
+As a side note, we think that you have uploaded v5.6 as an additional document to this CDS page rather than putting it in place of the previous version - you might want to fix this to make it easier to find!
+Best regards,
+Nedaa-Alexandra and Jacob
+
+=====> Thanks for your replies and comments, I am not familiar with the CDS, which cause the wrong placement, I will notice it in the future.
+
+
+---------
+Table 54 - Can you please explain this table further and put some comments on it in the INT note?  i.e. explain here what the difference is between 'tqH' and 'tqH_all'? (It took us a while to work out that tqH is from Table 19 whereas tqH_all is with the HVV added!).  It is clear however that while the HVV would make the limits slightly different for each channel, these are well within the uncertainties, so we don't believe that this is a problem to consider further.
+=====> sorry for the unclear captions, have added. tcH and tuH means the nominal FCNC Htautau signal samples, tcH\_all and tuH\_all also consider the contributions from FCNC multilepton signal samples.
+
+
+This mixture of lepton SFs (FCLoose, PLIV) could introduce issues in any fits that use both simultaneously.  The systematic up and down shifts on different lepton WPs are not equivalent, and as such should use different NPs in the fit (or indeed using one set and using seperate sets should both be tested as these enforce different correlation schemes, and the most conservative estimate should be taken). However, it is clear from the systematic ranking tables that you do not appear to be highly sensitive to lepton ID or ISO systematics, so please just add a comment to the note mentioning this issue but explaining that the effect would be negligible.  Equivalently, depending on how you set up AnalysisTop - Overlap Removal and MET calculations may be inconsistent with the objects you are using in the analysis if you calculate them using FCLoose and then apply PLIV on top - although as long as these are consistent everywhere then it is likely to be ok.  It is worth adding a comment on this in the note.
+=====> will add this?
+
+
+"The discussion is included in L1013-1023 in INT V5.6" - do you mean L1063-1073 or have we misunderstood?
+=====> Yes, you're right, Sorry for the numbers, since we added some descriptions about the systematics, so we didn't correct the line numbers in time.
+
+"We are using default 50+-50% from Jet CP recommendations."  -  would you benefit at all from using quark-gluon fractions specific for your analysis rather than the default?
+=====> ?
+
+Figure 42 - In the pre-approval meeting the topic was raised regarding the modelling for b1 and b2 (thtaultauh-3j and tltauhad-1j) - We think it would be useful to run a 'realistic Asimov' fit to see if this problem with the background modelling is resolved.  You could run a BONLY fit with data in the CRs and SR up to your cut only (BDT < 0.2).  That should hopefully fix the background modelling issue in the SR without having to unblind?  We are keen to know if the fit using the CRs has the power to resolve this issue or whether there is something really missing. (You could then also consider estimating sensitivity again taking by the resultant background scalings to modify your Asimov in the whole SR (i.e. use the post-fit scale factors to correct your MC before the fit) - then running a S+B fit on this modified 'Asimov' with all regions. ) - This is similar to the strategy used by the FCNC H(bb) analysis (please see Sec 10.2 an 10.3 of their internal note https://cds.cern.ch/record/2645330/files/ATL-COM-PHYS-2018-1500.pdf ).
+=====>
+
+
+
+
+
+
+
