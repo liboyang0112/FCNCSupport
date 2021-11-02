@@ -22,8 +22,11 @@ Uncertainties related to the detector effects are included for the signal and ba
 \begin{itemize}
 \item The electron and muon trigger, reconstruction, identification and isolation efficiencies. These are estimated with the tag-and-probe method on the $Z\to ll$, $J/\psi\to ll$ and $W\to l\nu$ events \cite{lep_sys}. There are 5NP for electron(El\_ChargeMisID\_STAT, El\_ChargeMisID\_SYST, El\_Reco, El\_ID\_TightLH, El\_Iso\_FCLoose), 8NP for muon(Mu\_TTVA\_STAT, Mu\_TTVA\_SYST, Mu\_ID\_STAT, Mu\_ID\_SYST, Mu\_ID\_STAT\_LOWPT, Mu\_ID\_SYST\_LOWPT, Mu\_Iso\_SYST, Mu\_Iso\_STAT, Mu\_Iso\_STAT), 1NP for single electron trigger, and 2NP for single muon trigger. 
   We also checked the recommended PLIV scale factors can be applied to the electron and muon from
-  tau decays using $Z\rightarrow \tau\tau\rightarrow e\mu$ enriched control sample in App.~\ref{sec:CheckPLIV} and additional $\pm 2\%$ systematic uncertainty
-  is assigned for PLIV cut for the tau-lepton in the lepton + $\thad$ channels as ``Tau\_PLIV''.
+  tau decays using $Z\rightarrow \tau\tau\rightarrow e\mu$ enriched control sample in App.~\ref{sec:CheckPLIV} and
+  additional $\pm 2\%$ systematic uncertainty is assigned for PLIV cut for the tau-lepton in the lepton + $\thad$ channels as ``Tau\_PLIV''.
+  This mixture of lepton SFs (FCLoose, PLIV) could introduce issues in any fits that use both simultaneously. But the effect is likely small
+  because the PLIV SFs is applied on top of leptons using FCLoose cuts and there is no additional systematic assigned to PLIV,
+  except $\pm 2\%$ assigned for the tau-lepton.
   
 \item Electron energy and muon momentum scales. They are estimated from the early 13 TeV $Z\to ll$ events. For electron energy scales, we used 1 NP for EG\_RESOLUTION\_ALL, and 2 NP for EG\_SCALE\_ALL and EG\_SCALE\_AF2. For muon momentum scales, 1NP MUON\_SCALE is used.
 \item Jet energy scale (JES) and resolution (JER). The JES uncertainty is estimated by varying the jet energies according to the uncertainties derived from simulation and in-situ calibration measurements using a model with a reduced set of 43 orthogonal NPs (30 NPs for JES and 13 NPs for full JER) \cite{jet_sys} which has up to 30\% correlation losses, which are assumed to be uncorrelated, and the induced changes can be added in quadrature. The individual scale variations on the jets are parameterised in $\pt$ and $\eta$. The total JES uncertianty is below 5\% for most jets and below 1\% for central jets with pT between 300 GeV and 2 TeV.
