@@ -44,7 +44,7 @@ This mixture of lepton SFs (FCLoose, PLIV) could introduce issues in any fits th
 
 =====>We were using the ntuples provided by the Htautau CP analysis group where they used the correct gluon-qaurk fraction for JES while the
       default 50+-50 % were used in the ttWHML ntuples. From the ranking plot of Fig, 56, the impact of JET_Flavor_Composition seems a bit
-      higher in the hadronic channels than in the leptonic channels and we will check the difference due to different gluon-quark frction assumed.
+      higher in the hadronic channels than in the leptonic channels and we will check the difference due to different gluon-quark fraction assumed.
       
 
 Figure 42 - In the pre-approval meeting the topic was raised regarding the modelling for b1 and b2 (thtaultauh-3j and tltauhad-1j) - We think it would be useful to run a 'realistic Asimov' fit to see if this problem with the background modelling is resolved.  You could run a BONLY fit with data in the CRs and SR up to your cut only (BDT < 0.2).  That should hopefully fix the background modelling issue in the SR without having to unblind?  We are keen to know if the fit using the CRs has the power to resolve this issue or whether there is something really missing. (You could then also consider estimating sensitivity again taking by the resultant background scalings to modify your Asimov in the whole SR (i.e. use the post-fit scale factors to correct your MC before the fit) - then running a S+B fit on this modified 'Asimov' with all regions. ) - This is similar to the strategy used by the FCNC H(bb) analysis (please see Sec 10.2 an 10.3 of their internal note https://cds.cern.ch/record/2645330/files/ATL-COM-PHYS-2018-1500.pdf ).
