@@ -439,8 +439,7 @@ In this analysis and FCNC H(bb) analysis, an uncertainty on hdamp(referred to as
 		
 
 Before unblinding procedure, small mismodelling could be found  in $t_h\tlhad$-3j and $t_l\tauhad$-1j signal regions.Therefore, it would be useful to run a realistic Asimov fit to see if this problem with the background modelling is resolved. A BONLY fit with data in the CRs and SR up to 0.2 in the BDT discriminant distributions is performed. This is similar to the strategy used by the FCNC H(bb) analysis~\cite{ANA-TOPQ-2018-41-INT1}. The results are shown in Figure~\ref{fig:tthML_partial_unblinding_tuH}
-\iffalse and Figure~\ref{fig:tthML_partial_unblinding_tcH} \fi. The background modeling is improved by a factor of 2 in $t_l\tauhad$-1j channel. After rescaling the background from the fits(Figure\ref{fig:tthML_partial_unblinding_tuH_NF}\iffalse-Figure\ref{fig:tthML_partial_unblinding_tcH_NF}\fi),
-we have evaluated the impact on the limits is small(Tab\ref{tab:tthML_rescaled_limit}). 
+\iffalse and Figure~\ref{fig:tthML_partial_unblinding_tcH} \fi. The background modeling is improved by a factor of 2 in $t_l\tauhad$-1j channel. After rescaling the background from the fits(Tab \ref{tab:tthML_rescaled_factor}), we have evaluated the impact on the limits is small(Tab\ref{tab:tthML_rescaled_limit_1j}-\ref{tab:tthML_rescaled_limit_3j}). 
 
 \begin{figure}[H]
 \centering
@@ -452,7 +451,7 @@ we have evaluated the impact on the limits is small(Tab\ref{tab:tthML_rescaled_l
 \\
 \includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_Summary.pdf}
 \includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_Summary_postFit.pdf}
-\caption{Pre-fit(left) and Post-fit(right) BDT discriminants in the SRs $t_h\tlhad$-3j and $t_l\tauhad$-1j in terms of tuH signal. The histograms show the observed data compared to the MC-based model. The distributions of the BDT discriminants are unblinded up to a value of 0.2}
+\caption{Pre-fit(left) and Post-fit(right) BDT discriminants in the SRs $t_h\tlhad$-3j and $t_l\tauhad$-1j. The histograms show the observed data compared to the MC-based model. The distributions of the BDT discriminants are unblinded up to a value of 0.2}
 \label{fig:tthML_partial_unblinding_tuH}
 \end{figure}
 
@@ -472,19 +471,19 @@ we have evaluated the impact on the limits is small(Tab\ref{tab:tthML_rescaled_l
 
 
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b1j_ss_beforeNF.pdf}
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b1j_ss_postFit_afterNF.pdf}
-\\
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b3j_os_beforeNF.pdf}
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b3j_os_postFit_afterNF.pdf}
-\\
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b3j_os_NF.pdf}
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b1j_ss_NF.pdf}
-\caption{Pre-fit(left) and Post-fit(right) BDT discriminants in the SRs $t_h\tlhad$-3j(medium two) and $t_l\tauhad$-1j(top two) in terms of tuH signal with region-dependent norm factor applied to $t\bar{t}$ sample. The fitted norm factors are presented in the bottom.}
-\label{fig:tthML_partial_unblinding_tuH_NF}
-\end{figure}
+%%\begin{figure}[H]
+%%\centering
+%%\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b1j_ss_beforeNF.pdf}
+%%\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b1j_ss_postFit_afterNF.pdf}
+%%\\
+%%\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b3j_os_beforeNF.pdf}
+%%\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b3j_os_postFit_afterNF.pdf}
+%%\\
+%%\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b3j_os_NF.pdf}
+%%\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b1j_ss_NF.pdf}
+%%\caption{Pre-fit(left) and Post-fit(right) BDT discriminants in the SRs $t_h\tlhad$-3j(medium two) and $t_l\tauhad$-1j(top two) in terms of tuH signal with region-dependent norm factor applied to $t\%%bar{t}$ sample. The fitted norm factors are presented in the bottom.}
+%%\label{fig:tthML_partial_unblinding_tuH_NF}
+%%\end{figure}
 
 
 
@@ -505,28 +504,114 @@ we have evaluated the impact on the limits is small(Tab\ref{tab:tthML_rescaled_l
 
 
 
+%%\begin{table}
+%%\caption{The expected $95\%$ CL exclusion upper limits on signal ( $\mu=1\to$~BR$(t\to Hq)=0.1\%$ ) with the Asimov (B-only) in the leptonic channels after rescaling the background from the fits.}
+%%\label{tab:tthML_rescaled_limit}
+%%\centering
+%%\begin{tabular}{cccc} \toprule\toprule
+%% & $t_l\tauhad$-2j & $t_l\tauhad$-1j & $t_h\tlhad$-2j\\\midrule
+%%tcH merged & $4.16^{+1.69}_{-1.16}$ & $8.30^{+3.05}_{-2.32}$ & $5.77^{+2.71}_{-1.61}$\\
+%%tuH merged & $3.41^{+1.39}_{-0.95}$ & $6.04^{+2.08}_{-1.69}$ & $2.99^{+1.26}_{-0.84}$\\
+%%\bottomrule\bottomrule\\
+%%\end{tabular}
+%%\begin{tabular}{cccc} \toprule\toprule
+%% & $t_h\tlhad$-3j & $t_l\thadhad$ & Combined\\\midrule
+%%tcH merged & $2.71^{+1.25}_{-0.76}$ & $0.59^{+0.26}_{-0.16}$ & $0.55^{+0.24}_{-0.15}$\\
+%%tuH merged & $1.96^{+0.83}_{-0.55}$ & $0.42^{+0.19}_{-0.12}$ & $0.40^{+0.17}_{-0.11}$\\
+%%\bottomrule\bottomrule\\
+%%\end{tabular}
+%%\end{table}
+%%
+%%
+%%\begin{table}
+%%\caption{The expected $95\%$ CL exclusion upper limits on signal ( $\mu=1\to$~BR$(t\to Hq)=0.1\%$ ) with the Asimov (B-only) in the leptonic channels after rescaling the background from the fits.}
+%%\label{tab:tthML_rescaled_limit_1}
+%%\centering
+%%\begin{tabular}{cccc} \toprule\toprule
+%% & $t_l\tauhad$-2j & $t_l\tauhad$-1j & $t_h\tlhad$-2j\\\midrule
+%%tcH merged & $4.16^{+1.69}_{-1.16}$ & $6.36^{+1.08}_{-1.78}$ & $5.77^{+2.71}_{-1.61}$\\
+%%tuH merged & $3.41^{+1.39}_{-0.95}$ & $4.82^{+0.83}_{-1.35}$ & $2.99^{+1.26}_{-0.84}$\\
+%%\bottomrule\bottomrule\\
+%%\end{tabular}
+%%\begin{tabular}{cccc} \toprule\toprule
+%% & $t_h\tlhad$-3j & $t_l\thadhad$ & Combined\\\midrule
+%%tcH merged & $2.74^{+1.27}_{-0.76}$ & $0.59^{+0.26}_{-0.16}$ & $0.55^{+0.24}_{-0.15}$\\
+%%tuH merged & $1.98^{+0.84}_{-0.55}$ & $0.42^{+0.19}_{-0.12}$ & $0.40^{+0.17}_{-0.11}$\\
+%%\bottomrule\bottomrule\\
+%%\end{tabular}
+%%\end{table}
+
 \begin{table}
-\caption{The expected $95\%$ CL exclusion upper limits on signal ( $\mu=1\to$~BR$(t\to Hq)=0.1\%$ ) with the Asimov (B-only) in the leptonic channels after rescaling the background from the fits.}
-\label{tab:tthML_rescaled_limit}
+\begin{center} 
+\begin{tabular}{ccc}\toprule\toprule
+& $t_l\tauhad$-1j & $t_h\tlhad$-3j \\\midrule
+  QCD Fake                 & 0.90  & 0.95 \\
+  W-jet fake               & 1.25  & 1.21 \\
+  Other Fake               & 0.99  & 0.76 \\
+  b Fake                   & 1.14  & 1.20 \\
+  SM Higgs                 & 0.81  & 0.94 \\
+  $\bar{t}tV$              & 0.99  & 0.98 \\
+  Diboson                  & 0.98  & 0.89 \\
+  Z$\rightarrow \tau\tau$  & 0.83  & 0.93 \\
+  Lep fake                 & 0.95  & 0.92 \\
+  $\bar{t}t$               & 1.01  & 0.98 \\
+  Rare                     & 0.95  & 0.89 \\
+\bottomrule\bottomrule\\
+\end{tabular} 
+\caption{Scale factor derived from the BONLY fit in the low BDT region in $t_l\tauhad$-1j and $t_h\tlhad$-3j regions.} 
+\label{tab:tthML_rescaled_factor}
+\end{center} 
+\end{table}
+
+
+\begin{table}
 \centering
 \begin{tabular}{cccc} \toprule\toprule
  & $t_l\tauhad$-2j & $t_l\tauhad$-1j & $t_h\tlhad$-2j\\\midrule
-tcH merged & $4.16^{+1.69}_{-1.16}$ & $8.30^{+3.05}_{-2.32}$ & $5.77^{+2.71}_{-1.61}$\\
-tuH merged & $3.41^{+1.39}_{-0.95}$ & $6.04^{+2.08}_{-1.69}$ & $2.99^{+1.26}_{-0.84}$\\
+tcH merged & $4.16^{+1.69}_{-1.16}$ & $3.52^{+1.49}_{-0.98}$ & $5.77^{+2.71}_{-1.61}$\\
+tuH merged & $3.41^{+1.39}_{-0.95}$ & $2.82^{+1.18}_{-0.79}$ & $2.99^{+1.26}_{-0.84}$\\
 \bottomrule\bottomrule\\
 \end{tabular}
 \begin{tabular}{cccc} \toprule\toprule
  & $t_h\tlhad$-3j & $t_l\thadhad$ & Combined\\\midrule
-tcH merged & $2.71^{+1.25}_{-0.76}$ & $0.59^{+0.26}_{-0.16}$ & $0.55^{+0.24}_{-0.15}$\\
-tuH merged & $1.96^{+0.83}_{-0.55}$ & $0.42^{+0.19}_{-0.12}$ & $0.40^{+0.17}_{-0.11}$\\
+tcH merged & $2.74^{+1.27}_{-0.76}$ & $0.59^{+0.26}_{-0.16}$ & $0.55^{+0.24}_{-0.15}$\\
+tuH merged & $1.98^{+0.84}_{-0.55}$ & $0.42^{+0.19}_{-0.12}$ & $0.39^{+0.17}_{-0.11}$\\
 \bottomrule\bottomrule\\
 \end{tabular}
+\caption{The expected $95\%$ CL exclusion upper limits on signal ( $\mu=1\to$~BR$(t\to Hq)=0.1\%$ ) with the Asimov in the leptonic channels after rescaling the background using scale factors derived in  $t_l\tauhad$-1j region.} 
+\label{tab:tthML_rescaled_limit_1j}
 \end{table}
 
 
+\begin{table}
+\centering
+\begin{tabular}{cccc} \toprule\toprule
+ & $t_l\tauhad$-2j & $t_l\tauhad$-1j & $t_h\tlhad$-2j\\\midrule
+tcH merged & $4.21^{+1.71}_{-1.18}$ & $3.38^{+1.44}_{-0.94}$ & $5.57^{+2.63}_{-1.56}$\\
+tuH merged & $3.44^{+1.40}_{-0.96}$ & $2.70^{+1.13}_{-0.75}$ & $2.90^{+1.23}_{-0.81}$\\
+\bottomrule\bottomrule\\
+\end{tabular}
+\begin{tabular}{cccc} \toprule\toprule
+ & $t_h\tlhad$-3j & $t_l\thadhad$ & Combined\\\midrule
+tcH merged & $2.74^{+1.27}_{-0.76}$ & $0.58^{+0.26}_{-0.16}$ & $0.54^{+0.24}_{-0.15}$\\
+tuH merged & $1.98^{+0.84}_{-0.55}$ & $0.42^{+0.18}_{-0.12}$ & $0.39^{+0.17}_{-0.11}$\\
+\bottomrule\bottomrule\\
+\end{tabular}
+\caption{The expected $95\%$ CL exclusion upper limits on signal ( $\mu=1\to$~BR$(t\to Hq)=0.1\%$ ) with the Asimov in the leptonic channels after rescaling the background using scale factors derived in $t_h\tlhad$-3j region.} 
+\label{tab:tthML_rescaled_limit_3j}
+\end{table}
 
 
-
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_1j_Summary.pdf}
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_1j_Summary_postFit.pdf}
+\\
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_3j_Summary.pdf}
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_3j_Summary_postFit.pdf}
+\caption{Pre-fit(left) and Post-fit(right) BDT discriminants after scaling using SFs derived in the $t_h\tlhad$-3j(bottom two) and $t_l\tauhad$-1j(top two) in terms of tuH signal. }
+\label{fig:tthML_partial_unblinding_tuH}
+\end{figure}
 
 
 \newpage
