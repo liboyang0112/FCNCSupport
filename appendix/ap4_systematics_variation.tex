@@ -441,6 +441,8 @@ In this analysis and FCNC H(bb) analysis, an uncertainty on hdamp(referred to as
 Before unblinding procedure, small mismodelling could be found  in $t_h\tlhad$-3j and $t_l\tauhad$-1j signal regions.Therefore, it would be useful to run a realistic Asimov fit to see if this problem with the background modelling is resolved. A BONLY fit with data in the CRs and SR up to 0.2 in the BDT discriminant distributions is performed. This is similar to the strategy used by the FCNC H(bb) analysis~\cite{ANA-TOPQ-2018-41-INT1}. The results are shown in Figure~\ref{fig:tthML_partial_unblinding_tuH}
 \iffalse and Figure~\ref{fig:tthML_partial_unblinding_tcH} \fi. The background modeling is improved by a factor of 2 in $t_l\tauhad$-1j channel. After rescaling the background from the fits(Tab \ref{tab:tthML_rescaled_factor}), we have evaluated the impact on the limits is small(Tab\ref{tab:tthML_rescaled_limit_1j}-\ref{tab:tthML_rescaled_limit_3j}). 
 
+Quark-gluon fraction is also considered when we derived the Jet Flavour Composition systematics, the relative difference between default 50-50\% fraction and calculated qg fraction(Fig \ref{fig:cal_qg_frac}) are shown in Fig \ref{fig:cal_and_defau_qg_frac} using partial $t\bar{t}$ samples. Given the statistical error, the descrepancy between these two settings could be negelected.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b1j_ss.pdf}
@@ -612,6 +614,28 @@ tuH merged & $1.98^{+0.84}_{-0.55}$ & $0.42^{+0.18}_{-0.12}$ & $0.39^{+0.17}_{-0
 \caption{Pre-fit(left) and Post-fit(right) BDT discriminants after scaling using SFs derived in the $t_h\tlhad$-3j(bottom two) and $t_l\tauhad$-1j(top two) in terms of tuH signal. }
 \label{fig:tthML_partial_unblinding_tuH}
 \end{figure}
+
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/qgfraction_2j.pdf}
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/qgfraction_3j.pdf}
+\\
+\caption{Comparision between default qg fraction and calculated qg fraction in 2j(left) region and 3j(right) region in hadronic channel.}
+\label{fig:cal_and_defau_qg_frac}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/qgfraction.pdf}
+\\
+\caption{Calculated qg fraction using $t\bar{t}$ samples.}
+\label{fig:cal_qg_frac}
+\end{figure}
+
+
 
 
 \newpage
