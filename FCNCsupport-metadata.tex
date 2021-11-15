@@ -7,19 +7,19 @@
 \AtlasTitle{\boldmath Search for flavor-changing neutral currents $tHq$ interactions with $H\to\taup\taum$ in proton-proton collisions at $\sqrt{s}=13$~TeV}
 
 % Author - this does not work with revtex (add it after \begin{document})
-\author{The ATLAS Collaboration}
+%\author{The ATLAS Collaboration}
 
 % Authors and list of contributors to the analysis
 % \AtlasAuthorContributor also adds the name to the author list
 % Include package latex/atlascontribute to use this
 % Use authblk package if there are multiple authors, which is included by latex/atlascontribute
-% \usepackage{authblk}
+ \usepackage{authblk}
 % Use the following 3 lines to have all institutes on one line
-% \makeatletter
-% \renewcommand\AB@affilsepx{, \protect\Affilfont}
-% \makeatother
-% \renewcommand\Authands{, } % avoid ``. and'' for last author
-% \renewcommand\Affilfont{\itshape\small} % affiliation formatting
+ \makeatletter
+ \renewcommand\AB@affilsepx{, \protect\Affilfont}
+ \makeatother
+ \renewcommand\Authands{, } % avoid ``. and'' for last author
+ \renewcommand\Affilfont{\itshape\small} % affiliation formatting
 % \AtlasAuthorContributor{First AtlasAuthorContributor}{a}{Author's contribution.}
 % \AtlasAuthorContributor{Second AtlasAuthorContributor}{b}{Author's contribution.}
 % \AtlasAuthorContributor{Third AtlasAuthorContributor}{a}{Author's contribution.}
@@ -29,6 +29,14 @@
 % \author[b]{Third Author}
 % \affil[a]{One Institution}
 % \affil[b]{Another Institution}
+
+\AtlasAuthorContributor{Xin Chen}{a}{Supervisor of Boyang Li and MingMing Xia}
+\AtlasAuthorContributor{Boyang Li}{a}{Main analyser, analysis code maintainer; signal generation; derivation, ntuple production; fake tau estimation; BDT analysis; systematics; fit; support note.}
+\AtlasAuthorContributor{Weiming Yao}{b}{Analysis contact, main analyser, \texttt{ttHML} ntuple skimming and support; fake tau estimation; BDT analysis; cross check; support note.}
+\AtlasAuthorContributor{Mingming Xia}{a}{Analysis contact, main analyser, \texttt{xTauFramework} n-tuple production; production validation; fake tau estimation in hadronic channels; systematics and final fits.}
+
+\affil[a]{Tsinghua University, Beijing}
+\affil[b]{Lawrence Berkeley National Laboratory and University of California, Berkeley}
 
 % If a special author list should be indicated via a link use the following code:
 % Include the two lines below if you do not use atlasstyle:
@@ -47,7 +55,7 @@
 % and line numbers.
 % Comment or remove in final version.
 
-\AtlasVersion{5.7}
+\AtlasVersion{5.8}
 
 % ATLAS reference code, to help ATLAS members to locate the paper
 %\AtlasRefCode{GROUP-2017-XX}
@@ -105,7 +113,7 @@ A search is presented for flavor-changing neutral currents $tHq$ interactions wi
 
 % Editorial Board Members - indicate the Chair by a (chair) after his/her name
 % Give either all members at once (then they appear on one line), or separately
-% \AtlasCoverEdBoardMember{EdBoard~Chair~(chair), EB~Member~1, EB~Member~2, EB~Member~3}
+%\AtlasCoverEdBoardMember{EdBoard~Luca Fiorini~(chair), Edson Carquin Lopez, and Michele Weber}
 % \AtlasCoverEdBoardMember{EdBoard~Chair~(chair)}
 % \AtlasCoverEdBoardMember{EB~Member~1}
 % \AtlasCoverEdBoardMember{EB~Member~2}
@@ -121,4 +129,9 @@ A search is presented for flavor-changing neutral currents $tHq$ interactions wi
 
 % EdBoard egroup
 % \AtlasCoverEgroupEdBoard{atlas-GROUP-2016-XX-editorial-board@cern.ch}
+% ATLAS reference code, to help ATLAS members to locate the paper                                                                                                                                                                                                    
+\AtlasRefCode{ANA-TOPQ-2019-17}
+
+% ATLAS note number. Can be an COM, INT, PUB or CONF note                                                                                                                                                                                                            
+\AtlasNote{ANA-TOPQ-2019-17-INT1}
 
