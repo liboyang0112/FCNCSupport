@@ -1,0 +1,85 @@
+
+Congratulations, the unblinding approval was successful, with a very clear presentation by Mingming on behalf of the team. We list a few more important comments that were raised during the approval and add a list of suggestions for the text. 
+Major comments from approval meeting (must be addressed before unblinding, together with EB comments):
+
+
+Uncertainties on the Higgs boson production and decay rates: decide whether you prefer to take the SM predictions (as per the Yellow Report) or the experimental uncertainties of state-of-the-art 
+measurements of these quantities. If you decide to stick to the SM predictions (which we do for many other processes) I suggest we state this very clearly and discuss to which precision these SM predictions have been confirmed, and how taking the larger uncertainty would affect your result.
+
+
+Could you confirm that the signal uncertainties are estimated in a similar way as in the other FCNC tqH searches? In particular, the dominant uncertainty "signal PS" should be estimated by all teams, as the difference between ME+Pythia vs. ME+Herwig.
+=====>
+
+A statement should be added to the paper that training the charm channel separately does not gain much sensitivity and that the BDT outputs are very similar for charm and up quark samples. If this is discussed in detail in the INT, please provide a pointer to the relevant section.
+=====> added, and add the comparision of different types of signals.
+
+
+The fake tau correction factors could have been floated in the fit, using the approach reported on slide 31. Please, report the result of this test clearly.
+===> 
+
+The paper should state the (minor) impact of decorrelating the modelling NP across the different signal regions, summarizing the studies of Appendix F in one or two sentences.
+====> text
+
+The motivation is currently a mixture of outdated references, with scenarios that have often been ruled out by Higgs measurement or direct SUSY searches, and some (few) new papers. Our summary plot leans heavily on the Snowmass report from 2013, but also that collects many inputs from pre-LHC literature. It would be good to review critically which are the viable scenarios, and which tqH BR is still allowed for up and charm, so that we present a credible motivation, that is not discredited by older and bolder claims. 
+====> 
+
+
+
+Text and style comments:
+
+Abstract:
+Line 7: flavor-changing neutral current[remove the "s"]
+====> done
+
+Line 10: The search targets top quark pair production with one top decaying to Wb and the other to Hq, and single qg -> tH single top production in association with a Higgs boson. All W-boson decay modes are considered, while the Higgs boson is assumed to decay to a tau+ tau- pair [some statement about hadronic and leptonic tau decays]. No excess is found [if unblinding confirms that] and upper limits are set on the equivalent t->uH and t->cH branching ratios. The observed 95% confidence level bounds are Gamma(t->uH) < XXX and Gamma(t->cH) < YYY, while the expected limits are Gamma(t->uH) < 4.6 x 10-4 and Gamma(t->cH) < 3.4 x 10-4, respectively. [I have suppressed the errors on the 95% CL bounds]. 
+====> done
+
+Introduction:
+-Line 162: mention that 10-15 is beyond the experimental sensitivity of the LHC experiments.
+====> will add
+
+-Line 168: You give many examples of models that would enhance the FCNC coupling. It would be good to state the typical maximal branching ratios that can be found in these models, without leading to observable effects in other measurements. Many references are old, from before the LHC era. The ansatz by Cheng and Sher, that gives the largest effect, is from 1987, well before the discovery of both the top quark and the Higgs boson!! Even if the author of the BR calculation checked in 1992 that the parameters of the models with multiple Higgs doublets correspond to viable BSM proposals, that are not ruled out by other measurements, it would seem quite likely that it would be incompatible wit the observed properties of the Higgs boson and the top quark. For the FCNC summary plot we base our BSM predictions on the Snowmass top WG report from 2013: https://arxiv.org/pdf/1311.2028.pdf. Even that would seem seem somewhat outdated, when it considers 1 TeV squarks and gluinos. Can you search the literature for a more up-to-date assessment and proposal a credible target for these searches? Some of these are already in the paper draft. Large values for t->hc are still possible according to: https://arxiv.org/pdf/1508.05101.pdf, https://arxiv.org/pdf/1509.00491.pdf https://arxiv.org/pdf/1404.1241.pdf
+=====>
+
+
+-Line 169: The tqH interaction could also potentially open up more Higgs decay channels, such as H->tq*, but they are likely suppressed due to the top-Higgs mass difference, which could be interesting for future studies. -> It should be relatively straightforward to check the order of magnitude one could get with MG5 and the topFCNC model. Would it make sense to do that before recommending this as a new direction?
+
+
+Line 172-174: How small is the SM tH production rate compared to the FCNC rate for viable extensions of the SM? Could you indicate a "typical" maximal tH rate along the lines of the discussion in 162-171.
+
+
+Line 201: For the top quark decays to a Higgs boson and an up-type quark, we expect the L and R couplings to be indistinguishable, as the Higgs boson is a scalar. This does not necessarily hold for pp -> tH production. It is possible that the L and R couplings yield approximately the same effects, but I don't expect them to lead to exactly identical results. Can you clarify whether Fig. 2 corresponds to production or decay? Can you produce plots for both processes, separately?
+====>
+
+Table 1: we need to introduce "lepton" as "electron or muon". And state that possible leptonic tau decays are not counted in the #leptons column, as this will come in Table 2.
+===> done
+
+Line 218: The decay of H->tau_lep tau_had is also dropped when top decay[S] leptonically because in this case, the lepton fake could be important when both leptons have same-sign charge and the overlap of the fake lepton and fake taus can be difficult to estimate. -> This signature is not part of any FCNC tqH search, is it? The same-sign lepton signature can be quite powerful to reduce SM backgrounds. How much sensitivity do you expect we could gain by including this channel?
+
+
+Table 3: Please, indicate the assumption for the strength of the tqH coupling in the caption (it is given in the introduction, but these tables should be readable standalone). The SM Higgs yield is comparable to the FCNC contribution for the large coupling strength you assume. Which uncertainty do you assign to the SM Higgs production yield?
+
+Figure 4: shouldn't you indicate the FF estimate of the QCD with fake taus in this figure?
+======> add a text in the caption, done
+
+Line 380: tH is the same order of magnitude as the signal assuming an 0.1%. Is this background reduced considerably in later stages of the (BDT) selection?
+
+Figures 8-25: a lot of these figures have isolated with very large uncertainties, that show up as wild fluctuations in the grey band in the ratio inset. Is this due to a lack of MC statistics?
+======> 
+
+Figure 26: the caption confirms the fakes are not yet added. Why not?
+======> 
+
+Section 12.4: I see no mention of aMC@NLO vs. Powheg, which is part of the nominal list of ttbar variations by PMG.
+======> 
+
+Line 1074: The NP ttbar PS, which corresponds to the difference between Pythia and Herwig is significantly constrained and is the 4th leading systematic in the leptonic channels. Indicate in the main text whether it is correlated across different control and signal regions? Studies releasinge the correlation, by creating one such NP per region, are reported in Appendix F. It would be good to comment on the main result in the body of the note, with a reference to the appendix.
+
+
+Table 19 and 20: I suggest we present the actual BR, rather than the mu-value that the reader must multiply by 1x10-3 to obtain the BR. Note that mu-values are usually reported with the total uncertainty, including the theory uncertainty on the SM prediction in the denominator.
+=====> will do
+
+Section 15 Conclusion: rewrite along the same lines as the abstract. Add some information on the analysis method (BDT selection + profile likelihood fit). Give the BR in terms of X times 10-4. Indicate improvement with respect to partial run 2 analysis.
+=====>done
+
+
