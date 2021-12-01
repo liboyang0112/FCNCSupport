@@ -457,6 +457,42 @@ Quark-gluon fraction is also considered when we derived the Jet Flavour Composit
 \label{fig:tthML_partial_unblinding_tuH}
 \end{figure}
 
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/3j_NormFactors.pdf}
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/1j_NormFactors.pdf}
+\\
+\caption{Normalisation factors in the SRs $t_h\tlhad$-3j(top) and $t_l\tauhad$-1j(bottom). }
+\label{fig:tthML_partial_unblinding_NF}
+\end{figure}
+
+
+
+\newpage
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/3j_NuisPar.pdf}
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/1j_NuisPar.pdf}
+\caption{Pulls and constraints of the nuisance parameters for the partially unblinded background-only fit to the observed data in the SRs $t_h\tlhad$-3j(left) and $t_l\tauhad$-1j(right).}
+\label{fig:tthML_partial_unblinding_pull}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/3j_CorrMatrix.pdf}
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/1j_CorrMatrix.pdf}
+\caption{Systematic uncertainty covariance matrix for the partially unblinded background-only fit to the observed data in the SRs $t_h\tlhad$-3j(left) and $t_l\tauhad$-1j(right).}
+\label{fig:tthML_partial_unblinding_corre}
+\end{figure}
+
+
+
 %\begin{figure}[H]
 %\centering
 %\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tcH_reg1l1tau1b1j_ss.pdf}
@@ -743,7 +779,90 @@ The scale factors for the fake taus calibration in the Monte Carlo is described 
 \end{figure}
 
 
+For further check of the fit before looking at the real data, another BONLY fit with data in the CRs and SR up to 0.2 in the BDT discriminant distributions is made. In the $t_h\tlhad$-3j and $t_l\tauhad$-1j signal regions, the fake tau correction factors could have been floated. After the unblinded fit, we can derived the nomarlization factor for each samples, then a realistic Asimov fit is performed after scaling the samples. The results are shown in Figure. The impact on the limits have been evaluated in Tab, which is small(Tab\ref{tab:tthML_rescaled_limit_fake_1j}-\ref{tab:tthML_rescaled_limit_fake_3j}). 
 
+\begin{table}
+\centering
+\begin{tabular}{cccc} \toprule\toprule
+ & $t_l\tauhad$-2j & $t_l\tauhad$-1j & $t_h\tlhad$-2j\\\midrule
+tcH merged & $4.18^{+1.70}_{-1.17}$ & $3.88^{+1.62}_{-1.09}$ & $4.98^{+2.38}_{-1.39}$\\
+tuH merged & $3.39^{+1.38}_{-0.95}$ & $3.10^{+1.28}_{-0.87}$ & $2.58^{+1.10}_{-0.72}$\\
+\bottomrule\bottomrule\\
+\end{tabular}
+\begin{tabular}{cccc} \toprule\toprule
+ & $t_h\tlhad$-3j & $t_l\thadhad$ & Combined\\\midrule
+tcH merged & $2.37^{+1.14}_{-0.66}$ & $0.56^{+0.25}_{-0.16}$ & $0.51^{+0.22}_{-0.14}$\\
+tuH merged & $1.69^{+0.73}_{-0.47}$ & $0.40^{+0.18}_{-0.11}$ & $0.37^{+0.16}_{-0.10}$\\
+\bottomrule\bottomrule\\
+\end{tabular}
+\caption{The expected $95\%$ CL exclusion upper limits on signal ( $\mu=1\to$~BR$(t\to Hq)=0.1\%$ ) with the Asimov in the leptonic channels after rescaling the background using scale factors derived in $t_l\tauhad$-1j region.} 
+\label{tab:tthML_rescaled_limit_fake_1j}
+\end{table}
+
+
+
+\begin{table}
+\centering
+\begin{tabular}{cccc} \toprule\toprule
+ & $t_l\tauhad$-2j & $t_l\tauhad$-1j & $t_h\tlhad$-2j\\\midrule
+tcH merged & $4.21^{+1.71}_{-1.18}$ & $3.38^{+1.44}_{-0.94}$ & $5.57^{+2.63}_{-1.56}$\\
+tuH merged & $3.44^{+1.40}_{-0.96}$ & $2.70^{+1.13}_{-0.75}$ & $2.90^{+1.23}_{-0.81}$\\
+\bottomrule\bottomrule\\
+\end{tabular}
+\begin{tabular}{cccc} \toprule\toprule
+ & $t_h\tlhad$-3j & $t_l\thadhad$ & Combined\\\midrule
+tcH merged & $2.74^{+1.27}_{-0.76}$ & $0.58^{+0.26}_{-0.16}$ & $0.54^{+0.24}_{-0.15}$\\
+tuH merged & $1.98^{+0.84}_{-0.55}$ & $0.42^{+0.18}_{-0.12}$ & $0.39^{+0.17}_{-0.11}$\\
+\bottomrule\bottomrule\\
+\end{tabular}
+\caption{The expected $95\%$ CL exclusion upper limits on signal ( $\mu=1\to$~BR$(t\to Hq)=0.1\%$ ) with the Asimov in the leptonic channels after rescaling the background using scale factors derived in $t_h\tlhad$-3j region.} 
+\label{tab:tthML_rescaled_limit_fake_3j}
+\end{table}
+
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{\FCNCFigures/tthML/partial_unblinding/fake_plot/3j_NormFactors.pdf}
+\includegraphics[width=0.7\textwidth]{\FCNCFigures/tthML/partial_unblinding/fake_plot/1j_NormFactors.pdf}
+\\
+\caption{Normalisation factors for fake tau contibutions in the SRs $t_h\tlhad$-3j(left) and $t_l\tauhad$-1j(right). }
+\label{fig:tthML_partial_unblinding_NF_fake}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/fake_plot/3j_NuisPar.pdf}
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/fake_plot/1j_NuisPar.pdf}
+\caption{Pulls and constraints of the nuisance parameters for the partially unblinded background-only fit to the observed data in the SRs $t_h\tlhad$-3j(left) and $t_l\tauhad$-1j(right).}
+\label{fig:tthML_partial_unblinding_pull_fake}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/fake_plot/3j_CorrMatrix.pdf}
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/fake_plot/1j_CorrMatrix.pdf}
+\caption{Systematic uncertainty covariance matrix for the partially unblinded background-only fit to the observed data in the SRs $t_h\tlhad$-3j(left) and $t_l\tauhad$-1j(right).}
+\label{fig:tthML_partial_unblinding_corre_fake}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/fake_plot/1j_Summary.pdf}
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/fake_plot/1j_Summary_postFit.pdf}
+\\
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/fake_plot/3j_Summary.pdf}
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/fake_plot/3j_Summary_postFit.pdf}
+\caption{Pre-fit(left) and Post-fit(right) BDT discriminants after scaling using SFs derived in the $t_h\tlhad$-3j(bottom two) and $t_l\tauhad$-1j(top two) in terms of tuH signal. }
+\label{fig:tthML_partial_unblinding_tuH}
+\end{figure}
 
 
 
