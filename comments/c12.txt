@@ -15,7 +15,7 @@ A statement should be added to the paper that training the charm channel separat
 
 
 The fake tau correction factors could have been floated in the fit, using the approach reported on slide 31. Please, report the result of this test clearly.
-===> 
+===> done. In the appendix4.
 
 The paper should state the (minor) impact of decorrelating the modelling NP across the different signal regions, summarizing the studies of Appendix F in one or two sentences.
 ====> text
@@ -52,34 +52,35 @@ Line 201: For the top quark decays to a Higgs boson and an up-type quark, we exp
 ====>
 
 Table 1: we need to introduce "lepton" as "electron or muon". And state that possible leptonic tau decays are not counted in the #leptons column, as this will come in Table 2.
-===> done
+====> done
 
 Line 218: The decay of H->tau_lep tau_had is also dropped when top decay[S] leptonically because in this case, the lepton fake could be important when both leptons have same-sign charge and the overlap of the fake lepton and fake taus can be difficult to estimate. -> This signature is not part of any FCNC tqH search, is it? The same-sign lepton signature can be quite powerful to reduce SM backgrounds. How much sensitivity do you expect we could gain by including this channel?
 
-
 Table 3: Please, indicate the assumption for the strength of the tqH coupling in the caption (it is given in the introduction, but these tables should be readable standalone). The SM Higgs yield is comparable to the FCNC contribution for the large coupling strength you assume. Which uncertainty do you assign to the SM Higgs production yield?
+=====> add the assumption in the caption. ?
 
 Figure 4: shouldn't you indicate the FF estimate of the QCD with fake taus in this figure?
 ======> add a text in the caption, done
 
 Line 380: tH is the same order of magnitude as the signal assuming an 0.1%. Is this background reduced considerably in later stages of the (BDT) selection?
+====> the tH cross section is smaller than the FCNC process, and the process is accomplished by a b-quark, in the cutflow table, the smhiggs including ggH,vbf,VH,ttH and tH is samller than the yields of signal, tH is small.
 
 Figures 8-25: a lot of these figures have isolated with very large uncertainties, that show up as wild fluctuations in the grey band in the ratio inset. Is this due to a lack of MC statistics?
-======> 
+======> Yes, some fluctuations are due to the statistics, the post-fit plots in the further chapters are much better.
 
 Figure 26: the caption confirms the fakes are not yet added. Why not?
-======> 
+======> Here, we want to give a intuition of the difference between data and MC is the fake contribution, which will be estimated by FF method. 
 
 Section 12.4: I see no mention of aMC@NLO vs. Powheg, which is part of the nominal list of ttbar variations by PMG.
 ======> 
 
 Line 1074: The NP ttbar PS, which corresponds to the difference between Pythia and Herwig is significantly constrained and is the 4th leading systematic in the leptonic channels. Indicate in the main text whether it is correlated across different control and signal regions? Studies releasinge the correlation, by creating one such NP per region, are reported in Appendix F. It would be good to comment on the main result in the body of the note, with a reference to the appendix.
-
+====> done?
 
 Table 19 and 20: I suggest we present the actual BR, rather than the mu-value that the reader must multiply by 1x10-3 to obtain the BR. Note that mu-values are usually reported with the total uncertainty, including the theory uncertainty on the SM prediction in the denominator.
-=====> will do
+=====> done
 
 Section 15 Conclusion: rewrite along the same lines as the abstract. Add some information on the analysis method (BDT selection + profile likelihood fit). Give the BR in terms of X times 10-4. Indicate improvement with respect to partial run 2 analysis.
-=====>done
+=====> done
 
 
