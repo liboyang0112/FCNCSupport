@@ -31,7 +31,6 @@ The paper should state the (minor) impact of decorrelating the modelling NP acro
 The motivation is currently a mixture of outdated references, with scenarios that have often been ruled out by Higgs measurement or direct SUSY searches, and some (few) new papers. Our summary plot leans heavily on the Snowmass report from 2013, but also that collects many inputs from pre-LHC literature. It would be good to review critically which are the viable scenarios, and which tqH BR is still allowed for up and charm, so that we present a credible motivation, that is not discredited by older and bolder claims. 
 
 ====> There are a few recent studies on FCNC search, but mostly push the limits. Most models are not dead yet since the LHC limits start to get interesting.
-????? this is enough ?
 
 
 Text and style comments:
@@ -54,7 +53,6 @@ Introduction:
 
 =====> There are a few recent studies on FCNC search, but mostly push the limits. Most models are not dead yet since the LHC limits start to get interesting.
        Will check (?)
-?????? need to add something?
 
 
 -Line 169: The tqH interaction could also potentially open up more Higgs decay channels, such as H->tq*, but they are likely suppressed due to the top-Higgs mass difference, which could be interesting for future studies. -> It should be relatively straightforward to check the order of magnitude one could get with MG5 and the topFCNC model. Would it make sense to do that before recommending this as a new direction?
