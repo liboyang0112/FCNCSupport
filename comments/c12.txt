@@ -8,7 +8,8 @@ Uncertainties on the Higgs boson production and decay rates: decide whether you 
 measurements of these quantities. If you decide to stick to the SM predictions (which we do for many other processes) I suggest we state this very clearly and discuss to which precision these SM predictions have been confirmed, and how taking the larger uncertainty would affect your result.
 
 ======>We take the signal strength of H->tautau 0.92+0.13-0.12 measured by ATLAS with 139 fb-1 data and recomputed the limits with the uncertainty of
-       BR(H->tautau) +14-13%. The limit changes by xxx% compared to take the SM B(H->tautau) predictions as our default. (?)
+       BR(H->tautau) +14-13%. Since our results are dominated by statistis between 30-40%, the final results would only change slightly less than 10%.
+       Besides the LHC BR(H->tautau) will improve further by coming CMS results. So we will take the SM prediction from Yellow report for now. 
 
 Could you confirm that the signal uncertainties are estimated in a similar way as in the other FCNC tqH searches? In particular, the dominant uncertainty "signal PS" should be estimated by all teams, as the difference between ME+Pythia vs. ME+Herwig.
 
@@ -16,7 +17,7 @@ Could you confirm that the signal uncertainties are estimated in a similar way a
 
 A statement should be added to the paper that training the charm channel separately does not gain much sensitivity and that the BDT outputs are very similar for charm and up quark samples. If this is discussed in detail in the INT, please provide a pointer to the relevant section.
 
-=====> done. added a txet(l848-l849) and also added the comparision of different types of signals(Fig40-42).
+=====> done. added a txet(L848-L849) and also added the comparision of different types of signals(Fig40-42).
 
 
 The fake tau correction factors could have been floated in the fit, using the approach reported on slide 31. Please, report the result of this test clearly
@@ -26,11 +27,12 @@ The fake tau correction factors could have been floated in the fit, using the ap
 
 The paper should state the (minor) impact of decorrelating the modelling NP across the different signal regions, summarizing the studies of Appendix F in one or two sentences.
 
-=====> done
+=====> done, see text in L994. 
 
 The motivation is currently a mixture of outdated references, with scenarios that have often been ruled out by Higgs measurement or direct SUSY searches, and some (few) new papers. Our summary plot leans heavily on the Snowmass report from 2013, but also that collects many inputs from pre-LHC literature. It would be good to review critically which are the viable scenarios, and which tqH BR is still allowed for up and charm, so that we present a credible motivation, that is not discredited by older and bolder claims. 
 
-====> There are a few recent studies on FCNC search, but mostly push the limits. Most models are not dead yet since the LHC limits start to get interesting.
+====> There are a few recent studies on FCNC studies,mostly push their limits using the previous models. Most models predicts the FCNC BR at 10-5 or below, which are far
+      beyoud the LHC reach. However, our limits are getting interesting and start to constrain some of these models.
 
 
 Text and style comments:
@@ -51,18 +53,17 @@ Introduction:
 
 -Line 168: You give many examples of models that would enhance the FCNC coupling. It would be good to state the typical maximal branching ratios that can be found in these models, without leading to observable effects in other measurements. Many references are old, from before the LHC era. The ansatz by Cheng and Sher, that gives the largest effect, is from 1987, well before the discovery of both the top quark and the Higgs boson!! Even if the author of the BR calculation checked in 1992 that the parameters of the models with multiple Higgs doublets correspond to viable BSM proposals, that are not ruled out by other measurements, it would seem quite likely that it would be incompatible wit the observed properties of the Higgs boson and the top quark. For the FCNC summary plot we base our BSM predictions on the Snowmass top WG report from 2013: https://arxiv.org/pdf/1311.2028.pdf. Even that would seem seem somewhat outdated, when it considers 1 TeV squarks and gluinos. Can you search the literature for a more up-to-date assessment and proposal a credible target for these searches? Some of these are already in the paper draft. Large values for t->hc are still possible according to: https://arxiv.org/pdf/1508.05101.pdf, https://arxiv.org/pdf/1509.00491.pdf https://arxiv.org/pdf/1404.1241.pdf
 
-=====> There are a few recent studies on FCNC search, but mostly push the limits. Most models are not dead yet since the LHC limits start to get interesting.
-       Will check (?)
+=====> See the reply above.
 
 
 -Line 169: The tqH interaction could also potentially open up more Higgs decay channels, such as H->tq*, but they are likely suppressed due to the top-Higgs mass difference, which could be interesting for future studies. -> It should be relatively straightforward to check the order of magnitude one could get with MG5 and the topFCNC model. Would it make sense to do that before recommending this as a new direction?
 
-=====>That's a good idea to check that, but for now, we will remove the sentence.
+=====>That's a good idea to check that, but for now, the sentence is commented out.
 
 Line 172-174: How small is the SM tH production rate compared to the FCNC rate for viable extensions of the SM? Could you indicate a "typical" maximal tH rate along the lines of the discussion in 162-171.
 
-=====> The SM tH production cross section is about 92.3 fb and is small compared ti FCNC rate from ttbar decay with B9t->qH)=0.1%, which is about 1.664 pb. 
-       We will make it clear in the text.(?)
+=====> The SM tH production cross section is about 92.3 fb and is small compared ti FCNC rate from ttbar decay with B9t->qH)=0.1%, which is about 1.664 pb.
+       The SM tH production is about 10% of small SM Higgs background, which is negligible.  
 
 Line 201: For the top quark decays to a Higgs boson and an up-type quark, we expect the L and R couplings to be indistinguishable, as the Higgs boson is a scalar. This does not necessarily hold for pp -> tH production. It is possible that the L and R couplings yield approximately the same effects, but I don't expect them to lead to exactly identical results. Can you clarify whether Fig. 2 corresponds to production or decay? Can you produce plots for both processes, separately?
 
@@ -74,16 +75,13 @@ Table 1: we need to introduce "lepton" as "electron or muon". And state that pos
 
 Line 218: The decay of H->tau_lep tau_had is also dropped when top decay[S] leptonically because in this case, the lepton fake could be important when both leptons have same-sign charge and the overlap of the fake lepton and fake taus can be difficult to estimate. -> This signature is not part of any FCNC tqH search, is it? The same-sign lepton signature can be quite powerful to reduce SM backgrounds. How much sensitivity do you expect we could gain by including this channel?
 
-=====> done
-
-Line 218: The decay of H->tau_lep tau_had is also dropped when top decay[S] leptonically because in this case, the lepton fake could be important when both leptons have same-sign charge and the overlap of the fake lepton and fake taus can be difficult to estimate. -> This signature is not part of any FCNC tqH search, is it? The same-sign lepton signature can be quite powerful to reduce SM backgrounds. How much sensitivity do you expect we could gain by including this channel?
-
 =====> As stated, the problem of 2lSS+tau is to estimated the overlap of the fake lepton and fake taus. Its sensitivity is smaller than the lepton+2tau, and
        comparable to the lepton+tau channels due to the smaller acceptance while the background is not an issue in the high BDT regions. 
 
 Table 3: Please, indicate the assumption for the strength of the tqH coupling in the caption (it is given in the introduction, but these tables should be readable standalone). The SM Higgs yield is comparable to the FCNC contribution for the large coupling strength you assume. Which uncertainty do you assign to the SM Higgs production yield?
 
-=====> done
+=====> the assumption for the strength of the tqH coupling is added in the caption. The errors quoted in the table are statistical only. The SM Higgs production is
+       dominated by ttH and its systematic uncertainties are described in the systematic section, which is about 10%. 
 
 Figure 4: shouldn't you indicate the FF estimate of the QCD with fake taus in this figure?
 
@@ -108,7 +106,7 @@ Section 12.4: I see no mention of aMC@NLO vs. Powheg, which is part of the nomin
 
 Line 1074: The NP ttbar PS, which corresponds to the difference between Pythia and Herwig is significantly constrained and is the 4th leading systematic in the leptonic channels. Indicate in the main text whether it is correlated across different control and signal regions? Studies releasinge the correlation, by creating one such NP per region, are reported in Appendix F. It would be good to comment on the main result in the body of the note, with a reference to the appendix.
 
-====> done
+====> Yes, the comments are in the INT note, L1084-1090.
 
 Table 19 and 20: I suggest we present the actual BR, rather than the mu-value that the reader must multiply by 1x10-3 to obtain the BR. Note that mu-values are usually reported with the total uncertainty, including the theory uncertainty on the SM prediction in the denominator.
 
