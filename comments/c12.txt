@@ -61,8 +61,8 @@ Introduction:
 
 Line 172-174: How small is the SM tH production rate compared to the FCNC rate for viable extensions of the SM? Could you indicate a "typical" maximal tH rate along the lines of the discussion in 162-171.
 
-=====> The SM tH production cross section is about 92.3 fb and is small compared ti FCNC rate from ttbar decay with B9t->qH)=0.1%, which is about 1.664 pb. 
-       We will make it clear in the text.(?)
+=====> The SM tH production cross section is about 92.3 fb and is small compared ti FCNC rate from ttbar decay with Brt->qH)=0.1%, which is about 1.664 pb. 
+       After the event selection, the $tH$ process will consist of 10\%-12\% yields of the total standard model higgs(ggH,VBF,VH and ttH process) production in the signal regions.   
 
 Line 201: For the top quark decays to a Higgs boson and an up-type quark, we expect the L and R couplings to be indistinguishable, as the Higgs boson is a scalar. This does not necessarily hold for pp -> tH production. It is possible that the L and R couplings yield approximately the same effects, but I don't expect them to lead to exactly identical results. Can you clarify whether Fig. 2 corresponds to production or decay? Can you produce plots for both processes, separately?
 
@@ -91,7 +91,7 @@ Figure 4: shouldn't you indicate the FF estimate of the QCD with fake taus in th
 
 Line 380: tH is the same order of magnitude as the signal assuming an 0.1%. Is this background reduced considerably in later stages of the (BDT) selection?
 
-=====> No, the FCNC rate from ttbar decay with 0.1% is 1.66 pb, compared to SM tH cross section of 92.3 fb.
+=====> No, the FCNC rate from ttbar decay with 0.1% is 1.66 pb, compared to SM tH cross section of 92.3 fb. After the event selection, the $tH$ process will consist of 10\%-12\% yields of the total standard model higgs(ggH,VBF,VH and ttH process) production in the signal regions.   
 
 Figures 8-25: a lot of these figures have isolated with very large uncertainties, that show up as wild fluctuations in the grey band in the ratio inset. Is this due to a lack of MC statistics
 
