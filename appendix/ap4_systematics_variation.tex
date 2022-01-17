@@ -10,10 +10,10 @@ at 35\%. Work is in progress by doing NLL scan vs $\mu$ by fixing one of NPs to 
 In the final fit, we chose to set the symmetrisation scheme of these two NPs to MAXIMUM instead of TWOSIDED to avoid the one-sided impact, the limit table shown in \ref{tab:tthML_max_vs_twosided} is derived with TWOSIDED setting, the limit in the body (Tab.\ref{tab:tab_tthML_limit}) is presented using MAXIMUM setting.
 
 %Both of the ONESIDE systematics Pileup\_Rho\_Topology and JET\_Flavor\_Composition are checked via the negative log-likelihood scan as shown in Figure~\ref{fig:tthML_n%llscan_1} to investigate the possible cause to one-side effect on the signal strength $\mu$.
+\subsection{Validation plots}
+In this chapter, we present the major NPs in both of channels. They are:
 
-They are:
-
-In leptonic channels:
+In leptonic channel:
 \begin{itemize}
 	\item $\bar{t}t$ PS in Figure \ref{fig:tthML_ttbarPS}.
 	\item $\bar{t}t$ ME in Figure \ref{fig:tthML_ttbarME}.
@@ -36,7 +36,7 @@ In leptonic channels:
 
 \end{itemize}
 
-In hadronic channels:
+In hadronic channel:
 \begin{itemize}
 	\item $\bar{t}t$ PS in Figure \ref{fig:xTFW_ttbarPS}.
 	\item $\bar{t}t$ ME in Figure \ref{fig:xTFW_ttbarME}.
@@ -380,11 +380,10 @@ In hadronic channels:
 \label{fig:xTFW_btag_C_8}
 \end{figure}
 
-
-
+\subsection{ ttbar parton shower systematic check}
 For ttbar Parton Shower untertainty, Pythia + Herwig 7.0.X samples are used to derived the impact of the PS systematic. Given the high rank of PS uncertaity in leptonic channel and the availibity of the newer PW+H7.1 samples(hereafer referred to as PS71 systematic), the limit with PS71 applied are checked and shown here Table.\ref{tab:tthML_ttbarPS_vs_ttbarPS71}. The impact on the limits is small in the leptonic channels. 
 
-\begin{table}
+\begin{table}[H]
 \caption{The expected $95\%$ CL exclusion upper limits on signal ( $\mu=1\to$~BR$(t\to Hq)=0.1\%$ ) with the Asimov (B-only) in the leptonic channels,  with JET\_Flavor\_Composition and JET\_Pileup\_RhoTopology set to TWOSIDED.}
 \label{tab:tthML_max_vs_twosided}
 \centering
@@ -411,16 +410,15 @@ tuH merged & $2.27^{+0.95}_{-0.64}$ & $0.42^{+0.19}_{-0.12}$ & $0.39^{+0.17}_{-0
 \end{table}
 
 
-\begin{table}
+\begin{table}[H]
 \caption{The expected $95\%$ CL exclusion upper limits on signal ( $\mu=1\to$~BR$(t\to Hq)=0.1\%$ ) with the Asimov (B-only) in the leptonic channels, all uncertainties with PS71 systematic included.}
 \label{tab:tthML_ttbarPS_vs_ttbarPS71}
 \input{\FCNCTables/tthML/limits_PS71sys}
 \end{table}
 
 
-
+\subsection{partial unblined fit in low BDT region}
 In this analysis and FCNC H(bb) analysis, an uncertainty on hdamp(referred to as hdamp) for ttbar samples is used instead of the generator uncertainty (PW vs amc@NLO, referred to as ME). We explore the difference between these two types of ttbar theoretical uncertainties based on the following setups(Fig.\ref{fig:xTFW_ME_vs_MEhdamp}). Hereafter, the all sys means all systematics except ME and hdamp. The impact on the final limits is small in the leptonic channels. 
-
 \begin{itemize}
 	\item compare all sys + ME  vs  all sys + ME + hdamp
 	\item compare all sys + ME  vs  all sys + hdamp 
@@ -441,18 +439,17 @@ In this analysis and FCNC H(bb) analysis, an uncertainty on hdamp(referred to as
 Before unblinding procedure, small mismodelling could be found  in $t_h\tlhad$-3j and $t_l\tauhad$-1j signal regions.Therefore, it would be useful to run a realistic Asimov fit to see if this problem with the background modelling is resolved. A BONLY fit with data in the CRs and SR up to 0.2 in the BDT discriminant distributions is performed. This is similar to the strategy used by the FCNC H(bb) analysis~\cite{ANA-TOPQ-2018-41-INT1}. The results are shown in Figure~\ref{fig:tthML_partial_unblinding_tuH}
 \iffalse and Figure~\ref{fig:tthML_partial_unblinding_tcH} \fi. The background modeling is improved by a factor of 2 in $t_l\tauhad$-1j channel. After rescaling the background from the fits(Tab \ref{tab:tthML_rescaled_factor}), we have evaluated the impact on the limits is small(Tab\ref{tab:tthML_rescaled_limit_1j}-\ref{tab:tthML_rescaled_limit_3j}). 
 
-Quark-gluon fraction is also considered when we derived the Jet Flavour Composition systematics, the relative difference between default 50-50\% fraction and calculated qg fraction(Fig \ref{fig:cal_qg_frac}) are shown in Fig \ref{fig:cal_and_defau_qg_frac} using partial $t\bar{t}$ samples. Given the statistical error, the descrepancy between these two settings could be negelected.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b1j_ss.pdf}
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b1j_ss_postFit.pdf}
+\includegraphics[width=0.3\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b1j_ss.pdf}
+\includegraphics[width=0.3\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b1j_ss_postFit.pdf}
 \\
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b3j_os.pdf}
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b3j_os_postFit.pdf}
+\includegraphics[width=0.3\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b3j_os.pdf}
+\includegraphics[width=0.3\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_reg1l1tau1b3j_os_postFit.pdf}
 \\
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_Summary.pdf}
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_Summary_postFit.pdf}
+\includegraphics[width=0.3\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_Summary.pdf}
+\includegraphics[width=0.3\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_Summary_postFit.pdf}
 \caption{Pre-fit(left) and Post-fit(right) BDT discriminants in the SRs $t_h\tlhad$-3j and $t_l\tauhad$-1j. The histograms show the observed data compared to the MC-based model. The distributions of the BDT discriminants are unblinded up to a value of 0.2}
 \label{fig:tthML_partial_unblinding_tuH}
 \end{figure}
@@ -633,7 +630,6 @@ tuH merged & $1.96^{+0.83}_{-0.55}$ & $0.42^{+0.18}_{-0.12}$ & $0.39^{+0.17}_{-0
 \label{tab:tthML_rescaled_limit_1j}
 \end{table}
 
-
 \begin{table}
 \centering
 \begin{tabular}{cccc} \toprule\toprule
@@ -652,25 +648,26 @@ tuH merged & $1.98^{+0.84}_{-0.55}$ & $0.42^{+0.18}_{-0.12}$ & $0.39^{+0.17}_{-0
 \label{tab:tthML_rescaled_limit_3j}
 \end{table}
 
-
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_1j_Summary.pdf}
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_1j_Summary_postFit.pdf}
+\includegraphics[width=0.3\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_1j_Summary.pdf}
+\includegraphics[width=0.3\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_1j_Summary_postFit.pdf}
 \\
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_3j_Summary.pdf}
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_3j_Summary_postFit.pdf}
+\includegraphics[width=0.3\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_3j_Summary.pdf}
+\includegraphics[width=0.3\textwidth]{\FCNCFigures/tthML/partial_unblinding/tuH_3j_Summary_postFit.pdf}
 \caption{Pre-fit(left) and Post-fit(right) BDT discriminants after scaling using SFs derived in the $t_h\tlhad$-3j(bottom two) and $t_l\tauhad$-1j(top two) in terms of tuH signal. }
 \label{fig:tthML_partial_unblinding_tuH}
 \end{figure}
 
 
+\subsection{Quark-gluon fraction check}
+Quark-gluon fraction is also considered when we derived the Jet Flavour Composition systematics, the relative difference between default 50-50\% fraction and calculated qg fraction(Fig \ref{fig:cal_qg_frac}) are shown in Fig \ref{fig:cal_and_defau_qg_frac} using partial $t\bar{t}$ samples. Given the statistical error, the descrepancy between these two settings could be negelected.
 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/qgfraction_2j.pdf}
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/qgfraction_3j.pdf}
+\includegraphics[width=0.3\textwidth]{\FCNCFigures/tthML/partial_unblinding/qgfraction_2j.pdf}
+\includegraphics[width=0.3\textwidth]{\FCNCFigures/tthML/partial_unblinding/qgfraction_3j.pdf}
 \\
 \caption{Comparision between default qg fraction and calculated qg fraction in 2j(left) region and 3j(right) region in hadronic channel.}
 \label{fig:cal_and_defau_qg_frac}
@@ -678,14 +675,25 @@ tuH merged & $1.98^{+0.84}_{-0.55}$ & $0.42^{+0.18}_{-0.12}$ & $0.39^{+0.17}_{-0
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.32\textwidth]{\FCNCFigures/tthML/partial_unblinding/qgfraction.pdf}
+\includegraphics[width=0.3\textwidth]{\FCNCFigures/tthML/partial_unblinding/qgfraction.pdf}
 \\
 \caption{Calculated qg fraction using $t\bar{t}$ samples.}
 \label{fig:cal_qg_frac}
 \end{figure}
 
+Futhermore, in the final pull distribution, the Jet Flavour Composition is pulled down to the 1sigma boudary, a cross check with decorelating this NP in fifferent signal region to see the distributions. We can conclude that this NP is reasonable in all of the signal regions, whose fitted value is within the 1 sigma error of nominal from Figure \ref{fig:decorrelated_JFC}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/unblinded/decorrelated/tuH_NuisPar.pdf}
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/unblinded/decorrelated/tcH_NuisPar.pdf}
+\\
+\caption{Comparison of pulls distribution with decorrelated Jet Flavour Composition in SRs in leptonic channel in terms of tuH merged signal(left) and tcH merged signal(right).}
+\label{fig:decorrelated_JFC}
+\end{figure}
 
 
+
+\subsection{fake tau calibration SF check}
 The scale factors for the fake taus calibration in the Monte Carlo is described in the chapter of background estimation in body of note, the nominal value of the scale factors will vary along with other uncertainties in the final fit, these varied scale factors is shown here.
 
 \begin{figure}[H]
@@ -864,6 +872,92 @@ tuH merged & $1.98^{+0.84}_{-0.55}$ & $0.42^{+0.18}_{-0.12}$ & $0.39^{+0.17}_{-0
 \label{fig:tthML_partial_unblinding_tuH}
 \end{figure}
 
+\subsection{partial unblined fit VS full unblined fit}
+Since the leptonic channel is the most sensitive channel in this analysis, and we also conducted the partial data study in low BDT region in the previous chapter, we compare the results using full data with those from partial data as a cross check.
+No significant difference are observed in these two fit \ref{fig:tthML_partialVSfull}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/unblinded/partial_VS_full/tuH_NuisPar_comp.pdf}
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/unblinded/partial_VS_full/tcH_NuisPar_comp.pdf}
+\\
+\caption{Comparison of pulls distribution with partial data and full data in leptonic channel in terms of tuH signal(left) and in terms of tcH signal(right).}
+\label{fig:tthML_partialVSfull}
+\end{figure}
+
+\subsection{Htautau branching ratio theoretical uncertainty check}
+After fitting to the unblinded data, we can find the HttBR NP disappeared in the ranking plot in terms of tuH signal(see left part in Figure \ref{fig:fcnc_rank_data}) in hadronic channel. This is due to the fitted signal strength($\mu=0.04$) in this channel is small, we do a sainty check for this. In terms of tcH signal, this NP shows up since the fitted strength is ,which is larger than that for tuH signal. The signal strength cancellation between two signal region(one is positive and the other is negative), which lead to the small fitted value in combined region. From the plots \ref{fig:xTFW_tuH_NF}-\ref{fig:xTFW_tcH_23j_NF}, we can the fitted value is larger, the HttBR will rank higher, which is expected because the HttBR will only affect the normalization of signal yields.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{\FCNCFigures/unblinded/checkHttBR/tuH_combined_NormFactors.pdf}
+\\
+\caption{Signal strength for combined SR in terms of tuH merged signal in hadronic channel.}
+\label{fig:xTFW_tuH_NF}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{\FCNCFigures/unblinded/checkHttBR/tuH_2j_ranking.pdf}
+\includegraphics[width=0.45\textwidth]{\FCNCFigures/unblinded/checkHttBR/tuH_2j_NormFactors.pdf}
+\\
+\includegraphics[width=0.3\textwidth]{\FCNCFigures/unblinded/checkHttBR/tuH_3j_ranking.pdf}
+\includegraphics[width=0.45\textwidth]{\FCNCFigures/unblinded/checkHttBR/tuH_3j_NormFactors.pdf}
+\caption{Raking plots(left two) and signal strength(right two) for 2j(upper two) and 3j(lower two) SR in terms of tuH merged signal in hadronic channel.}
+\label{fig:xTFW_tuH_23j_NF}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.32\textwidth]{\FCNCFigures/unblinded/checkHttBR/tcH_combined_NormFactors.pdf}
+\\
+\caption{Signal strength for combined SR in terms of tcH merged signal in hadronic channel.}
+\label{fig:xTFW_tcH_NF}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{\FCNCFigures/unblinded/checkHttBR/tcH_2j_ranking.pdf}
+\includegraphics[width=0.45\textwidth]{\FCNCFigures/unblinded/checkHttBR/tcH_2j_NormFactors.pdf}
+\\
+\includegraphics[width=0.3\textwidth]{\FCNCFigures/unblinded/checkHttBR/tcH_3j_ranking.pdf}
+\includegraphics[width=0.45\textwidth]{\FCNCFigures/unblinded/checkHttBR/tcH_3j_NormFactors.pdf}
+\caption{Raking plots(left two) and signal strength(right two) for 2j(upper two) and 3j(lower two) SR in terms of tcH merged signal in hadronic channel.}
+\label{fig:xTFW_tcH_23j_NF}
+\end{figure}
+
+
+Futhermore, data and MC prediction in the post-fit plot ratios excluding the signal are shown in \ref{fig:fig:tthML_remove_signal_1}-\ref{fig:tthML_remove_signal_2}, which would be good to make a direct link between the data-prediction comparison in the plots and the slight excess. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{\FCNCFigures/unblinded/remove_signal_in_plots/reg1l1tau1b1j_ss.pdf}
+\includegraphics[width=0.4\textwidth]{\FCNCFigures/unblinded/remove_signal_in_plots/reg1l1tau1b1j_ss_postFit.pdf}
+\\
+\includegraphics[width=0.4\textwidth]{\FCNCFigures/unblinded/remove_signal_in_plots/reg1l1tau1b2j_ss.pdf}
+\includegraphics[width=0.4\textwidth]{\FCNCFigures/unblinded/remove_signal_in_plots/reg1l1tau1b2j_ss_postFit.pdf}
+\caption{Comparison of data and MC prediction before fit(left) and after fit(right) in $t_l\tauhad$-1j (top) region, and $t_l\tauhad$-2j region(bottom).}
+\label{fig:tthML_remove_signal_1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{\FCNCFigures/unblinded/remove_signal_in_plots/reg1l1tau1b2j_os.pdf}
+\includegraphics[width=0.4\textwidth]{\FCNCFigures/unblinded/remove_signal_in_plots/reg1l1tau1b2j_os_postFit.pdf}
+\\
+\includegraphics[width=0.4\textwidth]{\FCNCFigures/unblinded/remove_signal_in_plots/reg1l1tau1b3j_os.pdf}
+\includegraphics[width=0.4\textwidth]{\FCNCFigures/unblinded/remove_signal_in_plots/reg1l1tau1b3j_os_postFit.pdf}
+\\
+\includegraphics[width=0.4\textwidth]{\FCNCFigures/unblinded/remove_signal_in_plots/reg1l2tau1bnj_os.pdf}
+\includegraphics[width=0.4\textwidth]{\FCNCFigures/unblinded/remove_signal_in_plots/reg1l2tau1bnj_os_postFit.pdf}
+\\
+\caption{Comparison of data and MC prediction before fit(left) and after fit(right) in $t_h\tlhad$-2j region(top), $t_h\tlhad$-3j region(middle) and $t_l\thadhad$ (bottom).}
+\label{fig:tthML_remove_signal_2}
+\end{figure}
 
 
 \newpage

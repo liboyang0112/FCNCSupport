@@ -1,0 +1,20 @@
+Dear analyzers, dear members of the EB,
+
+congratulations on having unblinded the data and thank you for the presentation today. Let us share our notes from today’s discussion:
+
+Clearly, the ~2 sigma excess needs to be understood in more detail. The following points were raised:
+
+* The consistency between the post-fit plots and the slight excess needs to be better understood and/or documented. One ingredient is to exclude the signal from the data/prediction in the post-fit plot ratios. It would be good to make a direct link between the data-prediction comparison in the plots and the slight excess.
+===> done. in appendix D.7
+
+* A few pulls in the pull plots need to be better understood. One ingredient for that is a comparison of the unblinded fit to partially-unblinded fit instead of comparing to Asimov. The flavor composition uncertainty needs particular scrutiny (decorrelating between regions or even calculating the proper composition for your phase space).
+===> done. decorrelated the Jet Flavor Composition in different SRs. in appendix D.4
+
+* It was asked, why the H->tautau BR drops in the ranking plot in the hadronic channel in the unblinded case. Mingming argued that this is due to the data-prediction disagreement and the non-zero fitted mu. This is to be confirmed.
+===> done. in appendix D.7
+
+In addition, it was noticed that a few bins contain less than 10 events, so that the asymptotic approximation may not be valid anymore. It would be useful to confirm the expected results with toys. This should be rather straightforward now with TRExFitter.
+====> done. use LimitType: TOYS as a cross check, no changes are observed.
+
+Best
+Marcel and Johannes
