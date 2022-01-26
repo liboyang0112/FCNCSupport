@@ -358,7 +358,8 @@
 
 % Draft heading/footer code
 \newcommand{\AtlasDraftHeading}{%
-  \RequirePackage[headsepline]{scrpage2}
+  %\RequirePackage[headsepline]{scrpage2}
+  \RequirePackage[headsepline]{scrlayer-scrpage}
   \ihead{}
   \chead[]{\fbox{\textsf\bfseries DRAFT}}
   \ohead{}
@@ -370,14 +371,16 @@
 
 % Include fancier header and footer for auxiliary material document
 \ifADOC@auxmat
-  \RequirePackage[headsepline]{scrpage2}
+  %\RequirePackage[headsepline]{scrpage2}
+  \RequirePackage[headsepline]{scrlayer-scrpage}
   \chead{ATLAS Collaboration -- arXiv:\AtlasArXivId\ \AtlasArXivCat}
   \pagestyle{scrheadings}
 \fi
 
 % BOOK, i.e. book heading/footer code
 \newcommand{\AtlasBookHeading}{%
-  \RequirePackage[headsepline]{scrpage2}
+  %\RequirePackage[headsepline]{scrpage2}
+  \RequirePackage[headsepline]{scrlayer-scrpage}
   \ifx\ADOC@draftversion\@empty%
     \relax
   \else
