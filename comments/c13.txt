@@ -1,20 +1,37 @@
+Dear Marcel and Johannes,
+
+ We have incorporated the unblinded results and addressed your concerns in the revised Int note V5.9
+ See the replied comments below.
+   cheers
+   the tqHtautau team 
+
 Dear analyzers, dear members of the EB,
 
 congratulations on having unblinded the data and thank you for the presentation today. Let us share our notes from today’s discussion:
 
 Clearly, the ~2 sigma excess needs to be understood in more detail. The following points were raised:
 
+===> thanks
+
 * The consistency between the post-fit plots and the slight excess needs to be better understood and/or documented. One ingredient is to exclude the signal from the data/prediction in the post-fit plot ratios. It would be good to make a direct link between the data-prediction comparison in the plots and the slight excess.
-===> done. in appendix D.7
+
+===> We performed the background only fit to the unblinded data where the excess remains the same, see Figure 116-117 in appendix D.8. We also checked the kinematic of excess events in
+    the t_l2had high BDT region in appendix L, which are nothing unusual, except the dR(tau,light-jet) is broader in data than MC. 
 
 * A few pulls in the pull plots need to be better understood. One ingredient for that is a comparison of the unblinded fit to partially-unblinded fit instead of comparing to Asimov. The flavor composition uncertainty needs particular scrutiny (decorrelating between regions or even calculating the proper composition for your phase space).
-===> done. decorrelated the Jet Flavor Composition in different SRs. in appendix D.4
+
+===> We have compared the pull of NP from the unblinded fit with the partially-unblinded fit in Figure 111 in Appendix D.6, which are consistent.
+     We also tried the suggestion for the flavor composition NP decocorrelating between regions as shown in Figure 98 in Appendix D.4.
 
 * It was asked, why the H->tautau BR drops in the ranking plot in the hadronic channel in the unblinded case. Mingming argued that this is due to the data-prediction disagreement and the non-zero fitted mu. This is to be confirmed.
-===> done. in appendix D.7
+
+===> This is mainly due to the fact that the fitted signal strength($\mu=0.04$) in this channel is too small. The signal strength cancellation is in work between two signal
+     region(one is positive and the other is negative), which lead to a small fitted value in combined region. If we fit the channel separate, the HttBR is showed up in the rank plot
+     in Figure 113-114 in Appendix D.7.
 
 In addition, it was noticed that a few bins contain less than 10 events, so that the asymptotic approximation may not be valid anymore. It would be useful to confirm the expected results with toys. This should be rather straightforward now with TRExFitter.
-====> done. use LimitType: TOYS as a cross check, no changes are observed.
+
+====> Checked using LimitType: TOYS as a cross check, no changes are observed in the limits.
 
 Best
 Marcel and Johannes

@@ -1,17 +1,20 @@
 \section{Fit model and signal extraction}
 \label{sec:fit}
 
-The parameter of interest in this search is the signal strength of the FCNC interactions, BR($t\to Hq$) and corresponding production mode cross section. The statistical analysis of the data employs a binned likelihood function constructed as the product of Poisson probability terms, in bins of the BDT output.
+The parameter of interest in this search is the signal strength of the FCNC interactions, $\mathcal{B}(t\to Hq)$ and corresponding production mode cross section. The statistical analysis of the data employs a binned likelihood function constructed as the product of Poisson probability terms, in bins of the BDT output.
+
+\subsection{Fit with Asimov data}
+\label{sec:fit_asimov}
 
 To take into account the systematic uncertianties associated with the MC estimation from different sources for both the signal and background samples, the fit model incorporates these systematics as extra Gaussian or Log-Normal constraint terms multiplied with the combined likelihood. The fitted central values and errors of the systematics parameters, or NPs, are expected to follow a normal distribution centered around 0 with unit width, when the Asimov data is used. The fit model construction is obtained with the \texttt{RooFit} and \texttt{RooStats} software, and the model configuration and persistence files (as input to \texttt{RooStats}) are produced by \texttt{TRExFitter} \cite{TRExFitter}, which is a software package interface with \texttt{HistFactory}. The \texttt{TRExFitter} includes additional features such as histogram smoothing, NP pruning (as shown in Figure \ref{fig:xTFW_pruning_0}-\ref{fig:tthML_pruning_2}) and error symmetrization before the fits.
 %A procedure called local symmetrization to the systematic variational histograms is implemented to semmetrize bins with one-sided variations which may cause problems in the fit.
 
-The correlated bin-by-bin histogram variation corresponds to the up and down variation of each NP. The independent bin-by-bin fluctuations in the combined MC templates are also treated as NPs. They are incorporated in the model as extra Poisson constraint terms, and are expected to have a fitted value of 1 and a fitted error reflecting the relative statistical error in each particular bin. There is one parameter of interest (POI) freely floating in the fit without any constraints, namely, the signal strength $\mu$ (\texttt{SigXsecOverSM}) which is a multiplicative factor on a presumed branching ratio of BR($t\to Hq$)=$0.1\%$ in this analysis. The errors associated with the different systematics will be properly propagated to the fitted error of $\mu$ in a simultaneous fit of multiple regions via a profiled likelihood scan by the minimization program \texttt{MINUIT}. 
+The correlated bin-by-bin histogram variation corresponds to the up and down variation of each NP. The independent bin-by-bin fluctuations in the combined MC templates are also treated as NPs. They are incorporated in the model as extra Poisson constraint terms, and are expected to have a fitted value of 1 and a fitted error reflecting the relative statistical error in each particular bin. There is one parameter of interest (POI) freely floating in the fit without any constraints, namely, the signal strength $\mu$ (\texttt{SigXsecOverSM}) which is a multiplicative factor on a presumed branching ratio of $\mathcal{B}(t\to Hq)=0.1\%$ in this analysis. The errors associated with the different systematics will be properly propagated to the fitted error of $\mu$ in a simultaneous fit of multiple regions via a profiled likelihood scan by the minimization program \texttt{MINUIT}. 
 
 The one-sided NPs in the analysis, namely, \texttt{fakeSFXprongXPtbin}, \texttt{``ttbar fragmentation''}, \texttt{``ttbar hard scattering''}, \texttt{JET$\_$BJES$\_$Response}, \texttt{JET$\_$JER$\_$DataVsMC$\_$MC16}, \texttt{JET$\_$SingleParticle$\_$HighPt}, \texttt{JET$\_$TILECORR$\_$Uncertainty}, \texttt{MET$\_$SoftTrk$\_$ResoPara}, \texttt{MET$\_$SoftTrk$\_$ResoPerp} are symmetrized. This is done manually on the MC components of the background. By default, all the kinematic NPs (shape NPs due to, e.g., energy scales) are smoothed using the default smoothing parameters (set to 40) in \texttt{TRExFitter}. This helps removing the artificial NP constraints due to statistical fluctuations in the systematic variations, and makes the fit well behaved. %The NPs pull distributions before the smoothing for each SR are given in App. \ref{app:channel_fit}.
 
-Figure~\ref{fig:fcnc_rank_data} shows the ranking of the 30 top NPs along with their pull distributions, produced also with {\texttt TRExFitter}. The highest ranked NP is defined to have the largest impact on $\mu$. The impact is evaluated by varying the NP under consideration by one $\sigma$ (either pre or post-fit error) up and down, and afterwards looking at the relative change in $\mu$ under the conditional fit where the NP under consideration is fixed to its varied new value.
-Figure~\ref{fig:fcnc_pull_data} shows the pull distributions of all NPs in asimov fit. %The NPs which are constrained less than $80\%$ of their original error are smoothed with the default smoothing method in {\texttt TRExFitter}. The pre and post-smoothing distributions of the relevant NPs are given in App. \ref{app:smoothpruneNP}. Similar pull distributions before the NP smoothing are given in Figure \ref{fig:fcnc_pull_nosmooth} of App. \ref{app:smoothpruneNP}.
+Figure~\ref{fig:fcnc_rank_asimov} and ~\ref{fig:fcnc_rank_asimov_tcH} show the ranking of the 30 top NPs along with their pull distributions using Asimov data, produced also with {\texttt TRExFitter} in terms of the tuH and tcH signals. The highest ranked NP is defined to have the largest impact on $\mu$. The impact is evaluated by varying the NP under consideration by one $\sigma$ (either pre or post-fit error) up and down, and afterwards looking at the relative change in $\mu$ under the conditional fit where the NP under consideration is fixed to its varied new value.
+Figure~\ref{fig:tcH_NuisPar}-\ref{fig:fcnc_tthml_NuisPar} show the pull distributions of all NPs in asimov fit for the tuH and tcH signals. %The NPs which are constrained less than $80\%$ of their original error are smoothed with the default smoothing method in {\texttt TRExFitter}. The pre and post-smoothing distributions of the relevant NPs are given in App. \ref{app:smoothpruneNP}. Similar pull distributions before the NP smoothing are given in Figure \ref{fig:fcnc_pull_nosmooth} of App. \ref{app:smoothpruneNP}.
 Normalization and shape systematics whose impact is less than $1\%$ are removed from the fit. %The list of removed NPs are given in App. \ref{app:smoothpruneNP}.
 
 It is observed that the NP ``$\bar{t}t$ PS'' is highly constrained. The reason for this is further understood. This NP is correlated across different control and signal regions, studies releasing the correlation, by creating one such NP per region, are reported in Appendix \ref{sec:decor}. As shown  in Figure \ref{fig:tuH_NuisPar_decorr} (left), the constraint is originated from signal regions with high statistics especially $t_h\tlhad 3j$. The NP impact on the background is shown in Figure \ref{fig:tthML_ttbarPS}. It is clear that the NP variation is around 2.5\% which is quite significant compared to the statistical uncertainty in the low BDT region. By inspecting the correlation matrix, the NP ``$\bar{t}t$ PS'' doesn't have correlation with other NPs significant enough to be released.
@@ -34,7 +37,7 @@ This comes from the difference of the samples themselves and has nothing to do w
 %The latter two cause large variation in the signal region, but small variation in the low BDT background region. Thus, they have large impact on the fitted signal strength but are not much constrained by the fit. The first one causes large variations in the background region, but it is an overall shift effect which can be adjusted by the fit through the floating normalization factors of the fake. Therefore, this NP is not constrained either. The \texttt{NOS\_TOPFRAC\_LH} only affects the $\tlhad$ channel, so the variation in hadronic is null. It causes up to $10\%$ bin-by-bin variations in both the signal and the background regions, which explains why it has a high ranking and is constrained at the same time.
 %Figure \ref{fig:NPvar_other} shows the systematic variations due to a few constrained NPs, \texttt{JET\_JES\_PILEUP\_RHOTOPOLOGY}, \texttt{TAU\_TES\_INSITU} and \texttt{MET\_SOFTTRK\_RESOPERP}. They cause about $5-20\%$ bin-by-bin variations in the low BDT region, which can be constrained by the background region events. As a result, their impact on the signal is also reduced. Note that \texttt{MET\_SOFTTRK\_RESOPERP} is a one-sided NP, whose upward and downward variations are set to be the same.
 
-Figure~\ref{fig:fcnc_correl_data_1}-\ref{fig:fcnc_correl_data_2}shows the correlation matrix for diffrent NPs. Except for self-correlations, and the correlations between FSR and Btag\_B\_0 with 27\%, FSR with TAU\_PLIV at -44.9\%, JET\_Flavour\_Composition with JET\_Pileup\_RhoTopology at -34.8\%,   
+Figure~\ref{fig:fcnc_correl_asimov_1}-\ref{fig:fcnc_correl_asimov_2}shows the correlation matrix for diffrent NPs. Except for self-correlations, and the correlations between FSR and Btag\_B\_0 with 27\%, FSR with TAU\_PLIV at -44.9\%, JET\_Flavour\_Composition with JET\_Pileup\_RhoTopology at -34.8\%,   
 FSR with scale at 14.4\%, and Fakes from ABCD for electron and muon at -60\%, all other NPs have relatively small correlations with each other in the leptonic channels, which justifies the fit models for independent systematics. These high correlations are due to the fact that the FSR has significant impact on the low b-jet pT as well as the yields of selected
 $t\bar t$ events; Similarly, the number of electron and muon fakes are constrains by the sum in the fit.   
 
@@ -45,8 +48,8 @@ $t\bar t$ events; Similarly, the number of electron and muon fakes are constrain
 %\input{\FCNCFigures/tex/xTFW_trexPrefit}
 
 %%%%%%%%%%% DATA %%%%%%%%%%%
-\input{\FCNCFigures/unblinded/tex/tthML_trexPrefit}
-\input{\FCNCFigures/unblinded/tex/xTFW_trexPrefit}
+%\input{\FCNCFigures/unblinded/tex/tthML_trexPrefit}
+%\input{\FCNCFigures/unblinded/tex/xTFW_trexPrefit}
 
 
 
@@ -160,11 +163,33 @@ $t\bar t$ events; Similarly, the number of electron and muon fakes are constrain
 
 %%%%%%%%%%% DATA %%%%%%%%%%%
 
+\subsection{Fit with unblinded data}
+\label{sec:fit_data}
+
+Figure~\ref{fig:tthML_trexPrefit}-\ref{fig:xTFW_trexPrefit_tcH} show the pre-fits, post-fits, and background only-fits to the unblinded data for the tuH and tcH searches, respectively.
+There is an excess of data events above background with a significance of 2.6$\sigma$ in the $t_l\thadhad$ channel in the hight BDT region as seen in Figure~\ref{fig:tthML_trexPrefit}(c1-c3) and Figure~\ref{fig:tthML_trexPrefit_tcH}(c1-c3). We have checked the kinematic distributions for these excess of events in
+the BDT$>0.8$ region, which can be found in Appendix \ref{sec:checkexcess}.  There seems nothing unusual between data and expectation except the
+minimum $\Delta R(\tau, light-jet)$ between the tau candidate and the light-jet in the event where the data are broader. 
+
+The pull distributions of all unpruned NPs in the unblinded fits are consistet within the uncertainties as shown in Figure~\ref{fig:fcnc_pull_data}
+for the tuH signal.
+We also checked the pull of NPs obtained in the data using the tuH and tcH signals separately from the $t\bar t$ decays and the $tH$ production as shown
+in Figure~\ref{fig:tuH_NuisPar_unblind_had}-\ref{fig:tcH_NuisPar_unblind_lep}, which are consistent to each other.
+
+The pruned NPs in the fit to the unblinded data are summarized in Figure~\ref{fig:xTFW_pruning_0}-\ref{fig:tthML_pruning_2}.
+Figure~\ref{fig:fcnc_rank_data}-\ref{fig:fcnc_rank_data_tcH} show the ranking plots from the fit to the unblinded data with the tuH and tcH signals.
+The correlation matrix between NPs from the unblinded data are also shown in Figure~\ref{fig:fcnc_correl_data_1}-\ref{fig:fcnc_correl_data_2}, which have the similar correlation as
+seen from the Asimov data. 
+
+\input{\FCNCFigures/unblinded/tex/tthML_trexPrefit}
+\input{\FCNCFigures/unblinded/tex/xTFW_trexPrefit}
+
+
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.25\textwidth]{\FCNCFigures/unblinded/xTFW/tuH_NuisPar.pdf}
 \includegraphics[width=0.25\textwidth]{\FCNCFigures/unblinded/tthML/tuH_NuisPar.pdf}
-\caption{ The pull distributions of asimov fit in hadronic channels (left) combined and leptonic channels combined (right) in terms of tuH merged signal . }
+\caption{ The pull distributions of the unblinded fit in hadronic channels (left) combined and leptonic channels combined (right) in terms of tuH merged signal . }
 \label{fig:fcnc_pull_data}
 \end{figure}
 
@@ -182,7 +207,7 @@ $t\bar t$ events; Similarly, the number of electron and muon fakes are constrain
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.99\textwidth]{\FCNCFigures/unblinded/tthML/tuH_Pruning_0.pdf}
-\caption{ Summary of the pruned nuisance parameters in the fit to the  Asimov dataset under the S+B hypothesis in leptonic channels part 1 in terms of tuH merged signal. The systematic uncertainties that did not survive the pruning are indicated in red. Green corresponds to the uncertainties for which both shape and normalisation is kept, yellow(orange) indicates that shape (normalisation) is kept. Grey indicates that the uncertainty is not present.}
+\caption{ Summary of the pruned nuisance parameters in the fit to the unblinded dataset under the S+B hypothesis in leptonic channels part 1 in terms of tuH merged signal. The systematic uncertainties that did not survive the pruning are indicated in red. Green corresponds to the uncertainties for which both shape and normalisation is kept, yellow(orange) indicates that shape (normalisation) is kept. Grey indicates that the uncertainty is not present.}
 \label{fig:tthML_pruning_0}
 \end{figure}
 
