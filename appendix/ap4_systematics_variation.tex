@@ -661,8 +661,7 @@ tuH merged & $1.98^{+0.84}_{-0.55}$ & $0.42^{+0.18}_{-0.12}$ & $0.39^{+0.17}_{-0
 
 
 \subsection{Quark-gluon fraction check}
-Quark-gluon fraction is also considered when we derived the Jet Flavour Composition systematics, the relative difference between default 50-50\% fraction and calculated qg
-fraction(Fig.~\ref{fig:cal_qg_frac}) are shown in Figure~\ref{fig:cal_and_defau_qg_frac} using partial $t\bar{t}$ samples. Given the statistical error, the descrepancy between these two settings could be negelected.
+Quark-gluon fraction is also considered when we derived the Jet Flavour Composition systematics, the relative difference between default 50-50\% fraction and calculated qg fraction(Fig.~\ref{fig:cal_qg_frac}). Fractions for backgrounds and signals in leptonic and hadronic channels are shown in Figure~\ref{fig:fig:qg_frac_b_vs_s1}-\ref{fig:fig:qg_frac_b_vs_s2}. Given the statistical error, the descrepancy between these two settings could be negelected.
 
 
 \begin{figure}[H]
@@ -674,13 +673,37 @@ fraction(Fig.~\ref{fig:cal_qg_frac}) are shown in Figure~\ref{fig:cal_and_defau_
 \label{fig:cal_and_defau_qg_frac}
 \end{figure}
 
+
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.3\textwidth]{\FCNCFigures/tthML/partial_unblinding/qgfraction.pdf}
+\includegraphics[width=0.4\textwidth]{\FCNCFigures/closureCheck/PlotsQGfraction_h1l2tauos_gq2dBg.pdf}
+\includegraphics[width=0.4\textwidth]{\FCNCFigures/closureCheck/PlotsQGfraction_h1l2tauos_gq2dSig.pdf}
 \\
-\caption{Calculated qg fraction using $t\bar{t}$ samples.}
-\label{fig:cal_qg_frac}
+\includegraphics[width=0.4\textwidth]{\FCNCFigures/closureCheck/PlotsQGfraction_h1ltauos1b2jt_gq2dBg.pdf}
+\includegraphics[width=0.4\textwidth]{\FCNCFigures/closureCheck/PlotsQGfraction_h1ltauos1b2jt_gq2dSig.pdf}
+\\
+\includegraphics[width=0.4\textwidth]{\FCNCFigures/closureCheck/PlotsQGfraction_h1ltauos1b3jt_gq2dBg.pdf}
+\includegraphics[width=0.4\textwidth]{\FCNCFigures/closureCheck/PlotsQGfraction_h1ltauos1b3jt_gq2dSig.pdf}
+\\
+\caption{Comparison for qg fraction between background(left) and signal(right) in $t_l\thadhad$(top),$t_h\tlhad$-2j(middle) and $t_h\tlhad$-3j(bottom).}
+\label{fig:qg_frac_b_vs_s1}
 \end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{\FCNCFigures/closureCheck/PlotsQGfraction_h1ltauss1b1jt_gq2dBg.pdf}
+\includegraphics[width=0.4\textwidth]{\FCNCFigures/closureCheck/PlotsQGfraction_h1ltauss1b1jt_gq2dSig.pdf}
+\\
+\includegraphics[width=0.4\textwidth]{\FCNCFigures/closureCheck/PlotsQGfraction_h1ltauss1b2jt_gq2dBg.pdf}
+\includegraphics[width=0.4\textwidth]{\FCNCFigures/closureCheck/PlotsQGfraction_h1ltauss1b2jt_gq2dSig.pdf}
+\\
+\includegraphics[width=0.35\textwidth]{\FCNCFigures/closureCheck/bkg_qgfraction.pdf}
+\includegraphics[width=0.35\textwidth]{\FCNCFigures/closureCheck/signal_qgfraction.pdf}
+\caption{Comparison for qg fraction between background(left) and signal(right) in $t_l\tauhad$-1j(top), $t_l\tauhad$-2j(middle) and $t_h\thadhad$(bottom).}
+\label{fig:qg_frac_b_vs_s2}
+\end{figure}
+
 
 Futhermore, in the final pull distribution, the Jet Flavour Composition is pulled down to the 1sigma boudary, a cross check with decorelating this NP in fifferent signal region to see the pulls. We can conclude that this NP is reasonable in all of the signal regions, whose fitted value is within the 1 sigma error of nominal as shown in Figure \ref{fig:decorrelated_JFC}.
 \begin{figure}[H]
