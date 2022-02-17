@@ -372,13 +372,61 @@ In this chapter, the fitted results using unblinded data are presented, the fit 
 
 
 
-\begin{figure}[H]
+\begin{figure}[htb]
 \centering
-\includegraphics[width=0.45\textwidth]{\FCNCFigures/closureCheck/RankingSysts_SigXsecOverSM_tuH.pdf}
-\includegraphics[width=0.45\textwidth]{\FCNCFigures/closureCheck/RankingSysts_SigXsecOverSM_tcH.pdf}
-\caption{ Ranking plot from a fit to a unblinded dataset for combined channels(lep+had) in terms of tuH merged signal(left), tcH merged signal(right).}
-\label{fig:rank_lep_had}
+\includegraphics[width=0.45\textwidth]{\FCNCFigures/unblinded/xTFW/tuH_Ranking.pdf}
+\includegraphics[width=0.45\textwidth]{\FCNCFigures/unblinded/tthML/tuH_Ranking.pdf}
+\caption{ Ranking plot from a fit to unblind dataset for (left) hadronic channels and (right)
+leptonic channels in terms of tuH merged signal. All two sided NPs ( with up and down) are symmetrized by "TWOSIDED" and one sided NPs (PS, hdamp, MET, fake estimation etc.) are symmetrized by "ONESIDED". The fitted values of the most important nuisance parameters and their impact on the measured
+signal strength are shown. The black points, which are plotted according to the bottom horizontal scale, show the deviation
+of each of the fitted nuisance parameters,$\hat{\theta}$, from $\theta_{0}$, which is the nominal value of that nuisance parameter, in units of the
+pre-fit standard deviation $\Delta\theta$. The black error bars show the post-fit errors, $\sigma_{\theta}$ , which are close to 1 if these data do not
+provide any further constraint on that uncertainty. Conversely, a value of $\sigma_{\theta}$ much smaller than 1 indicates a significant
+reduction with respect to the original uncertainty. The nuisance parameters are sorted according to the post-fit effect of each on $\mu$ (hashed blue area),
+with those with the largest impact at the top. The scale NP is for a variation of normalization and factorization. Only the leading 30 nuisance parameters are shown. The post-fit effect on $\mu$,
+shown according to the top horizontal scale, is calculated by fixing the corresponding nuisance parameter at $\hat{\theta}\pm \sigma_{\theta}$ and
+redoing the fit. The difference between the default and modified $\mu$, $\Delta\mu$, represents the effect of the systematic uncertainty
+in question on $\mu$.}
+\label{fig:fcnc_rank_data}
 \end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.45\textwidth]{\FCNCFigures/unblinded/xTFW/tcH_Ranking.pdf}
+\includegraphics[width=0.45\textwidth]{\FCNCFigures/unblinded/tthML/tcH_Ranking.pdf}
+\caption{ Ranking plot from a fit to unblind dataset for (left) hadronic channels and (right)
+leptonic channels in terms of tcH merged signal. All two sided NPs ( with up and down) are symmetrized by "TWOSIDED" and one sided NPs (PS, hdamp, MET, fake estimation etc.) are symmetrized by "ONESIDED". The fitted values of the most important nuisance parameters and their impact on the measured
+signal strength are shown. The black points, which are plotted according to the bottom horizontal scale, show the deviation
+of each of the fitted nuisance parameters,$\hat{\theta}$, from $\theta_{0}$, which is the nominal value of that nuisance parameter, in units of the
+pre-fit standard deviation $\Delta\theta$. The black error bars show the post-fit errors, $\sigma_{\theta}$ , which are close to 1 if these data do not
+provide any further constraint on that uncertainty. Conversely, a value of $\sigma_{\theta}$ much smaller than 1 indicates a significant
+reduction with respect to the original uncertainty. The nuisance parameters are sorted according to the post-fit effect of each on $\mu$ (hashed blue area),
+with those with the largest impact at the top. The scale NP is for a variation of normalization and factorization. Only the leading 30 nuisance parameters are shown. The post-fit effect on $\mu$,
+shown according to the top horizontal scale, is calculated by fixing the corresponding nuisance parameter at $\hat{\theta}\pm \sigma_{\theta}$ and
+redoing the fit. The difference between the default and modified $\mu$, $\Delta\mu$, represents the effect of the systematic uncertainty
+in question on $\mu$.}
+\label{fig:fcnc_rank_data_tcH}
+\end{figure}
+
+
+
+
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=1\textwidth]{\FCNCFigures/unblinded/xTFW/tuH_CorrMatrix.pdf}
+\caption{ Correlation matrix corresponding to the fit to unblind dataset. Only nuisance parameters with a correlation coefficient of at least 1\% with any other parameter are displayed for hadronic channels combined.}
+\label{fig:fcnc_correl_data_1}
+\end{figure}
+
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=1\textwidth]{\FCNCFigures/unblinded/tthML/tuH_CorrMatrix.pdf}
+\caption{ Correlation matrix corresponding to the fit to unblind dataset. Only nuisance parameters with a correlation coefficient of at least 1\% with any other parameter are displayed for leptonic channels combined.}
+\label{fig:fcnc_correl_data_2}
+\end{figure}
+
 
 
 

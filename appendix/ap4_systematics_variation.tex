@@ -661,7 +661,7 @@ tuH merged & $1.98^{+0.84}_{-0.55}$ & $0.42^{+0.18}_{-0.12}$ & $0.39^{+0.17}_{-0
 
 
 \subsection{Quark-gluon fraction check}
-Quark-gluon fraction is also considered when we derived the Jet Flavour Composition systematics, the relative difference between default 50-50\% fraction and calculated qg fraction(Fig.~\ref{fig:cal_qg_frac}). Fractions for backgrounds and signals in leptonic and hadronic channels are shown in Figure~\ref{fig:fig:qg_frac_b_vs_s1}-\ref{fig:fig:qg_frac_b_vs_s2}. Given the statistical error, the descrepancy between these two settings could be negelected.
+Quark-gluon fraction is also considered when we derived the Jet Flavour Composition systematics, the relative difference between default 50-50\% fraction and calculated qg fraction is shown in Figure~\ref{fig:cal_qg_frac}. Fractions for backgrounds and signals in leptonic and hadronic channels are shown in Figure~\ref{fig:fig:qg_frac_b_vs_s1}-\ref{fig:fig:qg_frac_b_vs_s2}. The gq fractions are checked in these SRs and are consistent with the used default value, especially in the most sensitive region $t_l\thadhad$.
 
 
 \begin{figure}[H]
@@ -700,7 +700,7 @@ Quark-gluon fraction is also considered when we derived the Jet Flavour Composit
 \\
 \includegraphics[width=0.35\textwidth]{\FCNCFigures/closureCheck/bkg_qgfraction.pdf}
 \includegraphics[width=0.35\textwidth]{\FCNCFigures/closureCheck/signal_qgfraction.pdf}
-\caption{Comparison for qg fraction between background(left) and signal(right) in $t_l\tauhad$-1j(top), $t_l\tauhad$-2j(middle) and $t_h\thadhad$(bottom).}
+\caption{Comparison for qg fraction between background(left) and signal(right) in $t_l\tauhad$-1j(top), $t_l\tauhad$-2j(middle) and $t_h\thadhad$($>=2j$)(bottom).}
 \label{fig:qg_frac_b_vs_s2}
 \end{figure}
 
@@ -998,9 +998,7 @@ in the $t_l\thadhad$ high BDT region. The fitted pull of NPs are also consistent
 
 
 \subsection{Some checks in most sensitive region}
-
-Production and decay modes signal are overlayed in the same figure \ref{fig:overlay_signal_closure} for clear clarification. The excess(data-Pred.) is compared to the signals is shown in Fig~\ref{fig:excess_com} in $t_l\thadhad$ region. For further check, the BDT distribution is splitted according to differet run years in Fig~\ref{fig:different_year_com}
-and Table~\ref{tab:pre_fit_diff_year}.
+The signal shape in production and decay modes are overlayed in Figure~\ref{fig:overlay_signal_closure} for clear comparison. The excess(data-Pred.) is compared to the signals is shown in Fig~\ref{fig:excess_com} in $t_l\thadhad$ region, the excess is consistent with a small signal in the high BDT regions within the statistics. For further check, the BDT distribution is broken down according to different run years in Figure~\ref{fig:different_year_com} and Table~\ref{tab:pre_fit_diff_year_1}-\ref{tab:pre_fit_diff_year_2}. The yields in different run periods are consistent with the expected luminosity in region of BDT $>0.6$. 
 
 \begin{figure}[H]
 \centering
@@ -1032,25 +1030,64 @@ and Table~\ref{tab:pre_fit_diff_year}.
 
 \begin{table}[H]
 \caption{Pre-fit yields for different years in high BDT regions( BDT score $>0.8$) }
-\label{tab:pre_fit_diff_year}
+\label{tab:pre_fit_diff_year_1}
 \centering
+%\small
+\footnotesize
 \begin{tabular}{ccccc} \toprule\toprule
-& $2015-2016$ & $2017$  & $2018$  & run2 \\\midrule
+& $2015-2016$(Lumi:36) & $2017$(Lumi:44)  & $2018$(Lumi:58)  & run2 \\\midrule
 
-Wjet fake&		$0.005\pm0.002$  &    $0.008\pm0.004$  &    $0.009\pm0.005$   &   $0.022\pm0.007$ \\
-other fake&		$0.003\pm0.003$  &    $0.47\pm0.27$    &    $0.15\pm0.14$     &   $0.62\pm0.301408$ \\
-b fake&			$0.32\pm0.19$    &    $0.22\pm0.26$    &    $0.57\pm0.25$     &   $1.11\pm0.40$\\
-lep fake&		$0.003\pm0.0024$ &    $0\pm0$          &    $0\pm0$           &   $0.003\pm0.002$\\
-doublefake&		$0.11\pm0.11$    &    $0.037\pm0.033$  &    $0.24\pm0.12$     &   $0.39\pm0.17$\\
-ttbar&			$0\pm0$          &    $0\pm0$          &    $0\pm0$           &   $0\pm0$\\
-others&			$0.42\pm0.048$   &    $0.47\pm0.053$   &    $0.88\pm0.16$     &   $1.8\pm0.17$\\
-tuH&			$2.21\pm0.081$   &    $2.65\pm0.087$   &    $3.43\pm0.10$     &   $8.28\pm0.16$\\
-data&			$2\pm1.41$       &    $0\pm0$          &    $6\pm2.45$        &   $8\pm2.83$\\
+%% Wjet fake&		$0.005\pm0.002$  &    $0.008\pm0.004$  &    $0.009\pm0.005$   &   $0.022\pm0.007$ \\
+%% other fake&		$0.003\pm0.003$  &    $0.47\pm0.27$    &    $0.15\pm0.14$     &   $0.62\pm0.301408$ \\
+%% b fake&			$0.32\pm0.19$    &    $0.22\pm0.26$    &    $0.57\pm0.25$     &   $1.11\pm0.40$\\
+%% lep fake&		$0.003\pm0.0024$ &    $0\pm0$          &    $0\pm0$           &   $0.003\pm0.002$\\
+%% doublefake&		$0.11\pm0.11$    &    $0.037\pm0.033$  &    $0.24\pm0.12$     &   $0.39\pm0.17$\\
+%% ttbar&			$0\pm0$          &    $0\pm0$          &    $0\pm0$           &   $0\pm0$\\
+%% others&			$0.42\pm0.048$   &    $0.47\pm0.053$   &    $0.88\pm0.16$     &   $1.8\pm0.17$\\
+%% tuH&			$2.21\pm0.081$   &    $2.65\pm0.087$   &    $3.43\pm0.10$     &   $8.28\pm0.16$\\
+%% data&			$2\pm1.41$       &    $0\pm0$          &    $6\pm2.45$        &   $8\pm2.83$\\
+Wjet fake&	         $0.0052\pm0.00238345$  & $0.0078\pm0.0038$    & $0.0092\pm0.0052$   &$0.022\pm0.0068$\\    
+other fake&	         $0.0027\pm0.0027$ 		& $0.47\pm0.27$        & $0.15\pm0.14$        &$0.62\pm0.30$\\
+b fake&		         $0.32\pm0.19$     & $0.22\pm0.26$       & $0.57\pm0.25$        &$1.10\pm0.40$\\
+lep fake&	         $0.0028\pm0.0024$ & $0\pm0$                     & $0\pm0$     &$0.0028\pm0.0024$\\
+doublefake&	         $0.11\pm0.11$       & $0.037\pm0.033$     & $0.24\pm0.12$        &$0.39\pm0.17$\\
+ttbar&		         $0\pm0$                   & $0\pm0$          & $0\pm0$          &$0\pm0$\\
+others&              $0.42\pm0.048$    & $0.47\pm0.053$       & $0.88\pm0.16$       &$1.78\pm0.17$\\
+total background &   $0.87\pm0.22$     & $1.20\pm0.38$        & $1.84\pm0.34$        &$3.92\pm0.56$    \\
+tuH&			     $2.21\pm0.081$     & $2.65\pm0.087$       & $3.43\pm0.10$        &$8.28\pm0.16$\\    
+data&		         $2\pm1.41$             & $0\pm0$                     & $6\pm2.45$  &$8\pm2.83$\\
 
 \bottomrule\bottomrule\\
 \end{tabular}
 \end{table}
 
+
+\begin{table}[H]
+\caption{Pre-fit yields for different years in high BDT regions( BDT score $>0.6$) }
+\label{tab:pre_fit_diff_year_2}
+\centering
+%\small
+\footnotesize
+\begin{tabular}{ccccc} \toprule\toprule
+& $2015-2016$(Lumi:36) & $2017$(Lumi:44)  & $2018$(Lumi:58)  & run2 \\\midrule
+
+Wjet fake&		$0.18\pm0.19$        &    $0.030\pm0.012$    &   $0.022\pm0.0078$      &  $0.24\pm0.17$ \\
+other fake&		$1.05\pm0.37$        &    $1.16\pm0.38$       &   $3.68\pm0.81$          &  $5.90\pm0.97$ \\
+b fake&			$1.63\pm0.44$        &    $1.46\pm0.46$       &   $2.02\pm0.50$          &  $5.10\pm0.81$ \\
+lep fake&		$0.0040\pm0.0025$    &   $0.0012\pm0.00069$  &   $0.0024\pm0.0024$     &  $0.0076\pm0.0036$ \\
+doublefake&		$0.32\pm0.50$        &   $0.58\pm0.25$      &   $1.47\pm0.33$          &  $2.36\pm0.65$ \\
+ttbar&			$0\pm0$              &    $0\pm0$            &   $0\pm0$                       &  $0\pm0$ \\
+others&			$1.66\pm0.11$        &    $1.87\pm0.12$      &   $2.91\pm0.19$          &  $6.44\pm0.25$ \\
+total background&$4.84\pm0.79$       &    $5.10\pm0.66$       &   $10.10\pm1.03$           &  $20.04\pm1.45$ \\
+tuH&			$5.66\pm0.13$        &    $6.55\pm0.14$       &   $8.75\pm0.16$           &  $20.96\pm0.25$ \\
+data&			$10\pm3.16$          &    $12\pm3.46$              &   $13\pm3.61$                &  $35\pm5.92$ \\
+
+\bottomrule\bottomrule\\
+\end{tabular}
+\end{table}
+
+%% 44/36 =1.2
+%% 58/36 =1.6      
 
 
 
